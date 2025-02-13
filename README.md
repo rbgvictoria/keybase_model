@@ -33,7 +33,7 @@ There are two types of situations where the tree structure breaks down, or where
 2.  **Reticulations:** Sometimes multiple leads lead to the same next lead,
     causing a cycle (or 'reticulation') in the graph. In the KeyBase data model
     this situation is resolved by the `reticulation_id` field in the **leads**
-    table, which servers as the root for a new graph within the same key. So,
+    table, which serves as the root for a new graph within the same key. So,
     compared to the general scenario both the **Item** and the **Key** are
     skipped.
 
@@ -66,10 +66,10 @@ branch as well as a leaf):
     could be used for other things as well. So, if an item keyed out in more
     than one place in a key, people would add the subordinate item(s) that would
     really key out in that particular spot. This broke KeyBase, which is why I
-    came up with the extra lead ieda, rather than trying to deal with it in the
-    item, like I did before. This is way more flexible, so now it is possible to
-    add more than one subordinate item, e.g., 'Adoxaceae: Sambucus, Viburnum',
-    as well.
+    came up with the extra lead idea, rather than trying to deal with it in the
+    item, like I did before. This is more flexible, so now it is possible to add
+    more than one subordinate item, e.g., 'Adoxaceae: Sambucus, Viburnum', as
+    well.
 
     In theory it is possible for leads to have an item and the key to continue,
     which is something you sometimes see in printed keys, e.g. '...**2 (sect.
@@ -90,10 +90,10 @@ published somewhere else.
 
 The **change_notes** table is used for notes about changes that were made when
 people upload a new version of the key (so, a new CSV file). These change notes
-are comparable to commit messages in version management systems.The change notes
-actually apply to a version of the key, so there is a `version` column in both
-the **keys** and **change_notes** tables, but I do not want composite keys, so
-we have to add a business rule when the records are created, so that the
+are comparable to commit messages in version management systems. The change
+notes actually apply to a version of the key, so there is a `version` column in
+both the **keys** and **change_notes** tables, but I do not want composite keys,
+so we have to add a business rule when the records are created, so that the
 versions line up. 
 
 The **keys** table, and every other table that is not merely a pivot table, has
@@ -110,15 +110,15 @@ manipulation actions is managed at the project level.
 
 ![organisation](public/media/organisation.svg)
 
-This provides a level of encapsulation so that projects can trust that KeyBase
-handles their keys well and that users from outside can not make changes to
-their keys. If people want to use a key from another project in their project,
-they can just export that key and import it in their project, just like forking
-a repository in GitHub. KeyBase does not have a mechanism for that, so people
-need to do that manually and manage attribution etc. themselves. People are also
-free to create projects outside KeyBase in which they bring together keys from
-different projects, provided they provide the necessary attribution (not to
-KeyBase but to the makers of the key).
+This provides a level of encapsulation that makes that projects can trust that
+KeyBase handles their keys well and that users from outside can not make changes
+to their keys. If people want to use a key from another project in their own
+project, they can just export that key and import it in their project, analogous
+to forking a repository in GitHub. KeyBase does not have a mechanism for that,
+so people need to do that manually and manage attribution etc. themselves.
+People are also free to create projects outside KeyBase in which they bring
+together keys from different projects, provided they provide the necessary
+attribution (not to KeyBase but to the makers of the key).
 
 There is an **agents** table in the data model which has a record for every
 user. The **agents** table is linked to from every other table that is not
@@ -159,7 +159,7 @@ too hard to maintain). Filters link to **keys** via the **items** and **leads**
 tables, so one step too much for a simple many-to-many relationship, but
 **keys** can be accessed directly from the **filters** in the ORM. Not sure if
 we can do everything we need to make filters work in the ORM, so we'll have to
-see how usefull this is.
+see how useful this is.
 
 Filters can be applied and turned off on the **Project** page. When a filter is
 applied only the keys that are necessary to key out the items in the filter are
