@@ -1,88 +1,21 @@
-Table agents {
-  id bigint [pk, not null]
-  created_at timestamp(0)
-  updated_at timestamp(0)
-  name "character varying(255)" [not null]
-  first_name "character varying(64)"
-  surname "character varying(64)"
-  email "character varying(255)" [not null]
-  orcid "character varying(255)"
-  user_id integer
-  created_by_id integer
-  updated_by_id integer
-
-  Indexes {
-    created_by_id [type: btree, name: "agents_created_by_id_index"]
-    name [type: btree, name: "agents_name_index"]
-    surname [type: btree, name: "agents_surname_index"]
-    updated_by_id [type: btree, name: "agents_updated_by_id_index"]
-    user_id [type: btree, name: "agents_user_id_index"]
-  }
-}
-
-Table change_notes {
-  id bigint [pk, not null]
-  created_at timestamp(0)
-  updated_at timestamp(0)
-  remarks text [not null]
-  key_id integer [not null]
-  version integer [not null]
-  created_by_id integer [not null]
-  updated_by_id integer
-
-  Indexes {
-    (key_id, version) [unique, name: "change_notes_key_id_version_unique"]
-    created_by_id [type: btree, name: "change_notes_created_by_id_index"]
-    updated_by_id [type: btree, name: "change_notes_updated_by_id_index"]
-  }
-}
-
-Table filter_item {
-  filter_id integer [not null]
-  item_id integer [not null]
-
-  Indexes {
-    (filter_id, item_id) [unique, name: "filter_item_filter_id_item_id_unique"]
-  }
-}
-
-Table filters {
+Table projects {
   id bigint [pk, not null]
   created_at timestamp(0)
   updated_at timestamp(0)
   title "character varying(255)" [not null]
-  items_not_found text
-  is_project_filter boolean
-  project_id integer [not null]
+  description text
+  project_icon "character varying(255)"
+  taxonomic_scope_id integer [not null]
   created_by_id integer
   updated_by_id integer
 
   Indexes {
-    created_by_id [type: btree, name: "filters_created_by_id_index"]
-    project_id [type: btree, name: "filters_project_id_index"]
-    updated_by_id [type: btree, name: "filters_updated_by_id_index"]
+    created_by_id [type: btree, name: "projects_created_by_id_index"]
+    taxonomic_scope_id [type: btree, name: "projects_taxonomic_scope_id_index"]
+    title [type: btree, name: "projects_title_index"]
+    updated_by_id [type: btree, name: "projects_updated_by_id_index"]
   }
 }
-
-Table items {
-  id bigint [pk, not null]
-  created_at timestamp(0)
-  updated_at timestamp(0)
-  guid uuid [not null]
-  name "character varying(255)" [not null]
-  url "character varying(255)"
-  project_id integer [not null]
-  created_by_id integer
-  updated_by_id integer
-
-  Indexes {
-    created_by_id [type: btree, name: "items_created_by_id_index"]
-    name [type: btree, name: "items_name_index"]
-    project_id [type: btree, name: "items_project_id_index"]
-    updated_by_id [type: btree, name: "items_updated_by_id_index"]
-  }
-}
-
 
 Table keys {
   id bigint [pk, not null]
@@ -139,39 +72,39 @@ Table leads {
   }
 }
 
-Table project_users {
+Table items {
   id bigint [pk, not null]
   created_at timestamp(0)
   updated_at timestamp(0)
+  guid uuid [not null]
+  name "character varying(255)" [not null]
+  url "character varying(255)"
   project_id integer [not null]
-  user_id integer [not null]
-  role "character varying(255)" [not null]
   created_by_id integer
   updated_by_id integer
 
   Indexes {
-    (project_id, user_id) [unique, name: "project_users_project_id_user_id_unique"]
-    created_by_id [type: btree, name: "project_users_created_by_id_index"]
-    updated_by_id [type: btree, name: "project_users_updated_by_id_index"]
+    created_by_id [type: btree, name: "items_created_by_id_index"]
+    name [type: btree, name: "items_name_index"]
+    project_id [type: btree, name: "items_project_id_index"]
+    updated_by_id [type: btree, name: "items_updated_by_id_index"]
   }
 }
 
-Table projects {
+Table change_notes {
   id bigint [pk, not null]
   created_at timestamp(0)
   updated_at timestamp(0)
-  title "character varying(255)" [not null]
-  description text
-  project_icon "character varying(255)"
-  taxonomic_scope_id integer [not null]
-  created_by_id integer
+  remarks text [not null]
+  key_id integer [not null]
+  version integer [not null]
+  created_by_id integer [not null]
   updated_by_id integer
 
   Indexes {
-    created_by_id [type: btree, name: "projects_created_by_id_index"]
-    taxonomic_scope_id [type: btree, name: "projects_taxonomic_scope_id_index"]
-    title [type: btree, name: "projects_title_index"]
-    updated_by_id [type: btree, name: "projects_updated_by_id_index"]
+    (key_id, version) [unique, name: "change_notes_key_id_version_unique"]
+    created_by_id [type: btree, name: "change_notes_created_by_id_index"]
+    updated_by_id [type: btree, name: "change_notes_updated_by_id_index"]
   }
 }
 
@@ -208,6 +141,50 @@ Table sources {
   }
 }
 
+Table filter_item {
+  filter_id integer [not null]
+  item_id integer [not null]
+
+  Indexes {
+    (filter_id, item_id) [unique, name: "filter_item_filter_id_item_id_unique"]
+  }
+}
+
+Table filters {
+  id bigint [pk, not null]
+  created_at timestamp(0)
+  updated_at timestamp(0)
+  title "character varying(255)" [not null]
+  items_not_found text
+  is_project_filter boolean
+  project_id integer [not null]
+  created_by_id integer
+  updated_by_id integer
+
+  Indexes {
+    created_by_id [type: btree, name: "filters_created_by_id_index"]
+    project_id [type: btree, name: "filters_project_id_index"]
+    updated_by_id [type: btree, name: "filters_updated_by_id_index"]
+  }
+}
+
+Table project_users {
+  id bigint [pk, not null]
+  created_at timestamp(0)
+  updated_at timestamp(0)
+  project_id integer [not null]
+  user_id integer [not null]
+  role "character varying(255)" [not null]
+  created_by_id integer
+  updated_by_id integer
+
+  Indexes {
+    (project_id, user_id) [unique, name: "project_users_project_id_user_id_unique"]
+    created_by_id [type: btree, name: "project_users_created_by_id_index"]
+    updated_by_id [type: btree, name: "project_users_updated_by_id_index"]
+  }
+}
+
 Table users {
   id bigint [pk, not null]
   name "character varying(255)" [not null]
@@ -219,78 +196,72 @@ Table users {
   updated_at timestamp(0)
 }
 
+Table agents {
+  id bigint [pk, not null]
+  created_at timestamp(0)
+  updated_at timestamp(0)
+  name "character varying(255)" [not null]
+  first_name "character varying(64)"
+  surname "character varying(64)"
+  email "character varying(255)" [not null]
+  orcid "character varying(255)"
+  user_id integer
+  created_by_id integer
+  updated_by_id integer
+
+  Indexes {
+    created_by_id [type: btree, name: "agents_created_by_id_index"]
+    name [type: btree, name: "agents_name_index"]
+    surname [type: btree, name: "agents_surname_index"]
+    updated_by_id [type: btree, name: "agents_updated_by_id_index"]
+    user_id [type: btree, name: "agents_user_id_index"]
+  }
+}
+
 Ref agents_created_by_id_foreign:agents.id < agents.created_by_id
-
 Ref agents_updated_by_id_foreign:agents.id < agents.updated_by_id
-
 Ref agents_user_id_foreign:users.id < agents.user_id
 
 Ref change_notes_created_by_id_foreign:agents.id < change_notes.created_by_id
-
 Ref change_notes_key_id_foreign:keys.id < change_notes.key_id
-
 Ref change_notes_updated_by_id_foreign:agents.id < change_notes.updated_by_id
 
 Ref filter_item_filter_id_foreign:filters.id < filter_item.filter_id
-
 Ref filter_item_item_id_foreign:items.id < filter_item.item_id
 
 Ref filters_created_by_id_foreign:agents.id < filters.created_by_id
-
 Ref filters_project_id_foreign:projects.id < filters.project_id
-
 Ref filters_updated_by_id_foreign:agents.id < filters.updated_by_id
 
 Ref items_created_by_id_foreign:agents.id < items.created_by_id
-
 Ref items_project_id_foreign:projects.id < items.project_id
-
 Ref items_updated_by_id_foreign:agents.id < items.updated_by_id
 
 Ref keys_created_by_id_foreign:agents.id < keys.created_by_id
-
 Ref keys_first_step_id_foreign:leads.id < keys.first_step_id
-
 Ref keys_project_id_foreign:projects.id < keys.project_id
-
 Ref keys_source_id_foreign:sources.id < keys.source_id
-
 Ref keys_subkey_of_id_foreign:keys.id < keys.subkey_of_id
-
 Ref keys_taxonomic_scope_id_foreign:items.id < keys.taxonomic_scope_id
-
 Ref keys_updated_by_id_foreign:agents.id < keys.updated_by_id
 
 Ref leads_created_by_id_foreign:agents.id < leads.created_by_id
-
 Ref leads_item_id_foreign:items.id < leads.item_id
-
 Ref leads_key_id_foreign:keys.id < leads.key_id
-
 Ref leads_parent_id_foreign:leads.id < leads.parent_id
-
 Ref leads_reticulation_id_foreign:leads.id < leads.reticulation_id
-
 Ref leads_subkey_id_foreign:keys.id < leads.subkey_id
-
 Ref leads_updated_by_id_foreign:agents.id < leads.updated_by_id
 
 Ref project_users_created_by_id_foreign:agents.id < project_users.created_by_id
-
 Ref project_users_project_id_foreign:projects.id < project_users.project_id
-
 Ref project_users_updated_by_id_foreign:agents.id < project_users.updated_by_id
-
 Ref project_users_user_id_foreign:users.id < project_users.user_id
 
 Ref projects_created_by_id_foreign:agents.id < projects.created_by_id
-
 Ref projects_taxonomic_scope_id_foreign:items.id < projects.taxonomic_scope_id
-
 Ref projects_updated_by_id_foreign:agents.id < projects.updated_by_id
 
 Ref sources_created_by_id_foreign:agents.id < sources.created_by_id
-
 Ref sources_project_id_foreign:projects.id < sources.project_id
-
 Ref sources_updated_by_id_foreign:agents.id < sources.updated_by_id
