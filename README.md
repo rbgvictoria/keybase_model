@@ -58,7 +58,7 @@ branch as well as a leaf):
     key with a single lead for the item. The second is to add this lead to the
     key the item keys out in. KeyBase supports both these solutions. For the
     latter solution KeyBase allows the construction `<item>:<subordinate item>`,
-    e.g. 'Ginkgoaceae:Ginkgo biloba' (which skips two keys), in the 'to'column
+    e.g. 'Ginkgoaceae: Ginkgo biloba' (which skips two keys), in the 'to' column
     of the input file.
 
 2.  **References to items in other keys:** When KeyBase allowed people to add
@@ -75,7 +75,10 @@ branch as well as a leaf):
     which is something you sometimes see in printed keys, e.g. '...**2 (sect.
     Camptocheate)**...**5 (sect. Thamniella)**', but I am not sure whether
     someone has tried that in KeyBase or what KeyBase would do with it if
-    someone tried. The better practice here is probably to add the item name to the `lead_text`, especially since there is generally no link on these items and there will also be no keys to the members of these items, so there is no reason to have the item in KeyBase.
+    someone tried. The better practice here is to add the item name to the
+    `lead_text`, especially since there is generally no link on these items and
+    there will also be no keys to the members of these items, so there is no
+    reason to have the item in KeyBase.
 
 
 ## Extra key metadata
