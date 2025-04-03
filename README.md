@@ -151,7 +151,7 @@ The global filters are in the data model, where we just call them **filters**.
 Filters are created by uploading a list of item names. We just have people enter
 them in a text area, separated by line breaks. Nothing more fancy is needed.
 KeyBase tries to match the names to items in KeyBase and then stores these items
-(or their ideas). Names that cannot be matched to items in KeyBase are listed in
+(or their IDs). Names that cannot be matched to items in KeyBase are listed in
 the `items_not_found` field (which is just a string). This way, when the item is
 added to a key the filter can be updated and one does not have to upload a new
 list of names.
