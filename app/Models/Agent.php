@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use DateTime;
+use App\Traits\Blamable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -26,6 +27,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Agent extends Model
 {
+    use Blamable;
+
     /**
      * User account the Agent belongs to
      * @return BelongsTo<User, Agent>
@@ -33,23 +36,5 @@ class Agent extends Model
     public function user(): BelongsTo
     {
         return $this->belongsto(User::class);
-    }
-
-    /**
-     * Agent who created the record
-     * @return BelongsTo<Agent, Agent>
-     */
-    public function createdBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
-    }
-
-    /**
-     * Agent who last updated the record
-     * @return BelongsTo<Agent, Agent>
-     */
-    public function updatedBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
     }
 }

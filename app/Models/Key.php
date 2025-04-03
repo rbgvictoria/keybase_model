@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Blamable;
 use DateTime;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -45,6 +46,8 @@ use Ramsey\Uuid\Uuid;
  */
 class Key extends Model
 {
+    use Blamable;
+
     /**
      * Item for which the key is a key to its members
      * 
@@ -167,25 +170,5 @@ class Key extends Model
     public function changeNotes(): HasMany
     {
         return $this->hasMany(ChangeNote::class);
-    }
-
-   /**
-     * Agent who created the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function createdBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
-    }
-
-    /**
-     * Agent who last updated the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function updatedBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
     }
 }

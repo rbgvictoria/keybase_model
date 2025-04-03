@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Blamable;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,6 +24,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class ChangeNote extends Model
 {
+    use Blamable;
+
     /**
      * Key the note belongs to
      * 
@@ -32,25 +35,4 @@ class ChangeNote extends Model
     {
         return $this->belongsTo(Key::class);
     }
-
-    /**
-     * Agent who created the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function createdBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
-    }
-
-    /**
-     * Agent who last updated the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function updatedBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
-    }
-
 }

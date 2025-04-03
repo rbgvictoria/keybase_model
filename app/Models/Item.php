@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Blamable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -30,6 +31,8 @@ use Ramsey\Uuid\Uuid;
  */
 class Item extends Model
 {
+    use Blamable;
+
     /**
      * Project the item belongs to
      * 
@@ -100,25 +103,5 @@ class Item extends Model
                         ->orWhere('f.is_project_filter', '=', false);
             })
             ->get();
-    }
-
-    /**
-     * Agent who created the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function createdBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
-    }
-
-    /**
-     * Agent who last updated the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function updatedBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
     }
 }

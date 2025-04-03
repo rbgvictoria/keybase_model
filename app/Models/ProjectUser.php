@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Blamable;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -24,6 +25,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class ProjectUser extends Model
 {
+    use Blamable;
+    
     /**
      * Project the user has a role in
      * 

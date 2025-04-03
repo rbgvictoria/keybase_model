@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Blamable;
 use DateTime;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -31,6 +32,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Project extends Model
 {
+    use Blamable;
+
     /**
      * Highest taxon of which all Items that are keyed out by all Keys in the
      * Project belong are members
@@ -40,16 +43,6 @@ class Project extends Model
     public function taxonomicScope(): BelongsTo
     {
         return $this->belongsTo(Item::class);
-    }
-
-    /**
-     * Agent who created the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function createdBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
     }
 
     /**
@@ -111,15 +104,5 @@ class Project extends Model
             ->whereNull('is_project_filter')
             ->orWhere('is_project_filter', '=', false)
             ->get();
-    }
-
-    /**
-     * Agent who last updated the record
-     * 
-     * @return BelongsTo<Agent, Project>
-     */
-    public function updatedBy(): BelongsTo
-    {
-        return $this->belongsTo(Agent::class);
     }
 }
