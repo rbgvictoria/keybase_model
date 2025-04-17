@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('project_icon')->nullable();
-            $table->unsignedBigInteger('taxonomic_scope_id');
+            $table->unsignedBigInteger('taxonomic_scope_id')->nullable();
             $table->unsignedBigInteger('created_by_id')->nullable();
             $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->index('title');
