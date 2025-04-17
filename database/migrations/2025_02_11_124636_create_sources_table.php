@@ -29,9 +29,9 @@ return new class extends Migration
             $table->string('place_of_publication')->nullable();
             $table->string('pages', 32)->nullable();
             $table->string('url')->nullable();
-            $table->integer('project_id');
-            $table->integer('created_by_id')->nullable();
-            $table->integer('updated_by_id')->nullable();
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('created_by_id')->nullable();
+            $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->index('title');
             $table->index('authors');
             $table->index('year');

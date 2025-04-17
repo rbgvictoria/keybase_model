@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('surname', 64)->nullable();
             $table->string('email');
             $table->string('orcid')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->integer('created_by_id')->nullable();
-            $table->integer('updated_by_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('created_by_id')->nullable();
+            $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->index('name');
             $table->index('surname');
             $table->index('user_id');

@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestampsTz();
             $table->text('remarks');
-            $table->integer('key_id');
-            $table->integer('version');
-            $table->integer('created_by_id');
-            $table->integer('updated_by_id')->nullable();
+            $table->unsignedBigInteger('key_id');
+            $table->unsignedBigInteger('version');
+            $table->unsignedBigInteger('created_by_id');
+            $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->unique(['key_id', 'version']);
             $table->index('created_by_id');
             $table->index('updated_by_id');

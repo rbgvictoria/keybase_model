@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('title');
             $table->longText('items_not_found')->nullable();
             $table->boolean('is_project_filter')->nullable();
-            $table->integer('project_id');
-            $table->integer('created_by_id')->nullable();
-            $table->integer('updated_by_id')->nullable();
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('created_by_id')->nullable();
+            $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->index('project_id');
             $table->index('created_by_id');
             $table->index('updated_by_id');
@@ -29,8 +29,8 @@ return new class extends Migration
         });
 
         Schema::create('filter_item', function(Blueprint $table) {
-            $table->integer('filter_id');
-            $table->integer('item_id');
+            $table->unsignedBigInteger('filter_id');
+            $table->unsignedBigInteger('item_id');
             $table->unique(['filter_id', 'item_id']);
             $table->foreign('filter_id')->references('id')->on('filters');
             $table->foreign('item_id')->references('id')->on('items');

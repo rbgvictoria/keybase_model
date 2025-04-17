@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('project_users', function (Blueprint $table) {
             $table->id();
             $table->timestampsTz();
-            $table->integer('project_id');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('user_id');
             $table->enum('role', ['manager', 'contributor']);
-            $table->integer('created_by_id')->nullable();
-            $table->integer('updated_by_id')->nullable();
+            $table->unsignedBigInteger('created_by_id')->nullable();
+            $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->unique(['project_id', 'user_id']);
             $table->index('created_by_id');
             $table->index('updated_by_id');
