@@ -12,7 +12,7 @@
 
 ![](./media/decision-tree-reticulation.drawio.svg)
 
-[Example CSV import](./examples/key-import-reticulation-example.txt)
+[Example CSV import](./examples/key-import-reticulation-example.csv)
 
 ![](./media/decision-tree-reticulation-resolved.drawio.svg)
 
@@ -21,21 +21,21 @@
 
 ![](./media/decision-tree-loop.drawio.svg)
 
-[Example CSV import](./examples/key-import-loop-example.txt)
+[Example CSV import](./examples/key-import-loop-example.csv)
 
 
 ### Orphans
 
 ![](./media/decision-tree-orphan.drawio.svg)
 
-[Example CSV import](./examples/key-import-orphan-example.txt)
+[Example CSV import](./examples/key-import-orphan-example.csv)
 
 
 ### Dead ends
 
 ![](./media/decision-tree-dead-end.drawio.svg)
 
-[Example CSV import](./examples/key-import-dead-end-example.txt)
+[Example CSV import](./examples/key-import-dead-end-example.csv)
 
 
 ## Processing key files
