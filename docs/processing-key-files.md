@@ -2,7 +2,7 @@
 
 ## Anatomy of a key
 
-![](./media/decision-tree.drawio.svg) 
+![](./media/decision-tree-no-errors.drawio.svg) 
 
 [Example CSV import](./examples/key-import-example.csv)
 
