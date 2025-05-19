@@ -4,7 +4,7 @@
 
 ![](./media/decision-tree.drawio.svg) 
 
-[Example CSV import](./examples/key-import-example.txt)
+[Example CSV import](./examples/key-import-example.csv)
 
 ## Errors in keys
 
