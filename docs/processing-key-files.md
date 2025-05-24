@@ -154,7 +154,7 @@ _Acaulon_ species. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
   ]
 ```
 
-### Polytomies [**Info**]
+### Polytomies [**Warning**]
 
 ![](./media/decision-tree-polytomy.drawio.svg)
 
@@ -171,12 +171,99 @@ _Acaulon_ species. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
     2 => 2,
     3 => 2,
     4 => 2,
-    5 => 3, <--
+    5 => 3,
   ]
 ```
 
 
-### Reticulations [**Info**]
+### Orphans [**Error**]
+
+![](./media/decision-tree-orphan.drawio.svg)
+
+<caption>
+
+**Figure ....** Graph of key with orphan couplet. [[Example CSV
+import](./examples/key-import-orphan-example.csv)]
+
+</caption>
+
+```bash
+> array_diff($from, $toNodes);
+= [
+    0 => 1,
+    5 => 6,
+  ]
+```
+
+### Dead ends [**Error**]
+
+![](./media/decision-tree-dead-end.drawio.svg)
+
+<caption>
+
+**Figure ...** Graph of key with dead end. [[Example CSV import](./examples/key-import-dead-end-example.csv)]
+
+</caption>
+
+```bash
+> array_diff($toNodes, $from);
+= [
+    5 => 7,
+  ]
+```
+
+### Loops [**Error**]
+
+![](./media/decision-tree-loop.drawio.svg)
+
+<caption>
+
+**Figure ...** Graph of key with loop. [[Example CSV
+import](./examples/key-import-loop-example.csv)]
+
+</caption>
+
+```php
+class ErrorCheckService extends Service {
+    private $fromNodes;
+    private $toNodes;
+    private $loops;
+
+    public function __construct($inKey)
+    {
+        $this->fromNodes = $inKey->map(fn ($lead) => $lead['from'])->toArray();
+        $this->toNodes = $inKey->map(fn ($lead) => $lead['to'])->toArray();
+    }
+
+    public function checkForLoops()
+    {
+        $this->loops = [];
+        $this->traverseKey([], $this->fromNodes[0]);
+        return $this->loops;
+    }
+    
+    private function traverseKey($path, $node) 
+    {
+        $path[] = $node;
+        
+        foreach (array_keys($this->fromNodes, $node) as $lead) {
+            $goTo = $this->toNodes[$lead];
+            if ($goTo) { // not an orphan 
+                if (in_array($goTo, $this->fromNodes)) { // goTo is a couplet (not an item)
+                    if (in_array($goTo, $path)) { // goTo is on path: append to loops array
+                        $this->loops[$lead] = $goTo;
+                    }
+                    else { // goTo is not on path: go to next couplet
+                        $this->traverseKey($path, $goTo);
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+### Reticulations [**Warning**]
 
 ![](./media/decision-tree-reticulation.drawio.svg)
 
@@ -213,55 +300,66 @@ _Acaulon_ species. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 </caption>
 
 
-### Loops [**Error**]
+### Subkeys [**Info**]
 
-![](./media/decision-tree-loop.drawio.svg)
-
-<caption>
-
-**Figure ...** Graph of key with loop. [[Example CSV
-import](./examples/key-import-loop-example.csv)]
-
-</caption>
-
-
-### Orphans [**Error**]
-
-![](./media/decision-tree-orphan.drawio.svg)
+![](./media/graph-subkeys.drawio.svg)
 
 <caption>
 
-**Figure ....** Graph of key with orphan couplet. [[Example CSV
-import](./examples/key-import-orphan-example.csv)]
+**Figure ...** Graphs of key with subkeys. **A.** decision tree; **B.** leads
+graph. 
 
 </caption>
 
 ```bash
-> array_diff($from, $toNodes);
+> $subkeys = collect($inkey)->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
 = [
-    0 => 1,
-    5 => 6,
+    "Group 1",
+    "Group 2",
+    "Group 3",
+  ]
+```
+
+```bash
+> $to[0] = collect($inkey)->map(fn ($lead) => $lead['to'])->toArray();
+= [
+    "Group 1",
+    2,
+    "Group 2",
+    3,
+    "Group 3",
+    "Cercis",
+  ]
+```
+
+```bash
+> $toItems[0] = array_diff(collect($to[0])->filter(fn ($item) => !is_numeric($item))->toArray(), $subkeys);
+= [
+    5 => "Cercis",
   ]
 ```
 
 
+### Shortcut [**Info**]
 
-### Dead ends [**Error**]
+![shortcut](./media/graph-shortcut.drawio.svg)
 
-![](./media/decision-tree-dead-end.drawio.svg)
 
 <caption>
 
-**Figure ...** Graph of key with dead end. [[Example CSV import](./examples/key-import-dead-end-example.csv)]
+**Figure ...** Graph for lead with a 'to' item provided as `Senegalia:Senegalia
+greggii`. **A.** shortcut as implemented in KeyBase; **B.** longcut with a
+single-lead `Key to the species of Senegalia`.
 
 </caption>
 
-```bash
-> array_diff($toNodes, $from);
-= [
-    5 => 7,
-  ]
-```
 
+![double shortcut](./media/graph-double-shortcut.drawio.svg)
+
+<caption>
+
+**Figure ...** Example of double shortcut (`Brachychiton:Brachychiton populneus:Brachychiton populneus subsp. populneus`) from **KeyBase (2025).** Flora of Victoria: Key to the genera of Sterculiaceae. &lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025]. Currently KeyBase does not hanle this situation well.
+
+</caption>
 
 ## Processing key files

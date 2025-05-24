@@ -3,25 +3,25 @@ from,text,to,subkey
 1,"Flower generally bilateral, less often +- radial; calyx, corolla generally conspicuous; petals overlapped in bud, free or 2 lowermost +- fused; stamens 10 (or 5, 6, 7, 9), generally +- included; leaf 1- or 2-pinnate (less often simple or palmately compound)",2,
 2,Flower +- radial to +- bilateral; sepals fused only at very base; leaf 1- or 2-pinnate; (Caesalpinioideae excluding <i>Cercis</i>),Group 2,
 2,"Flower bilateral; sepals free to +- entirely fused; leaf simple, 1-pinnate, or palmate",3,
-3,"Upper petal (banner) inside lateral ones (wings) in bud; stamens free; leaf simple, reniform or bi-lobed ; (Caesalpinioideae)",Cercis {Cercis occidentalis},
+3,"Upper petal (banner) inside lateral ones (wings) in bud; stamens free; leaf simple, reniform or bi-lobed ; (Caesalpinioideae)","Cercis: Cercis occidentalis",
 3,"Upper petal (banner) outside lateral ones (wings) in bud (only banner present in <i>Amorpha</i>, petal position not evident in some <i>Dalea</i>); stamens generally with all or 9 filaments fused (free in <i>Thermopsis</i>, <i>Pickeringia</i>, <i>Calia</i>); leaf 1-pinnate (leaflets often 3), some palmately compound (especially <i>Lupinus</i>) or simple; (Papilionoideae)",Group 3,
 1,Stamens 10; 1&deg; leaflets generally 2--4,Prosopis,Group 1
 1,"Stamens > 10; 1&deg; leaflets generally > 4, or leaf simple",2,Group 1
 2,"Filaments fused below, free above; leaf 2-pinnate",3,Group 1
 2,Filaments free; leaf 2-pinnate or simple,4,Group 1
 3,"Inflorescence axillary spike-like racemes or +- terminal panicle of head-like racemes; petiole with a gland; fruit not or slowly dehiscent, valves not recurving; ScV, CCo, SnFrB, SCoRO, SW",Albizia,Group 1
-3,"Inflorescence axillary heads; petiole without a gland; fruit dehiscent, valves recurving; DSon",Calliandra {Calliandra eriophylla},Group 1
+3,"Inflorescence axillary heads; petiole without a gland; fruit dehiscent, valves recurving; DSon","Calliandra: Calliandra eriophylla",Group 1
 4,Plant unarmed,Acacia,Group 1
 4,Plant armed with prickles or stipular spines,5,Group 1
-5,Plant armed with prickles,Senegalia {Senegalia greggii},Group 1
+5,Plant armed with prickles,"Senegalia: Senegalia greggii",Group 1
 5,Plant armed with stipular spines,6,Group 1
 6,Leaf simple,Acacia,Group 1
 6,Leaf 2-pinnate,Vachellia,Group 1
-1,Leaf simple; corolla pink-purple,Cercis {Cercis occidentalis},Group 2
+1,Leaf simple; corolla pink-purple,"Cercis: Cercis occidentalis",Group 2
 1,Leaf compound; corolla generally +- yellow,2,Group 2
 2,"Leaf 1-pinnate, plant unarmed or main leaf axis generally > 2 cm, a weak spine at tip; corolla generally yellow",Senna,Group 2
 2,"Leaf generally 2-pinnate (both 1- and 2-pinnate in some), plant armed, main leaf axis generally < 2 cm (except <i>Gleditsia</i>), a strong spine at tip, or (if leaf interpreted as 1-pinnate; see <i>Parkinsonia</i>), leaf subtended by a strong spine generally < 2 cm and main leaf axis not a spine at tip; corolla +- yellow to orange, less often +- red or with orange to +- red marks",3,Group 2
-3,"Flower +- 3--5 mm; sepals, petals +- alike in color, texture; plant tree, generally armed",Gleditsia {Gleditsia triacanthos},Group 2
+3,"Flower +- 3--5 mm; sepals, petals +- alike in color, texture; plant tree, generally armed","Gleditsia: Gleditsia triacanthos",Group 2
 3,"Flower > 5 mm; sepals, petals not alike in color, texture; plant perennial herb, shrub, small tree, armed or not",4,Group 2
 4,Plant unarmed,5,Group 2
 4,Plant armed,6,Group 2
@@ -37,19 +37,19 @@ from,text,to,subkey
 3,"Leaves all or mostly compound, generally persistent",6,Group 3
 4,Plant gland-dotted; corolla indigo blue to pink-purple; seed 1,Psorothamnus,Group 3
 4,Plant not gland-dotted; corolla yellow to +- red; seeds (1)2--several,5,Group 3
-5,"Corolla red-purple; fruit narrowed between seeds, glabrous",Alhagi {Alhagi maurorum},Group 3
-5,"Corolla yellow; fruit not narrowed between seeds, densely hairy",Ulex {Ulex europaeus},Group 3
+5,"Corolla red-purple; fruit narrowed between seeds, glabrous","Alhagi: Alhagi maurorum",Group 3
+5,"Corolla yellow; fruit not narrowed between seeds, densely hairy","Ulex: Ulex europaeus",Group 3
 6,Leaf simple or palmately compound; all filaments free,Pickeringia,Group 3
 6,Leaf pinnately compound; all or 9 filaments fused,7,Group 3
 7,Plant gland-dotted; fruit indehiscent; seed 1,Psorothamnus,Group 3
 7,Plant not gland-dotted; fruit dehiscent (sometimes slowly so); seeds generally several,8,Group 3
-8,"Leaf even-pinnate; corolla wings purple-pink suffused with white, banner, keel yellow-white to pink or purple; fruit not flat, generally narrowed between seeds",Olneya {Olneya tesota},Group 3
+8,"Leaf even-pinnate; corolla wings purple-pink suffused with white, banner, keel yellow-white to pink or purple; fruit not flat, generally narrowed between seeds","Olneya: Olneya tesota",Group 3
 8,"Leaf odd-pinnate; corolla white or pink; fruit flat, not narrowed between seeds",Robinia,Group 3
 9,Petal 1 (the banner) --- inflorescence spike-like; fruit indehiscent; seed 1,Amorpha,Group 3
 9,Petals 5,10,Group 3
 10,Filaments all fused; leaves simple or ternately or palmately compound,11,Group 3
 10,"Filaments all free or 9 fused, 1 (uppermost) free or 0; leaves generally odd-pinnately compound (or leaflet number, arrangement generally irregular, as sometimes in <i>Acmispon</i>)",14,Group 3
-11,"Leaves simple, < 2.5 cm; stems generally +- leafless",Spartium {Spartium junceum},Group 3
+11,"Leaves simple, < 2.5 cm; stems generally +- leafless","Spartium: Spartium junceum",Group 3
 11,"Leaves simple or generally compound, generally > 2.5 cm; stems leafy",12,Group 3
 12,"Leaf of 3--17 leaflets, palmately compound; corolla blue, purple, white, or yellow, banner glabrous to densely hairy, keel generally beaked",Lupinus,Group 3
 12,"Leaf of 1--3 leaflets, appearing simple or not; corolla yellow or white, banner generally glabrous, keel obtuse",13,Group 3
@@ -57,7 +57,7 @@ from,text,to,subkey
 13,Style +- abruptly bent at tip; upper lip of calyx 2-lobed,Genista,Group 3
 14,Inflorescence generally an umbel or flowers 1--2; corolla generally yellow,Acmispon,Group 3
 14,Inflorescence a raceme; corolla yellow or not,15,Group 3
-15,"Corolla yellow with dark marks; fruit papery, inflated",Colutea {Colutea arborescens},Group 3
+15,"Corolla yellow with dark marks; fruit papery, inflated","Colutea: Colutea arborescens",Group 3
 15,"Corolla white or pink to purple; fruit not papery, not inflated",16,Group 3
 16,Flower 6--10 mm; plant gland-dotted; fruit indehiscent; seed 1 (see also <i>Marina</i>),Psorothamnus,Group 3
 16,Flower 14--25 mm; plant not gland-dotted; fruit dehiscent or not; seeds several,17,Group 3
@@ -72,7 +72,7 @@ from,text,to,subkey
 21,Leaflets gland-dotted; fruit indehiscent or transversely dehiscent; seed 1,22,Group 3
 21,Leaflets not gland-dotted; fruit indehiscent or dehiscent through longitudinal sutures; seeds generally several,23,Group 3
 22,Leaves +- basal or clustered near stem tips; leaflets elliptic to oblanceolate or widely obovate; fruit included in calyx except for beak,Pediomelum,Group 3
-22,Leaves cauline; leaflets obovate to linear; fruit exserted from calyx,Ladeania {Ladeania lanceolata},Group 3
+22,Leaves cauline; leaflets obovate to linear; fruit exserted from calyx,"Ladeania: Ladeania lanceolata",Group 3
 23,"Filaments of all stamens fused; leaflets generally 5--9, entire",Lupinus,Group 3
 23,"Filaments of 9 stamens fused, the 10th (uppermost) free; leaflets 3--5, entire, toothed, or wavy",24,Group 3
 24,"Leaflets 3--9, lower 2 in stipular position or not, others +- palmately arranged, stipules gland-like, reduced to bumps, or inconspicuous, inflorescence an umbel or 1--3-flowered, corolla generally yellow (see also <i>Acmispon</i>)",Lotus,Group 3
@@ -83,7 +83,7 @@ from,text,to,subkey
 26,"Leaflets >= 3; main leaf axis ending as leaflet, tendril, or bristle",27,Group 3
 27,Leaflets 3; fruit generally indehiscent (generally dehiscent in <i>Phaseolus</i>),28,Group 3
 27,Leaflets > 3 on all or most leaves; fruit dehiscent or not,37,Group 3
-28,Keel petals spirally coiled; leaflet generally lobed --- trailing or twining vine,Phaseolus {Phaseolus filiformis},Group 3
+28,Keel petals spirally coiled; leaflet generally lobed --- trailing or twining vine,"Phaseolus: Phaseolus filiformis",Group 3
 28,"Keel petals not spirally coiled; leaflet entire, toothed, or wavy",29,Group 3
 29,"Leaflet toothed or wavy --- fruit ovate or reniform, generally 1-seeded, or +- coiled, several-seeded",30,Group 3
 29,"Leaflet not toothed, not wavy",33,Group 3
@@ -99,17 +99,17 @@ from,text,to,subkey
 34,Inflorescence a raceme; fruit exserted from calyx,Astragalus,Group 3
 35,Corolla cream to yellow; calyx conspicuously swollen in fruit,Rupertia,Group 3
 35,Corolla at least partly blue to purple; calyx swollen or not in fruit,36,Group 3
-36,"Calyx swollen in fruit; bracts at each node, especially lower, of inflorescence united into fan-shaped, 3--5 toothed blade",Bituminaria {Bituminaria bituminosa},Group 3
+36,"Calyx swollen in fruit; bracts at each node, especially lower, of inflorescence united into fan-shaped, 3--5 toothed blade","Bituminaria: Bituminaria bituminosa",Group 3
 36,Calyx not (or only +-) swollen in fruit; bracts at nodes of inflorescence not united,Hoita,Group 3
 37,"Leaf even-pinnate, main axis ending as a bristle or tendril or not",38,Group 3
 37,"Leaf odd-pinnate, main axis ending as a leaflet",41,Group 3
 38,"Leaflets +- 20--60; fruit 4--8 cm or 15--20 cm; plant annual, shrub, small tree",Sesbania,Group 3
 38,"Leaflets < 30; fruit generally < 8 cm; plant annual, perennial herb",39,Group 3
-39,"Stipules leaflet-like, often > leaflets; style longitudinally folded; leaflets 4--6, glabrous",Pisum {Pisum sativum},Group 3
+39,"Stipules leaflet-like, often > leaflets; style longitudinally folded; leaflets 4--6, glabrous","Pisum: Pisum sativum",Group 3
 39,"Stipules generally not leaflet-like but sometimes +- = leaflets; style not longitudinally folded; leaflets 4--many, hairy or glabrous",40,Group 3
 40,"Style +- flat, puberulent near +- middle for +- 1/3--1/2 length adaxially; leaflets +- rolled in bud",Lathyrus,Group 3
 40,"Style generally not +- flat, puberulent at tip, all around or especially abaxially; leaflets folded in bud",Vicia,Group 3
-41,"Corolla wings << keel; leaflets adaxially finely red-dotted; fruit 1-seeded, leathery, strongly net-ridged",Onobrychis {Onobrychis viciifolia},Group 3
+41,"Corolla wings << keel; leaflets adaxially finely red-dotted; fruit 1-seeded, leathery, strongly net-ridged","Onobrychis: Onobrychis viciifolia",Group 3
 41,"Corolla wings +- = keel; leaflets adaxially dark gland-dotted or not, not red-dotted; fruit not simultaneously 1-seeded, leathery, and strongly net-ridged",42,Group 3
 42,"Plant gland-dotted on stems, leaflets, or both; fruit indehiscent",43,Group 3
 42,Plant not obviously gland-dotted; fruit dehiscent or not,48,Group 3
@@ -133,7 +133,7 @@ from,text,to,subkey
 51,"Seeds several; leaflet tip without gland; inflorescence a spike or raceme, dense or not, generally > 1 cm",52,Group 3
 52,"Fruit indehiscent, breaking into 1-seeded segments; corolla 6--9 mm; leaflet generally < 6 mm",Ornithopus,Group 3
 52,"Fruit generally dehiscent (sometimes slowly so), not breaking into 1-seeded segments; corolla often > 9 mm; leaflet often > 6 mm",53,Group 3
-53,"Style tip or stigma finely hairy; stipules spiny, free",Peteria {Peteria thompsoniae},Group 3
+53,"Style tip or stigma finely hairy; stipules spiny, free","Peteria: Peteria thompsoniae",Group 3
 53,"Style tip and stigma glabrous; stipules not spiny, free or fused",54,Group 3
 54,"Keel tip rounded to acute (or short-beaked); fruit 1-chambered, if +- 2-chambered then septum from lower suture, rarely fusing with narrow flange from upper suture",Astragalus,Group 3
 54,"Keel tip beaked; fruit +- 2-chambered, septum from upper suture, partial to complete",Oxytropis,Group 3
