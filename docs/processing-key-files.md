@@ -6,8 +6,8 @@
 
 <caption>
 
-**Figure 1.** Bracketed key from **KeyBase (2025)**. Flora of Victoria: Key to
-_Acaulon_ species. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
+**Figure 1.** Bracketed key from **KeyBase (2025)**. _Flora of Victoria: Key to
+Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 24-05-2025].
 
 </caption>
@@ -358,7 +358,7 @@ single-lead `Key to the species of Senegalia`.
 
 <caption>
 
-**Figure ...** Example of double shortcut (`Brachychiton:Brachychiton populneus:Brachychiton populneus subsp. populneus`) from **KeyBase (2025).** Flora of Victoria: Key to the genera of Sterculiaceae. &lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025]. Currently KeyBase does not hanle this situation well.
+**Figure ...** Example of double shortcut (`Brachychiton:Brachychiton populneus:Brachychiton populneus subsp. populneus`) from **KeyBase (2025).** _Flora of Victoria: Key to the genera of Sterculiaceae_. &lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025]. Currently KeyBase does not handle this situation well.
 
 </caption>
 
