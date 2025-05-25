@@ -45,11 +45,14 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 <caption>
 
-**Figure ...** Graph of example key.
+**Figure 2** Graph of key in figure 1. In this graph the circles are couplets, arrows are leads and rectangles are the keyed out items. 
 
 </caption>
 
 ![](./media/graph-leads.drawio.svg)
+
+
+![couplets](./media/couplets.drawio.svg)
 
 ```bash
 > $from = collect($inkey)->map(fn ($lead) => $lead['from'])->toArray();
@@ -95,7 +98,7 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 ```
 
 ```bash
-> $toNodes = collect($to)->filter(fn ($item) => is_numeric($item))->toArray();
+> $toCouplets = collect($to)->filter(fn ($item) => is_numeric($item))->toArray();
 = [
     0 => 2,
     1 => 3,
@@ -105,7 +108,7 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 ```
 
 ```bash
-> array_count_values($toNodes);
+> array_count_values($toCouplets);
 = [
     2 => 1,
     3 => 1,
@@ -129,9 +132,7 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 
 
-## Deviations from ideal key structure
-
-
+## Pitfalls
 
 ### Singleton couplets [**Error**]
 
@@ -188,7 +189,7 @@ import](./examples/key-import-orphan-example.csv)]
 </caption>
 
 ```bash
-> array_diff($from, $toNodes);
+> array_diff($from, $toCouplets);
 = [
     0 => 1,
     5 => 6,
@@ -206,7 +207,7 @@ import](./examples/key-import-orphan-example.csv)]
 </caption>
 
 ```bash
-> array_diff($toNodes, $from);
+> array_diff($toCouplets, $from);
 = [
     5 => 7,
   ]
@@ -225,20 +226,20 @@ import](./examples/key-import-loop-example.csv)]
 
 ```php
 class ErrorCheckService extends Service {
-    private $fromNodes;
-    private $toNodes;
+    private $from;
+    private $to;
     private $loops;
 
     public function __construct($inKey)
     {
-        $this->fromNodes = $inKey->map(fn ($lead) => $lead['from'])->toArray();
-        $this->toNodes = $inKey->map(fn ($lead) => $lead['to'])->toArray();
+        $this->from = $inKey->map(fn ($lead) => $lead['from'])->toArray();
+        $this->to = $inKey->map(fn ($lead) => $lead['to'])->toArray();
     }
 
     public function checkForLoops()
     {
         $this->loops = [];
-        $this->traverseKey([], $this->fromNodes[0]);
+        $this->traverseKey([], $this->from[0]);
         return $this->loops;
     }
     
@@ -246,10 +247,10 @@ class ErrorCheckService extends Service {
     {
         $path[] = $node;
         
-        foreach (array_keys($this->fromNodes, $node) as $lead) {
-            $goTo = $this->toNodes[$lead];
+        foreach (array_keys($this->from, $node) as $lead) {
+            $goTo = $this->to[$lead];
             if ($goTo) { // not an orphan 
-                if (in_array($goTo, $this->fromNodes)) { // goTo is a couplet (not an item)
+                if (in_array($goTo, $this->from)) { // goTo is a couplet (not an item)
                     if (in_array($goTo, $path)) { // goTo is on path: append to loops array
                         $this->loops[$lead] = $goTo;
                     }
@@ -299,6 +300,26 @@ class ErrorCheckService extends Service {
 
 </caption>
 
+![](./media/couplets-reticulation-resolved.drawio.svg)
+
+
+![](./media/couplets-reticulation-new-graph.drawio.svg)
+
+This will find the reticulations in a key:
+
+```bash
+> $reticulations = collect(array_unique($toCouplets))->filter(fn ($value) => array_count_values($toCouplets)[$value] > 1)->toArray();
+= [
+    2,
+  ]
+```
+
+And this will tell you for each lead `$i` if it leads to a reticulation:
+
+```php
+array_count_values($toCouplets)[$lead[$i]['to']] > 1
+```
+
 
 ### Subkeys [**Info**]
 
@@ -310,6 +331,8 @@ class ErrorCheckService extends Service {
 graph. 
 
 </caption>
+
+![](./media/couplets-subkeys.drawio.svg)
 
 ```bash
 > $subkeys = collect($inkey)->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
