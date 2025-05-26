@@ -2,7 +2,7 @@
 
 ## Anatomy of an identification key
 
-![alt text](image.png)
+![bracketed key](./media/bracketed-key.png)
 
 <caption>
 
@@ -12,11 +12,55 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 </caption>
 
+![indented-key](./media/indented-key.png)
+
+<caption>
+
+**Figure 2.** Same key as in figure 1 displayed as an indented key.
+
+</caption>
 
 [[Example CSV import](./examples/key-import-example.csv)]
 
+
+![](./media/decision-tree-no-errors.drawio.svg) 
+
+<caption>
+
+**Figure 3** Graph of key in figure 1. In this graph the circles are couplets,
+arrows are leads and rectangles are the keyed out items. 
+
+</caption>
+
+![](./media/graph-leads.drawio.svg)
+
+<caption>
+
+**Figure 4.** Conversion of decision tree to graph of leads that is stored in
+KeyBase.
+
+</caption>
+
+
+![couplets](./media/bracketed-key.drawio.svg)
+
+<caption>
+
+**Figure 5.** Bracketed key in the KeyBase data model, showing couplets.
+
+</caption>
+
+
+![nested sets](./media/indented-key.drawio.svg)
+
+<caption>
+
+**Figure 6.** Indented key in the KeyBase data model, showing nested sets.
+
+</caption>
+
 ```php
-[
+$inKey = [
     [
       "from" => 1,
       "text" => "Plants to 1 mm tall; lamellae absent; leaf margins recurved",
@@ -41,21 +85,8 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
   ]
 ```
 
-![](./media/decision-tree-no-errors.drawio.svg) 
-
-<caption>
-
-**Figure 2** Graph of key in figure 1. In this graph the circles are couplets, arrows are leads and rectangles are the keyed out items. 
-
-</caption>
-
-![](./media/graph-leads.drawio.svg)
-
-
-![couplets](./media/couplets.drawio.svg)
-
 ```bash
-> $from = collect($inkey)->map(fn ($lead) => $lead['from'])->toArray();
+> $from = collect($inKey)->map(fn ($lead) => $lead['from'])->toArray();
 = [
     1,
     1,
@@ -71,18 +102,7 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 ```
 
 ```bash
-> array_count_values($from);
-= [
-    1 => 2,
-    2 => 2,
-    3 => 2,
-    4 => 2,
-    5 => 2,
-  ]
-```
-
-```bash
-> $to = collect($inkey)->map(fn ($lead) => $lead['to'])->toArray();
+> $to = collect($inKey)->map(fn ($lead) => $lead['to'])->toArray();
 = [
     2,
     3,
@@ -108,16 +128,6 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 ```
 
 ```bash
-> array_count_values($toCouplets);
-= [
-    2 => 1,
-    3 => 1,
-    4 => 1,
-    5 => 1,
-  ]
-```
-
-```bash
 > $toItems = collect($to)->filter(fn ($item) => !is_numeric($item))->toArray();
 = [
     2 => "Acaulon chrysacanthum",
@@ -129,30 +139,33 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
   ]
 ```
 
+## Pitfalls and things to look out for
 
-
-
-## Pitfalls
-
-### Singleton couplets [**Error**]
+### Singletons [**Error**]
 
 ![](./media/decision-tree-singleton.drawio.svg)
 
 <caption>
 
-**Figure ...** Graph of key with singleton couplet. [[Example CSV import](./examples/key-import-singleton-example.csv)]
+**Figure 7.** Graph of key with singleton couplet. [[Example CSV import](./examples/key-import-singleton-example.csv)]
 
 </caption>
 
+`CODE`
+
+To check for the presence of singletons in a key:
+
 ```bash
-> array_count_values($from);
+> $singletons = collect(array_unique($from))->filter(fn ($value) => array_count_values($from)[$value] == 1)->toArray();
 = [
-    1 => 2,
-    2 => 2,
-    3 => 2,
-    4 => 1,
-    5 => 2,
+    6 => 4,
   ]
+```
+
+To check whether a lead with index `$i` is a singleton:
+
+```php
+$isSingleton = array_count_values($from)[$inKey[$i]] == 1 ? true : false;
 ```
 
 ### Polytomies [**Warning**]
@@ -161,19 +174,23 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 <caption>
 
-**Figure ...** Graph of key with polytomy. [[Example CSV import](./media/decision-tree-polytomy.drawio.svg)]
+**Figure 8.** Graph of key with polytomy. [[Example CSV import](./media/decision-tree-polytomy.drawio.svg)]
 
 </caption>
 
+To check for the presence of polytomies in a key:
+
 ```bash
-> array_count_values($from);
+> $polytomies = collect(array_unique($from))->filter(fn ($value) => array_count_values($from)[$value] > 2)->toArray();
 = [
-    1 => 2,
-    2 => 2,
-    3 => 2,
-    4 => 2,
-    5 => 3,
+    10 => 6,
   ]
+```
+
+To check for a single lead with index `$i` whether it is part of a polytomy:
+
+```php
+$isInPolytomy = array_count_values($from)[$inKey[$i]['from']] > 2 ? true : false;
 ```
 
 
@@ -183,17 +200,24 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 <caption>
 
-**Figure ....** Graph of key with orphan couplet. [[Example CSV
+**Figure 9.** Graph of key with orphan couplet. [[Example CSV
 import](./examples/key-import-orphan-example.csv)]
 
 </caption>
 
+To check for the presence of orphans in a key:
+
 ```bash
-> array_diff($from, $toCouplets);
+> $orphans = array_slice(array_diff($from, $toCouplets), 1);
 = [
-    0 => 1,
-    5 => 6,
+    6,
   ]
+```
+
+The check whether a lead with index `$` is an orphan:
+
+```php
+$isOrphan = in_array($inKey[$i], $orphans) ? true : false;
 ```
 
 ### Dead ends [**Error**]
@@ -202,15 +226,23 @@ import](./examples/key-import-orphan-example.csv)]
 
 <caption>
 
-**Figure ...** Graph of key with dead end. [[Example CSV import](./examples/key-import-dead-end-example.csv)]
+**Figure 10.** Graph of key with dead end. [[Example CSV import](./examples/key-import-dead-end-example.csv)]
 
 </caption>
 
+To check if there are dead ends in a key:
+
 ```bash
-> array_diff($toCouplets, $from);
+> $deadEnds = array_diff($toCouplets, $from);
 = [
     5 => 7,
   ]
+```
+
+To check if a lead with index `$i` is a dead end:
+
+```php
+$isDeadEnd = in_array($inKey[$i]['to'], $deadEnds) ? true : false; 
 ```
 
 ### Loops [**Error**]
@@ -219,7 +251,7 @@ import](./examples/key-import-orphan-example.csv)]
 
 <caption>
 
-**Figure ...** Graph of key with loop. [[Example CSV
+**Figure 11.** Graph of key with loop. [[Example CSV
 import](./examples/key-import-loop-example.csv)]
 
 </caption>
@@ -262,6 +294,23 @@ class ErrorCheckService extends Service {
         }
     }
 }
+
+$service = new ErrorCheckService($inkey)
+```
+
+To check for loops in a key:
+
+```bash
+> $loops = $service->checkForLoops();
+= [
+   6,
+  ]
+```
+
+To check if a lead with index `$i` creates a loop:
+
+```php
+$isLoop = in_array($inKey[$i]['to'], $loops) ? true : false;
 ```
 
 ### Reticulations [**Warning**]
@@ -270,40 +319,25 @@ class ErrorCheckService extends Service {
 
 <caption>
 
-**Figure ...** Graph of key with reticulation. [[Example CSV import](./examples/key-import-reticulation-example.csv)]
+**Figure 12.** Graph of key with reticulation. [[Example CSV import](./examples/key-import-reticulation-example.csv)]
 
 </caption>
 
-```bash
-> array_count_values($toNodes);
-= [
-    2 => 2,
-    3 => 1,
-    4 => 1,
-    5 => 1,
-  ]
-```
-
-![](./media/graph-reticulation-resolved.drawio.svg)
+![](./media/indented-key-reticulation-resolved.drawio.svg)
 
 <caption>
 
-**Figure ...** Graph of key with reticulation resolved by repeating the subgraph.
+**Figure 13.** Graph of key with reticulation resolved by repeating the subgraph.
 
 </caption>
 
-![](./media/graph-reticulation-new-graph.drawio.svg)
+![](./media/indented-key-reticulation-new-graph.drawio.svg)
 
 <caption>
 
-**Figure ...** Graph of key with reticulation resolved by starting a new graph.
+**Figure 14.** Graph of key with reticulation resolved by starting a new graph.
 
 </caption>
-
-![](./media/couplets-reticulation-resolved.drawio.svg)
-
-
-![](./media/couplets-reticulation-new-graph.drawio.svg)
 
 This will find the reticulations in a key:
 
@@ -323,19 +357,23 @@ array_count_values($toCouplets)[$lead[$i]['to']] > 1
 
 ### Subkeys [**Info**]
 
-![](./media/graph-subkeys.drawio.svg)
+![](./media/indented-key-subkeys.drawio.svg)
 
 <caption>
 
-**Figure ...** Graphs of key with subkeys. **A.** decision tree; **B.** leads
-graph. 
+**Figure 15.** Key with subkeys.
 
 </caption>
 
-![](./media/couplets-subkeys.drawio.svg)
+To check if a key has subkeys:
 
 ```bash
-> $subkeys = collect($inkey)->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
+> $hasSubkeys = collect($inKey)->filter(fn ($lead) => isset($lead['subkey']))->count() ? true : false;
+= true
+```
+
+```bash
+> $subkeyLabels = collect($inkey)->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
 = [
     "Group 1",
     "Group 2",
@@ -343,8 +381,18 @@ graph.
   ]
 ```
 
+```php
+$subkeys = [];
+
+$subkeys['main'] = collect($inKey)->filter(fn ($lead) => !isset($lead['subkey']))->toArray();
+
+foreach ($subkeyLabels as $label) {
+    $subkeys[$label] = collect($inkey)->filter(fn ($lead) => isset($lead['subkey']) && $lead['subkey'] == $label)->toArray()
+}
+```
+
 ```bash
-> $to[0] = collect($inkey)->map(fn ($lead) => $lead['to'])->toArray();
+> $to = collect($subkeys['main'])->map(fn ($lead) => $lead['to'])->toArray();
 = [
     "Group 1",
     2,
@@ -365,24 +413,23 @@ graph.
 
 ### Shortcut [**Info**]
 
-![shortcut](./media/graph-shortcut.drawio.svg)
-
-
-<caption>
-
-**Figure ...** Graph for lead with a 'to' item provided as `Senegalia:Senegalia
-greggii`. **A.** shortcut as implemented in KeyBase; **B.** longcut with a
-single-lead `Key to the species of Senegalia`.
-
-</caption>
-
-
-![double shortcut](./media/graph-double-shortcut.drawio.svg)
+![shortcut](./media/couplets-shortcut.drawio.svg)
 
 <caption>
 
-**Figure ...** Example of double shortcut (`Brachychiton:Brachychiton populneus:Brachychiton populneus subsp. populneus`) from **KeyBase (2025).** _Flora of Victoria: Key to the genera of Sterculiaceae_. &lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025]. Currently KeyBase does not handle this situation well.
+**Figure 16.** Examples of shortcuts in keys. **A.** Single shortcut:
+`Senegalia:Senegalia greggii` in **KeyBase (2025)**, _Vascular plants of
+California: Jepson Herbarium, UC Berkeley: Fabaceae Group 1_.
+&lt;https://keybase.rbg.vic.gov.au/keys/show/10038&gt; [Seen: 26-05-2025];
+**B.** double shortcut: `Brachychiton:Brachychiton populneus:Brachychiton
+populneus subsp. populneus` in **KeyBase (2025).** _Flora of Victoria: Key to
+the genera of Sterculiaceae_.
+&lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025].
 
 </caption>
 
 ## Processing key files
+
+- Convert CSV file to multidimensional array; detect delimiters and headers
+- DEBUG
+- Upload key: [KeyUploadService](https://github.com/rbgvictoria/keybase-ws/blob/master/libraries/KeyUploadService.php)
