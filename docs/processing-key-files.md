@@ -38,13 +38,14 @@ numbers. Therefore, for larger keys the bracketed format is the better format
 
 </caption>
 
+The key in the figures above can be represented as the decision tree in **figure
+3**. The tree might not look like a decision tree, because the statements are
+not shown, but decision trees is what keys are. 
+
 ![](./media/decision-tree-no-errors.drawio.svg) 
 
 <caption>
 
-The key in the figures above can be represented as the decision tree in **figure
-3**. The tree might not look like a decision tree, because the statements are
-not shown, but decision trees is what keys are. 
 
 **Figure 3.** Graph of key in figures 1 and 2. In this graph the circles are couplets,
 arrows are leads and rectangles are the keyed out items (identification results). 
@@ -95,6 +96,10 @@ is stored in the database and might be better for illustrating what is going on.
 **Figure 6.** Indented key in the KeyBase data model, showing nested sets.
 
 </caption>
+
+The boxes outlined with a broken line in (**figure 6**) are nested sets. Nested sets can be stored in the database by storing the numbers in the top- and bottom-righthand of the boxes as `left` and `right`. KeyBase currently still stores the nested sets in the database, but for the last ten years, nested sets have been created by the plugin, so it is not necessary to store them in the database anymore. This makes KeyBase more flexible in what it can do with keys. Nested sets are used in the KeyBase player to get the remaining and discarded items and they are also make the filters work.
+
+[I see that I made an error with the nested sets in the figure (there are twice as many). I will fix that later.]
 
 The bracketed format lends itself very well to exchange as tabular data (**table
 1**), which is why CSV is the preferred format for importing and exporting keys
@@ -235,7 +240,7 @@ with the standard debug messages 'Error', 'Warning' and 'Info'.
 
 Errors break the key, so keys with errors will not be uploaded. Warnings do not
 break the tree but are not good practice and might not have been the intention
-of the user, so we let the user. If there are no debug messages to report, the
+of the user, so we let the user decide. If there are no debug messages to report, the
 key can just be uploaded without further feedback from the user decide.
 Currently the first screen only reports which delimiter was used. I think we can
 skip that as well.
@@ -289,7 +294,7 @@ To find polytomies in a key:
 ```bash
 > $polytomies = collect(array_unique($from))->filter(fn ($value) => array_count_values($from)[$value] > 2)->toArray();
 = [
-    10 => 6,
+    8 => 5,
   ]
 ```
 
