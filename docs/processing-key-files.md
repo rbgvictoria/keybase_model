@@ -14,14 +14,6 @@ result of the identification.
 
 ![bracketed key](./media/bracketed-key.png)
 
-Another often-used format is the indented key (**figure 2**). In an indented key the
-next couplet a lead leads to follow immediately below the lead. Because of this
-it is not necessary to show the number of the next couplet. In fact couplet
-numbers are not necessary at all, as the indentation takes care of that.
-However, larger keys become hard to follow without the numbers or even with the
-numbers. Therefore, for larger keys the bracketed format is the better format
-(but this is subject to personal opinion).
-
 <caption>
 
 **Figure 1.** Bracketed key from **KeyBase (2025)**. _Flora of Victoria: Key to
@@ -29,6 +21,14 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 24-05-2025].
 
 </caption>
+
+Another often-used format is the indented key (**figure 2**). In an indented key the
+next couplet a lead leads to follows immediately below the lead. Because of this
+it is not necessary to show the number of the next couplet. In fact couplet
+numbers are not necessary at all, as the indentation takes care of that.
+However, larger keys become hard to follow without the numbers or even with the
+numbers. Therefore, for larger keys the bracketed format is the better format
+(but this is subject to personal opinion).
 
 ![indented-key](./media/indented-key.png)
 
