@@ -2,7 +2,25 @@
 
 ## Anatomy of an identification key
 
+The pathway keys—or dichotomous keys—that are managed in KeyBase, and have been
+published in the literature for the last 200 years or so, come in two main
+forms, both of which can be reproduced by KeyBase.
+
+Most keys in the literature, at least the botanical literature, are bracketed
+keys (**figure 1**). In a bracketed key the key is divided in couplets, each couplet
+having two leads. Each lead starts with the number of the couplet, followed by a
+statement and then by either the number of the next couplet to go to or the
+result of the identification.
+
 ![bracketed key](./media/bracketed-key.png)
+
+Another often-used format is the indented key (**figure 2**). In an indented key the
+next couplet a lead leads to follow immediately below the lead. Because of this
+it is not necessary to show the number of the next couplet. In fact couplet
+numbers are not necessary at all, as the indentation takes care of that.
+However, larger keys become hard to follow without the numbers or even with the
+numbers. Therefore, for larger keys the bracketed format is the better format
+(but this is subject to personal opinion).
 
 <caption>
 
@@ -20,21 +38,62 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 </caption>
 
-[[Example CSV import](./examples/key-import-example.csv)]
+The bracketed format lends itself very well to exchange as tabular data (**table
+1**), which is why CSV is the preferred format for importing and exporting keys
+in KeyBase. From now on KeyBase will only support tabular data, which can be CSV
+or Excel. KeyBase used to support two XML formats, SDD and LPXK, but other
+applications that people stopped using when KeyBase came onto the
+scene are needed to produce data in these formats, so they are used very little.
+
+<caption>
+
+**Table 1** Key from figures 1 and 2 as tabular data<sup>1</sup>.
+
+</caption>
+
+from | statement | to
+-|-|-
+1 | Plants to 1 mm tall; lamellae absent; leaf margins recurved | 2
+1 | Plants c. 2 mm tall; leaves with 2 or 3 irregular longitudinal lamellae (often inconspicuous) on the adaxial surface of the costa; margins not recurved | 3
+2 | Costa excurrent in a reddish gold arista | Acaulon chrysacanthum
+2 | Costa excurrent in a long hyaline hairpoint | Acaulon leucochaete
+3 | Plants triquetrous when viewed from above; leaves strongly keeled | Acaulon triquetrum
+3 | Plants not triquetrous when viewed from above; leaves not keeled | 4
+4 | Spores echinate; capsules brown; leaf margin usually entire | Acaulon mediterraneum
+4 | Spores papillose; capsules orange or dark ferrugineous; leaf margin entire, crenulate or irregularly dentate | 5
+5 | Mature spores 30-50 µm diam., finely papillose; capsules usually orange; leaf margin usually entire | Acaulon integrifolium
+5 | Mature spores 50-65 µm diam., very coarsely granular; capsules ferrugineous to dark brown; leaf margin usually crenulate to irregularly dentate | Acaulon granulosum
+
+<sup>1</sup> [Data in this table as CSV](./examples/key-import-example.csv)
+
+
 
 
 ![](./media/decision-tree-no-errors.drawio.svg) 
 
 <caption>
 
-**Figure 3** Graph of key in figure 1. In this graph the circles are couplets,
+**Figure 3.** Graph of key in figure 1. In this graph the circles are couplets,
 arrows are leads and rectangles are the keyed out items. 
 
 </caption>
 
+A key is a graph, but the vertices and edges in this graph are not the nodes and
+relationships of graph databases. All the data is in the leads and the vertices
+are not so much nodes as branching points. So, in KeyBase we only store the
+leads as records and link them through the `parent` (`parent_id` in the database)
+property (figure 4B). Couplets, in KeyBase, are data constructs, i.e. sets
+of (almost always two) leads with the same parent.
+
+<br>
+
 ![](./media/graph-leads.drawio.svg)
 
 <caption>
+
+
+
+
 
 **Figure 4.** Conversion of decision tree to graph of leads that is stored in
 KeyBase.
@@ -58,6 +117,15 @@ KeyBase.
 **Figure 6.** Indented key in the KeyBase data model, showing nested sets.
 
 </caption>
+
+In its simplest (and most common) form, the CSV for a key will have three
+columns, `from`, `statement` and `to`. Note that currently the CSV files that
+can be imported into and exported from KeyBase do not have column headers. In
+the new version the exports will have column headers but a large part of the
+imported files will not, so a script that deals with the uploaded files will
+need to check whether there are column headers or not (just by checking if the
+first value in the first row is numeric or not) and, if there are not, add the
+three abovementioned column headers.
 
 ```php
 $inKey = [
@@ -139,7 +207,7 @@ $inKey = [
   ]
 ```
 
-## Pitfalls and things to look out for
+## Things to look out for
 
 ### Singletons [**Error**]
 
@@ -410,21 +478,112 @@ foreach ($subkeyLabels as $label) {
   ]
 ```
 
-
 ### Shortcut [**Info**]
+
+Often an item that keys out only has a single member (in the project), so there
+will not be a key for this item. However, this member itself can have multiple
+members, so can have a key to its members. In order to still be able to link
+this key to the present key, KeyBase has a data structure we call a 'shortcut'
+(from now on). A shortcut is a lead with an item. The parent of the shortcut is
+the lead with the keyed-out item (figure 16).
 
 ![shortcut](./media/couplets-shortcut.drawio.svg)
 
 <caption>
 
-**Figure 16.** Examples of shortcuts in keys. **A.** Single shortcut:
-`Senegalia:Senegalia greggii` in **KeyBase (2025)**, _Vascular plants of
+**Figure 16.** Couplet with shortcut
+`:Senegalia greggii` in **KeyBase (2025)**, _Vascular plants of
 California: Jepson Herbarium, UC Berkeley: Fabaceae Group 1_.
-&lt;https://keybase.rbg.vic.gov.au/keys/show/10038&gt; [Seen: 26-05-2025];
-**B.** double shortcut: `Brachychiton:Brachychiton populneus:Brachychiton
-populneus subsp. populneus` in **KeyBase (2025).** _Flora of Victoria: Key to
-the genera of Sterculiaceae_.
+&lt;https://keybase.rbg.vic.gov.au/keys/show/10038&gt; [Seen: 26-05-2025].
+
+</caption>
+
+In the key file shortcuts can be provided by appending a colon (':') and an item
+name, e.g. `:Senegalia greggii`, to an item name in the `to` column. (People
+will be tempted to put a space after the colon, so we should account for that
+when parsing a key).
+
+To check if there are any shortcuts in a provided key, you can run:
+
+```php
+$shortcuts = collect($items)->filter(fn ($value) => substr_count($value, ':'))->toArray();
+```
+
+And for a single lead:
+
+```php
+$hasShortcut = substr_count($lead['to'], ':') ? true : false;
+```
+
+### Chained shortcuts [**Error**]
+
+There are a few instances in KeyBase where people have tried to chain shortcuts
+
+![double shortcut](./media/couplets-double-shortcut.drawio.svg)
+
+<caption>
+
+**Figure 17.** Couplet with chained shortcuts `:Brachychiton
+populneus:Brachychiton populneus subsp. populneus` in **KeyBase (2025).** _Flora
+of Victoria: Key to the genera of Sterculiaceae_.
 &lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025].
+
+</caption>
+
+While chained shortcuts do not break anything, KeyBase does not treat them as
+shortcuts but will  export and display them as extra leads (which is what they
+are), which might make people think it is doing something wrong. Also, shortcuts
+are meant to connect keys, not link extra items to keys (I did call them linked
+items before, which might have given people that idea).
+
+So, from now on, we will report chained shortcuts as errors.
+
+To find chained shortcuts in a provided key, you can run:
+
+```php
+$chainedShortcuts = collect($items)->filter(fn ($value) => substr_count($value, ':') > 1)->toArray();
+```
+
+And for a single lead:
+
+```php
+$hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
+```
+
+### Unfinished keys [**Warning**]
+
+Unfinished keys are keys where not every item keys out, so they have multiple items coming from the same lead. KeyBase currently does not support unfinished keys, but people have asked about it, and it is something that needs to be supported once KeyBase has a key editor, so that people, when creating a tree, can first add all the items to a key and incrementally distribute the leads into couplets (and leave it at any stage).
+
+Unfinished keys can be supported in the KeyBase data model as shown in figure 18.
+
+![unfinished key](./media/indented-key-unfinished.drawio.svg)
+
+<caption>
+
+**Figure 18.** Unfinished key in the KeyBase data model.
+
+</caption>
+
+A starting key, to which items have been added but (ostensibly) no leads could
+look like in figure 19. In this key all items are connected to leads, as is
+enforced by the data model, but all leads come from the root and lack
+statements. This requires a bit more thinking once we start implementing an
+editor as I cannot really see a way to start building the key from here.
+
+![starting tree](./media/indented-key-starting-tree.drawio.svg)
+
+<caption>
+
+**Figure 19.** Starting key where all leads come from the root. 
+
+</caption>
+
+
+![object relationships](./media/schema-relationships.drawio.svg)
+
+<caption>
+
+**Figure 20** All possible object relationships between Keys, Leads and Items. Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
 
