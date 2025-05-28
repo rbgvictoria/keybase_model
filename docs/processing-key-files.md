@@ -38,6 +38,64 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 </caption>
 
+![](./media/decision-tree-no-errors.drawio.svg) 
+
+<caption>
+
+The key in the figures above can be represented as the decision tree in **figure
+3**. The tree might not look like a decision tree, because the statements are
+not shown, but decision trees is what keys are. 
+
+**Figure 3.** Graph of key in figures 1 and 2. In this graph the circles are couplets,
+arrows are leads and rectangles are the keyed out items (identification results). 
+
+</caption>
+
+A key is a graph, but the vertices and edges in this graph are not the nodes and
+relationships of graph databases. All the data is in the leads and the vertices
+are not so much entities as branching points. So, in KeyBase, the leads are the
+entities and are stored as records. Leads (Lead records) are linked through the `parent`
+(`parent_id` in the database) property (figure 4B). Couplets, in KeyBase, are
+data constructs, i.e. sets of (almost always two) leads with the same parent.
+
+<br>
+
+![](./media/graph-leads.drawio.svg)
+
+<caption>
+
+**Figure 4.** Conversion of decision tree to graph of leads that is stored in
+KeyBase.
+
+</caption>
+
+If we split the graph into couplets (**figure 5**) we can see that a lead either
+has an item or is the parent of another couplet of leads. There are a few
+exceptions to this rule as will be discussed, but KeyBase has gotten by very
+well for 15 years without implementing these exceptions.
+
+
+![couplets](./media/bracketed-key.drawio.svg)
+
+<caption>
+
+**Figure 5.** Bracketed key in the KeyBase data model, showing couplets.
+
+</caption>
+
+While the bracketed key format lends itself better for exchange and
+dissemination, the indented format (**figure 6**) is closer to the way the key
+is stored in the database and might be better for illustrating what is going on.
+
+
+![nested sets](./media/indented-key.drawio.svg)
+
+<caption>
+
+**Figure 6.** Indented key in the KeyBase data model, showing nested sets.
+
+</caption>
+
 The bracketed format lends itself very well to exchange as tabular data (**table
 1**), which is why CSV is the preferred format for importing and exporting keys
 in KeyBase. From now on KeyBase will only support tabular data, which can be CSV
@@ -66,58 +124,6 @@ from | statement | to
 
 <sup>1</sup> [Data in this table as CSV](./examples/key-import-example.csv)
 
-
-
-
-![](./media/decision-tree-no-errors.drawio.svg) 
-
-<caption>
-
-**Figure 3.** Graph of key in figure 1. In this graph the circles are couplets,
-arrows are leads and rectangles are the keyed out items. 
-
-</caption>
-
-A key is a graph, but the vertices and edges in this graph are not the nodes and
-relationships of graph databases. All the data is in the leads and the vertices
-are not so much nodes as branching points. So, in KeyBase we only store the
-leads as records and link them through the `parent` (`parent_id` in the database)
-property (figure 4B). Couplets, in KeyBase, are data constructs, i.e. sets
-of (almost always two) leads with the same parent.
-
-<br>
-
-![](./media/graph-leads.drawio.svg)
-
-<caption>
-
-
-
-
-
-**Figure 4.** Conversion of decision tree to graph of leads that is stored in
-KeyBase.
-
-</caption>
-
-
-![couplets](./media/bracketed-key.drawio.svg)
-
-<caption>
-
-**Figure 5.** Bracketed key in the KeyBase data model, showing couplets.
-
-</caption>
-
-
-![nested sets](./media/indented-key.drawio.svg)
-
-<caption>
-
-**Figure 6.** Indented key in the KeyBase data model, showing nested sets.
-
-</caption>
-
 In its simplest (and most common) form, the CSV for a key will have three
 columns, `from`, `statement` and `to`. Note that currently the CSV files that
 can be imported into and exported from KeyBase do not have column headers. In
@@ -126,6 +132,10 @@ imported files will not, so a script that deals with the uploaded files will
 need to check whether there are column headers or not (just by checking if the
 first value in the first row is numeric or not) and, if there are not, add the
 three abovementioned column headers.
+
+When the CSV file has been processed you end up with a multidimensional
+associative array like below (I think KeyBase might ship the data between the
+frontend and backend as JSON, but I am not sure).
 
 ```php
 $inKey = [
@@ -152,6 +162,10 @@ $inKey = [
     ],
   ]
 ```
+
+Before the validation and uploading of the key, we create arrays with the values
+of the 'from' and 'to' columns (you do not have to do that, but it is how I did
+it).
 
 ```bash
 > $from = collect($inKey)->map(fn ($lead) => $lead['from'])->toArray();
@@ -185,6 +199,11 @@ $inKey = [
   ]
 ```
 
+The array for the 'to' column needs to be split into couplets and items. KeyBase
+uses the convention that couplet indexes are always numeric (in literature
+sometimes letters or roman numerals are used), so the numbers are couplets and
+the strings items.
+
 ```bash
 > $toCouplets = collect($to)->filter(fn ($item) => is_numeric($item))->toArray();
 = [
@@ -209,17 +228,32 @@ $inKey = [
 
 ## Things to look out for
 
+There are (quite) a few exceptions from the ideal key structure illustrated
+above that we need to look out for when validating keys and for the ones that
+are not errors also when uploading the keys. They are reported back to the user
+with the standard debug messages 'Error', 'Warning' and 'Info'. 
+
+Errors break the key, so keys with errors will not be uploaded. Warnings do not
+break the tree but are not good practice and might not have been the intention
+of the user, so we let the user. If there are no debug messages to report, the
+key can just be uploaded without further feedback from the user decide.
+Currently the first screen only reports which delimiter was used. I think we can
+skip that as well.
+
 ### Singletons [**Error**]
 
 ![](./media/decision-tree-singleton.drawio.svg)
 
 <caption>
 
-**Figure 7.** Graph of key with singleton couplet. [[Example CSV import](./examples/key-import-singleton-example.csv)]
+**Figure 7.** Graph of key with singleton couplet. [[Example CSV
+import](./examples/key-import-singleton-example.csv)]
 
 </caption>
 
-`CODE`
+Couplets with a single lead serve no purpose in the key and are errors. They
+might also interfere with the rendering of the key later on, as they are not
+expected. 
 
 To check for the presence of singletons in a key:
 
@@ -246,7 +280,11 @@ $isSingleton = array_count_values($from)[$inKey[$i]] == 1 ? true : false;
 
 </caption>
 
-To check for the presence of polytomies in a key:
+Polytomies, i.e. couplets with more than two leads, are harmless, but they are
+not considered good practice and they may have gone into or left in the key by
+accident, so we issue a warning.
+
+To find polytomies in a key:
 
 ```bash
 > $polytomies = collect(array_unique($from))->filter(fn ($value) => array_count_values($from)[$value] > 2)->toArray();
@@ -273,7 +311,10 @@ import](./examples/key-import-orphan-example.csv)]
 
 </caption>
 
-To check for the presence of orphans in a key:
+Orphans are couplets, except the first couplets, that are not in the 'to'
+column, so people using the key cannot get to them.
+
+To find orphans in a key:
 
 ```bash
 > $orphans = array_slice(array_diff($from, $toCouplets), 1);
@@ -294,11 +335,15 @@ $isOrphan = in_array($inKey[$i], $orphans) ? true : false;
 
 <caption>
 
-**Figure 10.** Graph of key with dead end. [[Example CSV import](./examples/key-import-dead-end-example.csv)]
+**Figure 10.** Graph of key with dead end. [[Example CSV
+import](./examples/key-import-dead-end-example.csv)]
 
 </caption>
 
-To check if there are dead ends in a key:
+Dead ends are the opposite of orphans. They are couplet numbers in the 'to'
+column without couplets. They are mostly the result of typos (as are orphans).
+
+To find dead ends in a key:
 
 ```bash
 > $deadEnds = array_diff($toCouplets, $from);
@@ -323,6 +368,11 @@ $isDeadEnd = in_array($inKey[$i]['to'], $deadEnds) ? true : false;
 import](./examples/key-import-loop-example.csv)]
 
 </caption>
+
+Loops are created when a lead points back to a couplet that is on the path
+already taken. Loops are the biggest problem when uploading a key, as new leads
+are created until the system has run out of memory, and they are also the
+hardest to find, as one has to traverse the key to find them.
 
 ```php
 class ErrorCheckService extends Service {
@@ -391,6 +441,14 @@ $isLoop = in_array($inKey[$i]['to'], $loops) ? true : false;
 
 </caption>
 
+Reticulations are created when multiple leads lead to the same couplet.
+Reticulations do no harm but, if ignored, lead to a different key than the user
+expects, so we need to catch them and deal with them properly.
+
+There are two ways of dealing with reticulations. One is repeating the subgraph
+as many times as needed to repair the tree structure (**figure 13**). This is what KeyBase is
+doing now and is the same as not dealing with reticulations. 
+
 ![](./media/indented-key-reticulation-resolved.drawio.svg)
 
 <caption>
@@ -398,6 +456,13 @@ $isLoop = in_array($inKey[$i]['to'], $loops) ? true : false;
 **Figure 13.** Graph of key with reticulation resolved by repeating the subgraph.
 
 </caption>
+
+Possibly a better way of dealing with reticulations is starting a new graph
+(**figure 14**). This involves creating a new root lead that the leads leading
+to the couplet link to with the `reticulation` (`reticulation_id` in the
+database) property. So this is one of the exceptions to the rule that leads
+either have an item or are the parent of another set of leads. Weare going to
+try this out in the new version of KeyBase.
 
 ![](./media/indented-key-reticulation-new-graph.drawio.svg)
 
@@ -407,7 +472,11 @@ $isLoop = in_array($inKey[$i]['to'], $loops) ? true : false;
 
 </caption>
 
-This will find the reticulations in a key:
+Reticulations when dealt with this way will cause problems later on, as keys
+with reticulations cannot be displayed as indented keys and for that eason will
+also not be able to be edited if and when KeyBase gets a key editor. 
+
+This will find reticulations in a key:
 
 ```bash
 > $reticulations = collect(array_unique($toCouplets))->filter(fn ($value) => array_count_values($toCouplets)[$value] > 1)->toArray();
@@ -432,6 +501,17 @@ array_count_values($toCouplets)[$lead[$i]['to']] > 1
 **Figure 15.** Key with subkeys.
 
 </caption>
+
+Large keys, of which we have quite a few in KeyBase, are often split into
+smaller subkeys (**figure 15**). Currently KeyBase does not deal with subkeys,
+but merging subkeys into one big key is the largest (and perhaps the only)
+source of reticulations, so it is a high priority for me to fix this in the new
+version. Reticulations are better dealt with as subkeys.
+
+CSV files for keys with subkeys need a fourth 'subkey' column. Therefore they
+need to have a headerrow, otherwise KeyBase will ignore this column.
+
+[[Example CSV of key with subkeys](./examples/keybase-import-key-with-subkeys-example.csv)]
 
 To check if a key has subkeys:
 
@@ -485,7 +565,7 @@ will not be a key for this item. However, this member itself can have multiple
 members, so can have a key to its members. In order to still be able to link
 this key to the present key, KeyBase has a data structure we call a 'shortcut'
 (from now on). A shortcut is a lead with an item. The parent of the shortcut is
-the lead with the keyed-out item (figure 16).
+the lead with the keyed-out item (**figure 16**).
 
 ![shortcut](./media/couplets-shortcut.drawio.svg)
 
@@ -589,6 +669,22 @@ editor as I cannot really see a way to start building the key from here.
 
 ## Processing key files
 
-- Convert CSV file to multidimensional array; detect delimiters and headers
-- DEBUG
-- Upload key: [KeyUploadService](https://github.com/rbgvictoria/keybase-ws/blob/master/libraries/KeyUploadService.php)
+Processing of uploaded key files takes three steps:
+
+- **Processing the uploaded CSV file**
+
+  This involves detecting the delimiter and the header. I found a nice method for detecting CSV delimiters on Stack Overflow, which I have turned into a [class](../app/Actions/GetCsvDelimiter.php). Take it or leave it. 
+
+- **Validating the key**
+
+  This involves doing all the tests discussed above. The script that does it now
+  can be found at
+  [ErrorCheckService](https://github.com/rbgvictoria/keybase/blob/master/libraries/ErrorCheckService.php).
+  I think it would be nice to have classes for each of the types of
+  errors/features, but I will leave that to you.
+
+- **Uploading the key**
+
+  I still kind of like how it is done now:
+  [KeyUploadService](https://github.com/rbgvictoria/keybase-ws/blob/master/libraries/KeyUploadService.php),
+  so I will have a look at modernising this script.
