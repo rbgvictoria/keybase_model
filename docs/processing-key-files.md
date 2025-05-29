@@ -97,9 +97,16 @@ is stored in the database and might be better for illustrating what is going on.
 
 </caption>
 
-The boxes outlined with a broken line in (**figure 6**) are nested sets. Nested sets can be stored in the database by storing the numbers in the top- and bottom-righthand of the boxes as `left` and `right`. KeyBase currently still stores the nested sets in the database, but for the last ten years, nested sets have been created by the plugin, so it is not necessary to store them in the database anymore. This makes KeyBase more flexible in what it can do with keys. Nested sets are used in the KeyBase player to get the remaining and discarded items and they are also make the filters work.
-
-[I see that I made an error with the nested sets in the figure (there are twice as many). I will fix that later.]
+The boxes outlined with a broken line in (**figure 6**) are nested sets. Nested
+sets can be stored in the database by storing the numbers in the top- and
+bottom-righthand of the boxes as `left` and `right`. KeyBase currently still
+stores the nested sets in the database, but for the last ten years, nested sets
+have been created by the plugin, so it is not necessary to store them in the
+database anymore. This makes KeyBase more flexible in what it can do with keys.
+Nested sets are used in the KeyBase player to get the remaining and discarded
+items. So, for couplet **3** in figure 6 remaining items are the items on the
+leads of which the value of `left` is between 8 and 20 and the discarded items
+where it is not. Nested sets also make the filers work.
 
 The bracketed format lends itself very well to exchange as tabular data (**table
 1**), which is why CSV is the preferred format for importing and exporting keys
@@ -466,7 +473,7 @@ Possibly a better way of dealing with reticulations is starting a new graph
 (**figure 14**). This involves creating a new root lead that the leads leading
 to the couplet link to with the `reticulation` (`reticulation_id` in the
 database) property. So this is one of the exceptions to the rule that leads
-either have an item or are the parent of another set of leads. Weare going to
+either have an item or are the parent of another set of leads. We are going to
 try this out in the new version of KeyBase.
 
 ![](./media/indented-key-reticulation-new-graph.drawio.svg)
