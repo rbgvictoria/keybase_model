@@ -7,7 +7,8 @@ Keys are the core of KeyBase. To make keys work, we need three things (tables), 
 ![keys, leads and items](public/media/keys-leads-items.svg)
 
 A key is a graph of leads, so the **leads** table contains an adjacency list
-made up by the `id` and `parent_id` fields. The lead itself is in the `lead_text` field.
+made up by the `id` and `parent_id` fields. The lead itself is in the
+`lead_text` field.
 
 In most cases the graph will be a tree (a graph with no cycles). KeyBase
 currently enforces that. In KeyBase, the branches of the tree are **leads** and
@@ -17,7 +18,8 @@ through the `taxonomic_scope_id` and `first_step_id` fields in the **keys**
 table. The `taxonomic_scope_id` field links to the **items** table and the
 `first_step_id` field to the **leads** table (so that is really the root).
 
-There are two types of situations where the tree structure breaks down, or where there are other types of leaves:
+There are two types of situations where the tree structure breaks down, or where
+there are other types of leaves:
 
 1.  **Subkeys:** Large keys are often broken down into smaller subkeys, e.g.
     https://keybase.rbg.vic.gov.au/keys/show/3854. In the KeyBase data model we

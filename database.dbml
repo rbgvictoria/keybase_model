@@ -124,9 +124,8 @@ Table "keys" {
   "author" varchar(255) [default: NULL]
   "description" text [default: NULL]
   "notes" text [default: NULL]
-  "modified_from_source" tinyint(1) [default: NULL]
-  "first_step_id" bigint(20) [not null]
-  "taxonomic_scope_id" bigint(20) [not null]
+  "root_id" bigint(20)
+  "item_id" bigint(20)
   "project_id" bigint(20) [not null]
   "subkey_of_id" bigint(20) [default: NULL]
   "source_id" bigint(20) [default: NULL]
@@ -138,20 +137,20 @@ Table "keys" {
     title [name: "keys_title_index"]
     project_id [name: "keys_project_id_index"]
     subkey_of_id [name: "keys_subkey_of_id_index"]
-    taxonomic_scope_id [name: "keys_taxonomic_scope_id_index"]
+    item_id [name: "keys_item_id_index"]
     created_by_id [name: "keys_created_by_id_index"]
     updated_by_id [name: "keys_updated_by_id_index"]
     source_id [name: "keys_source_id_foreign"]
-    first_step_id [name: "keys_first_step_id_foreign"]
+    root_id [name: "keys_root_id_foreign"]
   }
 }
 
 Ref "keys_created_by_id_foreign":"agents"."id" < "keys"."created_by_id"
-Ref "keys_first_step_id_foreign":"leads"."id" < "keys"."first_step_id"
+Ref "keys_root_id_foreign":"leads"."id" < "keys"."root_id"
 Ref "keys_project_id_foreign":"projects"."id" < "keys"."project_id"
 Ref "keys_source_id_foreign":"sources"."id" < "keys"."source_id"
 Ref "keys_subkey_of_id_foreign":"keys"."id" < "keys"."subkey_of_id"
-Ref "keys_taxonomic_scope_id_foreign":"items"."id" < "keys"."taxonomic_scope_id"
+Ref "keys_item_id_foreign":"items"."id" < "keys"."item_id"
 Ref "keys_updated_by_id_foreign":"agents"."id" < "keys"."updated_by_id"
 
 
@@ -160,7 +159,7 @@ Table "leads" {
   "created_at" timestamp [default: NULL]
   "updated_at" timestamp [default: NULL]
   "node_name" varchar(255) [default: NULL]
-  "lead_text" text [not null]
+  "statement" text [not null]
   "parent_id" bigint(20) [default: NULL]
   "item_id" bigint(20) [default: NULL]
   "reticulation_id" bigint(20) [default: NULL]
@@ -220,20 +219,20 @@ Table "projects" {
   "title" varchar(255) [not null]
   "description" text [default: NULL]
   "project_icon" varchar(255) [default: NULL]
-  "taxonomic_scope_id" bigint(20) [not null]
+  "item_id" bigint(20) [default: NULL]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
 
   Indexes {
     title [name: "projects_title_index"]
-    taxonomic_scope_id [name: "projects_taxonomic_scope_id_index"]
+    item_id [name: "projects_item_id_index"]
     created_by_id [name: "projects_created_by_id_index"]
     updated_by_id [name: "projects_updated_by_id_index"]
   }
 }
 
 Ref "projects_created_by_id_foreign":"agents"."id" < "projects"."created_by_id"
-Ref "projects_taxonomic_scope_id_foreign":"items"."id" < "projects"."taxonomic_scope_id"
+Ref "projects_item_id_foreign":"items"."id" < "projects"."item_id"
 Ref "projects_updated_by_id_foreign":"agents"."id" < "projects"."updated_by_id"
 
 
