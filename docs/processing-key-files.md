@@ -88,7 +88,6 @@ While the bracketed key format lends itself better for exchange and
 dissemination, the indented format (**figure 6**) is closer to the way the key
 is stored in the database and might be better for illustrating what is going on.
 
-
 ![nested sets](./media/indented-key.drawio.svg)
 
 <caption>
