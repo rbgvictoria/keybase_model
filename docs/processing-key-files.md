@@ -518,7 +518,8 @@ Large keys, of which we have quite a few in KeyBase, are often split into
 smaller subkeys (**figure 15**). Currently KeyBase does not deal with subkeys,
 but merging subkeys into one big key is the largest (and perhaps the only)
 source of reticulations, so it is a high priority for me to fix this in the new
-version. Reticulations are better dealt with as subkeys.
+version. Subkeys are much more straightforward to deal with than and are much
+preferrable to reticulations and if KeyBase can deal with subkeys, we might not need special treatment for reticulations.
 
 CSV files for keys with subkeys need a fourth 'subkey' column. Therefore they
 need to have a headerrow, otherwise KeyBase will ignore this column.
