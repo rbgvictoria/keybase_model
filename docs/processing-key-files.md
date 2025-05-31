@@ -39,9 +39,8 @@ https://keybase.rbg.vic.gov.au/keys/show/12181?mode=indented
 
 </caption>
 
-The key in the figures above can be represented as the decision tree in **figure
-3**. The tree might not look like a decision tree, because the statements are
-not shown, but decision trees is what keys are. 
+Keys can be represented as the decision tree in **figure 3**. The graph in
+figure 3 has the structure of the key in figures 1 and 2, but the taxon names have been replaced by numbered item labels and the statements of the leads are not shown.
 
 ![](./media/decision-tree-no-errors.drawio.svg) 
 
@@ -241,9 +240,9 @@ the strings items.
 ## Things to look out for
 
 There are (quite) a few exceptions from the ideal key structure illustrated
-above that we need to look out for when validating keys and for the ones that
-are not errors also when uploading the keys. They are reported back to the user
-with the standard debug messages 'Error', 'Warning' and 'Info'. 
+above that we need to look out for when validating keys and for some that are
+not errors also when uploading the keys. They are reported back to the user with
+the standard debug messages 'Error', 'Warning' and 'Info'. 
 
 Errors break the key, so keys with errors will not be uploaded. Warnings do not
 break the tree but are not good practice and might not have been the intention
