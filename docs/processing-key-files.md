@@ -18,7 +18,7 @@ result of the identification.
 
 **Figure 1.** Bracketed key from **KeyBase (2025)**. _Flora of Victoria: Key to
 Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
-24-05-2025].
+24-05-2025]. https://keybase.rbg.vic.gov.au/keys/show/12181?mode=bracketed
 
 </caption>
 
@@ -35,6 +35,7 @@ numbers. Therefore, for larger keys the bracketed format is the better format
 <caption>
 
 **Figure 2.** Same key as in figure 1 displayed as an indented key.
+https://keybase.rbg.vic.gov.au/keys/show/12181?mode=indented
 
 </caption>
 
