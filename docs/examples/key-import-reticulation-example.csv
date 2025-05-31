@@ -1,13 +1,13 @@
-"from","statement","to"
-1,"Plants to 1 mm tall; lamellae absent; leaf margins recurved",2
-1,"Plants c. 2 mm tall; leaves with 2 or 3 irregular longitudinal lamellae (often inconspicuous) on the adaxial surface of the costa; margins not recurved",3
-2,"Costa excurrent in a reddish gold arista","Acaulon chrysacanthum"
-2,"Costa excurrent in a long hyaline hairpoint","Acaulon leucochaete"
-3,"Plants triquetrous when viewed from above; leaves strongly keeled","Acaulon triquetrum"
-3,"Plants not triquetrous when viewed from above; leaves not keeled",4
-4,"Spores echinate; capsules brown; leaf margin usually entire","Acaulon mediterraneum"
-4,"Spores papillose; capsules orange or dark ferrugineous; leaf margin entire, crenulate or irregularly dentate",6
-6,"…",2
-6,"…",5
-5,"Mature spores 30-50 µm diam., finely papillose; capsules usually orange; leaf margin usually entire","Acaulon integrifolium"
-5,"Mature spores 50-65 µm diam., very coarsely granular; capsules ferrugineous to dark brown; leaf margin usually crenulate to irregularly dentate","Acaulon granulosum"
+from,statement,to
+1,"Phasellus cursus enim sit amet justo efficitur, id semper sem hendrerit",2
+1,Suspendisse pharetra urna suscipit orci porta vehicula,3
+2,Vestibulum at massa a purus consectetur bibendum,Item 1
+2,Cras ultricies lorem id enim tempor bibendum et quis justo,Item 2
+3,Phasellus vitae magna quis ante elementum lacinia a et nisi,Item 3
+3,Cras at mauris vitae lorem pellentesque euismod,4
+4,Donec vitae est sed tortor facilisis tincidunt nec sed nisi,Item 4
+4,Fusce et orci eu purus pellentesque ornare,6
+6,"Donec pellentesque orci nec odio dapibus, rutrum efficitur nibh laoreet",2
+6,Ut a lectus id ipsum tempor consectetur et vitae odio,5
+5,Vivamus fermentum velit ut leo dictum tempus,Item 5
+5,Nam sed urna ac dolor posuere sodales placerat sed purus,Item 6

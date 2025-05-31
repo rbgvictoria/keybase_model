@@ -656,28 +656,17 @@ Unfinished keys can be supported in the KeyBase data model as shown in figure 18
 
 </caption>
 
-A starting key, to which items have been added but (ostensibly) no leads could
-look like in figure 19. In this key all items are connected to leads, as is
-enforced by the data model, but all leads come from the root and lack
-statements. This requires a bit more thinking once we start implementing an
-editor as I cannot really see a way to start building the key from here.
-
-![starting tree](./media/indented-key-starting-tree.drawio.svg)
-
-<caption>
-
-**Figure 19.** Starting key where all leads come from the root. 
-
-</caption>
-
+<hr>
 
 ![object relationships](./media/schema-relationships.drawio.svg)
 
 <caption>
 
-**Figure 20** All possible object relationships between Keys, Leads and Items. Couplets and shortcut are demarcated by boxes with a broken outline.
+**Figure 19** All possible object relationships between Keys, Leads and Items. Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
+
+<hr>
 
 ## Processing key files
 
