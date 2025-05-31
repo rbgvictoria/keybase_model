@@ -99,14 +99,14 @@ is stored in the database and might be better for illustrating what is going on.
 
 The boxes outlined with a broken line in (**figure 6**) are nested sets. Nested
 sets can be stored in the database by storing the numbers in the top- and
-bottom-righthand of the boxes as `left` and `right`. KeyBase currently still
-stores the nested sets in the database, but for the last ten years, nested sets
-have been created by the plugin, so it is not necessary to store them in the
-database anymore. This makes KeyBase more flexible in what it can do with keys.
-Nested sets are used in the KeyBase player to get the remaining and discarded
-items. So, for couplet **3** in figure 6 remaining items are the items on the
-leads of which the value of `left` is between 8 and 20 and the discarded items
-where it is not. Nested sets also make the filers work.
+bottom-righthand corners of the boxes as `left` and `right`. KeyBase currently
+still stores the nested sets in the database, but for the last ten years, nested
+sets have been created by the plugin, so it is not necessary to store them in
+the database anymore. This makes KeyBase more flexible in what it can do with
+keys. Nested sets are used in the KeyBase player to get the remaining and
+discarded items. So, for couplet **3** in figure 6 remaining items are the items
+on the leads of which the value of `left` is between 8 and 20 and the discarded
+items where it is not. Nested sets also make the filers work.
 
 The bracketed format lends itself very well to exchange as tabular data (**table
 1**), which is why CSV is the preferred format for importing and exporting keys
@@ -248,7 +248,7 @@ with the standard debug messages 'Error', 'Warning' and 'Info'.
 Errors break the key, so keys with errors will not be uploaded. Warnings do not
 break the tree but are not good practice and might not have been the intention
 of the user, so we let the user decide. If there are no debug messages to report, the
-key can just be uploaded without further feedback from the user decide.
+key can just be uploaded without further feedback from the user.
 Currently the first screen only reports which delimiter was used. I think we can
 skip that as well.
 
@@ -265,7 +265,7 @@ import](./examples/key-import-singleton-example.csv)]
 
 Couplets with a single lead serve no purpose in the key and are errors. They
 might also interfere with the rendering of the key later on, as they are not
-expected. 
+expected.
 
 To check for the presence of singletons in a key:
 
@@ -293,8 +293,8 @@ $isSingleton = array_count_values($from)[$inKey[$i]] == 1 ? true : false;
 </caption>
 
 Polytomies, i.e. couplets with more than two leads, are harmless, but they are
-not considered good practice and they may have gone into or left in the key by
-accident, so we issue a warning.
+not considered good practice and they may have gone into or been left in the key
+by accident, so we issue a warning.
 
 To find polytomies in a key:
 
@@ -453,13 +453,13 @@ $isLoop = in_array($inKey[$i]['to'], $loops) ? true : false;
 
 </caption>
 
-Reticulations are created when multiple leads lead to the same couplet.
+Reticulations are created when multiple leads go to the same couplet.
 Reticulations do no harm but, if ignored, lead to a different key than the user
 expects, so we need to catch them and deal with them properly.
 
 There are two ways of dealing with reticulations. One is repeating the subgraph
-as many times as needed to repair the tree structure (**figure 13**). This is what KeyBase is
-doing now and is the same as not dealing with reticulations. 
+as many times as needed to repair the tree structure (**figure 13**). This is
+what KeyBase does now and is the same as not dealing with reticulations. 
 
 ![](./media/indented-key-reticulation-resolved.drawio.svg)
 
@@ -485,7 +485,7 @@ try this out in the new version of KeyBase.
 </caption>
 
 Reticulations when dealt with this way will cause problems later on, as keys
-with reticulations cannot be displayed as indented keys and for that eason will
+with reticulations cannot be displayed as indented keys and for that reason will
 also not be able to be edited if and when KeyBase gets a key editor. 
 
 This will find reticulations in a key:
@@ -500,7 +500,7 @@ This will find reticulations in a key:
 And this will tell you for each lead `$i` if it leads to a reticulation:
 
 ```php
-array_count_values($toCouplets)[$lead[$i]['to']] > 1
+array_count_values($toCouplets)[$inKey[$i]['to']] > 1
 ```
 
 
