@@ -98,14 +98,14 @@ is stored in the database and might be better for illustrating what is going on.
 
 The boxes outlined with a broken line in (**figure 6**) are nested sets. Nested
 sets can be stored in the database by storing the numbers in the top- and
-bottom-righthand corners of the boxes as `left` and `right`. KeyBase currently
+bottom-right corners of the boxes as `left` and `right`. KeyBase currently
 still stores the nested sets in the database, but for the last ten years, nested
 sets have been created by the plugin, so it is not necessary to store them in
 the database anymore. This makes KeyBase more flexible in what it can do with
 keys. Nested sets are used in the KeyBase player to get the remaining and
 discarded items. So, for couplet **3** in figure 6 remaining items are the items
 on the leads of which the value of `left` is between 8 and 20 and the discarded
-items where it is not. Nested sets also make the filers work.
+items where it is not. Nested sets also make the filters work.
 
 The bracketed format lends itself very well to exchange as tabular data (**table
 1**), which is why CSV is the preferred format for importing and exporting keys
@@ -125,7 +125,7 @@ from | statement | to
 1 | Plants to 1 mm tall; lamellae absent; leaf margins recurved | 2
 1 | Plants c. 2 mm tall; leaves with 2 or 3 irregular longitudinal lamellae (often inconspicuous) on the adaxial surface of the costa; margins not recurved | 3
 2 | Costa excurrent in a reddish gold arista | Acaulon chrysacanthum
-2 | Costa excurrent in a long hyaline hairpoint | Acaulon leucochaete
+2 | Costa excurrent in a long hyaline hair-point | Acaulon leucochaete
 3 | Plants triquetrous when viewed from above; leaves strongly keeled | Acaulon triquetrum
 3 | Plants not triquetrous when viewed from above; leaves not keeled | 4
 4 | Spores echinate; capsules brown; leaf margin usually entire | Acaulon mediterraneum
@@ -514,14 +514,15 @@ array_count_values($toCouplets)[$inKey[$i]['to']] > 1
 </caption>
 
 Large keys, of which we have quite a few in KeyBase, are often split into
-smaller subkeys (**figure 15**). Currently KeyBase does not deal with subkeys,
-but merging subkeys into one big key is the largest (and perhaps the only)
+smaller sub-keys (**figure 15**). Currently KeyBase does not deal with subkeys,
+but merging sub-keys into one big key is the largest (and perhaps the only)
 source of reticulations, so it is a high priority for me to fix this in the new
-version. Subkeys are much more straightforward to deal with than and are much
-preferrable to reticulations and if KeyBase can deal with subkeys, we might not need special treatment for reticulations.
+version. Sub-keys are much more straightforward to deal with than and are much
+preferable to reticulations and if KeyBase can deal with sub-keys, we might not
+need special treatment for reticulations.
 
-CSV files for keys with subkeys need a fourth 'subkey' column. Therefore they
-need to have a headerrow, otherwise KeyBase will ignore this column.
+CSV files for keys with sub-keys need a fourth 'subkey' column. Therefore they
+need to have a header row, otherwise KeyBase will ignore this column.
 
 [[Example CSV of key with subkeys](./examples/keybase-import-key-with-subkeys-example.csv)]
 
@@ -644,7 +645,12 @@ $hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
 
 ### Unfinished keys [**Warning**]
 
-Unfinished keys are keys where not every item keys out, so they have multiple items coming from the same lead. KeyBase currently does not support unfinished keys, but people have asked about it, and it is something that needs to be supported once KeyBase has a key editor, so that people, when creating a tree, can first add all the items to a key and incrementally distribute the leads into couplets (and leave it at any stage).
+Unfinished keys are keys where not every item keys out, so they have multiple
+items coming from the same lead. KeyBase currently does not support unfinished
+keys, but people have asked about it, and it is something that needs to be
+supported once KeyBase has a key editor, so that people, when creating a tree,
+can first add all the items to a key and incrementally distribute the leads into
+couplets (and leave it at any stage).
 
 Unfinished keys can be supported in the KeyBase data model as shown in figure 18.
 
@@ -662,7 +668,8 @@ Unfinished keys can be supported in the KeyBase data model as shown in figure 18
 
 <caption>
 
-**Figure 19** All possible object relationships between Keys, Leads and Items. Couplets and shortcut are demarcated by boxes with a broken outline.
+**Figure 19** All possible object relationships between Keys, Leads and Items.
+Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
 
@@ -674,7 +681,9 @@ Processing of uploaded key files takes three steps:
 
 - **Processing the uploaded CSV file**
 
-  This involves detecting the delimiter and the header. I found a nice method for detecting CSV delimiters on Stack Overflow, which I have turned into a [class](../app/Actions/GetCsvDelimiter.php). Take it or leave it. 
+  This involves detecting the delimiter and the header. I found a nice method
+  for detecting CSV delimiters on Stack Overflow, which I have turned into a
+  [class](../app/Actions/GetCsvDelimiter.php). Take it or leave it. 
 
 - **Validating the key**
 
