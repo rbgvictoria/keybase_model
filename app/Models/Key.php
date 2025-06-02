@@ -4,12 +4,12 @@ namespace App\Models;
 
 use App\Traits\Blamable;
 use DateTime;
-use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Query\Builder as QueryBuilder;
 use Ramsey\Uuid\Uuid;
 
 /**
@@ -24,14 +24,15 @@ use Ramsey\Uuid\Uuid;
  * @property string $description
  * @property string $notes
  * @property bool $modified_from_source
- * @property int $first_step_id
- * @property int $taxonomic_scope_id
+ * @property int $root_id
+ * @property int $item_id
  * @property int $project_id
  * @property int $subkey_of_id
  * @property int $source_id
  * @property int $created_by_id
  * @property int $updated_by_id
- * @property Item $taxonomicScope
+ * @property Item $item
+ * @property Lead $root
  * @property Project $project
  * @property Source $source
  * @property Lead[] $leads
@@ -53,7 +54,7 @@ class Key extends Model
      * 
      * @return BelongsTo<Item, Key>
      */
-    public function taxonomicScope(): BelongsTo
+    public function item(): BelongsTo
     {
         return $this->belongsTo(Item::class);
     }
@@ -83,9 +84,9 @@ class Key extends Model
      * 
      * @return void
      */
-    public function firstStep(): BelongsTo
+    public function root(): BelongsTo
     {
-        $this->belongsTo(Lead::class);
+        return $this->belongsTo(Lead::class);
     }
 
     /**
@@ -155,7 +156,7 @@ class Key extends Model
             ->join('filter_item as fi', 'f.id', '=', 'fi.filter_id')
             ->join('leads as l', 'fi.item_id', '=', 'l.item_id')
             ->where('l.key_id', '=', $this->id)
-            ->where(function (Builder $query) {
+            ->where(function (QueryBuilder $query) {
                 $query->whereNull('f.is_project_filter')
                     ->orWhere('f.is_project_filter', '=', false);
             })

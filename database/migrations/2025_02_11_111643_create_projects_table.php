@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('project_icon')->nullable();
-            $table->unsignedBigInteger('taxonomic_scope_id')->nullable();
+            $table->unsignedBigInteger('item_id')->nullable();
             $table->unsignedBigInteger('created_by_id')->nullable();
             $table->unsignedBigInteger('updated_by_id')->nullable();
             $table->index('title');
-            $table->index('taxonomic_scope_id');
+            $table->index('item_id');
             $table->index('created_by_id');
             $table->index('updated_by_id');
             $table->foreign('created_by_id')->references('id')->on('agents');

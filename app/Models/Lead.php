@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property DateTime $created_at
  * @property DateTime $updated_at
  * @property string $node_name
- * @property string $lead_text
+ * @property string $statement
  * @property int $parent_id
  * @property int $item_id
  * @property int $reticulation_id

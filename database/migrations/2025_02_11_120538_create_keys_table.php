@@ -20,9 +20,8 @@ return new class extends Migration
             $table->string('author')->nullable();
             $table->text('description')->nullable();
             $table->text('notes')->nullable();
-            $table->boolean('modified_from_source')->nullable();
-            $table->unsignedBigInteger('first_step_id');
-            $table->unsignedBigInteger('taxonomic_scope_id');
+            $table->unsignedBigInteger('root_id');
+            $table->unsignedBigInteger('item_id');
             $table->unsignedBigInteger('project_id');
             $table->unsignedBigInteger('subkey_of_id')->nullable();
             $table->unsignedBigInteger('source_id')->nullable();
@@ -35,7 +34,7 @@ return new class extends Migration
             $table->index('taxonomic_scope_id');
             $table->index('created_by_id');
             $table->index('updated_by_id');
-            $table->foreign('taxonomic_scope_id')->references('id')->on('items');
+            $table->foreign('item_id')->references('id')->on('items');
             $table->foreign('project_id')->references('id')->on('projects');
             $table->foreign('subkey_of_id')->references('id')->on('keys');
             $table->foreign('created_by_id')->references('id')->on('agents');

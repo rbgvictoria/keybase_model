@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestampsTz();
             $table->string('node_name')->nullable();
-            $table->text('lead_text');
+            $table->text('statement');
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->unsignedBigInteger('item_id')->nullable();
             $table->unsignedBigInteger('reticulation_id')->nullable();
@@ -40,7 +40,7 @@ return new class extends Migration
         });
 
         Schema::table('keys', function (Blueprint $table) {
-            $table->foreign('first_step_id')->references('id')->on('leads');
+            $table->foreign('root_id')->references('id')->on('leads');
         });
     }
 
@@ -50,7 +50,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('keys', function (Blueprint $table) {
-            $table->dropForeign('keys_first_step_id_foreign');
+            $table->dropForeign('keys_root_id_foreign');
         });
 
         Schema::dropIfExists('leads');

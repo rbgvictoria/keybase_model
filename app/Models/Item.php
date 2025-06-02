@@ -50,7 +50,7 @@ class Item extends Model
      */
     public function keysTo(): HasMany
     {
-        return $this->hasMany(Key::class, 'taxonomic_scope_id', 'id');
+        return $this->hasMany(Key::class, 'item_id', 'id');
     }
 
     /**

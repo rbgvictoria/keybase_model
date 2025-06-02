@@ -104,7 +104,7 @@ sets have been created by the plugin, so it is not necessary to store them in
 the database anymore. This makes KeyBase more flexible in what it can do with
 keys. Nested sets are used in the KeyBase player to get the remaining and
 discarded items. So, for couplet **3** in figure 6 remaining items are the items
-on the leads of which the value of `left` is between 8 and 20 and the discarded
+on the leads of which the value of `left` is between 8 and 21 and the discarded
 items where it is not. Nested sets also make the filters work.
 
 The bracketed format lends itself very well to exchange as tabular data (**table
@@ -144,12 +144,12 @@ need to check whether there are column headers or not (just by checking if the
 first value in the first row is numeric or not) and, if there are not, add the
 three abovementioned column headers.
 
-When the CSV file has been processed you end up with a multidimensional
-associative array like below (I think KeyBase might ship the data between the
-frontend and backend as JSON, but I am not sure).
+When the CSV file has been processed you end up with a collection like below (I
+think KeyBase might ship the data between the frontend and backend as JSON, but
+I am not sure).
 
 ```php
-$inKey = [
+$inKey = collect([
     [
       "from" => 1,
       "text" => "Plants to 1 mm tall; lamellae absent; leaf margins recurved",
@@ -171,7 +171,7 @@ $inKey = [
       "text" => "Mature spores 50-65 µm diam., very coarsely granular; capsules ferrugineous to dark brown; leaf margin usually crenulate to irregularly dentate",
       "to" => "Acaulon granulosum",
     ],
-  ]
+  ])
 ```
 
 Before the validation and uploading of the key, we create arrays with the values
@@ -179,35 +179,39 @@ of the 'from' and 'to' columns (you do not have to do that, but it is how I did
 it).
 
 ```bash
-> $from = collect($inKey)->map(fn ($lead) => $lead['from'])->toArray();
-= [
-    1,
-    1,
-    2,
-    2,
-    3,
-    3,
-    4,
-    4,
-    5,
-    5,
-  ]
+> $from = $inKey->map(fn ($lead) => $lead['from']);
+= Illuminate\Support\Collection {#5180
+    all: [
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+    ],
+  }
 ```
 
 ```bash
-> $to = collect($inKey)->map(fn ($lead) => $lead['to'])->toArray();
-= [
-    2,
-    3,
-    "Acaulon chrysacanthum",
-    "Acaulon leucochaete",
-    "Acaulon triquetrum",
-    4,
-    "Acaulon mediterraneum",
-    5,
-    "Acaulon integrifolium",
-    "Acaulon granulosum",
-  ]
+> $to = $inKey->map(fn ($lead) => $lead['to']);
+= Illuminate\Support\Collection {#5237
+    all: [
+      2,
+      3,
+      "Acaulon chrysacanthum",
+      "Acaulon leucochaete",
+      "Acaulon triquetrum",
+      4,
+      "Acaulon mediterraneum",
+      5,
+      "Acaulon integrifolium",
+      "Acaulon granulosum",
+    ],
+  }
 ```
 
 The array for the 'to' column needs to be split into couplets and items. KeyBase
@@ -216,25 +220,29 @@ sometimes letters or roman numerals are used), so the numbers are couplets and
 the strings items.
 
 ```bash
-> $toCouplets = collect($to)->filter(fn ($item) => is_numeric($item))->toArray();
-= [
-    0 => 2,
-    1 => 3,
-    5 => 4,
-    7 => 5,
-  ]
+> $toCouplets = $to->filter(fn ($item) => is_numeric($item));
+= Illuminate\Support\Collection {#5210
+    all: [
+      0 => 2,
+      1 => 3,
+      5 => 4,
+      7 => 5,
+    ]
+  }
 ```
 
 ```bash
-> $toItems = collect($to)->filter(fn ($item) => !is_numeric($item))->toArray();
-= [
-    2 => "Acaulon chrysacanthum",
-    3 => "Acaulon leucochaete",
-    4 => "Acaulon triquetrum",
-    6 => "Acaulon mediterraneum",
-    8 => "Acaulon integrifolium",
-    9 => "Acaulon granulosum",
-  ]
+> $toItems = $to->filter(fn ($item) => !is_numeric($item));
+= Illuminate\Support\Collection {#5241 
+    all: [
+      2 => "Acaulon chrysacanthum",
+      3 => "Acaulon leucochaete",
+      4 => "Acaulon triquetrum",
+      6 => "Acaulon mediterraneum",
+      8 => "Acaulon integrifolium",
+      9 => "Acaulon granulosum",
+    ]
+  }
 ```
 
 ## Things to look out for
@@ -266,20 +274,15 @@ Couplets with a single lead serve no purpose in the key and are errors. They
 might also interfere with the rendering of the key later on, as they are not
 expected.
 
-To check for the presence of singletons in a key:
+To find singletons in a key:
 
 ```bash
-> $singletons = collect(array_unique($from))->filter(fn ($value) => array_count_values($from)[$value] == 1)->toArray();
+> $singletons = $from->countBy()->filter(fn ($value) => $value == 1)->keys()->all();
 = [
-    6 => 4,
+    6,
   ]
 ```
 
-To check whether a lead with index `$i` is a singleton:
-
-```php
-$isSingleton = array_count_values($from)[$inKey[$i]] == 1 ? true : false;
-```
 
 ### Polytomies [**Warning**]
 
@@ -298,16 +301,10 @@ by accident, so we issue a warning.
 To find polytomies in a key:
 
 ```bash
-> $polytomies = collect(array_unique($from))->filter(fn ($value) => array_count_values($from)[$value] > 2)->toArray();
+> > $olytomies = $from->countBy()->filter(fn ($value) => $value > 2)->keys()->all();
 = [
-    8 => 5,
+    5,
   ]
-```
-
-To check for a single lead with index `$i` whether it is part of a polytomy:
-
-```php
-$isInPolytomy = array_count_values($from)[$inKey[$i]['from']] > 2 ? true : false;
 ```
 
 
@@ -328,17 +325,12 @@ column, so people using the key cannot get to them.
 To find orphans in a key:
 
 ```bash
-> $orphans = array_slice(array_diff($from, $toCouplets), 1);
+> $orphans = $from->diff($toCouplets)->slice(1)->all();
 = [
     6,
   ]
 ```
 
-The check whether a lead with index `$` is an orphan:
-
-```php
-$isOrphan = in_array($inKey[$i], $orphans) ? true : false;
-```
 
 ### Dead ends [**Error**]
 
@@ -357,17 +349,12 @@ column without couplets. They are mostly the result of typos (as are orphans).
 To find dead ends in a key:
 
 ```bash
-> $deadEnds = array_diff($toCouplets, $from);
+> $deadEnds = $toCouplets->diff($from)->all();
 = [
-    5 => 7,
+    7,
   ]
 ```
 
-To check if a lead with index `$i` is a dead end:
-
-```php
-$isDeadEnd = in_array($inKey[$i]['to'], $deadEnds) ? true : false; 
-```
 
 ### Loops [**Error**]
 
@@ -436,11 +423,6 @@ To check for loops in a key:
   ]
 ```
 
-To check if a lead with index `$i` creates a loop:
-
-```php
-$isLoop = in_array($inKey[$i]['to'], $loops) ? true : false;
-```
 
 ### Reticulations [**Warning**]
 
@@ -490,16 +472,10 @@ also not be able to be edited if and when KeyBase gets a key editor.
 This will find reticulations in a key:
 
 ```bash
-> $reticulations = collect(array_unique($toCouplets))->filter(fn ($value) => array_count_values($toCouplets)[$value] > 1)->toArray();
+> $reticulations = $toCouplets->countBy()->filter(fn ($value) => $value > 1)->keys()->all();
 = [
     2,
   ]
-```
-
-And this will tell you for each lead `$i` if it leads to a reticulation:
-
-```php
-array_count_values($toCouplets)[$inKey[$i]['to']] > 1
 ```
 
 
@@ -515,7 +491,7 @@ array_count_values($toCouplets)[$inKey[$i]['to']] > 1
 
 Large keys, of which we have quite a few in KeyBase, are often split into
 smaller sub-keys (**figure 15**). Currently KeyBase does not deal with subkeys,
-but merging sub-keys into one big key is the largest (and perhaps the only)
+but merging sub-keys into one big key is the largest (and perhaps only)
 source of reticulations, so it is a high priority for me to fix this in the new
 version. Sub-keys are much more straightforward to deal with than and are much
 preferable to reticulations and if KeyBase can deal with sub-keys, we might not
@@ -526,49 +502,51 @@ need to have a header row, otherwise KeyBase will ignore this column.
 
 [[Example CSV of key with subkeys](./examples/keybase-import-key-with-subkeys-example.csv)]
 
-To check if a key has subkeys:
+To find sub-keys in a key:
 
 ```bash
-> $hasSubkeys = collect($inKey)->filter(fn ($lead) => isset($lead['subkey']))->count() ? true : false;
+> $hasSubkeys = $inKey->filter(fn ($lead) => isset($lead['subkey']))->count() ? true : false;
 = true
 ```
 
 ```bash
-> $subkeyLabels = collect($inkey)->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
+> $subkeyLabels = $inkey->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
 = [
-    "Group 1",
-    "Group 2",
-    "Group 3",
+    "Subkey 1",
+    "Subkey 2",
+    "Subkey 3",
   ]
 ```
+
+If a key has sub-keys, it needs to split up into a main key and sub-keys:
 
 ```php
 $subkeys = [];
 
-$subkeys['main'] = collect($inKey)->filter(fn ($lead) => !isset($lead['subkey']))->toArray();
+$subkeys['main'] = $inKey->filter(fn ($lead) => !isset($lead['subkey']));
 
 foreach ($subkeyLabels as $label) {
-    $subkeys[$label] = collect($inkey)->filter(fn ($lead) => isset($lead['subkey']) && $lead['subkey'] == $label)->toArray()
+    $subkeys[$label] = $inkey->filter(fn ($lead) => isset($lead['subkey']) && $lead['subkey'] == $label);
 }
 ```
 
-```bash
-> $to = collect($subkeys['main'])->map(fn ($lead) => $lead['to'])->toArray();
-= [
-    "Group 1",
-    2,
-    "Group 2",
-    3,
-    "Group 3",
-    "Cercis",
-  ]
-```
+In the main key, non-numeric values in the `$to` collection can be either
+sub-keys or items:
 
 ```bash
-> $toItems[0] = array_diff(collect($to[0])->filter(fn ($item) => !is_numeric($item))->toArray(), $subkeys);
-= [
-    5 => "Cercis",
-  ]
+> $to = $subkeys['main']->map(fn ($lead) => $lead['to']);
+= Illuminate\Support\Collection {#5217
+    all: [
+      "Subkey 1",
+      2,
+      "Subkey 2",
+      "Subkey 3",
+    ]
+  }
+
+> $toItems = $to->filter(fn ($item) => !is_numeric($item))->diff($subkeys);
+= Illuminate\Support\Collection {5281 
+    all: []
 ```
 
 ### Shortcut [**Info**]
@@ -599,12 +577,14 @@ when parsing a key).
 To check if there are any shortcuts in a provided key, you can run:
 
 ```php
-$shortcuts = collect($items)->filter(fn ($value) => substr_count($value, ':'))->toArray();
+$shortcuts = $toItems)->filter(fn ($value) => substr_count($value, ':'))->all();
 ```
 
 And for a single lead:
 
 ```php
+$lead = $inKey->slice($i, 1)->first();
+
 $hasShortcut = substr_count($lead['to'], ':') ? true : false;
 ```
 
@@ -634,7 +614,7 @@ So, from now on, we will report chained shortcuts as errors.
 To find chained shortcuts in a provided key, you can run:
 
 ```php
-$chainedShortcuts = collect($items)->filter(fn ($value) => substr_count($value, ':') > 1)->toArray();
+$chainedShortcuts = $toItems->filter(fn ($value) => substr_count($value, ':') > 1)->all();
 ```
 
 And for a single lead:
