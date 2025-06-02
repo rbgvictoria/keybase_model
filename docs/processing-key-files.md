@@ -22,9 +22,9 @@ Acaulon species_. &lt;https://keybase.rbg.vic.gov.au/keys/show/12181&gt; [Seen:
 
 </caption>
 
-Another often-used format is the indented key (**figure 2**). In an indented key the
-next couplet a lead leads to follows immediately below the lead. Because of this
-it is not necessary to show the number of the next couplet. In fact couplet
+Another often-used format is the indented key (**figure 2**). In an indented key
+the next couplet a lead leads to follows immediately below the lead. Because of
+this it is not necessary to show the number of the next couplet. In fact couplet
 numbers are not necessary at all, as the indentation takes care of that.
 However, larger keys become hard to follow without the numbers or even with the
 numbers. Therefore, for larger keys the bracketed format is the better format
@@ -40,7 +40,9 @@ https://keybase.rbg.vic.gov.au/keys/show/12181?mode=indented
 </caption>
 
 Keys can be represented as the decision tree in **figure 3**. The graph in
-figure 3 has the structure of the key in figures 1 and 2, but the taxon names have been replaced by numbered item labels and the statements of the leads are not shown.
+figure 3 has the structure of the key in figures 1 and 2, but the taxon names
+have been replaced by numbered item labels and the statements of the leads are
+not shown.
 
 ![](./media/decision-tree-no-errors.drawio.svg) 
 
@@ -245,6 +247,7 @@ the strings items.
   }
 ```
 
+
 ## Things to look out for
 
 There are (quite) a few exceptions from the ideal key structure illustrated
@@ -283,6 +286,12 @@ To find singletons in a key:
   ]
 ```
 
+To check if a lead is a singleton:
+
+```php
+$isSingleton = $from->filter(fn ($value) => $value == $inKey[$i$]['from'])->count() == 1
+```
+
 
 ### Polytomies [**Warning**]
 
@@ -301,10 +310,16 @@ by accident, so we issue a warning.
 To find polytomies in a key:
 
 ```bash
-> > $olytomies = $from->countBy()->filter(fn ($value) => $value > 2)->keys()->all();
+> $polytomies = $from->countBy()->filter(fn ($value) => $value > 2)->keys()->all();
 = [
     5,
   ]
+```
+
+To check if a lead with index `$i` is part of a polytomy:
+
+```php
+$isPolytomy = $from->filter(fn ($value) => $value == $inKey[$i]['from'])->count() > 2;
 ```
 
 
@@ -331,6 +346,12 @@ To find orphans in a key:
   ]
 ```
 
+To check if a lead with index `$i` is an orphan:
+
+```php
+$isOrphan = $toCouplets->filter(fn ($value) => $value == $inKey[$i]['from'])->count() == 0;
+```
+
 
 ### Dead ends [**Error**]
 
@@ -353,6 +374,12 @@ To find dead ends in a key:
 = [
     7,
   ]
+```
+
+To check if a lead is a dead end:
+
+```php
+$isDeadEnd = is_numeric($inKey[$i]['to']) && $from->filter(fn ($value) => $value == $inKey[$i]['to'])->count() == 0;
 ```
 
 
@@ -423,6 +450,12 @@ To check for loops in a key:
   ]
 ```
 
+To check if a lead with index `$i` creates a loop:
+
+```php
+$isLoop = collect($loops)->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 0;
+```
+
 
 ### Reticulations [**Warning**]
 
@@ -438,7 +471,7 @@ Reticulations are created when multiple leads go to the same couplet.
 Reticulations do no harm but, if ignored, lead to a different key than the user
 expects, so we need to catch them and deal with them properly.
 
-There are two ways of dealing with reticulations. One is repeating the subgraph
+There are two ways of dealing with reticulations. One is repeating the sub-graph
 as many times as needed to repair the tree structure (**figure 13**). This is
 what KeyBase does now and is the same as not dealing with reticulations. 
 
@@ -446,7 +479,7 @@ what KeyBase does now and is the same as not dealing with reticulations.
 
 <caption>
 
-**Figure 13.** Graph of key with reticulation resolved by repeating the subgraph.
+**Figure 13.** Graph of key with reticulation resolved by repeating the sub-graph.
 
 </caption>
 
@@ -478,19 +511,25 @@ This will find reticulations in a key:
   ]
 ```
 
+To check if a lead with index `$i` is in a reticulation:
 
-### Subkeys [**Info**]
+```php
+$isReticulation = is_numeric($inKey[$i]['to']) && $toCouplets->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 1;
+```
+
+
+### Sub-keys [**Info**]
 
 ![](./media/indented-key-subkeys.drawio.svg)
 
 <caption>
 
-**Figure 15.** Key with subkeys.
+**Figure 15.** Key with sub-keys.
 
 </caption>
 
 Large keys, of which we have quite a few in KeyBase, are often split into
-smaller sub-keys (**figure 15**). Currently KeyBase does not deal with subkeys,
+smaller sub-keys (**figure 15**). Currently KeyBase does not deal with sub-keys,
 but merging sub-keys into one big key is the largest (and perhaps only)
 source of reticulations, so it is a high priority for me to fix this in the new
 version. Sub-keys are much more straightforward to deal with than and are much
@@ -500,7 +539,7 @@ need special treatment for reticulations.
 CSV files for keys with sub-keys need a fourth 'subkey' column. Therefore they
 need to have a header row, otherwise KeyBase will ignore this column.
 
-[[Example CSV of key with subkeys](./examples/keybase-import-key-with-subkeys-example.csv)]
+[[Example CSV of key with sub-keys](./examples/keybase-import-key-with-subkeys-example.csv)]
 
 To find sub-keys in a key:
 
@@ -510,12 +549,14 @@ To find sub-keys in a key:
 ```
 
 ```bash
-> $subkeyLabels = $inkey->map(fn ($lead) => $lead['subkey'])->unique()->values()->all()
-= [
-    "Subkey 1",
-    "Subkey 2",
-    "Subkey 3",
-  ]
+> $subkeyLabels = $inkey->map(fn ($lead) => $lead['subkey'])->unique()->values();
+= Illuminate\Support\Collection {#5102
+    all: [
+      "Subkey 1",
+      "Subkey 2",
+      "Subkey 3",
+    ]
+  }
 ```
 
 If a key has sub-keys, it needs to split up into a main key and sub-keys:
@@ -544,9 +585,15 @@ sub-keys or items:
     ]
   }
 
-> $toItems = $to->filter(fn ($item) => !is_numeric($item))->diff($subkeys);
+> $toItems = $to->filter(fn ($item) => !is_numeric($item))->diff($subkeyLabels);
 = Illuminate\Support\Collection {5281 
     all: []
+```
+
+To check if a lead with index `$i` goes to a sub-key:
+
+```php
+$hasSubkey = $subkeyLabels->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 0;
 ```
 
 ### Shortcut [**Info**]
@@ -583,9 +630,7 @@ $shortcuts = $toItems)->filter(fn ($value) => substr_count($value, ':'))->all();
 And for a single lead:
 
 ```php
-$lead = $inKey->slice($i, 1)->first();
-
-$hasShortcut = substr_count($lead['to'], ':') ? true : false;
+$hasShortcut = substr_count($inKey[$i]['to'], ':') ? true : false;
 ```
 
 ### Chained shortcuts [**Error**]
