@@ -407,27 +407,27 @@ class ErrorCheckService extends Service {
 
     public function __construct($inKey)
     {
-        $this->from = $inKey->map(fn ($lead) => $lead['from'])->toArray();
-        $this->to = $inKey->map(fn ($lead) => $lead['to'])->toArray();
+        $this->from = $inKey->map(fn ($lead) => $lead['from']);
+        $this->to = $inKey->map(fn ($lead) => $lead['to']);
     }
 
     public function checkForLoops()
     {
-        $this->loops = [];
-        $this->traverseKey([], $this->from[0]);
+        $this->loops = collect([]);
+        $this->traverseKey(collect([]), $this->from[0]);
         return $this->loops;
     }
     
     private function traverseKey($path, $node) 
     {
-        $path[] = $node;
+        $path->push($node);
         
-        foreach (array_keys($this->from, $node) as $lead) {
+        foreach ($this->from->filter(fn ($value) => $value == $node)->keys() as $lead) {
             $goTo = $this->to[$lead];
             if ($goTo) { // not an orphan 
-                if (in_array($goTo, $this->from)) { // goTo is a couplet (not an item)
-                    if (in_array($goTo, $path)) { // goTo is on path: append to loops array
-                        $this->loops[$lead] = $goTo;
+                if ($this->from->contains($goTo)) { // goTo is a couplet (not an item)
+                    if ($path->contains($goTo)) { // goTo is on path: append to loops array
+                        $this->loops->put($lead, $goTo);
                     }
                     else { // goTo is not on path: go to next couplet
                         $this->traverseKey($path, $goTo);
@@ -445,15 +445,17 @@ To check for loops in a key:
 
 ```bash
 > $loops = $service->checkForLoops();
-= [
-   6,
-  ]
+= Illuminate\Support\Collection {#5307
+    all: [
+      7 => 6,
+    ]
+  }
 ```
 
 To check if a lead with index `$i` creates a loop:
 
 ```php
-$isLoop = collect($loops)->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 0;
+$isLoop = $loops->get($i);
 ```
 
 
