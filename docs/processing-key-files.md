@@ -418,11 +418,11 @@ class ErrorCheckService extends Service {
         return $this->loops;
     }
     
-    private function traverseKey($path, $node) 
+    private function traverseKey($path, $couplet) 
     {
-        $path->push($node);
+        $path->push($couplet);
         
-        foreach ($this->from->filter(fn ($value) => $value == $node)->keys() as $lead) {
+        foreach ($this->from->filter(fn ($value) => $value == $couplet)->keys() as $lead) {
             $goTo = $this->to[$lead];
             if ($goTo) { // not an orphan 
                 if ($this->from->contains($goTo)) { // goTo is a couplet (not an item)
