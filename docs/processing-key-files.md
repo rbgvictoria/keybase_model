@@ -489,8 +489,7 @@ Possibly a better way of dealing with reticulations is starting a new graph
 (**figure 14**). This involves creating a new root lead that the leads leading
 to the couplet link to with the `reticulation` (`reticulation_id` in the
 database) property. So this is one of the exceptions to the rule that leads
-either have an item or are the parent of another set of leads. We are going to
-try this out in the new version of KeyBase.
+either have an item or are the parent of another set of leads.
 
 ![](./media/indented-key-reticulation-new-graph.drawio.svg)
 
@@ -502,7 +501,9 @@ try this out in the new version of KeyBase.
 
 Reticulations when dealt with this way will cause problems later on, as keys
 with reticulations cannot be displayed as indented keys and for that reason will
-also not be able to be edited if and when KeyBase gets a key editor. 
+also not be able to be edited when KeyBase gets a key editor. For this reason,
+we will not treat reticulations as a feature and will keep ironing out
+reticulations and warn people about them like KeyBase has always done. 
 
 This will find reticulations in a key:
 
