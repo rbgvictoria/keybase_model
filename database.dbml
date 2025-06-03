@@ -162,7 +162,6 @@ Table "leads" {
   "statement" text [not null]
   "parent_id" bigint(20) [default: NULL]
   "item_id" bigint(20) [default: NULL]
-  "reticulation_id" bigint(20) [default: NULL]
   "subkey_id" bigint(20) [default: NULL]
   "key_id" bigint(20) [not null]
   "created_by_id" bigint(20) [default: NULL]
@@ -171,7 +170,6 @@ Table "leads" {
   Indexes {
     parent_id [name: "leads_parent_id_index"]
     item_id [name: "leads_item_id_index"]
-    reticulation_id [name: "leads_reticulation_id_index"]
     subkey_id [name: "leads_subkey_id_index"]
     key_id [name: "leads_key_id_index"]
     created_by_id [name: "leads_created_by_id_index"]
