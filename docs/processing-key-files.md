@@ -674,27 +674,28 @@ $hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
 ### Unfinished keys [**Warning**]
 
 Unfinished keys are keys where not every item keys out, so they have multiple
-items coming from the same lead. KeyBase currently does not support unfinished
-keys, but people have asked about it, and it is something that needs to be
-supported once KeyBase has a key editor, so that people, when creating a tree,
-can first add all the items to a key and incrementally distribute the leads into
-couplets (and leave it at any stage).
+items coming from the same lead. Multiple items from the same lead could be
+delivered in the import CSV by separating item labels with a comma. To my
+knowledge nobody has ever tried this and KeyBase will not support it. We will
+just send people a warning that KeyBase will treat this as a single item (which
+might be fine for some people). We might have to reconsider this in UAT.
 
-Unfinished keys can be supported in the KeyBase data model as shown in figure 18.
+To find leads with multiple items:
 
-![unfinished key](./media/indented-key-unfinished.drawio.svg)
+```bash
+> $multipleItems = $toItems->filter(fn ($value) => substr_count($value, ',') > 0)->all();
+= Illuminate\Support\Collection {#5257
+    all: [
+      11 => "Corymbia, Blakeella"
+    ]
+  }
+```
 
-<caption>
+To check if a lead has multiple items:
 
-**Figure 18.** Unfinished key in the KeyBase data model.
-
-</caption>
-
-Multiple items from the same lead could be delivered in the import CSV by
-separating item labels with a comma, e.g., `Item 1, Item 2, Item 3` for the
-polytomy in figure 18. To my knowledge nobody has ever tried this and KeyBase
-will not support it. We will just send people a warning that KeyBase will treat
-this as a single item (which might be fine for some people).
+```php
+$hasMultipleItems = !is_numeric($inKey[$i]['to']) && substr_count($inKey[$i]['to'], ',') > 0;
+```
 
 <br><hr>
 
