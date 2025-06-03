@@ -622,8 +622,8 @@ not key out in the main key:
 $unreachableSubkeys = $subkeys->diff($to);
 ```
 
-The inverse situation, _i.e._, sub-keys that key out in the main key but that are
-not there, is theoretically possible but will not be recognised, as in these
+The inverse situation, _i.e._, sub-keys that key out in the main key but that
+are not there, is theoretically possible but will not be recognised, as these
 sub-keys will be considered items.
 
 ### Shortcut [**Info**]
