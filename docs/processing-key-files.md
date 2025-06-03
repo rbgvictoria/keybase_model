@@ -690,7 +690,13 @@ Unfinished keys can be supported in the KeyBase data model as shown in figure 18
 
 </caption>
 
-<hr>
+Multiple items from the same lead could be delivered in the import CSV by
+separating item labels with a comma. For the situation in figure 18 this would
+be `Item 1, Item 2, Item 3`. To my knowledge nobody has ever tried this and
+KeyBase will not support it. We just send people a warning that KeyBase will
+treat this as a single item (which might be fine for some people).
+
+<br><hr>
 
 ![object relationships](./media/schema-relationships.drawio.svg)
 
@@ -701,7 +707,7 @@ Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
 
-<hr>
+<hr><br>
 
 ## Processing key files
 
