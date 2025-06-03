@@ -613,6 +613,19 @@ To check if a lead with index `$i` goes to a sub-key:
 $hasSubkey = $subkeys->filter(fn ($value) => $value == $inKeys[''][$i]['to'])->count() > 0;
 ```
 
+### Unreachable sub-keys [**Error**]
+
+If there are sub-keys in a key, there should also be a test for sub-keys that do
+not key out in the main key:
+
+```php
+$unreachableSubkeys = $subkeys->diff($to);
+```
+
+The inverse situation, _i.e._, sub-keys that key out in the main key but that are
+not there, is theoretically possible but will not be recognised, as in these
+sub-keys will be considered items.
+
 ### Shortcut [**Info**]
 
 Often an item that keys out only has a single member (in the project), so there
