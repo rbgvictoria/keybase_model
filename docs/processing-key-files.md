@@ -691,10 +691,10 @@ Unfinished keys can be supported in the KeyBase data model as shown in figure 18
 </caption>
 
 Multiple items from the same lead could be delivered in the import CSV by
-separating item labels with a comma. For the situation in figure 18 this would
-be `Item 1, Item 2, Item 3`. To my knowledge nobody has ever tried this and
-KeyBase will not support it. We just send people a warning that KeyBase will
-treat this as a single item (which might be fine for some people).
+separating item labels with a comma, e.g., `Item 1, Item 2, Item 3` for the
+polytomy in figure 18. To my knowledge nobody has ever tried this and KeyBase
+will not support it. We will just send people a warning that KeyBase will treat
+this as a single item (which might be fine for some people).
 
 <br><hr>
 
