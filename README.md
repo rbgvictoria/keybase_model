@@ -14,37 +14,30 @@ In most cases the graph will be a tree (a graph with no cycles). KeyBase
 currently enforces that. In KeyBase, the branches of the tree are **leads** and
 the leaves are **items**, which the **leads** are related to with the `item_id`
 field. An **Item** can be the root of another **Key**. This is done in KeyBase
-through the `taxonomic_scope_id` and `first_step_id` fields in the **keys**
-table. The `taxonomic_scope_id` field links to the **items** table and the
-`first_step_id` field to the **leads** table (so that is really the root).
+through the `item_id` and `root_id` fields in the **keys**
+table. The `item_id` field links to the **items** table and the
+`root_id` field to the **leads** table (so that is really the root).
 
 There are two types of situations where the tree structure breaks down, or where
 there are other types of leaves:
 
-1.  **Subkeys:** Large keys are often broken down into smaller subkeys, e.g.
+1.  **Sub-keys:** Large keys are often broken down into smaller sub-keys, e.g.
     https://keybase.rbg.vic.gov.au/keys/show/3854. In the KeyBase data model we
     have the `subkey_id` field in the **leads** table to deal with this. When
     using this, we basically skip the **Item** and go straight to the **Key**.
 
-    The KeyBase plugin currently does not support subkeys, so until now people
-    have had to make up items and have the subkey as a key with a taxonomic
+    The KeyBase plugin currently does not support sub-keys, so until now people
+    have had to make up items and have the sub-key as a key with a taxonomic
     scope (which is why `taxonomic_scope_id` is required), but we can support it
     in the data model and provide a custom API endpoint for use with the KeyBase
     plugin until the plugin has been updated.
 
 2.  **Reticulations:** Sometimes multiple leads lead to the same next lead,
-    causing a cycle (or 'reticulation') in the graph. In the KeyBase data model
-    this situation is resolved by the `reticulation_id` field in the **leads**
-    table, which serves as the root for a new graph within the same key. So,
-    compared to the general scenario both the **Item** and the **Key** are
-    skipped.
-
-    The KeyBase plugin currently does not support reticulations, so when a new
-    key is loaded into the database KeyBase will just pretend they are not there
-    and duplicate a branch as many times as is needed (which is what a recursive
-    query with `UNION ALL` would do). The new KeyBase will support reticulations
-    in its data model and create the input that the KeyBase plugin needs in the
-    API rather than already in the database. 
+    causing a cycle (or 'reticulation') in the graph. The KeyBase plugin
+    currently does not support reticulations, so when a new key is loaded into
+    the database KeyBase will just pretend they are not there and duplicate a
+    branch as many times as is needed (which is what a recursive query with
+    `UNION ALL` would do).
 
 There are also scenarios where an **Item** is not a leaf but a branch (or a
 branch as well as a leaf):
