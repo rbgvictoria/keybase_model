@@ -638,24 +638,12 @@ $hasShortcut = substr_count($inKey[$i]['to'], ':') ? true : false;
 
 ### Chained shortcuts [**Error**]
 
-There are a few instances in KeyBase where people have tried to chain shortcuts
-
-![double shortcut](./media/couplets-double-shortcut.drawio.svg)
-
-<caption>
-
-**Figure 17.** Couplet with chained shortcuts `:Brachychiton
-populneus:Brachychiton populneus subsp. populneus` in **KeyBase (2025).** _Flora
-of Victoria: Key to the genera of Sterculiaceae_.
-&lt;https://keybase.rbg.vic.gov.au/keys/show/2252&gt; [Seen: 25-05-2025].
-
-</caption>
-
+There are a few instances in KeyBase where people have tried to chain shortcuts.
 While chained shortcuts do not break anything, KeyBase does not treat them as
-shortcuts but will  export and display them as extra leads (which is what they
-are), which might make people think it is doing something wrong. Also, shortcuts
-are meant to connect keys, not link extra items to keys (I did call them linked
-items before, which might have given people that idea).
+shortcuts but will export and display them as extra leads (which is what they
+are), which is not what the author of the key intended and will confuse other
+users. Also, shortcuts are meant to connect keys, not link extra items to keys
+(I did call them linked items before, which might have given people that idea).
 
 So, from now on, we will report chained shortcuts as errors.
 
@@ -703,8 +691,8 @@ $hasMultipleItems = !is_numeric($inKey[$i]['to']) && substr_count($inKey[$i]['to
 
 <caption>
 
-**Figure 19** All possible object relationships between Keys, Leads and Items.
-Couplets and shortcut are demarcated by boxes with a broken outline.
+**Figure 17** All possible object relationships between Keys, Leads and Items in
+KeyBase. Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
 
