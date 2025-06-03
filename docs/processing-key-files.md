@@ -517,7 +517,7 @@ This will find reticulations in a key:
 To check if a lead with index `$i` is in a reticulation:
 
 ```php
-$isReticulation = $toCouplets->contain$($inKey[$i]['to']) && $toCouplets->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 1;
+$isReticulation = $toCouplets->contain$($inKey[$i]['to']) && !$toCouplets->containsOneItem(fn ($value) => $value == $inKey[$i]['to']);
 ```
 
 
@@ -552,7 +552,7 @@ To find sub-keys in a key:
 ```
 
 ```bash
-> $subkeyLabels = $inkey->map(fn ($lead) => $lead['subkey'])->unique()->values();
+> $subkeys = $inkey->map(fn ($lead) => $lead['subkey'])->unique()->values();
 = Illuminate\Support\Collection {#5102
     all: [
       "Subkey 1",
@@ -565,20 +565,34 @@ To find sub-keys in a key:
 If a key has sub-keys, it needs to split up into a main key and sub-keys:
 
 ```php
-$subkeys = [];
-
-$subkeys['main'] = $inKey->filter(fn ($lead) => !isset($lead['subkey']));
-
-foreach ($subkeyLabels as $label) {
-    $subkeys[$label] = $inkey->filter(fn ($lead) => isset($lead['subkey']) && $lead['subkey'] == $label);
-}
+$inKeys = $inKey->groupBy('subkey');
 ```
 
-In the main key, non-numeric values in the `$to` collection can be either
+> **Note**
+>
+> `$inKey->groupBy('subkey')` also works when the 'subkey' key is absent from
+> all items in the collection, so it might be a good idea to do this for all
+> imported files no matter if there is a 'subkey' column or not. Then the key
+> has sub-keys if the `$inKeys` collection has more than one item and you find
+> the subkeys using:
+>
+> ```php
+> $subkeys = $inKeys->keys()->slice(1);
+> ```
+> 
+> Everything else can then be done in the `foreach` loop:
+>
+> ```php
+> foreach ($inKeys as $key => $inKey) {
+>     //  
+> }
+> ```
+
+In the main key (`$inKeys['']`), non-numeric values in the `$to` collection can be either
 sub-keys or items:
 
 ```bash
-> $to = $subkeys['main']->map(fn ($lead) => $lead['to']);
+> $to = $inKeys['']->map(fn ($lead) => $lead['to']);
 = Illuminate\Support\Collection {#5217
     all: [
       "Subkey 1",
@@ -588,7 +602,7 @@ sub-keys or items:
     ]
   }
 
-> $toItems = $to->filter(fn ($item) => !is_numeric($item))->diff($subkeyLabels);
+> $toItems = $to->filter(fn ($item) => !is_numeric($item))->diff($subkeys);
 = Illuminate\Support\Collection {5281 
     all: []
 ```
@@ -596,7 +610,7 @@ sub-keys or items:
 To check if a lead with index `$i` goes to a sub-key:
 
 ```php
-$hasSubkey = $subkeyLabels->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 0;
+$hasSubkey = $subkeys->filter(fn ($value) => $value == $inKeys[''][$i]['to'])->count() > 0;
 ```
 
 ### Shortcut [**Info**]
