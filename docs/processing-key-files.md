@@ -349,7 +349,7 @@ To find orphans in a key:
 To check if a lead with index `$i` is an orphan:
 
 ```php
-$isOrphan = $toCouplets->filter(fn ($value) => $value == $inKey[$i]['from'])->count() == 0;
+$isOrphan = $toCouplets->doesntContain($inKey[$i]['from']);
 ```
 
 
@@ -379,7 +379,7 @@ To find dead ends in a key:
 To check if a lead is a dead end:
 
 ```php
-$isDeadEnd = is_numeric($inKey[$i]['to']) && $from->filter(fn ($value) => $value == $inKey[$i]['to'])->count() == 0;
+$isDeadEnd = $toCouplets->contains($inKey[$i]['to']) && $from->doesntContain($inKey[$i]['to']);
 ```
 
 
@@ -517,7 +517,7 @@ This will find reticulations in a key:
 To check if a lead with index `$i` is in a reticulation:
 
 ```php
-$isReticulation = is_numeric($inKey[$i]['to']) && $toCouplets->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 1;
+$isReticulation = $toCouplets->contain$($inKey[$i]['to']) && $toCouplets->filter(fn ($value) => $value == $inKey[$i]['to'])->count() > 1;
 ```
 
 
