@@ -705,45 +705,43 @@ And for a single lead:
 $hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
 ```
 
-### Unfinished keys [**Warning**]
+### Multi-item leads [**Warning**]
 
-Unfinished keys are keys where not every item keys out, so they have multiple
-items coming from the same lead. Multiple items from the same lead could be
-delivered in the import CSV by separating item labels with a comma or a pipe
-(`|`). To my knowledge nobody has ever tried this and KeyBase will not support
-it. We will just send people a warning that KeyBase will treat this as a single
-item (which might be fine for some people). We might have to reconsider this in
-UAT.
+The new version of KeyBase will support unfinished keys. Multiple item labels,
+separated by the pipe ('`|`') character, _e.g._ `Corymbia|Blakella`, added in
+the same cell in the 'to' column in an import file, will be interpreted and
+treated as multiple items coming from the same lead (**figure 17**).  
 
-To find leads with multiple items:
+![unfinished key](./media/unfinished-key.drawio.svg)
+
+<caption>
+
+**Figure 17.** Key that is not fully resolved: lead `6` leads to more than one item.
+
+</caption>
+
+To find multi-items in a key:
 
 ```bash
-> $pattern = '/( ?\| ?)|(, ?)/';
-= "/( ?\| ?)|(, ?)/"
-
-> $multipleItems = $toItems->filter(fn ($value) => count(preg_split($pattern, $value)) > 1)->all();
-= Illuminate\Support\Collection {#5257
-    all: [
-      11 => "Corymbia|Blakella"
-    ]
-  }
+> $multiItems = $toItems->filter(fn ($value) => count(preg_split('/ ?\| ?/', $value)) > 1)->all();
+= [
+    11 => "Corymbia|Blakella"
+  ]
 ```
 
-If KeyBase were to support uploading of keys with unresolved parts, it would
-only support the pipe as the separator.
-
-To check if a lead has multiple items:
+To check if a lead has a multi-item:
 
 ```php
-$hasMultipleItems = count(preg_split($pattern, $inKey[$i]['to']) > 1;
+$hasMultiItem = count(preg_split('/ ?\| ?/', $inKey[$i]['to']) > 1;
 ```
 
-> **Note**
-> 
-> I would actually like to support this in KeyBase. I think it can be done very
-> easily by making the relationship between leads and items many-to-many.
->
-> ![](../public/media/keys-leads-items-many-to-many.svg)
+Once KeyBase has its own key editor, it will be possible to assign items to a
+key that do not key out at all. This cannot be done with CSV key imports, of
+course.
+
+**Note** that the old plugin that KeyBase will keep supporting does not support
+multiple items keying out in the same place, so we might exclude unfinished keys
+from the old API.
 
 <br><hr>
 
@@ -751,7 +749,7 @@ $hasMultipleItems = count(preg_split($pattern, $inKey[$i]['to']) > 1;
 
 <caption>
 
-**Figure 17** All possible object relationships between Keys, Leads and Items in
+**Figure 18.** All possible object relationships between Keys, Leads and Items in
 KeyBase. Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
