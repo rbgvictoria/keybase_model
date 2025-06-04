@@ -8,36 +8,51 @@ Keys are the core of KeyBase. To make keys work, we need three things (tables), 
 
 A key is a graph of leads, so the **leads** table contains an adjacency list
 made up by the `id` and `parent_id` fields. The lead itself is in the
-`lead_text` field.
+`statement` field.
 
-In most cases the graph will be a tree (a graph with no cycles). KeyBase
-currently enforces that. In KeyBase, the branches of the tree are **leads** and
-the leaves are **items**, which the **leads** are related to with the `item_id`
-field. An **Item** can be the root of another **Key**. This is done in KeyBase
+In most cases the graph will be a tree, _i.e._ a graph with no cycles. KeyBase
+enforces this. In KeyBase, the branches of the tree are **leads** and the leaves
+are **items**. In principle, a **lead** can only lead to a single **item** and
+the old version of KeyBase enforced a many-to-one relationship between **leads**
+and **items**. The new version of KeyBase supports a many-to-many relationship
+between **leads** and **items**, so that it can store **keys** with parts that
+are not fully resolved, _i.e._ where a **lead** can lead to multiple **items**.
+
+The data model also has a many-to-many relationship between **keys** and
+**items**. This is done with an eye on the future, when KeyBase will have its
+own key editor, so that **items** that cannot be keyed out yet (are not assigned
+to a **lead**) can be assigned to a **key**.
+
+An **Item** can be the root of another **Key**. This is done in KeyBase
 through the `item_id` and `root_id` fields in the **keys**
 table. The `item_id` field links to the **items** table and the
-`root_id` field to the **leads** table (so that is really the root).
+`root_id` field to the **leads** table.
 
 There are two types of situations where the tree structure breaks down, or where
 there are other types of leaves:
 
-1.  **Sub-keys:** Large keys are often broken down into smaller sub-keys, e.g.
+1.  **Sub-keys:** Large keys are often broken down into smaller sub-keys, _e.g._
     https://keybase.rbg.vic.gov.au/keys/show/3854. In the KeyBase data model we
     have the `subkey_id` field in the **leads** table to deal with this. When
     using this, we basically skip the **Item** and go straight to the **Key**.
 
     The KeyBase plugin currently does not support sub-keys, so until now people
     have had to make up items and have the sub-key as a key with a taxonomic
-    scope (which is why `taxonomic_scope_id` is required), but we can support it
-    in the data model and provide a custom API endpoint for use with the KeyBase
-    plugin until the plugin has been updated.
+    scope (`item_id`), but we can support it in the data model and provide a
+    custom API endpoint for use with the KeyBase plugin until the plugin has
+    been updated.
 
-2.  **Reticulations:** Sometimes multiple leads lead to the same next lead,
-    causing a cycle (or 'reticulation') in the graph. The KeyBase plugin
-    currently does not support reticulations, so when a new key is loaded into
-    the database KeyBase will just pretend they are not there and duplicate a
-    branch as many times as is needed (which is what a recursive query with
-    `UNION ALL` would do).
+2.  **Reticulations:** Sometimes multiple leads lead to the same couplet,
+    causing a cycle (or 'reticulation') in the graph. The KeyBase plugin does
+    not support reticulations, so when a new key is loaded into the database
+    KeyBase will just pretend they are not there and duplicate a branch as many
+    times as is needed (which is what a recursive query with `UNION ALL` would
+    do). It is possible to repair the tree structure without repeating branches
+    by starting a new graph at a reticulation, but this will cause issues down
+    the track. Also, reticulations are not things we like to see in keys, so it
+    seems best not to make a feature of it. Most, if not all, reticulations in
+    KeyBase are caused by merging sub-keys into the main key, which is not
+    necessary anymore when KeyBase can handle sub-keys.
 
 There are also scenarios where an **Item** is not a leaf but a branch (or a
 branch as well as a leaf):
@@ -53,8 +68,8 @@ branch as well as a leaf):
     key with a single lead for the item. The second is to add this lead to the
     key the item keys out in. KeyBase supports both these solutions. For the
     latter solution KeyBase allows the construction `<item>:<subordinate item>`,
-    e.g. 'Ginkgoaceae: Ginkgo biloba' (which skips two keys), in the 'to' column
-    of the input file.
+    e.g. 'Ginkgoaceae:Ginkgo biloba' (which skips two keys), in the 'to' column
+    of the input file. We now call this construction a 'shortcut'.
 
 2.  **References to items in other keys:** When KeyBase allowed people to add
     additional items in the 'to' column, people were quick to work out that this
@@ -62,9 +77,9 @@ branch as well as a leaf):
     than one place in a key, people would add the subordinate item(s) that would
     really key out in that particular spot. This broke KeyBase, which is why I
     came up with the extra lead idea, rather than trying to deal with it in the
-    item, like I did before. This is more flexible, so now it is possible to add
-    more than one subordinate item, e.g., 'Adoxaceae: Sambucus, Viburnum', as
-    well.
+    item, like I did before.
+
+    While shortcuts can be used for this purpose, it is not their intended use and chaining shortcuts to link more items to a key will throw an error. Also, when a tree of keys in a project is created, a key will be placed below the first key its item keys out in, which has had people confused.
 
     In theory it is possible for leads to have an item and the key to continue,
     which is something you sometimes see in printed keys, e.g. '...**2 (sect.
@@ -178,9 +193,6 @@ not). User filters can be created by all logged in users and are only visible by
 those users themselves.
 
 ## Entire schema
-
-Relationships to the `agents` table that all tables have through their
-`created_by_id` and `updated_by_id` fields have been left out.
 
 ![entire schema](public/media/entire-schema.svg)
 
