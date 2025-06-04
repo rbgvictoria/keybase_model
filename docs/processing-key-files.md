@@ -626,7 +626,7 @@ The inverse situation, _i.e._, sub-keys that key out in the main key but that
 are not there, is theoretically possible but will not be recognised, as these
 sub-keys will be considered items.
 
-### Shortcut [**Info**]
+### Shortcuts [**Info**]
 
 Often an item that keys out only has a single member (in the project), so there
 will not be a key for this item. However, this member itself can have multiple
@@ -737,6 +737,13 @@ To check if a lead has multiple items:
 ```php
 $hasMultipleItems = count(preg_split($pattern, $inKey[$i]['to']) > 1;
 ```
+
+> **Note**
+> 
+> I would actually like to support this in KeyBase. I think it can be done very
+> easily by making the relationship between leads and items many-to-many.
+>
+> ![](../public/media/keys-leads-items-many-to-many.svg)
 
 <br><hr>
 
