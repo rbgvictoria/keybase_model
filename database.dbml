@@ -1,8 +1,8 @@
+
 Enum "project_users_role_enum" {
   "manager"
   "contributor"
 }
-
 
 Table "agents" {
   "id" bigint(20) [pk, not null, increment]
@@ -26,12 +26,6 @@ Table "agents" {
   }
 }
 
-Ref "agents_created_by_id_foreign":"agents"."id" < "agents"."created_by_id"
-Ref "agents_updated_by_id_foreign":"agents"."id" < "agents"."updated_by_id"
-Ref "agents_user_id_foreign":"users"."id" < "agents"."user_id"
-Ref "change_notes_created_by_id_foreign":"agents"."id" < "change_notes"."created_by_id"
-
-
 Table "change_notes" {
   "id" bigint(20) [pk, not null, increment]
   "created_at" timestamp [default: NULL]
@@ -49,10 +43,6 @@ Table "change_notes" {
   }
 }
 
-Ref "change_notes_key_id_foreign":"keys"."id" < "change_notes"."key_id"
-Ref "change_notes_updated_by_id_foreign":"agents"."id" < "change_notes"."updated_by_id"
-
-
 Table "filter_item" {
   "filter_id" bigint(20) [not null]
   "item_id" bigint(20) [not null]
@@ -62,10 +52,6 @@ Table "filter_item" {
     item_id [name: "filter_item_item_id_foreign"]
   }
 }
-
-Ref "filter_item_filter_id_foreign":"filters"."id" < "filter_item"."filter_id"
-Ref "filter_item_item_id_foreign":"items"."id" < "filter_item"."item_id"
-
 
 Table "filters" {
   "id" bigint(20) [pk, not null, increment]
@@ -85,16 +71,11 @@ Table "filters" {
   }
 }
 
-Ref "filters_created_by_id_foreign":"agents"."id" < "filters"."created_by_id"
-Ref "filters_project_id_foreign":"projects"."id" < "filters"."project_id"
-Ref "filters_updated_by_id_foreign":"agents"."id" < "filters"."updated_by_id"
-
-
 Table "items" {
   "id" bigint(20) [pk, not null, increment]
   "created_at" timestamp [default: NULL]
   "updated_at" timestamp [default: NULL]
-  "guid" binary(16) [not null]
+  "guid" uuid [not null]
   "name" varchar(255) [not null]
   "url" varchar(255) [default: NULL]
   "project_id" bigint(20) [not null]
@@ -109,23 +90,28 @@ Table "items" {
   }
 }
 
-Ref "items_created_by_id_foreign":"agents"."id" < "items"."created_by_id"
-Ref "items_project_id_foreign":"projects"."id" < "items"."project_id"
-Ref "items_updated_by_id_foreign":"agents"."id" < "items"."updated_by_id"
+Table "key_item" {
+  "key_id" bigint(20) [not null]
+  "item_id" bigint(20) [not null]
 
+  Indexes {
+    (key_id, item_id) [unique, name: "key_item_key_id_item_id_unique"]
+    item_id [name: "key_item_item_id_foreign"]
+  }
+}
 
 Table "keys" {
   "id" bigint(20) [pk, not null, increment]
   "created_at" timestamp [default: NULL]
   "updated_at" timestamp [default: NULL]
-  "guid" binary(16) [not null]
+  "guid" uuid [not null]
   "version" bigint(20) [not null]
   "title" varchar(255) [not null]
   "author" varchar(255) [default: NULL]
   "description" text [default: NULL]
   "notes" text [default: NULL]
-  "root_id" bigint(20)
-  "item_id" bigint(20)
+  "root_id" bigint(20) [not null]
+  "item_id" bigint(20) [not null]
   "project_id" bigint(20) [not null]
   "subkey_of_id" bigint(20) [default: NULL]
   "source_id" bigint(20) [default: NULL]
@@ -145,14 +131,15 @@ Table "keys" {
   }
 }
 
-Ref "keys_created_by_id_foreign":"agents"."id" < "keys"."created_by_id"
-Ref "keys_root_id_foreign":"leads"."id" < "keys"."root_id"
-Ref "keys_project_id_foreign":"projects"."id" < "keys"."project_id"
-Ref "keys_source_id_foreign":"sources"."id" < "keys"."source_id"
-Ref "keys_subkey_of_id_foreign":"keys"."id" < "keys"."subkey_of_id"
-Ref "keys_item_id_foreign":"items"."id" < "keys"."item_id"
-Ref "keys_updated_by_id_foreign":"agents"."id" < "keys"."updated_by_id"
+Table "lead_item" {
+  "lead_id" bigint(20) [not null]
+  "item_id" bigint(20) [not null]
 
+  Indexes {
+    (lead_id, item_id) [unique, name: "lead_item_lead_id_item_id_unique"]
+    item_id [name: "lead_item_item_id_foreign"]
+  }
+}
 
 Table "leads" {
   "id" bigint(20) [pk, not null, increment]
@@ -161,7 +148,7 @@ Table "leads" {
   "node_name" varchar(255) [default: NULL]
   "statement" text [not null]
   "parent_id" bigint(20) [default: NULL]
-  "item_id" bigint(20) [default: NULL]
+  "reticulation_id" bigint(20) [default: NULL]
   "subkey_id" bigint(20) [default: NULL]
   "key_id" bigint(20) [not null]
   "created_by_id" bigint(20) [default: NULL]
@@ -169,22 +156,13 @@ Table "leads" {
 
   Indexes {
     parent_id [name: "leads_parent_id_index"]
-    item_id [name: "leads_item_id_index"]
+    reticulation_id [name: "leads_reticulation_id_index"]
     subkey_id [name: "leads_subkey_id_index"]
     key_id [name: "leads_key_id_index"]
     created_by_id [name: "leads_created_by_id_index"]
     updated_by_id [name: "leads_updated_by_id_index"]
   }
 }
-
-Ref "leads_created_by_id_foreign":"agents"."id" < "leads"."created_by_id"
-Ref "leads_item_id_foreign":"items"."id" < "leads"."item_id"
-Ref "leads_key_id_foreign":"keys"."id" < "leads"."key_id"
-Ref "leads_parent_id_foreign":"leads"."id" < "leads"."parent_id"
-Ref "leads_reticulation_id_foreign":"leads"."id" < "leads"."reticulation_id"
-Ref "leads_subkey_id_foreign":"keys"."id" < "leads"."subkey_id"
-Ref "leads_updated_by_id_foreign":"agents"."id" < "leads"."updated_by_id"
-
 
 Table "project_users" {
   "id" bigint(20) [pk, not null, increment]
@@ -204,12 +182,6 @@ Table "project_users" {
   }
 }
 
-Ref "project_users_created_by_id_foreign":"agents"."id" < "project_users"."created_by_id"
-Ref "project_users_project_id_foreign":"projects"."id" < "project_users"."project_id"
-Ref "project_users_updated_by_id_foreign":"agents"."id" < "project_users"."updated_by_id"
-Ref "project_users_user_id_foreign":"users"."id" < "project_users"."user_id"
-
-
 Table "projects" {
   "id" bigint(20) [pk, not null, increment]
   "created_at" timestamp [default: NULL]
@@ -228,11 +200,6 @@ Table "projects" {
     updated_by_id [name: "projects_updated_by_id_index"]
   }
 }
-
-Ref "projects_created_by_id_foreign":"agents"."id" < "projects"."created_by_id"
-Ref "projects_item_id_foreign":"items"."id" < "projects"."item_id"
-Ref "projects_updated_by_id_foreign":"agents"."id" < "projects"."updated_by_id"
-
 
 Table "sources" {
   "id" bigint(20) [pk, not null, increment]
@@ -267,11 +234,6 @@ Table "sources" {
   }
 }
 
-Ref "sources_created_by_id_foreign":"agents"."id" < "sources"."created_by_id"
-Ref "sources_project_id_foreign":"projects"."id" < "sources"."project_id"
-Ref "sources_updated_by_id_foreign":"agents"."id" < "sources"."updated_by_id"
-
-
 Table "users" {
   "id" bigint(20) [pk, not null, increment]
   "name" varchar(255) [not null]
@@ -287,4 +249,84 @@ Table "users" {
   }
 }
 
+Ref "agents_created_by_id_foreign":"agents"."id" < "agents"."created_by_id"
 
+Ref "agents_updated_by_id_foreign":"agents"."id" < "agents"."updated_by_id"
+
+Ref "agents_user_id_foreign":"users"."id" < "agents"."user_id"
+
+Ref "change_notes_created_by_id_foreign":"agents"."id" < "change_notes"."created_by_id"
+
+Ref "change_notes_key_id_foreign":"keys"."id" < "change_notes"."key_id"
+
+Ref "change_notes_updated_by_id_foreign":"agents"."id" < "change_notes"."updated_by_id"
+
+Ref "filter_item_filter_id_foreign":"filters"."id" < "filter_item"."filter_id"
+
+Ref "filter_item_item_id_foreign":"items"."id" < "filter_item"."item_id"
+
+Ref "filters_created_by_id_foreign":"agents"."id" < "filters"."created_by_id"
+
+Ref "filters_project_id_foreign":"projects"."id" < "filters"."project_id"
+
+Ref "filters_updated_by_id_foreign":"agents"."id" < "filters"."updated_by_id"
+
+Ref "items_created_by_id_foreign":"agents"."id" < "items"."created_by_id"
+
+Ref "items_project_id_foreign":"projects"."id" < "items"."project_id"
+
+Ref "items_updated_by_id_foreign":"agents"."id" < "items"."updated_by_id"
+
+Ref "key_item_item_id_foreign":"items"."id" < "key_item"."item_id"
+
+Ref "key_item_key_id_foreign":"keys"."id" < "key_item"."key_id"
+
+Ref "keys_created_by_id_foreign":"agents"."id" < "keys"."created_by_id"
+
+Ref "keys_item_id_foreign":"items"."id" < "keys"."item_id"
+
+Ref "keys_project_id_foreign":"projects"."id" < "keys"."project_id"
+
+Ref "keys_root_id_foreign":"leads"."id" < "keys"."root_id"
+
+Ref "keys_source_id_foreign":"sources"."id" < "keys"."source_id"
+
+Ref "keys_subkey_of_id_foreign":"keys"."id" < "keys"."subkey_of_id"
+
+Ref "keys_updated_by_id_foreign":"agents"."id" < "keys"."updated_by_id"
+
+Ref "lead_item_item_id_foreign":"items"."id" < "lead_item"."item_id"
+
+Ref "lead_item_lead_id_foreign":"leads"."id" < "lead_item"."lead_id"
+
+Ref "leads_created_by_id_foreign":"agents"."id" < "leads"."created_by_id"
+
+Ref "leads_key_id_foreign":"keys"."id" < "leads"."key_id"
+
+Ref "leads_parent_id_foreign":"leads"."id" < "leads"."parent_id"
+
+Ref "leads_reticulation_id_foreign":"leads"."id" < "leads"."reticulation_id"
+
+Ref "leads_subkey_id_foreign":"keys"."id" < "leads"."subkey_id"
+
+Ref "leads_updated_by_id_foreign":"agents"."id" < "leads"."updated_by_id"
+
+Ref "project_users_created_by_id_foreign":"agents"."id" < "project_users"."created_by_id"
+
+Ref "project_users_project_id_foreign":"projects"."id" < "project_users"."project_id"
+
+Ref "project_users_updated_by_id_foreign":"agents"."id" < "project_users"."updated_by_id"
+
+Ref "project_users_user_id_foreign":"users"."id" < "project_users"."user_id"
+
+Ref "projects_created_by_id_foreign":"agents"."id" < "projects"."created_by_id"
+
+Ref "projects_item_id_foreign":"items"."id" < "projects"."item_id"
+
+Ref "projects_updated_by_id_foreign":"agents"."id" < "projects"."updated_by_id"
+
+Ref "sources_created_by_id_foreign":"agents"."id" < "sources"."created_by_id"
+
+Ref "sources_project_id_foreign":"projects"."id" < "sources"."project_id"
+
+Ref "sources_updated_by_id_foreign":"agents"."id" < "sources"."updated_by_id"

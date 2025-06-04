@@ -30,7 +30,7 @@ return new class extends Migration
         });
 
         Schema::table('projects', function (Blueprint $table) {
-            $table->foreign('taxonomic_scope_id')->references('id')->on('items');
+            $table->foreign('item_id')->references('id')->on('items');
         });
     }
 
@@ -40,9 +40,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->dropForeign('projects_taxonomic_scope_id_foreign');
+            $table->dropForeign('projects_item_id_foreign');
         });
 
+        Schema::dropIfExists('key_item');
+        Schema::dropIfExists('lead_item');
         Schema::dropIfExists('items');
     }
 };

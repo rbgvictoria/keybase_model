@@ -31,7 +31,7 @@ return new class extends Migration
             $table->index('title');
             $table->index('project_id');
             $table->index('subkey_of_id');
-            $table->index('taxonomic_scope_id');
+            $table->index('item_id');
             $table->index('created_by_id');
             $table->index('updated_by_id');
             $table->foreign('item_id')->references('id')->on('items');
@@ -40,6 +40,14 @@ return new class extends Migration
             $table->foreign('created_by_id')->references('id')->on('agents');
             $table->foreign('updated_by_id')->references('id')->on('agents');
         });
+
+        Schema::create('key_item', function(Blueprint $table) {
+            $table->unsignedBigInteger('key_id');
+            $table->unsignedBigInteger('item_id');
+            $table->unique(['key_id', 'item_id']);
+            $table->foreign('key_id')->references('id')->on('keys');
+            $table->foreign('item_id')->references('id')->on('items');
+        });
     }
 
     /**
@@ -47,6 +55,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('key_item');
         Schema::dropIfExists('keys');
     }
 };
