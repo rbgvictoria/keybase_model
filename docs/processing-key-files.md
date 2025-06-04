@@ -613,7 +613,7 @@ To check if a lead with index `$i` goes to a sub-key:
 $hasSubkey = $subkeys->filter(fn ($value) => $value == $inKeys[''][$i]['to'])->count() > 0;
 ```
 
-### Unreachable sub-keys [**Error**]
+#### Unreachable sub-keys [**Error**]
 
 If there are sub-keys in a key, there should also be a test for sub-keys that do
 not key out in the main key:
@@ -647,23 +647,42 @@ California: Jepson Herbarium, UC Berkeley: Fabaceae Group 1_.
 </caption>
 
 In the key file shortcuts can be provided by appending a colon (':') and an item
-name, e.g. `:Senegalia greggii`, to an item name in the `to` column. (People
+name, _e.g._ `:Senegalia greggii`, to an item name in the `to` column. (People
 will be tempted to put a space after the colon, so we should account for that
 when parsing a key).
 
 To check if there are any shortcuts in a provided key, you can run:
 
 ```php
-$shortcuts = $toItems)->filter(fn ($value) => substr_count($value, ':'))->all();
+$shortcuts = $toItems->filter(fn ($value) => substr_count($value, ':'))
+    ->map(fn ($value) => preg_split('/ ?: ?/', $value)[1]);
 ```
 
 And for a single lead:
 
 ```php
-$hasShortcut = substr_count($inKey[$i]['to'], ':') ? true : false;
+$hasShortcut = $substr_count($inKey[$i]['to'], ':') > 0;
 ```
 
-### Chained shortcuts [**Error**]
+#### Shortcuts already in key [**Error**]
+
+Shortcuts to items that are already keyed out in the key will cause problems
+later, as they will create a loop, so need to be caught before the key is
+uploaded.
+
+To find any spurious shortcuts in a key:
+
+```php
+$spuriousShortcuts = $shortcuts->filter(fn ($shortcut) => $toItems->contains($shortcut));
+```
+
+For a single lead with index `$i`:
+
+```php
+$hasSpuriousShortcut = $hasShortcut && $toItems->contains(preg_split('/ ?: ?/', $inKey[$i]['to'])[1]);
+```
+
+#### Chained shortcuts [**Error**]
 
 There are a few instances in KeyBase where people have tried to chain shortcuts.
 While chained shortcuts do not break anything, KeyBase does not treat them as
@@ -699,7 +718,10 @@ UAT.
 To find leads with multiple items:
 
 ```bash
-> $multipleItems = $toItems->filter(fn ($value) => substr_count($value, ',') > 0 || substr_count($value, '|') > 0)->all();
+> $pattern = '/( ?\| ?)|(, ?)/';
+= "/( ?\| ?)|(, ?)/"
+
+> $multipleItems = $toItems->filter(fn ($value) => count(preg_split($pattern, $value)) > 1)->all();
 = Illuminate\Support\Collection {#5257
     all: [
       11 => "Corymbia|Blakella"
@@ -713,7 +735,7 @@ only support the pipe as the separator.
 To check if a lead has multiple items:
 
 ```php
-$hasMultipleItems = !is_numeric($inKey[$i]['to']) && substr_count($inKey[$i]['to'], ',') > 0;
+$hasMultipleItems = count(preg_split($pattern, $inKey[$i]['to']) > 1;
 ```
 
 <br><hr>
