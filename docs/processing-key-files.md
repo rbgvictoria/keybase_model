@@ -690,21 +690,25 @@ $hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
 
 Unfinished keys are keys where not every item keys out, so they have multiple
 items coming from the same lead. Multiple items from the same lead could be
-delivered in the import CSV by separating item labels with a comma. To my
-knowledge nobody has ever tried this and KeyBase will not support it. We will
-just send people a warning that KeyBase will treat this as a single item (which
-might be fine for some people). We might have to reconsider this in UAT.
+delivered in the import CSV by separating item labels with a comma or a pipe
+(`|`). To my knowledge nobody has ever tried this and KeyBase will not support
+it. We will just send people a warning that KeyBase will treat this as a single
+item (which might be fine for some people). We might have to reconsider this in
+UAT.
 
 To find leads with multiple items:
 
 ```bash
-> $multipleItems = $toItems->filter(fn ($value) => substr_count($value, ',') > 0)->all();
+> $multipleItems = $toItems->filter(fn ($value) => substr_count($value, ',') > 0 || substr_count($value, '|') > 0)->all();
 = Illuminate\Support\Collection {#5257
     all: [
-      11 => "Corymbia, Blakeella"
+      11 => "Corymbia|Blakella"
     ]
   }
 ```
+
+If KeyBase were to support uploading of keys with unresolved parts, it would
+only support the pipe as the separator.
 
 To check if a lead has multiple items:
 
