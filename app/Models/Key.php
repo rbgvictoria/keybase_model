@@ -112,8 +112,7 @@ class Key extends Model
      */
     public function items(): BelongsToMany
     {
-        return $this->belongsToMany(Item::class, 'leads', 'key_id', 'item_id')
-                ->distinct();
+        return $this->belongsToMany(Item::class, 'key_item');
     }
 
     /**

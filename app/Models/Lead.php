@@ -6,6 +6,7 @@ use App\Traits\Blamable;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * Lead
@@ -24,7 +25,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int $updated_by_id
  * @property Key $key
  * @property Lead $parent
- * @property Item $item
+ * @property Item[] $items
  * @property Lead $reticulation
  * @property Key $subkey
  * @property Agent $createdBy
@@ -59,11 +60,11 @@ class Lead extends Model
     /**
      * Item the lead leads to
      * 
-     * @return BelongsTo<item, Lead>
+     * @return BelongsTo<Item, Lead>
      */
-    public function item(): BelongsTo
+    public function items(): BelongsToMany
     {
-        return $this->belongsTo(item::class);
+        return $this->belongsToMany(Item::class, 'lead_item');
     }
 
     /**
