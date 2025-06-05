@@ -1,0 +1,1779 @@
+from,statement,to,subkey
+1,"Specimens available for examination without flowers, these either not present on the specimen or not produced at all",2,
+1,"Specimens available for examination with flowers, often also producing seeds within fruits [ANGIOSPERMS]",7,
+2,Bulblets [small bulbs or corms that are dispersed in place of seeds or fruits] formed in place of flowers in inflorescence or inflorescence-like cluster,Family Group 1,
+2,Bulblets 0,3,
+3,"Sporangia, sporangium cases, seeds, cones, or cone-like structures 0 or not readily apparent [plants in strictly vegetative condition]",4,
+3,"Sporangia, sporangium cases, seeds, cones, or cone-like structures present",5,
+4,Plant aquatic,Family Group 2,
+4,Plant terrestrial [Note: terrestrial plants in strictly vegetative condition cannot be identified with this key],Cannot be identified,
+5,"Herbs reproducing by spores released directly from sporangia, the sporangia variously located [on abaxial leaf face, in stalked cluster arising from petiole or blade base, in hardened case at petiole base, in axils of linear or scale-like leaves, or in terminal cone-like structure], seeds and pollen never formed [LYCOPHYTES and FERNS]",Family Group 3,
+5,Herbs to trees reproducing by seeds,6,
+6,"Ovules exposed to air at time of pollination, not enclosed in ovary; pollen grains deposited directly on ovule, stigma 0; seeds, if present, borne between scales of cone or naked on branches, fruit not produced; shrubs or trees [GYMNOSPERMS]",Family Group 4,
+6,"Ovules enclosed in ovaries that on available specimens have matured as dehiscent or indehiscent fruits; seeds enclosed within ripened pericarp of fruit [if dry remains of flowers are present it may be possible to determine the family of a fruiting specimen under  couplet 7 in this key, but not all fruiting specimens may be identifiable here]",Cannot be identified,
+7,Specimens with only cleistogamous flowers &mdash; fruits developing without flowers opening,Family Group 5,
+7,Specimens with open flowers,8,
+8,"Specimens with unisexual flowers of only 1 kind [staminate or pistillate, but not both]; plants dioecious or monoecious",9,
+8,"Specimens with bisexual flowers or with both staminate and pistillate flowers [on same or different individuals]; plants bisexual, dioecious, or monoecious (occasionally with mixture of bisexual and unisexual flowers)",12,
+9,Specimen with only staminate flowers,10,
+9,Specimen with only pistillate flowers,11,
+10,"Herb or subshrub, woody only at base",Family Group 6,
+10,"Tree or shrub, conspicuously woody",Family Group 7,
+11,"Herb or subshrub, woody only at base",Family Group 8,
+11,"Tree or shrub, conspicuously woody",Family Group 9,
+12,"Pistils 2 or more per flower [carpels > 1, free to the base]",Family Group 10,
+12,Pistil 1 per flower [carpel 1 or carpels > 1 fused at least proximally],13,
+13,"Perianth 0 or in a single whorl [appearing to be either sepals or petals but not both], sometimes reduced to scale-like or bristle-like structures",14,
+13,Perianth in 2 or more whorls (generally both sepals and petals) or perianth parts spiraled 2 or more times around floral axis,18,
+14,"Tree or shrub, conspicuously woody",15,
+14,"Herb or subshrub, woody proximally if at all",16,
+15,"Inflorescence, at least the staminate, a catkin or catkin-like spike; flowers unisexual",Family Group 11,
+15,Inflorescence various but not catkin-like; flowers bisexual or unisexual,Family Group 12,
+16,Leaf venation parallel or leaves and stem not differentiated,Family Group 13,
+16,Leaf venation generally pinnate or palmate (sometimes only midvein evident) or leaves reduced to bladeless scales,17,
+17,Ovary inferior,Family Group 14,
+17,Ovary superior,Family Group 15,
+18,Perianth parts 2 or 3 per whorl,Family Group 16,
+18,Perianth parts generally 4 or 5 per whorl (rarely some other number or whorls differing in number of parts) or in a spiral with the number of parts indefinite,19,
+19,"Petals fused into a ring or a tube, the corolla generally falling as a unit [corolla of free petals fused to a hypanthium should be keyed under 19']",20,
+19,"Petals free, at least at base, attached and generally falling singly (sometimes individually joined to a hypanthium; in a few families &plusmn; joined and falling in groups, but not forming a ring or a tube, or petal 1)",22,
+20,Ovary inferior or partly so,Family Group 17,
+20,Ovary superior,21,
+21,Corolla bilateral,Family Group 18,
+21,Corolla radial,Family Group 19,
+22,Leaf compound or so deeply divided as to appear compound,Family Group 20,
+22,"Leaf simple, sometimes much reduced",23,
+23,Ovary inferior or partly so,Family Group 21,
+23,Ovary superior,24,
+24,Stamens > 2 &times; as many as petals,Family Group 22,
+24,Stamens <= 2 &times; as many as petals,25,
+25,"Tree or shrub, conspicuously woody",Family Group 23,
+25,"Herb or subshrub, woody only at base",Family Group 24,
+1,"Leaves linear, +- entire, sheathing at base",2,Family Group 1
+1,"Leaves linear-elliptic to round, entire, toothed, or palmately lobed, not sheathing at base",4,Family Group 1
+2,Plant with strong odor of onion or garlic; bulblets in head or umbel,"Alliaceae:Allium sativum|Allium vineale",Family Group 1
+2,Plant unscented; bulblets in spike- or panicle-like cluster,3,Family Group 1
+3,"Leaves stiff, sword-like, vertically folded, attached ""edge-on"" to stem, < 60 mm wide",Iridaceae:Watsonia meriana,Family Group 1
+3,"Leaves soft, flat or folded, not attached ""edge-on"" to stem, 1--2 mm wide",Poaceae {Poa bulbosa subsp. vivipara},Family Group 1
+4,"Leaves opposite, +- fleshy",Montiaceae:Montia chamissoi,Family Group 1
+4,"Leaves alternate or all basal, not fleshy",5,Family Group 1
+5,Proximal leaves sessile or tapered to short petioles; leaf blade entire or sharply toothed,Saxifragaceae:Micranthes,Family Group 1
+5,Proximal leaves abruptly slender-petioled; leaf blade palmately lobed or divided,6,Family Group 1
+6,"Proximal leaves 5--15 cm wide; plant stout, 30--150(200) cm",Ranunculaceae:Aconitum columbianum,Family Group 1
+6,"Proximal leaves 1.5--4 cm wide; plant slender, 8--50 cm",Saxifragaceae:Lithophragma,Family Group 1
+1,"Plant body consisting of a jointed, hollow-stemmed central axis and whorled branches; leaves reduced to whorled scales; plant emergent",Equisetaceae:Equisetum,Family Group 2
+1,"Plant body various, but not consisting of a jointed, hollow-stemmed central axis and whorled branches; leaves various, but not whorled scales; plant free-floating, emergent, or submersed",2,Family Group 2
+2,"Plant raft-like, free-floating on water surface or stranded along shore or in drying bottom sediments, breaking apart into individuals or small clumps",3,Family Group 2
+2,"Plant generally anchored in bottom sediments or, if free-floating, most of plant body below water surface or not readily breaking apart --- rhizomes or stolons present or 0, sometimes elongated",7,Family Group 2
+3,"Individual plant generally 0.4--30 mm in length or diam, sometimes not differentiated into leaves and stems; roots unbranched",4,Family Group 2
+3,"Individual plant often >> 30 mm, differentiated into leaves and stems; roots generally branched (0 in Salviniaceae, with finely dissected, root-like submersed leaves)",5,Family Group 2
+4,"Plant body spheric to disk-shaped or oblong, not differentiated into stems and leaves",Araceae,Family Group 2
+4,"Plant body differentiated into a short, often branched stem with small, minutely velvety-papillate, scale-like leaves",Azollaceae:Azolla,Family Group 2
+5,"Leaf blades glossy green, glabrous, finely parallel-veined; petioles often enlarged, forming gas-filled floats",Pontederiaceae:Eichhornia,Family Group 2
+5,"Leaf blades light to dark green or +- purple, velvety-hairy, +- palmately or obscurely veined, sessile, lacking floats, +- palmately or obscurely veined",6,Family Group 2
+6,"Leaves in floating rosettes, evidently +- palmately veined",Araceae:Pistia,Family Group 2
+6,"Leaves in whorls of 3, 2 floating, entire, obscurely veined, the 3rd submersed, finely dissected, root-like",Salviniaceae:Salvinia,Family Group 2
+7,"Leaf peltate, cordate, sagittate, or deeply notched",8,Family Group 2
+7,"Leaf not peltate, cordate, sagittate, or deeply notched",16,Family Group 2
+8,Leaf peltate,9,Family Group 2
+8,"Leaf sagittate or cordate to ovate or +- round, the base shallowly to deeply notched",10,Family Group 2
+9,Submersed parts not gelatinous; leaf blades generally emergent,Araliaceae:Hydrocotyle,Family Group 2
+9,Submersed parts gelatinous; leaf blades floating,Cabombaceae:Brasenia,Family Group 2
+10,"Leaf blades pinnately veined; petioles long, stout; rhizome stout",11,Family Group 2
+10,"Leaf blades +- palmately veined; petioles long or short, slender or stout; rhizome, if present, slender",12,Family Group 2
+11,Leaf sagittate; rhizome +- vertical,Araceae:Peltandra,Family Group 2
+11,Leaf ovate to round; rhizome horizontal,Nymphaeaceae,Family Group 2
+12,"Leaf blades palmately lobed, never sagittate, the lobes often toothed --- veinlets forming an irregular network",Araliaceae:Hydrocotyle,Family Group 2
+12,"Leaf blades ovate to cordate or sagittate, entire",13,Family Group 2
+13,"Palmate veins 3 --- smaller veins parallel, extending from main veins toward leaf margin",Araceae:Peltandra,Family Group 2
+13,Palmate veins generally 5--13+,14,Family Group 2
+14,Stipules 1--6 cm,Pontederiaceae:Heteranthera limosa,Family Group 2
+14,Stipules 0,15,Family Group 2
+15,Smaller veins passing like ladder-rungs between prominent main veins,Alismataceae or Hydrocharitaceae,Family Group 2
+15,Smaller veins forming network,Menyanthaceae:Nymphoides,Family Group 2
+16,"Leaves all basal or basal and cauline on a generally erect, generally emergent stem, sometimes from rhizome or corm-like base anchored in bottom sediments",17,Family Group 2
+16,Leaves generally all cauline; stems emergent or taking the form of underwater or floating rhizomes or stolons that are unable to support the plant body outside of water,47,Family Group 2
+17,"Leaves petioled, with expanded blades",18,Family Group 2
+17,"Leaves sessile, +- linear or reduced to bladeless sheaths",24,Family Group 2
+18,Leaf serrate or dentate to lobed or compound,19,Family Group 2
+18,"Leaf entire, simple",21,Family Group 2
+19,Leaf palmate; leaflets 4,Marsileaceae:Marsilea,Family Group 2
+19,Leaf toothed to pinnately lobed or 1--3-pinnate,20,Family Group 2
+20,"Leaf bases sheathing; leaves, lobes, or leaflets serrate to sharply dissected",Apiaceae,Family Group 2
+20,Leaf bases not sheathing; lobes or leaflets entire or dentate with +- rounded teeth,"Brassicaceae:Nasturtium|Rorippa",Family Group 2
+21,Leaves generally << 1 cm wide,Scrophulariaceae:Limosella,Family Group 2
+21,"Leaves generally >= 1 cm wide, often much larger",22,Family Group 2
+22,Wider leaves floating,Aponogetonaceae:Aponogeton distachyos,Family Group 2
+22,Wider leaves generally emergent,23,Family Group 2
+23,Stipules 0,Alismataceae,Family Group 2
+23,"Stipules present, 1--6 cm",Pontederiaceae:Heteranthera limosa,Family Group 2
+24,"Leaves vertically folded and attached ""edge-on"" to the stem, obviously 2-ranked",Juncaceae:Juncus,Family Group 2
+24,"Leaves cylindric, +- angled, flat, or reduced to bladeless sheaths, but not folded, not obviously 2-ranked",25,Family Group 2
+25,Leaves with flat blades or reduced to bladeless sheaths,26,Family Group 2
+25,Leaves cylindric or angled,36,Family Group 2
+26,"Leaves bladeless or nearly so, composed mainly of a tubular sheath",27,Family Group 2
+26,Leaves with ordinary flat blades and generally also +- tubular sheaths,29,Family Group 2
+27,Stems +- triangular,Cyperaceae,Family Group 2
+27,"Stems round, flattened, or several-angled",28,Family Group 2
+28,"Leaf sheaths closed, forming a continuous cylinder around stem",Cyperaceae,Family Group 2
+28,"Leaf sheaths open on one side, with overlapping margins",Juncaceae:Juncus,Family Group 2
+29,Leaf blade with a well-developed midvein or keel,30,Family Group 2
+29,"Leaf blade flat or rounded on back, lacking a prominent midvein or keel",31,Family Group 2
+30,"Leaf sheaths closed, forming a continuous cylinder around stem; stem generally triangular; leaves 3-ranked",Cyperaceae,Family Group 2
+30,"Leaf sheaths open on one side, with overlapping margins; stem round; leaves 2-ranked",Typhaceae:Sparganium,Family Group 2
+31,Annual; leaves all basal,Ranunculaceae:Myosurus,Family Group 2
+31,"Perennial herb, or if annual, some leaves cauline",32,Family Group 2
+32,Plant submersed; seawater or brackish water of bays and estuaries,Zosteraceae,Family Group 2
+32,Plant emergent; fresh or brackish water of coastal or inland areas,33,Family Group 2
+33,Nodes swollen; stem generally hollow,Poaceae,Family Group 2
+33,Nodes not swollen; stem generally filled to center with spongy tissue,34,Family Group 2
+34,Leaf generally > 5 mm wide; remnants of old inflorescence a dense spike; inner surface of leaf sheaths mucilaginous,Typhaceae:Typha,Family Group 2
+34,Leaf <= 5 mm wide; remnants of old inflorescence not evident or a raceme; inner surface of sheaths not mucilaginous,35,Family Group 2
+35,Leaves +- circular to semicircular in &times;-section,Juncaginaceae:Triglochin,Family Group 2
+35,Leaves flat,Pontederiaceae:Heteranthera limosa,Family Group 2
+36,Rhizomes and stolons 0; leaves densely tufted,37,Family Group 2
+36,Rhizomes or stolons present; leaves tufted or borne along rhizome or stolon,40,Family Group 2
+37,"Leaf divided lengthwise into 4 hollow chambers; a sporangium generally embedded in adaxial base of each leaf, containing either powdery or larger spores",Isoetaceae:Isoetes,Family Group 2
+37,"Leaf solid or hollow, but not regularly divided into 4 chambers; a sporangium never embedded in leaf base",38,Family Group 2
+38,Plant perennial herb; leaf often with internal cross-partitions,Juncaceae:Juncus,Family Group 2
+38,Plant annual; leaf without internal cross-partitions or partitions obscure,39,Family Group 2
+39,Leaf bases not sheathing,Brassicaceae:Subularia,Family Group 2
+39,Leaf bases sheathing,Juncaginaceae:Triglochin,Family Group 2
+40,Leaf sharply angled,41,Family Group 2
+40,Leaf cylindric,42,Family Group 2
+41,Stem triangular; leaves 3-ranked,Cyperaceae,Family Group 2
+41,Stem +- round; leaves 2-ranked,Typhaceae:Sparganium,Family Group 2
+42,Leaf with internal cross-partitions,43,Family Group 2
+42,Leaf without internal cross-partitions,44,Family Group 2
+43,"Leaf soft, blunt, generally <= 15 cm, loosely sheathing; cross-partitions often externally prominent",Apiaceae:Lilaeopsis,Family Group 2
+43,"Leaf generally stiff, acute, often > 15 cm, tightly sheathing; cross-partitions readily apparent by feel but often externally obscure",Juncaceae:Juncus,Family Group 2
+44,Leaf generally >> 6 cm,45,Family Group 2
+44,Leaf 1--7(11) cm,46,Family Group 2
+45,Stem +- straight; leaf blade tip without evident terminal pore; ligule 0.5--5 mm,Juncaginaceae:Triglochin,Family Group 2
+45,Stem zigzag; leaf blade tip with evident terminal pore; ligule 2--12 mm,Scheuchzeriaceae:Scheuchzeria palustris,Family Group 2
+46,"Plant spreading by rhizomes, producing +- spheric, ball-like structures [sporangium cases] +- 2--3 mm diam at bases of some leaves; new leaves uncoiling at tips",Marsileaceae:Pilularia,Family Group 2
+46,"Plant spreading by stolons, not producing ball-like structures at bases of leaves; new leaves not uncoiling at tips",Scrophulariaceae:Limosella,Family Group 2
+47,Leaves (or leaf-like branches) compound or very deeply divided,48,Family Group 2
+47,"Leaves simple, the margins entire, toothed, or shallowly lobed",55,Family Group 2
+48,"Leaf palmately compound --- leaflets 4, floating or emergent",Marsileaceae:Marsilea,Family Group 2
+48,Leaf pinnately compound or variously dissected,49,Family Group 2
+49,Leaflets lanceolate or wider; leaves mostly aerial,50,Family Group 2
+49,"Leaflets or lobes linear, at least on submersed leaves; all or many leaves submersed",51,Family Group 2
+50,Leaf bases sheathing; lobes or leaflets serrate to sharply dissected,Apiaceae,Family Group 2
+50,Leaf bases not sheathing; lobes or leaflets entire or dentate with +- rounded teeth,"Brassicaceae:Nasturtium|Rorippa",Family Group 2
+51,"Underwater parts bearing small, hollow bladders that suck in and trap small organisms when hairs at opening are triggered; plant carnivorous --- highly dissected underwater parts are actually modified stems and the bladders are the leaves",Lentibulariaceae:Utricularia,Family Group 2
+51,Underwater parts lacking bladder-like traps; plant not carnivorous,52,Family Group 2
+52,Submersed leaves alternate,Ranunculaceae:Ranunculus,Family Group 2
+52,Submersed leaves opposite or whorled,53,Family Group 2
+53,"Submersed leaves pinnately divided, central leaf axis evident",Haloragaceae:Myriophyllum,Family Group 2
+53,"Submersed leaves palmately dissected or repeatedly forked, central leaf axis 0",54,Family Group 2
+54,"Submersed leaves palmately dissected; floating leaves 0--few, linear-elliptic, +- entire",Cabombaceae:Cabomba,Family Group 2
+54,Submersed leaves repeatedly forked; floating leaves 0,Ceratophyllaceae:Ceratophyllum demersum,Family Group 2
+55,"Leaves long, narrow, strap-shaped or ribbon-like, often >> 20 cm, generally at least some basal",56,Family Group 2
+55,"Leaves linear to round, generally < 20 cm, generally all cauline",57,Family Group 2
+56,Plant of freshwater habitat,Typhaceae:Sparganium,Family Group 2
+56,Plant of seawater or brackish water of bays and estuaries,Zosteraceae,Family Group 2
+57,Leaf with stipules or sheathing base,58,Family Group 2
+57,Leaf without stipules or sheathing base,65,Family Group 2
+58,Principal veins of leaf pinnate,59,Family Group 2
+58,Principal veins of leaf parallel or pinnate-parallel or only 1 leaf vein apparent,60,Family Group 2
+59,"Leaves opposite or whorled, 2--15 mm",Elatinaceae,Family Group 2
+59,"Leaves alternate, >> 15 mm",Polygonaceae,Family Group 2
+60,Leaves generally +- opposite or appearing whorled,61,Family Group 2
+60,Leaves generally alternate,63,Family Group 2
+61,"Leaves emergent or floating; nodes swollen, internodes generally hollow",Poaceae,Family Group 2
+61,"Leaves submersed or some floating; nodes generally not swollen, internodes generally solid",62,Family Group 2
+62,"Leaves minutely toothed (teeth sometimes appearing +- 0 to naked eye); leaf base abruptly expanded, forming sheath, stipules 0",Hydrocharitaceae:Najas,Family Group 2
+62,"Leaves entire; leaf base not abruptly expanded, stipules present, free or fused to leaf base forming a sheath",Zannichelliaceae:Zannichellia palustris,Family Group 2
+63,Stipules +- completely fused to leaf blade base,Ruppiaceae:Ruppia,Family Group 2
+63,Stipules fused to leaf blade base <= 2/3 their length,64,Family Group 2
+64,Roots branched; leaves linear; midvein of leaf not differentiated from other veins; floating leaves 0,Pontederiaceae:Heteranthera dubia,Family Group 2
+64,Roots generally unbranched; leaves linear to ovate; midvein of leaf more prominent than other veins; floating leaves often present,Potamogetonaceae,Family Group 2
+65,Leaves alternate,66,Family Group 2
+65,Leaves opposite or whorled,69,Family Group 2
+66,Leaves sessile; annual,Campanulaceae,Family Group 2
+66,Leaves petioled; per,67,Family Group 2
+67,Leaves toothed or lobed,Ranunculaceae:Ranunculus,Family Group 2
+67,Leaves entire,68,Family Group 2
+68,Lateral leaf veins strongly diverging from midvein,Onagraceae:Ludwigia,Family Group 2
+68,Lateral leaf veins strongly ascending to nearly parallel to midvein,Ranunculaceae:Ranunculus,Family Group 2
+69,Leaves whorled,70,Family Group 2
+69,Leaves opposite,71,Family Group 2
+70,Leaf minutely toothed (teeth sometimes appearing +- 0 to naked eye),Hydrocharitaceae,Family Group 2
+70,Leaf entire,Plantaginaceae:Hippuris,Family Group 2
+71,Leaves fleshy,72,Family Group 2
+71,Leaves not or scarcely fleshy,73,Family Group 2
+72,"Leaves 2--6 mm, linear or oblanceolate; annual; plant generally +- red",Crassulaceae:Crassula aquatica,Family Group 2
+72,Leaves 3--50 mm linear to obovate; annual or perennial herb; plant generally not red,Montiaceae:Montia,Family Group 2
+73,Leaves 0.5--5 mm wide,74,Family Group 2
+73,Leaves 6--15+ mm wide,75,Family Group 2
+74,"Leaves minutely toothed (teeth sometimes appearing +- 0 to naked eye) to coarsely dentate, generally enlarged at base, all similar in form and submersed",Hydrocharitaceae,Family Group 2
+74,"Leaves entire, linear to ovate, not enlarged at base, sometimes with floating distal leaves different from submersed leaves",Plantaginaceae:Callitriche,Family Group 2
+75,Leaf veins palmate,Phrymaceae or Plantaginaceae,Family Group 2
+75,Leaf veins pinnate,76,Family Group 2
+76,Leaves toothed,Phrymaceae or Plantaginaceae,Family Group 2
+76,Leaves entire,77,Family Group 2
+77,"Leaves (3)5--13 cm; stems often swollen, hollow",Amaranthaceae:Alternanthera,Family Group 2
+77,Leaves < 5 cm; stems not swollen,Onagraceae:Ludwigia,Family Group 2
+1,"Plant free-floating, raft-like, or stranded along shoreline or on drying mud",2,Family Group 3
+1,"Plant anchored in soil or growing on another plant [if plant aquatic, rooted in bottom sediments]",3,Family Group 3
+2,"Leaves 0.5--1.5 mm, alternate [each with a thick green or +- red-tinged floating lobe and a thin, colorless submersed lobe]; upper surface of floating lobe papillate or with short, inconspicuous hairs",Azollaceae:Azolla,Family Group 3
+2,"Leaves 5--25 mm, appearing opposite [actually 2 floating leaves plus a 3rd submersed leaf dissected into root-like lobes]; upper surface of floating leaves conspicuously hairy",Salviniaceae:Salvinia,Family Group 3
+3,"Leaves linear or scale- or needle-like, entire or toothed (sometimes divided into linear lobes in _Asplenium septentrionale_); veins generally 0 or 1 (--few in _Asplenium septentrionale_)",4,Family Group 3
+3,"Leaves with well developed blades, not linear or scale- or needle-like, often lobed or compound; veins many",9,Family Group 3
+4,"Leaves basal, linear",5,Family Group 3
+4,"Leaves cauline, scale- or needle-like; sporangia in cone at tip of aerial shoot or in axils of distal leaves",7,Family Group 3
+5,Sporangia in 1 or more linear sori on abaxial leaf face,Aspleniaceae:Asplenium septentrionale,Family Group 3
+5,"Sporangia underground, embedded in adaxial face of widened leaf base or enclosed in hard, spheric sporangium case near leaf base",6,Family Group 3
+6,"Plant tufted, base corm-like; new leaves erect, never coiled; sporangium solitary, embedded in adaxial face of widened leaf base, +- covered by a translucent membrane",Isoetaceae:Isoetes,Family Group 3
+6,"Plant creeping by rhizomes; new leaves +- coiled, unrolling as they develop; sporangia several, enclosed in short-stalked, hard case attached near leaf base",Marsileaceae:Pilularia,Family Group 3
+7,"Stem hollow, jointed at nodes; leaves whorled, fused at base; sporangia several on undersides of peltate structures that are clustered in terminal cone",Equisetaceae:Equisetum,Family Group 3
+7,"Stem solid, not jointed; leaves alternate or opposite; sporangia in axils of distal scale-like leaves, the aggregation of fertile leaves sometimes cone-like",8,Family Group 3
+8,"Fertile leaves not in well defined ranks, the aggregation appearing round when viewed along axis from tip; sporangia all of 1 kind, producing only 1 kind of spore",Lycopodiaceae,Family Group 3
+8,"Fertile leaves 4-ranked, the aggregation appearing square when viewed along axis from tip; sporangia of 2 kinds, some with 4 large spores and others with many small spores",Selaginellaceae:Selaginella,Family Group 3
+9,"Plant aquatic or in dried pools or creek beds; leaf palmately compound, leaflets 4; sporangia borne underground or underwater, enclosed in short-stalked, hard case attached near petiole base",Marsileaceae:Marsilea,Family Group 3
+9,"Plant terrestrial or strongly emergent if in wet soil, or growing on another plant; leaf simple or 1--4-pinnate, if compound, leaflets generally >> 4; sporangia borne on aerial portion of leaf",10,Family Group 3
+10,"Leaf divided into dissimilar sterile (trophophore) and fertile (sporophore) parts; sterile part with an entire or 1--3-pinnate blade; fertile part bladeless, sporangia borne in stalked cluster arising from petiole or blade base; new leaves never coiled",Ophioglossaceae,Family Group 3
+10,"Leaf not divided into dissimilar sterile and fertile parts; sporangia borne on underside of leaf blade, sometimes near margin; new leaves generally coiled, unrolling as they develop",11,Family Group 3
+11,"Leaves of 2 dissimilar kinds, the fertile (sporangium-bearing) blades with greatly narrowed segments",12,Family Group 3
+11,"Leaves all alike or nearly so, the fertile [sporangium-bearing] blades very similar in size and shape to sterile blades",13,Family Group 3
+12,Blade deeply pinnately lobed or 1-pinnate; leaf generally > 30 cm,Blechnaceae:Blechnum,Family Group 3
+12,Blade 2 or more &times; pinnate or divided; leaf <= 30 cm,Pteridaceae,Family Group 3
+13,Sori borne along or near margin of leaf; indusia 0 or sori covered by reflexed or recurved leaf margin or leaf margin segment,14,Family Group 3
+13,"Sori borne away from margin on underside of leaf or leaflet, or sporangia scattered along veins and not clustered into sori; indusia present or 0",16,Family Group 3
+14,Pinnae all entire or minutely toothed,Pteridaceae,Family Group 3
+14,"Pinnae [some or all of them] conspicuously toothed, lobed, or compound",15,Family Group 3
+15,"Rhizome and base of petiole covered by hairs; rhizome long-creeping; leaf often > 80 cm, sometimes >= 2 m --- blade widely triangular, 2--4-pinnate",Dennstaedtiaceae {Pteridium aquilinum var. pubescens},Family Group 3
+15,"Rhizome and base of petiole bearing linear to ovate scales; rhizome short and compact to long-creeping; leaf generally < 80 cm, often much shorter",Pteridaceae,Family Group 3
+16,"Sporangia scattered along veins, not clustered into distinct sori; indusia 0",Pteridaceae,Family Group 3
+16,Sporangia clustered in distinct sori; indusia sometimes present,17,Family Group 3
+17,Indusia 0,18,Family Group 3
+17,Indusia present,20,Family Group 3
+18,Blade deeply pinnately lobed,Polypodiaceae:Polypodium,Family Group 3
+18,Blade 2--3-pinnate,19,Family Group 3
+19,"Trunk present; leaf >= 1 m; stipe not easily crushed, scale margin with bristle-like teeth",Cyatheaceae:Sphaeropteris cooperi,Family Group 3
+19,"Trunk 0; leaf < 1 m; stipe easily crushed, scale margin +- entire, without bristle-like teeth",Woodsiaceae {Athyrium distentifolium var. americanum},Family Group 3
+20,Sori linear to oblong or J-shaped,21,Family Group 3
+20,Sori +- round,23,Family Group 3
+21,"Veins of leaf segment forming a network; sori generally 2--4 mm, linear-oblong, end-to-end in rows parallel to midvein of leaf segment --- leaves 1 pinnate with deeply pinnately lobed pinnae",Blechnaceae:Woodwardia,Family Group 3
+21,"Veins of leaf segment free, minor veins extending to segment margin without rejoining; sori 0.5--15 mm, linear, oblong, J-shaped, or reniform, not end-to-end in rows parallel to midvein of leaf segment",22,Family Group 3
+22,"Leaf 3--30 cm, 1-pinnate with pinnae < 1.5 cm or leaf simple, linear, undivided or forked",Aspleniaceae:Asplenium,Family Group 3
+22,"Leaf 20--200 cm, 1--2 pinnate with pinnae generally 5--25 cm, toothed or pinnately lobed",Woodsiaceae {Athyrium filix-femina var. cyclosorum},Family Group 3
+23,"Blade with 1-celled, clear, needle-like hairs",Thelypteridaceae:Thelypteris,Family Group 3
+23,Blade without needle-like hairs,24,Family Group 3
+24,"Indusium peltate or round-reniform, attached +- in center of sorus, generally present and readily observable in late-season specimens",Dryopteridaceae,Family Group 3
+24,"Indusium attached to one side of sorus or cup-like, attached beneath sorus and often of hair- or scale-like fragments or lobes, generally delicate, often difficult to observe in late-season specimens",Woodsiaceae,Family Group 3
+1,Specimens with pollen-producing cones only; ovule/seed-producing structures unavailable,2,Family Group 4
+1,Specimens with ovule/seed-producing structures; pollen-producing cones present or 0,6,Family Group 4
+2,Leaves opposite or whorled,3,Family Group 4
+2,Leaves alternate,4,Family Group 4
+3,"Stems jointed at nodes, the internodes [main sites of photosynthesis] long, +- green; leaves dry, scale-like, often early deciduous, not overlapping; pollen cones with stamen-like structures, the pollen sacs borne on stout, filament-like stalks",Ephedraceae:Ephedra,Family Group 4
+3,"Stems not jointed at nodes, the internodes generally very short; leaves green, scale-, awl-, or needle-like, persistent, crowded, generally closely overlapping; pollen cones with sessile pollen sacs",Cupressaceae,Family Group 4
+4,"Pollen cones in leaf axils on 1-year old twigs; pollen sacs in groups of 4--16 on stout, filament-like stalks",Taxaceae,Family Group 4
+4,"Pollen cones terminal or in axils of newly formed leaves of current season; pollen sacs 2--6, sessile on abaxial faces of cone scales",5,Family Group 4
+5,Leaves needle-like; pollen sacs 2 per cone scale,Pinaceae,Family Group 4
+5,"Leaves needle-, awl-, or scale-like; pollen sacs 2--6 per cone scale",Cupressaceae,Family Group 4
+6,Ovules/seeds borne in a cone that becomes +- woody at maturity,7,Family Group 4
+6,"Ovules/seeds exposed on branches Or surrounded by a +- perianth-like cluster of membranous scales, Or enclosed in a cone that becomes fleshy and berry-like at maturity",8,Family Group 4
+7,"Cone bracts present, individually subtending and +- free from cone scales, exserted beyond cone scales or +- < scales and then +- hidden by them; leaves needle-like; ovules/seeds 2 per cone scale; seeds distally 1-winged or wingless",Pinaceae,Family Group 4
+7,"Cone bracts not evident, +- wholly fused to cone scales; leaves scale-like, awl-like, or needle-like; ovules/seeds 1--many per cone scale; seeds laterally 2-winged (wing sometimes very narrow) or distally 1-winged in _Calocedrus_",Cupressaceae,Family Group 4
+8,"Stems jointed at nodes, the internodes [main sites of photosynthesis] long, green; leaves dry, scale-like, often early deciduous, not overlapping; ovules/seed(s) surrounded by a +- perianth-like cluster of membranous scales; pollen cones with stamen-like structures, the pollen sacs borne on stout, filament-like stalks",Ephedraceae:Ephedra,Family Group 4
+8,"Stems not jointed at nodes, the internodes generally very short; leaves green, scale-like, awl-like, or needle-like, persistent, crowded, sometimes overlapping; ovules/seeds enclosed in fleshy cones Or exposed on branches and seeds individually subtended or surrounded by fleshy aril; pollen cones with sessile or stalked pollen sacs",9,Family Group 4
+9,"Leaves opposite or whorled, 1--20+ mm, scale-, awl-, or needle-like; seeds 1--3, enclosed in a fleshy, berry-like cone; pollen sacs 2--6, sessile on abaxial faces of cone scales",Cupressaceae:Juniperus,Family Group 4
+9,"Leaves alternate, 12--70 mm, needle-like; seed 1, +- enclosed by a fleshy, generally colored aril; pollen cones with stamen-like structures, pollen sacs in groups of 4--16 on stout filament-like stalks",Taxaceae,Family Group 4
+1,Cleistogamous flowers formed at or below ground or water surface,2,Family Group 5
+1,Cleistogamous flowers formed above ground or water surface,7,Family Group 5
+2,"Plant +- aquatic, submersed or emergent",3,Family Group 5
+2,Plant terrestrial,4,Family Group 5
+3,"Leaves opposite, palmately veined",Plantaginaceae:Bacopa,Family Group 5
+3,"Leaves alternate, parallel-veined",Pontederiaceae:Heteranthera,Family Group 5
+4,Leaves petioled,5,Family Group 5
+4,Leaves sessile,6,Family Group 5
+5,"Fruit 3-angled achene, tightly enclosed by hardened perianth; cleistogamous flowers at stem base",Polygonaceae:Emex spinosa,Family Group 5
+5,"Fruit ovoid to oblong capsule, not enclosed by hardened perianth; cleistogamous flowers in proximal leaf axils",Violaceae:Viola,Family Group 5
+6,"Leaves 0.5--4 cm, +- linear, +- 1-veined, not sheathing; cleistogamous flowers at stem base",Boraginaceae:Pectocarya,Family Group 5
+6,"Leaves 2--9 cm, ovate to lance-elliptic, parallel-veined, sheathing; cleistogamous flowers underground",Commelinaceae:Commelina,Family Group 5
+7,"Leaves sheathing, linear, parallel-veined; spikelets of cleistogamous flowers enclosed within leaf sheaths or borne in panicle-like clusters",Poaceae,Family Group 5
+7,"Leaves not sheathing, linear to ovate, not parallel-veined; spikelets of cleistogamous flowers 0",8,Family Group 5
+8,"Leaves all basal, inflorescence or solitary flower scapose",9,Family Group 5
+8,Leaves all or mostly cauline,10,Family Group 5
+9,"Plant aquatic; leaves on rhizome or stolon, often bearing small, hollow bladders that suck in and trap small organisms when hairs at opening are triggered; flowers 1--few",Lentibulariaceae:Utricularia subulata,Family Group 5
+9,"Plant terrestrial; leaves in basal rosette, not bearing traps; inflorescence a spike (flower 1)",Plantaginaceae:Plantago,Family Group 5
+10,Ovary inferior,11,Family Group 5
+10,Ovary superior,13,Family Group 5
+11,Inflorescence a closed head enclosed by spine-tipped involucre bracts,Asteraceae:Centaurea melitensis,Family Group 5
+11,Inflorescence a spike or spike-like raceme or flowers sessile in leaf axils,12,Family Group 5
+12,Ovary/fruit not narrowed distally; sepals ascending or +- spreading,"Campanulaceae {Githopsis, Heterocodon, Triodanis}",Family Group 5
+12,Ovary/fruit distally narrowed; sepals not separating,"Onagraceae:Epilobium|Neoholmgrenia",Family Group 5
+13,Leaves +- fleshy,14,Family Group 5
+13,Leaves not fleshy,15,Family Group 5
+14,Plant 50--230 cm; leaves entire or toothed,Balsaminaceae:Impatiens capensis,Family Group 5
+14,Plant 1--30 cm; leaves entire,Montiaceae:Montia,Family Group 5
+15,Leaves opposite,16,Family Group 5
+15,Leaves alternate,21,Family Group 5
+16,"Leaves 2--7 mm, awl-shaped to oblong, bristle-tipped",Caryophyllaceae:Loeflingia,Family Group 5
+16,"Leaves linear, oblong, or lanceolate to ovate or round, not bristle-tipped",17,Family Group 5
+17,Stem square in &times;-section; flowers in head-like axillary and terminal clusters --- fruit 4 nutlets,Lamiaceae:Lamium amplexicaule,Family Group 5
+17,Stem round in &times;-section; flowers axillary or in terminal raceme,18,Family Group 5
+18,Leaves of a pair unequal; ovule 1; fruit achene; perianth base hardened or 5-winged or -ribbed around fruit,"Nyctaginaceae:Acleisanthes|Mirabilis albida",Family Group 5
+18,Leaves of a pair equal; ovules several--many; fruit capsule; perianth base not hardened or 5-winged around fruit,19,Family Group 5
+19,"Fruit valves 3, ovary chambers 3",Cistaceae:Tuberaria,Family Group 5
+19,"Fruit valves 2, ovary chambers 1--2",20,Family Group 5
+20,Sepals strongly fused,Phrymaceae:Mimulus,Family Group 5
+20,Sepals +- free,Plantaginaceae:Bacopa,Family Group 5
+21,"Fruit 1--4 hard, shiny gray nutlets",Boraginaceae:Lithospermum incisum,Family Group 5
+21,Fruit a capsule,22,Family Group 5
+22,Perennial herb,23,Family Group 5
+22,Annual,24,Family Group 5
+23,Leaves +- sessile; capsule flat,Polygalaceae:Polygala californica,Family Group 5
+23,Leaves petioled; capsule ovoid to oblong,Violaceae:Viola,Family Group 5
+24,Inflorescence or solitary flowers axillary; ovary chambers 5,Balsaminaceae:Impatiens capensis,Family Group 5
+24,Inflorescence terminal (axillary); ovary chambers 2--3,25,Family Group 5
+25,Inflorescence a raceme,"Plantaginaceae {Antirrhinum, Dopatrium, Nuttallanthus}",Family Group 5
+25,Inflorescence a head,Polemoniaceae:Collomia grandiflora,Family Group 5
+1,"Plant fully aquatic, submersed, floating in water, or stranded on mud",2,Family Group 6
+1,"Plant terrestrial or parasitic on stem of woody host plant, or if growing in wet habitat, rooted in place and emerging well above water surface",7,Family Group 6
+2,"Plant generally free-floating, at or just below water surface, plant body 0.4--10 mm; leaves and stems not differentiated; roots 0--few, unbranched --- stamens emerging from tiny lateral, membrane-covered pouch or from minute cavity on top of plant body",Araceae,Family Group 6
+2,"Plant rooted in bottom sediments or free-floating, >> 10 mm; leaves and stems clearly differentiated; roots often branched",3,Family Group 6
+3,Leaves alternate,4,Family Group 6
+3,Leaves opposite or whorled,5,Family Group 6
+4,"Flowers in dense, spheric heads, these solitary or in axillary or terminal clusters, not enclosed in leaf sheaths; freshwater habitats",Typhaceae:Sparganium,Family Group 6
+4,"Flowers in axillary spikes, these generally enclosed and concealed in sheaths of subtending leaves; marine habitats",Zosteraceae,Family Group 6
+5,"Leaf blades entire, toothed, or shallowly lobed",Hydrocharitaceae,Family Group 6
+5,Leaf blades [at least those of submersed leaves] divided into linear or thread-like lobes,6,Family Group 6
+6,Blades of leaves repeatedly forked,Ceratophyllaceae:Ceratophyllum demersum,Family Group 6
+6,Blades of leaves pinnately divided,Haloragaceae:Myriophyllum,Family Group 6
+7,Plant parasitic on stem of woody host plant,8,Family Group 6
+7,Plant free-living,9,Family Group 6
+8,Flowers of parasite borne directly on stems of host; remainder of parasite internal within tissues of host; stems and leaves not differentiated; on _Psorothamnus_,Apodanthaceae:Pilostyles thurberi,Family Group 6
+8,Flowers borne on leafy branches of parasite; shoots of parasite external; leaves differentiated though sometimes reduced to scales; on various woody hosts [not _Psorothamnus_],Viscaceae,Family Group 6
+9,"Leaves opposite or whorled, not all basal",10,Family Group 6
+9,Leaves alternate or all basal,16,Family Group 6
+10,Stems or leaves thick and fleshy; inflorescence a terminal spike,11,Family Group 6
+10,"Stems and leaves of normal texture, not thick and fleshy; inflorescences various",12,Family Group 6
+11,Leaves +- cylindric or 3-angled in &times;-section; petal-like perianth parts 4,Bataceae:Batis maritima,Family Group 6
+11,"Leaves fleshy, scale-like; petal-like perianth parts 0",Chenopodiaceae,Family Group 6
+12,Leaves palmately compound or simple and deeply lobed,Cannabaceae,Family Group 6
+12,"Leaves simple, entire or toothed",13,Family Group 6
+13,Leaves whorled,Rubiaceae:Galium,Family Group 6
+13,Leaves opposite,14,Family Group 6
+14,"Leaves sessile or nearly so, entire",Caryophyllaceae,Family Group 6
+14,"Leaves conspicuously petioled, toothed",15,Family Group 6
+15,Stamens 8--15(20); stinging hairs 0,Euphorbiaceae:Mercurialis,Family Group 6
+15,Stamens 4; stinging hairs present or 0,Urticaceae,Family Group 6
+16,"Leaves stiff and sword-like, 5--15 dm; inflorescence a large panicle; perianth parts 6",Ruscaceae:Nolina,Family Group 6
+16,"Leaves not sword-like, often smaller; inflorescences various; perianth parts often other than 6",17,Family Group 6
+17,"Leaf blades linear or narrowly lanceolate, simple and entire, veins parallel; leaf bases sheathing",18,Family Group 6
+17,"Leaf blades variously shaped, sometimes toothed, lobed, or compound, veins mostly pinnate or palmate; leaf bases generally not sheathing",20,Family Group 6
+18,"Inflorescence a panicle or raceme of showy flowers; perianth parts all petal-like, white to +- yellow, each with a glistening, +- green-yellow gland in proximal half",Melanthiaceae:Toxicoscordion,Family Group 6
+18,Inflorescence a cluster of spikelets (sometimes panicle- or raceme-like); perianth parts 0 or minute scales,19,Family Group 6
+19,"Stem triangular, nodes not swollen; leaf blades channeled",Cyperaceae:Carex,Family Group 6
+19,Stem round; nodes generally swollen and knot-like; leaf blades generally flat,Poaceae,Family Group 6
+20,"Ocreae present, persistent or not; nodes generally swollen",Polygonaceae,Family Group 6
+20,Ocreae 0; nodes generally not swollen,21,Family Group 6
+21,Leaves all basal,22,Family Group 6
+21,At least some leaves cauline,24,Family Group 6
+22,"Leaves compound, leaflets 3; perianth parts in 5s; stolons present",Rosaceae:Fragaria,Family Group 6
+22,"Leaves simple, entire; perianth parts in 3s; stolons 0",23,Family Group 6
+23,"Perianth clearly differentiated into sepals and petals; plant +- emergent aquatic, annual or perennial herb",Alismataceae:Sagittaria,Family Group 6
+23,"Perianth whorls not strongly differentiated, outer and inner similar; plant terrestrial, matted per",Polygonaceae:Eriogonum,Family Group 6
+24,Plants vines,25,Family Group 6
+24,Plants prostrate to erect herbs,27,Family Group 6
+25,Tendrils 0; perianth parts not at all petal-like; stamens free,Cannabaceae:Humulus,Family Group 6
+25,Tendrils present; perianth parts petal-like,26,Family Group 6
+26,"Perianth parts fused, at least at base; stamens fused, number difficult to determine",Cucurbitaceae,Family Group 6
+26,"Perianth parts free; stamens 6, free",Smilacaceae:Smilax,Family Group 6
+27,Flowers in heads or umbels,28,Family Group 6
+27,"Flowers in axillary clusters, racemes, or panicles",31,Family Group 6
+28,Inflorescence a simple or compound umbel,Apiaceae,Family Group 6
+28,Inflorescence of 1 or more heads,29,Family Group 6
+29,Heads without involucres,Chenopodiaceae,Family Group 6
+29,Heads each subtended by an involucre,30,Family Group 6
+30,Stamens free; petals free,Apiaceae,Family Group 6
+30,Stamens fused by their anthers; petals fused or 0,Asteraceae,Family Group 6
+31,Leaves deeply lobed or compound,32,Family Group 6
+31,Leaves entire or toothed,35,Family Group 6
+32,"Leaves palmately compound, the leaflets serrate",Cannabaceae:Cannabis,Family Group 6
+32,"Leaves pinnately dissected or compound, the lobes or leaflets entire to coarsely toothed",33,Family Group 6
+33,"Leaves simple or 1-pinnate; anthers subsessile, 3--6 mm --- sepals 4--9, inflorescence a leafy raceme or panicle",Datiscaceae:Datisca glomerata,Family Group 6
+33,Leaves 2--4-pinnate; anthers exserted on slender filaments,34,Family Group 6
+34,"Leaflets coarsely crenate or shallowly lobed; sepals 4--5; petals 0; anthers linear, 1.5--5 mm; inflorescence an open panicle",Ranunculaceae:Thalictrum,Family Group 6
+34,"Leaflets 2-serrate; sepals 5; petals 5; anthers oval, < 1 mm; inflorescence a panicle of dense spikes",Rosaceae:Aruncus,Family Group 6
+35,Blades of leaves with several main veins; perianth parts >= 6 mm,Melanthiaceae:Veratrum,Family Group 6
+35,Blades of leaves with 1--3 main veins; perianth parts generally <= 5 mm,36,Family Group 6
+36,"Herbage armed with stinging, nettle-like hairs",Euphorbiaceae:Tragia,Family Group 6
+36,Herbage glabrous or with non-stinging hairs,37,Family Group 6
+37,Leaves covered with stellate scales or hairs,Euphorbiaceae:Croton,Family Group 6
+37,Leaves without stellate scales or hairs,38,Family Group 6
+38,"Leaves generally bearing bead-like, sessile hairs or powdery scales",Chenopodiaceae:Atriplex,Family Group 6
+38,Leaves glabrous or glaucous,39,Family Group 6
+39,"Leaves fleshy; sepals, petals each 4(5)",Crassulaceae:Rhodiola,Family Group 6
+39,"Leaves thin or fleshy; sepals 2--6, petals 0",40,Family Group 6
+40,Milky latex present; leaf blade base generally with 2 glands,Euphorbiaceae:Stillingia,Family Group 6
+40,Milky latex 0; leaf blade base without glands,41,Family Group 6
+41,"Leaf +- round, blade with translucent dots; plant mat-forming",Urticaceae:Soleirolia,Family Group 6
+41,"Leaf linear to (ob)ovate, blade without translucent dots; plant mat-forming to erect",Amaranthaceae:Amaranthus,Family Group 6
+1,Plant parasitic on stem of woody host plant,Viscaceae,Family Group 7
+1,"Plant free-living, rooted in ground",2,Family Group 7
+2,"Trunk unbranched, generally stout, covered with persistent woody leaf bases; leaves 4--7 m, pinnately compound",Arecaceae:Phoenix,Family Group 7
+2,"Trunk(s) generally branched, stout or slender, generally not covered with persistent leaf bases; leaves generally smaller, simple or compound",3,Family Group 7
+3,"Leaves stiff and sword-like, 0.6--2 m, base much expanded, white, fleshy; inflorescence a large panicle",Ruscaceae:Nolina,Family Group 7
+3,"Leaves not sword-like, mostly smaller, base not much expanded, white, and fleshy; inflorescences various",4,Family Group 7
+4,Leaves opposite or whorled,5,Family Group 7
+4,Leaves alternate (leaf often opposite a tendril or inflorescence in Vitaceae),23,Family Group 7
+5,Leaves compound,6,Family Group 7
+5,Leaves simple,9,Family Group 7
+6,Leaves palmate,Sapindaceae,Family Group 7
+6,Leaves pinnate,7,Family Group 7
+7,"Woody vine; sepals generally 4, conspicuous, petal-like",Ranunculaceae:Clematis,Family Group 7
+7,"Tree or large shrub; sepals generally 5 or number difficult to determine, very small",8,Family Group 7
+8,"Flowers sessile or borne on short, stout pedicels",Oleaceae:Fraxinus,Family Group 7
+8,"Flowers borne on elongated, thread-like pedicels",Sapindaceae:Acer negundo,Family Group 7
+9,Leaf toothed or lobed,10,Family Group 7
+9,Leaf entire (strongly wavy in some _Garrya_ species),12,Family Group 7
+10,Leaf palmately veined and lobed,Sapindaceae:Acer,Family Group 7
+10,Leaf pinnately veined and toothed,11,Family Group 7
+11,Petals 0; stamens 4--10,Picrodendraceae:Tetracoccus,Family Group 7
+11,"Petals 5, united in salverform corolla; stamens 4, epipetalous",Scrophulariaceae:Buddleja,Family Group 7
+12,Inflorescence a catkin,13,Family Group 7
+12,Inflorescence not a catkin,15,Family Group 7
+13,"Leaf blades well developed; catkins elongate, pendent",Garryaceae:Garrya,Family Group 7
+13,"Leaves scale-, awl-, or needle-like; ""catkins"" short, not pendent --- actually catkin-like pollen cone of gymnosperm",14,Family Group 7
+14,"Internodes very short; stem concealed by persistent, overlapping, green, scale-, awl-, or needle-like leaves; pollen sacs sessile beneath scales of small cone",Cupressaceae,Family Group 7
+14,"Internodes long; stem green, bearing dry, scale-like, often early-deciduous leaves; pollen sacs borne on filament-like stalk",Ephedraceae:Ephedra,Family Group 7
+15,Leaves whorled,16,Family Group 7
+15,Leaves opposite,18,Family Group 7
+16,Leaf with abaxial groove,Ericaceae:Empetrum,Family Group 7
+16,Leaf flat or with midvein raised on abaxial face,17,Family Group 7
+17,Stamens 4; weak-stemmed shrub; stems 4-angled when young,Rubiaceae:Galium,Family Group 7
+17,Stamens 5--10; stiff shrub; stems round,Picrodendraceae:Tetracoccus,Family Group 7
+18,Herbage covered with silvery scales,Elaeagnaceae:Shepherdia,Family Group 7
+18,Herbage glabrous or variously hairy,19,Family Group 7
+19,Petals fused proximally; stamens fused to corolla,20,Family Group 7
+19,Petals free or 0; stamens free from corolla,21,Family Group 7
+20,Leaves glossy,Rubiaceae:Coprosma,Family Group 7
+20,Leaves densely hairy,Scrophulariaceae:Buddleja,Family Group 7
+21,"Leaves thick, leathery, evergreen; flowers in peduncled, head-like clusters; sepals well developed",Simmondsiaceae:Simmondsia chinensis,Family Group 7
+21,"Leaves thin, deciduous; flowers in sessile axillary clusters or short-peduncled racemes; sepals very small",22,Family Group 7
+22,Bark of young stems +- red; flowers pedicelled in short axillary racemes; stamens 5--10,Picrodendraceae:Tetracoccus,Family Group 7
+22,Bark of young stems gray; flowers +- sessile in axillary clusters; stamens 1--4,Oleaceae:Forestiera,Family Group 7
+23,Tendrils present; plant a vine; inflorescence of umbels or a panicle of head- or umbel-like clusters,24,Family Group 7
+23,"Tendrils 0; plant a shrub or tree, rarely a vine; inflorescence various",25,Family Group 7
+24,"Tendrils each opposite a leaf; calyx 0 or 5-lobed; petals 5, adherent at tips, +- yellow",Vitaceae:Vitis,Family Group 7
+24,"Tendrils 2+ near petiole base; perianth parts 6 in 2 whorls of 3, petal-like, free, white to +- green or +- yellow",Smilacaceae:Smilax,Family Group 7
+25,Inflorescence a catkin or spike,26,Family Group 7
+25,Inflorescence not a catkin or spike,44,Family Group 7
+26,Leaves compound,27,Family Group 7
+26,Leaves simple,29,Family Group 7
+27,"Leaves 1- and 2-pinnate, leaflets 20--28 on 1-pinnate leaves",Fabaceae:Gleditsia,Family Group 7
+27,"Leaves 1-pinnate, leaflets 5--21",28,Family Group 7
+28,"Plant evergreen --- inflorescence resembles catkin when young, but is actually a branched panicle",Anacardiaceae:Pistacia,Family Group 7
+28,Plant deciduous,Juglandaceae,Family Group 7
+29,"Shrubs of +- saline desert habitats; leaves sometimes thick, +- fleshy; spikes erect or very short and axillary",30,Family Group 7
+29,"Shrubs or trees, generally of non-saline habitats; leaves mostly thinner, not fleshy; spikes or catkins erect to pendent",31,Family Group 7
+30,Leaf blades generally flat; perianth present though generally small and inconspicuous; bracts 0 or not peltate,Chenopodiaceae,Family Group 7
+30,Leaf blades generally +- cylindric; perianth 0; bracts peltate,Sarcobataceae:Sarcobatus,Family Group 7
+31,"Leaves scale-, awl- or needle-like; plants evergreen --- catkin-like structure actually pollen cone of a gymnosperm",32,Family Group 7
+31,Leaves with well developed blades; plants evergreen or deciduous,34,Family Group 7
+32,Pollen sacs borne on filament-like stalks,Taxaceae,Family Group 7
+32,Pollen sacs sessile on abaxial side of scale-like structures,33,Family Group 7
+33,Scales with 2 pollen sacs; needle-like leaves 1--30 cm; bark generally separating in flakes or plates,Pinaceae,Family Group 7
+33,"Scales with several pollen sacs; needle-like leaves (if present) 1--2.5 cm; bark thick, fibrous, persistent",Cupressaceae,Family Group 7
+34,Bractlets of inflorescence well developed and readily visible at time of flower,35,Family Group 7
+34,Bractlets of inflorescence 0 or very inconspicuous at time of flower,38,Family Group 7
+35,Catkins pendent,36,Family Group 7
+35,"Catkins +- stiff, +- erect to spreading but generally not pendent",37,Family Group 7
+36,"Catkin-bractlets fringe-margined, early-deciduous; stamens 8--60; trees",Salicaceae:Populus,Family Group 7
+36,"Catkin-bractlets entire or appearing 3-lobed, persistent; stamens 1--10; shrubs or trees",Betulaceae,Family Group 7
+37,"Low, brittle shrubs; leaves thin, crenate",Euphorbiaceae:Acalypha,Family Group 7
+37,"Shrubs or trees, not brittle; leaves entire or toothed --- catkin bracts sometimes early-deciduous",Salicaceae:Salix,Family Group 7
+38,Evergreen shrubs or trees,39,Family Group 7
+38,Deciduous shrubs or trees,41,Family Group 7
+39,Main veins of leaf parallel or nearly so --- 2 perianth whorls actually present but sepals small and easily overlooked,Fabaceae:Acacia,Family Group 7
+39,Main veins of leaf clearly pinnate,40,Family Group 7
+40,"Leaves glabrous or with stellate hairs, not gland-dotted; sepals present; generally of dry-land habitats; catkins slender, pendent, generally >= 2 cm",Fagaceae,Family Group 7
+40,"Leaves glabrous or with minute, straight hairs, dotted with tiny resin glands; sepals 0; generally of moist, often wetland habitats; catkins short, dense, generally < 2 cm",Myricaceae,Family Group 7
+41,Sepals small but evident,42,Family Group 7
+41,Sepals 0 or calyx modified into cup- or saucer-shaped structure or reduced to a nectary,43,Family Group 7
+42,Sepals 5--7; stamens 5--20; veins pinnate; leaf bases generally symmetric,Fagaceae,Family Group 7
+42,Sepals 4; stamens 4; veins palmate; leaf bases oblique,Moraceae,Family Group 7
+43,Leaves dotted with tiny resin glands; individual flowers difficult to distinguish,Myricaceae,Family Group 7
+43,Leaves not gland-dotted; individual flowers clearly distinguishable on close examination,Salicaceae,Family Group 7
+44,Leaves and stems armed with prickles,45,Family Group 7
+44,"Foliage not prickly, sometimes stems thorny or leaves spiny-toothed",46,Family Group 7
+45,Petals free; stamens many,Rosaceae:Rubus ursinus,Family Group 7
+45,Petals fused; stamens 5,Solanaceae:Solanum marginatum,Family Group 7
+46,Leaves palmately lobed,47,Family Group 7
+46,Leaves not palmately lobed,48,Family Group 7
+47,Leaves peltate; inflorescence a panicle,Euphorbiaceae:Ricinus,Family Group 7
+47,Leaves not peltate; inflorescence a head,Platanaceae:Platanus,Family Group 7
+48,Stems and leaves densely covered with stellate hairs,Euphorbiaceae,Family Group 7
+48,Stems and leaves glabrous or hairy but hairs not stellate,49,Family Group 7
+49,Stamens many,50,Family Group 7
+49,Stamens 12 or fewer,52,Family Group 7
+50,Leaves strongly aromatic; sepals 4; petals 0; anthers dehiscing by uplifted lids,Lauraceae:Laurus,Family Group 7
+50,Leaves not aromatic; sepals 5; petals 5; anthers dehiscent by slits,51,Family Group 7
+51,"Flowers in spheric heads; petals yellow, generally concealed by stamens; leaves simple or 2-pinnate",Fabaceae:Acacia,Family Group 7
+51,"Flowers in racemes; petals white, conspicuous; leaves simple",Rosaceae:Oemleria,Family Group 7
+52,Leaves compound,53,Family Group 7
+52,Leaves simple (occasionally reduced to scales),55,Family Group 7
+53,"Leaflets with a few, gland-tipped teeth near base",Simaroubaceae:Ailanthus,Family Group 7
+53,Leaflets entire or teeth not gland-tipped,54,Family Group 7
+54,"Leaflets 3--20, lance-linear to ovate, 10--130 mm",Anacardiaceae,Family Group 7
+54,"Leaflets 7--33, linear-oblong or narrowly elliptic, 2--10 mm",Burseraceae:Bursera microphylla,Family Group 7
+55,"Shrub with thorny, generally leafless green stems; leaves scale-like to narrowly oblong, early deciduous",Simaroubaceae:Castela,Family Group 7
+55,"Tree, shrub, or woody vine, thorns occasionally present but stems generally leafy; leaves various, sometimes deciduous in winter or dry season",56,Family Group 7
+56,Flower parts in 3s --- leaves with abaxial groove,Ericaceae:Empetrum,Family Group 7
+56,"Flower parts generally in 4s, 5s, or 6s",57,Family Group 7
+57,"Flowers in involucred heads, these generally in few- to many-headed clusters",Asteraceae,Family Group 7
+57,"Flowers solitary or variously clustered, not in involucred heads",58,Family Group 7
+58,"Leaves generally +- gray, either softly hairy or covered with powdery scales",Chenopodiaceae,Family Group 7
+58,Leaves green,59,Family Group 7
+59,Petals present,60,Family Group 7
+59,Petals 0,63,Family Group 7
+60,"Leaves entire to lobed, not spiny-toothed; inflorescence a terminal or axillary panicle or umbel-like cluster, or flowers 1; flower parts generally in 5s",61,Family Group 7
+60,Leaves spiny-toothed or entire; inflorescence an axillary cyme; flower parts in 4s or 5s,62,Family Group 7
+61,Petals 1--5 mm,Anacardiaceae,Family Group 7
+61,Petals 10--15 mm,Pittosporaceae:Pittosporum,Family Group 7
+62,"Stamens generally 4, alternate petals",Aquifoliaceae:Ilex aquifolium,Family Group 7
+62,"Stamens 4--5, opposite petals",Rhamnaceae:Rhamnus,Family Group 7
+63,Leaves strongly aromatic; anthers dehiscing by uplifted lids,Lauraceae:Laurus,Family Group 7
+63,Leaves not aromatic; anthers dehiscent by slits,64,Family Group 7
+64,Stamens = in number to and alternate sepals,Rhamnaceae:Rhamnus,Family Group 7
+64,Stamens = in number to and opposite sepals or > in number than sepals,65,Family Group 7
+65,Leaf blade 2--12 mm; shrubs,Picrodendraceae:Tetracoccus,Family Group 7
+65,Leaf blade 30--140 mm; trees or large shrubs,66,Family Group 7
+66,Leaf 3-veined from base; inflorescence a sessile axillary cluster,Cannabaceae:Celtis,Family Group 7
+66,Leaf 1-veined from base; inflorescence a stalked umbel or umbel-like raceme,Moraceae:Maclura,Family Group 7
+1,"Plant fully aquatic, submersed, floating in water, or stranded on mud",2,Family Group 8
+1,"Plant terrestrial or parasitic on stem of woody host, or if growing in wet habitat, rooted in place and emerging well above water surface",12,Family Group 8
+2,"Plant generally free-floating at or just below water surface, raft-like, the plant body 0.4--10 mm; leaves and stems not differentiated; roots 0--few, unbranched --- pistil located in tiny lateral, membrane-covered pouch or in minute cavity on top of plant body",Araceae,Family Group 8
+2,"Plant rooted in bottom sediments or free-floating, generally >> 15 mm; leaves and stems clearly differentiated; roots often branched",3,Family Group 8
+3,Leaves alternate,4,Family Group 8
+3,Leaves opposite or whorled or all basal,6,Family Group 8
+4,Fruits borne in umbel-like clusters --- flowers actually bisexual but stamens easily overlooked and ephemeral,Ruppiaceae:Ruppia,Family Group 8
+4,Fruits or flowers borne in spikes or heads,5,Family Group 8
+5,"Flowers in dense, spheric heads, these solitary or in axillary or terminal clusters, not enclosed in leaf sheaths; freshwater habitats",Typhaceae:Sparganium,Family Group 8
+5,"Flowers in axillary spikes, these generally enclosed and concealed in sheaths of subtending leaves; marine habitats",Zosteraceae,Family Group 8
+6,"Leaves all basal; flowers solitary in leaf-axils; style very elongated, generally 6--20 cm",Juncaginaceae:Triglochin scilloides,Family Group 8
+6,Leaves cauline; flowers axillary or variously clustered; styles generally << 6 cm (except in some Hydrocharitaceae),7,Family Group 8
+7,Leaf blades [at least those of submersed leaves] divided into linear or thread-like lobes,8,Family Group 8
+7,"Leaf blades entire, toothed, or shallowly lobed",9,Family Group 8
+8,Blades of leaves repeatedly forked,Ceratophyllaceae:Ceratophyllum demersum,Family Group 8
+8,Blades of leaves pinnately forked,Haloragaceae:Myriophyllum,Family Group 8
+9,"Petals and sepals both 3(4), evident; perianth and stigmas borne at water surface at end of long, tubular hypanthium; ovary inferior, sessile in leaf axil",Hydrocharitaceae,Family Group 8
+9,"Petals and sepals both 0; stigmas submersed, borne at end of short styles; ovary or ovaries superior, sessile or short-stalked in leaf axil",10,Family Group 8
+10,"Pistils 2--10, simple, each with a cup-like stigma; leaves entire",Zannichelliaceae:Zannichellia palustris,Family Group 8
+10,"Pistil 1, compound, bearing 2--4 slender stigmas",11,Family Group 8
+11,"Leaves subentire to finely or coarsely toothed; ovary chamber 1, ovule 1; fruit achene-like",Hydrocharitaceae:Najas,Family Group 8
+11,"Leaves entire; ovary chambers 4, ovules 4; fruit splitting into 4 nutlets",Plantaginaceae:Callitriche,Family Group 8
+12,Plants parasitic on stems of woody host plants,13,Family Group 8
+12,Plants free-living,14,Family Group 8
+13,Flowers of parasite borne directly on stems of host; remainder of parasite internal within tissues of host; stems and leaves not differentiated; on _Psorothamnus_,Apodanthaceae:Pilostyles thurberi,Family Group 8
+13,"Flowers borne on leafy branches of parasite; shoots of parasite external; leaves differentiated, though sometimes reduced to scales; on various woody hosts [not _Psorothamnus_]",Viscaceae,Family Group 8
+14,"Stem fleshy, bearing spiny tubercles; leaves 0",Cactaceae:Mammillaria dioica,Family Group 8
+14,"Stem generally not fleshy, without spiny tubercles; leaves generally present",15,Family Group 8
+15,"Leaves opposite or whorled, not all basal",16,Family Group 8
+15,Leaves alternate or all basal,24,Family Group 8
+16,Stems or leaves thick and fleshy; inflorescence a terminal spike,17,Family Group 8
+16,"Stems and leaves of normal texture, not thick and fleshy; inflorescence various",18,Family Group 8
+17,"Leaves +- cylindric or 3-angled in &times;-section; stigma 1, head-like, 2-lobed; ovary chambers 4; ovaries joining into a fleshy multiple fruit; perianth 0",Bataceae:Batis maritima,Family Group 8
+17,"Leaves fleshy, scale-like; stigmas 2, linear; ovary chamber 1; ovaries maturing as utricles, sometimes surrounded by fleshy bracts and perianth elements",Chenopodiaceae,Family Group 8
+18,"Leaves compound or deeply lobed, or also some simple",19,Family Group 8
+18,"Leaves simple, entire or toothed",20,Family Group 8
+19,Compound leaves palmate,Cannabaceae,Family Group 8
+19,Compound or deeply lobed leaves pinnate,Valerianaceae:Valeriana occidentalis,Family Group 8
+20,Leaves whorled; ovary inferior,Rubiaceae:Galium,Family Group 8
+20,Leaves opposite; ovary superior,21,Family Group 8
+21,"Leaves sessile or nearly so, entire; petals free",Caryophyllaceae,Family Group 8
+21,"Leaves conspicuously petioled, toothed; petals fused or 0",22,Family Group 8
+22,"Corolla showy, bilateral",Lamiaceae,Family Group 8
+22,Corolla 0,23,Family Group 8
+23,"Styles 2, ovary 2-chambered; stinging hairs 0",Euphorbiaceae:Mercurialis,Family Group 8
+23,"Style 0 or 1, ovary 1-chambered; stinging hairs present or 0",Urticaceae,Family Group 8
+24,"Leaves stiff and sword-like, 0.5--1.5 m; inflorescence a large panicle; perianth parts 6",Ruscaceae:Nolina,Family Group 8
+24,"Leaves not sword-like, often smaller; inflorescences various; perianth parts mostly other than 6",25,Family Group 8
+25,"Blades of leaves linear or narrowly lanceolate, simple and entire; veins parallel; leaf bases sheathing stem",26,Family Group 8
+25,"Blades of leaves variously shaped, sometimes toothed, lobed, or compound; veins mostly pinnate or palmate; leaf bases often not sheathing stems --- flowers not in spikelets",28,Family Group 8
+26,"Leaves all basal; flowers solitary in leaf axils; styles very elongated, generally 6--20 cm",Juncaginaceae:Triglochin scilloides,Family Group 8
+26,"Leaves basal and cauline or all cauline; flowers in spikes or spikelets, these generally in 2&deg; clusters; styles generally << 5 cm",27,Family Group 8
+27,Stem triangular; nodes not swollen; leaf blades channeled,Cyperaceae,Family Group 8
+27,Stem round; nodes generally swollen and knot-like; leaf blades generally flat,Poaceae,Family Group 8
+28,"Ocreae present, persistent or not; nodes generally +- swollen",Polygonaceae,Family Group 8
+28,Ocreae 0; nodes generally not swollen,29,Family Group 8
+29,Leaves all basal,30,Family Group 8
+29,At least some leaves cauline,33,Family Group 8
+30,"Leaves compound, leaflets 3; perianth parts in 5s; stolons present",Rosaceae:Fragaria,Family Group 8
+30,"Leaves simple, entire; perianth parts in 3s or 4s; stolons 0",31,Family Group 8
+31,Perianth parts in 4s; fruit a circumscissile capsule,Plantaginaceae:Plantago,Family Group 8
+31,Perianth parts in 3s; fruit 1--many achenes,32,Family Group 8
+32,"Perianth clearly differentiated into sepals and petals; pistils many; plant +- emergent aquatic, annual or perennial herb",Alismataceae:Sagittaria,Family Group 8
+32,"Perianth whorls not strongly differentiated, outer and inner similar; pistil 1; plant terrestrial matted per",Polygonaceae:Eriogonum,Family Group 8
+33,Plants vines,34,Family Group 8
+33,Plants prostrate to erect herbs,36,Family Group 8
+34,Tendrils 0; perianth not at all corolla-like; ovary superior,Cannabaceae:Humulus,Family Group 8
+34,Tendrils present; perianth corolla-like,35,Family Group 8
+35,Ovary inferior,Cucurbitaceae,Family Group 8
+35,Ovary superior,Smilacaceae:Smilax,Family Group 8
+36,"Pistils 2--22, simple; fruit a cluster of achenes or follicles",37,Family Group 8
+36,"Pistil 1, simple or compound; fruit achene, utricle, capsule, or splitting into 2--13 mericarps",39,Family Group 8
+37,"Leaves simple, fleshy",Crassulaceae:Rhodiola,Family Group 8
+37,"Leaves compound, leaflets thin",38,Family Group 8
+38,Leaflets coarsely crenate or shallowly lobed; sepals generally 4; petals 0; inflorescence an open panicle,Ranunculaceae:Thalictrum,Family Group 8
+38,Leaflets 2-serrate; sepals 5; petals 5; inflorescence a panicle of dense spikes,Rosaceae:Aruncus,Family Group 8
+39,Flowers in umbels or heads,40,Family Group 8
+39,Flowers solitary or in axillary clusters or in racemes or panicles,43,Family Group 8
+40,Inflorescence a simple or compound umbel,Apiaceae,Family Group 8
+40,Inflorescence of 1 or more heads,41,Family Group 8
+41,Head maturing as bur enclosing 1--5 fruits,Asteraceae,Family Group 8
+41,Head not maturing as bur,42,Family Group 8
+42,Corolla 0; head without involucre; ovary superior,Chenopodiaceae,Family Group 8
+42,Corolla tubular; head subtended by an involucre; ovary inferior,Asteraceae,Family Group 8
+43,Style branches 5--19; fruit splitting into 5--19 wedge-shaped mericarps at maturity,Malvaceae,Family Group 8
+43,Style unbranched or branches 2 or 3 (dissected into linear lobes in _Croton_); fruit unsegmented or splitting into 2--3 segments,44,Family Group 8
+44,"Leaves palmately compound, leaflets serrate",Cannabaceae:Cannabis,Family Group 8
+44,Leaves entire or toothed,45,Family Group 8
+45,Leaves densely stellate-scaly or -hairy; ovary chambers generally 3; fruit a capsule,Euphorbiaceae:Croton,Family Group 8
+45,Leaves not stellate-hairy; ovary chamber 1; fruit an achene or utricle,46,Family Group 8
+46,"Bractlets subtending flower 3, winged, abaxially bearing hooked hairs; stigma 1, sessile, hair-tufted; sepals 4, fused",Urticaceae:Soleirolia,Family Group 8
+46,"Bractlets subtending flower 1--2, without hooked hairs; stigmas 2, linear; sepals 0 or 3--5, free",47,Family Group 8
+47,"Flower enclosed between a pair of bractlets; sepals generally 0; leaves generally bearing bead-like, sessile hairs or powdery scales",Chenopodiaceae:Atriplex,Family Group 8
+47,Flower not enclosed by a pair of bractlets; sepals 3--5; leaves glabrous or glaucous,Amaranthaceae:Amaranthus,Family Group 8
+1,Plant parasitic on stem of woody host plant,Viscaceae,Family Group 9
+1,"Plant free-living, rooted in ground",2,Family Group 9
+2,"Trunk unbranched, generally stout, often covered with persistent woody leaf bases; leaves 4--7 m, pinnately compound",Arecaceae:Phoenix,Family Group 9
+2,"Trunk(s) generally branched, slender to stout, generally not covered with persistent leaf bases; leaves generally much smaller, simple or compound",3,Family Group 9
+3,"Leaves stiff and sword-like, 0.6--2 m, base much expanded, white, fleshy; inflorescence a large panicle",Ruscaceae:Nolina,Family Group 9
+3,"Leaves not sword-like, mostly smaller, base not much expanded, white, and fleshy; inflorescences various",4,Family Group 9
+4,Leaves opposite or whorled,5,Family Group 9
+4,Leaves alternate (leaf often opposite a tendril or an inflorescence in Vitaceae),19,Family Group 9
+5,Leaves compound,6,Family Group 9
+5,Leaves simple,9,Family Group 9
+6,Leaves palmate; leaflets 3,Sapindaceae:Acer glabrum,Family Group 9
+6,Leaves pinnate; leaflets often > 3,7,Family Group 9
+7,"Woody vine; sepals generally 4, conspicuous, petal-like; pistils many; styles elongated and plumose in fruit",Ranunculaceae:Clematis,Family Group 9
+7,"Tree or large shrub; sepals generally 5 or number difficult to determine, very small; pistil 1; styles never plumose",8,Family Group 9
+8,"Stigmas short, on slender style; ovary not winged in flower; fruit a 1-winged achene, not splitting",Oleaceae:Fraxinus,Family Group 9
+8,"Stigmas linear, +- sessile; ovary with 2 short wings in flower; fruit generally splitting into winged mericarps",Sapindaceae:Acer negundo,Family Group 9
+9,Margins of leaves toothed,Picrodendraceae:Tetracoccus,Family Group 9
+9,Margins of leaves entire,10,Family Group 9
+10,Weak-stemmed shrub,11,Family Group 9
+10,Stouter shrub or tree,12,Family Group 9
+11,"Perianth parts in 3s, free; ovary superior, unlobed, smooth; NCo",Ericaceae:Empetrum,Family Group 9
+11,"Perianth parts in 4s, fused; ovary inferior, +- bilobed, smooth to covered with short bristles; widespread",Rubiaceae:Galium,Family Group 9
+12,Stems and leaves covered with silvery scales,Elaeagnaceae:Shepherdia,Family Group 9
+12,Stems and leaves glabrous or variously hairy,13,Family Group 9
+13,Petals fused proximally,14,Family Group 9
+13,Petals free or 0,15,Family Group 9
+14,Leaves glossy,Rubiaceae:Coprosma,Family Group 9
+14,Leaves densely hairy,Scrophulariaceae:Buddleja,Family Group 9
+15,Flowers in pendent catkins,Garryaceae:Garrya,Family Group 9
+15,Flowers not in catkins,16,Family Group 9
+16,"Stems green, jointed; leaves thin, dry, scarious, scale-like, often early-deciduous --- structures appearing to be flowers actually ovulate cones of a gymnosperm",Ephedraceae:Ephedra,Family Group 9
+16,"Stems gray or brown or only young stems green, not jointed; leaves thin or thick, green, not dry and scarious, not scale-like, persistent or deciduous",17,Family Group 9
+17,"Leaves thick, leathery, evergreen; flowers solitary; sepals well developed",Simmondsiaceae:Simmondsia chinensis,Family Group 9
+17,"Leaves thin, deciduous; flowers in sessile, axillary clusters or short-peduncled racemes; sepals very small",18,Family Group 9
+18,"Flowers subsessile, solitary or few in axils; styles 3--4; ovary 3--4-lobed; fruit a capsule",Picrodendraceae:Tetracoccus,Family Group 9
+18,"Flowers pedicelled, in axillary clusters; style 1; ovary unlobed; fruit a drupe",Oleaceae:Forestiera,Family Group 9
+19,Tendrils present; plant a vine; inflorescence an umbel or panicle; fruit a berry,20,Family Group 9
+19,"Tendrils 0; plant a shrub or tree, rarely a vine; inflorescence, fruit various",21,Family Group 9
+20,Inflorescence an umbel,Smilacaceae:Smilax,Family Group 9
+20,Inflorescence a panicle,Vitaceae:Vitis,Family Group 9
+21,Flowers in catkins or catkin-like spikes,22,Family Group 9
+21,Flowers not in catkins or spikes --- ovules never produced in cone-like catkins,30,Family Group 9
+22,Leaves compound,23,Family Group 9
+22,Leaves simple,24,Family Group 9
+23,"Leaves 1--2-pinnate, leaflets entire; fruit a long, flat +- indehiscent legume",Fabaceae:Gleditsia,Family Group 9
+23,"Leaves 1-pinnate, leaflets serrate; fruit a small 2-winged nut",Juglandaceae:Pterocarya,Family Group 9
+24,Shrubs of +- saline desert habitats; leaves +- thick and fleshy or very narrow and densely hairy; spikes erect or very short and axillary,Chenopodiaceae,Family Group 9
+24,"Shrubs or trees, generally of moister habitats; leaves thin and wide; spikes or catkins erect or pendent",25,Family Group 9
+25,Stipules 0,26,Family Group 9
+25,"Stipules present, evident at least on new growth, sometimes deciduous but leaving evident scars",27,Family Group 9
+26,"Leaves sessile; blades +- gray, entire, not resin-dotted; flowers enclosed by a pair of bractlets; fruit an achene or utricle, enclosed between and falling together with papery or hardened bractlets",Chenopodiaceae,Family Group 9
+26,"Leaves petioled; blades green, crenate or serrate, resin-dotted; flowers subtended by 2--4 bractlets; fruit a papillate, wax-coated drupe, free of subtending bractlets, or an achene enclosed by and falling together with a pair of spongy bractlets",Myricaceae,Family Group 9
+27,"Styles repeatedly branched into many fine, thread-like divisions; ovary 3-lobed, maturing as a capsule; stems brittle; shrub",Euphorbiaceae:Acalypha,Family Group 9
+27,"Styles or style branches 2--4, generally not further divided; ovary generally unlobed, the fruits various; stems mostly not brittle; shrub or tree",28,Family Group 9
+28,"Catkins very dense at time of flower; only stigmas exserted beyond tips of tightly appressed bractlets; at maturity either catkin +- cone-like with ovaries ripening as winged achenes or bractlets expanding into 1 or more tubular involucres, each surrounding a nut",Betulaceae,Family Group 9
+28,"Catkins looser at time of flower; bractlets, if present, not tightly appressed, the ovaries or calyces generally visible on close inspection; at maturity either catkin becoming a +- open cluster of capsules or a fleshy multiple fruit",29,Family Group 9
+29,"Ovary tightly enwrapped by 4 appressed sepals; catkin bractlets 0; sepals fleshy at maturity, together with ovaries maturing as a multiple fruit",Moraceae:Morus,Family Group 9
+29,"Ovary not enclosed by sepals, calyx 0 or represented by an entire or slightly lobed rim; flowers subtended by bractlets, these sometimes deciduous; ovary ripening as a capsule containing several--many hair-tufted seeds",Salicaceae,Family Group 9
+30,"Leaves and stems generally with many straight, weak, slender prickles",Rosaceae:Rubus ursinus,Family Group 9
+30,"Leaves and stems without many straight, weak prickles (rarely with stout prickles), sometimes stems thorny or leaves spiny-margined",31,Family Group 9
+31,Leaves palmately lobed,32,Family Group 9
+31,Leaves not palmately lobed,33,Family Group 9
+32,"Inflorescence an erect terminal panicle; shrubs; bark not flaking in large plates; leaves peltate, glabrous",Euphorbiaceae:Ricinus,Family Group 9
+32,"Inflorescence axillary, generally drooping, of 1--7 spheric heads along an axis; trees; bark flaking from trunks in large plates; leaves obtuse to cordate at base, densely tomentose when young",Platanaceae:Platanus,Family Group 9
+33,Stems and leaves stellate-hairy,34,Family Group 9
+33,Stems and leaves glabrous or hairy but not stellate,35,Family Group 9
+34,"Ovary clearly superior, 2--4-lobed; fruit a capsule; involucre 0; (sub)shrub with entire leaves or desert shrub with crenate leaves",Euphorbiaceae,Family Group 9
+34,"Ovary inferior but sepals very small and often concealed by bractlets of involucre; fruit either an ovoid nut, subtended by a cup-like involucre, or a triangular nut, surrounded in groups of 1--3 by a bur-like involucre; shrub or tree with leaves entire, toothed, or pinnately lobed but not crenate",Fagaceae,Family Group 9
+35,Leaves compound,36,Family Group 9
+35,Leaves simple,40,Family Group 9
+36,Petals 0; ovary inferior --- fruit a nut with a +- dehiscent husk,Juglandaceae,Family Group 9
+36,Petals present; ovary or ovaries superior,37,Family Group 9
+37,"Leaflets with a few gland-tipped teeth near base; ovaries 5--6, joined only at style; fruit a cluster of winged achenes",Simaroubaceae:Ailanthus,Family Group 9
+37,"Leaflets entire or teeth not gland-tipped; ovary 1; fruit of 1 drupe, capsule, or winged achene",38,Family Group 9
+38,"Leaves strongly aromatic, dotted with minute, translucent glands; fruit a winged achene",Rutaceae:Ptelea,Family Group 9
+38,"Leaves aromatic or not, not dotted with translucent glands; fruit a drupe or capsule",39,Family Group 9
+39,"Leaflets 3--20, lance-linear to ovate, 10--130 mm; fruit a drupe",Anacardiaceae,Family Group 9
+39,"Leaflets 7--33, linear-oblong or narrowly elliptic, 2--10 mm; fruit drupe-like when young, capsule-like in age",Burseraceae:Bursera microphylla,Family Group 9
+40,Corolla 0; perianth parts 0 or in 1 series,41,Family Group 9
+40,Corolla present; perianth parts in 2 series,47,Family Group 9
+41,"Inflorescence a dense, spheric head; styles long, spreading; fruits and knobby-tipped, fleshy sepals ripening as a large multiple fruit",Moraceae:Maclura,Family Group 9
+41,"Inflorescence not a spheric head; styles not long, spreading; fruits and sepals not forming multiple fruit",42,Family Group 9
+42,"Flowers subtended or surrounded at base by an involucre of tiny scale-like bractlets; fruit an ovoid nut, subtended by a cup-like involucre; ovary inferior",Fagaceae:Quercus,Family Group 9
+42,"Flowers without an involucre; fruit an achene, utricle, capsule, or drupe; ovary inferior or superior",43,Family Group 9
+43,Calyx 0; flowers or fruits each enclosed by a pair of tightly appressed bracts,Chenopodiaceae,Family Group 9
+43,Calyx present; flowers or fruits not enclosed by a pair of tightly appressed bracts,44,Family Group 9
+44,Leaves strongly aromatic,Lauraceae:Laurus,Family Group 9
+44,Leaves not aromatic,45,Family Group 9
+45,"Leaves fleshy, linear, +- cylindric; calyx fused to ovary, winged in fruit",Sarcobataceae:Sarcobatus,Family Group 9
+45,"Leaves not fleshy, linear to round, flat; calyx free from ovary, not winged in fruit",46,Family Group 9
+46,Sepals free; fruit a capsule,Picrodendraceae:Tetracoccus,Family Group 9
+46,Sepals fused; fruit a drupe,Rhamnaceae:Rhamnus,Family Group 9
+47,"Shrub with thorny green stems; leaves early deciduous, scale-like to narrowly oblong",Simaroubaceae:Castela,Family Group 9
+47,"Tree, shrub, or woody vine, generally not thorny; leaves generally present, sometimes deciduous in winter or dry season",48,Family Group 9
+48,Flower parts in 3s,Ericaceae:Empetrum,Family Group 9
+48,Flower parts generally in 4s or 5s,49,Family Group 9
+49,"Flowers in involucred heads, these generally in open to dense clusters; ovary 1 per flower, inferior; calyx modified as a white to +- brown pappus",Asteraceae,Family Group 9
+49,"Flowers not in heads; ovaries 1--5, superior; calyx green, not modified",50,Family Group 9
+50,Hypanthium present,51,Family Group 9
+50,Hypanthium 0,52,Family Group 9
+51,"Ovary 1; petals <= 1 mm, +- yellow; inflorescence an axillary cyme",Rhamnaceae:Rhamnus,Family Group 9
+51,"Ovaries generally 5; petals 3--6 mm, white; inflorescence a raceme",Rosaceae:Oemleria,Family Group 9
+52,Flower parts in 4s; leaves spiny-toothed or entire,Aquifoliaceae:Ilex aquifolium,Family Group 9
+52,"Flower parts generally in 5s; leaves entire to lobed, not spiny-toothed",53,Family Group 9
+53,Petals 1--5 mm; fruit a drupe,Anacardiaceae,Family Group 9
+53,Petals 10--15 mm; fruit a capsule --- seeds sticky,Pittosporaceae,Family Group 9
+1,"Perianth 0 or of 1 whorl, generally called sepals even when petal-like",2,Family Group 10
+1,"Perianth of 2 or more whorls or spirals, the outer generally called sepals, the inner generally called petals",8,Family Group 10
+2,Hypanthium present,Rosaceae,Family Group 10
+2,Hypanthium 0,3,Family Group 10
+3,Trees; leaves palmately lobed,Platanaceae:Platanus,Family Group 10
+3,Herbs or woody vines; leaves various,4,Family Group 10
+4,Plant terrestrial or if aquatic with emergent leaves,Ranunculaceae,Family Group 10
+4,Plant aquatic with submersed or floating leaves,5,Family Group 10
+5,Perianth parts 1--4,6,Family Group 10
+5,Perianth +- 0,7,Family Group 10
+6,"Perianth part 1, white, petal-like, enlarging and turning green in age; stamens 6--18; fruit follicle, 4-seeded",Aponogetonaceae:Aponogeton distachyos,Family Group 10
+6,"Perianth parts 4, green or +- brown, sepal-like; stamens 4; fruit achene-like drupe, 1-seeded",Potamogetonaceae,Family Group 10
+7,"Flowers bisexual, borne along axis of initially short-peduncled spike, peduncle elongating in fruit; stamens 2; pistils (2)4(8); ovary stalk in fruit 12--35 mm; fruit +- ovoid, smooth, beak 0.5--1 mm",Ruppiaceae:Ruppia,Family Group 10
+7,"Flowers unisexual, staminate and pistillate together in sessile, 2-flowered axillary cluster; stamen 1; pistils (1)4--5(9); ovary stalk in fruit 0.1--1.5 mm; fruit abaxially curved, minutely roughened, beak 0.7--2 mm",Zannichelliaceae:Zannichellia palustris,Family Group 10
+8,Leaves and often stems thick and fleshy; pistils generally as many as petals or sepals --- stamens 1--2 &times; as many,Crassulaceae,Family Group 10
+8,Leaves and stems not very thick and fleshy; number of pistils same as or different from number of sepals or petals,9,Family Group 10
+9,Perianth parts in 3s,10,Family Group 10
+9,Perianth parts generally in 4s or 5s or indefinite in number,16,Family Group 10
+10,Leaves compound,11,Family Group 10
+10,Leaves simple,12,Family Group 10
+11,"Tree with unbranched trunk; leaves 4--7 m, leaflets many",Arecaceae:Phoenix,Family Group 10
+11,"Annual; leaves <= 6 cm, leaflets 3--5 --- carpels actually united by common style",Limnanthaceae:Floerkea,Family Group 10
+12,"Flowers solitary --- sepals and petals all similar, +- white or +- red-purple; leaves floating and peltate or some or all submersed and dissected",Cabombaceae,Family Group 10
+12,Flowers several--many in raceme- to panicle-like inflorescence,13,Family Group 10
+13,"Sepals green, petals white (pink)",Alismataceae,Family Group 10
+13,"Sepals and petals the same color, +- white to green or +- red",14,Family Group 10
+14,"Inflorescence bractless --- carpels actually +- fused, separating in fruit",Juncaginaceae:Triglochin,Family Group 10
+14,Inflorescence bracted,15,Family Group 10
+15,Ovules many per carpel; fruits erect --- carpels actually proximally fused [may appear +- free],Melanthiaceae,Family Group 10
+15,Ovules 1--3 per carpel; fruits spreading,Scheuchzeriaceae:Scheuchzeria palustris,Family Group 10
+16,Stamens > 2 &times; as many as petal-like perianth segments or > 15,17,Family Group 10
+16,Stamens 2 &times; as many as petals or fewer,23,Family Group 10
+17,Plants obviously woody; shrubs or trees,18,Family Group 10
+17,Plants herbaceous or slightly woody at base,20,Family Group 10
+18,Crushed leaves strongly aromatic; leaves opposite,Calycanthaceae:Calycanthus occidentalis,Family Group 10
+18,Crushed leaves not aromatic; leaves alternate,19,Family Group 10
+19,Flowers solitary; seeds with arils,Crossosomataceae,Family Group 10
+19,Flowers clustered; seeds without arils,Rosaceae,Family Group 10
+20,Hypanthium present,Rosaceae,Family Group 10
+20,Hypanthium 0,21,Family Group 10
+21,Sepals enlarging and persisting around fruit; stamens maturing from flower center toward edge,Paeoniaceae:Paeonia,Family Group 10
+21,Sepals deciduous as flower opens or withering as fruit matures; stamens maturing from flower edge toward center,22,Family Group 10
+22,"Sepals 2--3(4), falling as flower opens, not petal-like; carpels actually weakly fused in flower, +- separating in age",Papaveraceae:Platystemon,Family Group 10
+22,"Sepals 4--many, present in open flowers, sometimes petal-like; carpels generally wholly free",Ranunculaceae,Family Group 10
+23,"Petals fused, at least at base",24,Family Group 10
+23,Petals free but sometimes attached to a disk-like to tubular hypanthium,25,Family Group 10
+24,"Plant erect, prostrate, or twining; flowers generally conspicuous, not concealed by leaves; ovules many per ovary; milky latex generally present --- carpels proximally free but actually united by common stigma",Apocynaceae,Family Group 10
+24,"Plant prostrate, mat-forming; flowers minute, subsessile, axillary, generally concealed by leaves; ovules 1--2 per ovary; milky latex 0",Convolvulaceae:Dichondra,Family Group 10
+25,Hypanthium well developed,26,Family Group 10
+25,Hypanthium 0 or inconspicuous,28,Family Group 10
+26,"Leaves simple, basal or cauline; stipules often 0; veins generally palmate; ovules generally several--many per carpel --- carpels slightly fused proximally but free most of their length",Saxifragaceae,Family Group 10
+26,"Leaves simple or compound, generally cauline; stipules generally present; veins often pinnate; ovules generally 1--2 per carpel",27,Family Group 10
+27,Shrub,Crossosomataceae {Glossopetalon spinescens var. aridum},Family Group 10
+27,Herb,Rosaceae,Family Group 10
+28,Plant herbaceous,29,Family Group 10
+28,Plant woody,30,Family Group 10
+29,Annual; ovule 1 per ovary; leaves pinnately divided or compound --- carpels actually united by common style,Limnanthaceae:Limnanthes,Family Group 10
+29,Perennial herb; ovules several--many per ovary; leaves simple and entire or variously toothed to palmately lobed or compound,Saxifragaceae,Family Group 10
+30,Leaves pinnately compound,Simaroubaceae:Ailanthus,Family Group 10
+30,"Leaves simple, entire, sometimes scale-like",31,Family Group 10
+31,"Flowers solitary in leaf axils; fruit a cluster of follicles; leaves elliptic, persistent or drought-deciduous",Crossosomataceae,Family Group 10
+31,"Flowers in dense panicles; fruit cluster of +- dry drupes; leaves scale-like to narrowly oblong, early-deciduous --- shrub with thorny green stems",Simaroubaceae:Castela,Family Group 10
+1,Plant parasitic on stem of woody host plant,Viscaceae,Family Group 11
+1,"Plant free-living, rooted in ground",2,Family Group 11
+2,"Leaves fleshy, scale-like or linear to oblanceolate; catkins erect",3,Family Group 11
+2,"Leaves non-fleshy, +- thin to leathery, with well-developed flat blades, generally wider; catkins erect to drooping",4,Family Group 11
+3,"Leaves scale-like; distal stems +- fleshy, jointed",Chenopodiaceae,Family Group 11
+3,"Leaves linear to oblanceolate, +- cylindric; distal stems not jointed",Sarcobataceae:Sarcobatus,Family Group 11
+4,Leaves opposite,Garryaceae:Garrya,Family Group 11
+4,Leaves alternate,5,Family Group 11
+5,Leaf compound,6,Family Group 11
+5,Leaf simple,7,Family Group 11
+6,"Plants dioecious, evergreen; staminate catkin-like inflorescence branched --- inflorescence resembles catkin when young, but is actually a branched panicle",Anacardiaceae:Pistacia,Family Group 11
+6,"Plants monoecious, deciduous; staminate catkin unbranched",Juglandaceae,Family Group 11
+7,Fruit capsule; seeds 3--many,8,Family Group 11
+7,"Fruit dry or fleshy, indehiscent; seed generally 1",9,Family Group 11
+8,"Ovary 3-lobed; seeds 3, without a tuft of hairs; stems brittle",Euphorbiaceae:Acalypha,Family Group 11
+8,"Ovary unlobed; seeds several--many, each with a tuft of hairs; stems not brittle",Salicaceae,Family Group 11
+9,Shrubs of +- saline desert habitats; leaves densely stellate-hairy or scaly-puberulent and +- glabrous in age,Chenopodiaceae,Family Group 11
+9,"Shrubs or trees, generally of moister habitats; leaves glabrous or variously hairy",10,Family Group 11
+10,"Milky latex present; sepals of pistillate inflorescence enlarged and fleshy in fruit, ripening together with the ovaries as a spheric to ellipsoid or ovoid multiple fruit",Moraceae,Family Group 11
+10,"Milky latex 0; sepals 0 or if present, not becoming fleshy; ovaries ripening as individual drupes, nuts, or winged achenes",11,Family Group 11
+11,"Leaf blade dotted with minute, bead-like, peltate resin glands, aromatic; stipules 0; staminate catkins short, densely flowered; sepals 0; fruit a papillate, wax-coated drupe, free of subtending bracts Or an achene enclosed between a pair of spongy bractlets",Myricaceae,Family Group 11
+11,"Leaf blade not dotted with minute, bead-like resin glands (except in some Betulaceae), generally not aromatic; stipules formed but generally early-deciduous; staminate catkins elongated, either +- flexible and drooping or stiff and spike-like; sepals present in staminate catkins (except _Corylus_ in Betulaceae); fruit a nut or winged achene",12,Family Group 11
+12,"Fruits many, small, flattened, winged achenes, clustered in a cone-like fruit catkin; plant deciduous; pistillate flower calyx 0",Betulaceae,Family Group 11
+12,"Fruits 1--3, each a well-developed nut, subtended or surrounded by a husk-, cup-, or spiny, bur-like involucre; plant deciduous or evergreen; pistillate flower calyx fused to ovary, sepal tips surrounding style base",13,Family Group 11
+13,"Fruit a nut enclosed in a tubular, husk-like involucre; involucral bractlets 2, papery; staminate catkins drooping, densely flowered, bractlets +- concealing flowers, sepals 0; deciduous shrub",Betulaceae:Corylus,Family Group 11
+13,"Fruit a nut in a scaly cup-like involucre or 1--3 nuts enclosed in a spiny, bur-like involucre; involucral bractlets many, scaly or spiny; staminate catkins very slender and drooping or stiff and spike-like, bractlets inconspicuous, sepals present; deciduous or evergreen tree or shrub",Fagaceae,Family Group 11
+1,Plant parasitic on stem of woody host plant,Viscaceae,Family Group 12
+1,"Plant rooted in soil, not parasitic",2,Family Group 12
+2,"Inflorescence a dense spike or a spheric head, or flowers enclosed within a fleshy, hollow receptacle",3,Family Group 12
+2,"Inflorescence not a dense spike or a spheric head, flowers not enclosed in a fleshy, hollow receptacle",7,Family Group 12
+3,"Leaves pinnately compound or modified into linear to oblong or narrowly elliptic, entire, flattened axes without leaflets; fruit a legume --- perianth actually of 2 whorls, the calyx easily overlooked",Fabaceae Group 1,Family Group 12
+3,"Leaves simple, ovate or wider in overall outline, entire, toothed, or palmately lobed; fruit not a legume",4,Family Group 12
+4,"Inflorescence a hollow receptacle enclosing many tiny flowers; ripened inflorescence an externally smooth, fleshy multiple fruit [a fig]; milky latex present",Moraceae:Ficus,Family Group 12
+4,"Inflorescence a short, dense spike or a head; ripened pistillate inflorescence an externally roughened spike or spheric head; milky latex present or 0",5,Family Group 12
+5,Perianth parts fused into a tube; flowers bisexual,Asteraceae,Family Group 12
+5,Perianth parts free; flowers unisexual,6,Family Group 12
+6,"Lf-blade entire to toothed, sometimes irregularly few-lobed, faces glabrous or sparsely short-hairy; ripened pistillate inflorescence a fleshy spike or head; milky latex present; petiole base not expanded, not covering axillary bud; stipules membranous, free, generally early-deciduous",Moraceae,Family Group 12
+6,"Lf-blade +- deeply palmately lobed, the lobes entire or +- toothed, faces densely stellate-tomentose when young; ripened pistillate inflorescence a dry head of long-stiff-hairy achenes; milky latex 0; petiole base expanded, covering axillary bud; stipules large and green, fused around stem, persistent or deciduous --- pistils actually > 1",Platanaceae:Platanus,Family Group 12
+7,"Flowers unisexual, plant monoecious; pistillate inflorescence 1--5-flowered, maturing as a bur with spiny, knob-like, or membranous bract tips; staminate inflorescence a head",Asteraceae:Ambrosia,Family Group 12
+7,"Flowers bisexual, or if unisexual, pistillate inflorescence not 1--5-flowered and maturing as a bur with spiny, knob-like, or membranous bract tips; staminate inflorescence various",8,Family Group 12
+8,"Ovary inferior, partly so, or appearing so",9,Family Group 12
+8,Ovary superior,14,Family Group 12
+9,"Herbage covered with silvery scales; fruit drupe-like --- ovary actually superior, ripening as an achene, tightly enclosed by hypanthium base that becomes fleshy at maturity",Elaeagnaceae,Family Group 12
+9,Herbage without silvery scales; fruit various,10,Family Group 12
+10,"Inflorescence unit an involucred head, superficially resembling a single flower",Asteraceae,Family Group 12
+10,Inflorescence open or flowers solitary or paired,11,Family Group 12
+11,"Trees, evergreen; stamens many; leaves aromatic --- perianth early-deciduous as cap",Myrtaceae:Eucalyptus,Family Group 12
+11,"Shrubs or woody vines, evergreen or deciduous; stamens 4--12; leaves generally not aromatic",12,Family Group 12
+12,"Perianth rotate, lobes >> tube; leaves whorled; fruit 2-lobed",Rubiaceae:Galium,Family Group 12
+12,"Perianth tubular, lobes << tube; leaves alternate or opposite; fruit not lobed",13,Family Group 12
+13,Leaves alternate; perianth tube U-shaped; twining vine,Aristolochiaceae:Aristolochia,Family Group 12
+13,Leaves opposite; perianth tube straight; erect shrub,Caprifoliaceae:Lonicera involucrata,Family Group 12
+14,Leaves opposite or whorled,15,Family Group 12
+14,Leaves alternate,22,Family Group 12
+15,"Fruit winged, indehiscent; leaves generally lobed or compound",16,Family Group 12
+15,"Fruit not winged; leaves simple, entire or toothed",17,Family Group 12
+16,"Style evident, stigma 1, entire or slightly 2-lobed; fruit 1-winged, not splitting; leaves pinnately compound (leaflet generally 1 in Fraxinus anomala_)",Oleaceae:Fraxinus,Family Group 12
+16,"Style very short, stigmas 2(3), elongate; fruit 2(3)-winged, generally splitting into mericarps; leaves palmately lobed or compound or pinnately compound",Sapindaceae:Acer,Family Group 12
+17,Flowers bisexual; stamens 20--25(30),Rosaceae:Coleogyne,Family Group 12
+17,Flowers unisexual; stamens generally 3--12,18,Family Group 12
+18,Leaf covered with silvery scales,Elaeagnaceae:Shepherdia,Family Group 12
+18,Leaf glabrous or +- hairy,19,Family Group 12
+19,"Leaves needle-like, abaxially grooved",Ericaceae:Empetrum,Family Group 12
+19,"Leaves not needle-like, not grooved",20,Family Group 12
+20,"Staminate and pistillate flowers in sessile umbels; style 1, stigma entire or 2-lobed",Oleaceae:Forestiera,Family Group 12
+20,"Staminate flowers clustered, pistillate flowers generally solitary; styles or stigmas (2)3--5",21,Family Group 12
+21,"Staminate inflorescence a raceme or panicle, flowers clearly stalked; fruit 3--4-lobed",Picrodendraceae:Tetracoccus,Family Group 12
+21,"Staminate inflorescence head-like, flowers subsessile; fruit unlobed",Simmondsiaceae:Simmondsia chinensis,Family Group 12
+22,Leaves pinnately compound or very deeply pinnately divided,23,Family Group 12
+22,"Leaves simple, sometimes lobed",25,Family Group 12
+23,"Perianth parts +- brown-green, inconspicuous, bract-like; flowers unisexual, plants dioecious",Anacardiaceae:Pistacia,Family Group 12
+23,"Perianth parts petal-like, conspicuous; flowers bisexual",24,Family Group 12
+24,"Shrub; flowers solitary; perianth radial, parts 6, white --- sepals actually present in bud, but early-deciduous, 0 in open flower",Papaveraceae:Romneya,Family Group 12
+24,"Tree; flowers in raceme; perianth bilateral, parts 4, yellow or orange, proximally +- red",Proteaceae:Grevillea robusta,Family Group 12
+25,"Inflorescence flower-like with a cup-like involucre bearing colored, often petal-like nectaries; each stamen [actually a staminate flower] with a jointed stalk [composed of a filament and a pedicel]; pistil [actually pistillate flower] 3-lobed, generally exserted from involucre; milky latex present",Euphorbiaceae:Euphorbia,Family Group 12
+25,"Inflorescences various, but not flower-like; stamens generally > 1 per flower, the filaments not jointed; pistils various; milky latex generally 0",26,Family Group 12
+26,Anthers opening by pores with hinged lids; leaf strongly aromatic --- 2-whorled nature of perianth may not be evident in open flowers,Lauraceae,Family Group 12
+26,Anthers opening by slits; leaf generally not aromatic,27,Family Group 12
+27,"Leaves fleshy, cylindric to +- flat",Chenopodiaceae:Suaeda,Family Group 12
+27,"Leaves not fleshy, generally flat",28,Family Group 12
+28,Leaf palmately veined and lobed,29,Family Group 12
+28,"Leaf pinnately veined or only midvein evident, generally unlobed",31,Family Group 12
+29,"Woody vine; tendrils present --- calyx 0 or reduced to an entire or slightly lobed rim, easily overlooked",Vitaceae:Vitis,Family Group 12
+29,Erect or spreading shrub; tendrils 0,30,Family Group 12
+30,"Leaf peltate, glabrous; flowers unisexual, perianth parts +- green, free; stamens very many, the filaments irregularly joined in clusters",Euphorbiaceae:Ricinus,Family Group 12
+30,"Leaf not peltate, stellate-hairy; flowers bisexual, perianth parts yellow or orange to +- red, petal-like; stamens 5, filaments fused in 1 group",Malvaceae:Fremontodendron,Family Group 12
+31,"Perianth parts 2--3 cm, bright yellow; ovules many --- sepals actually present in bud, but early-deciduous, 0 in open flower",Papaveraceae:Dendromecon,Family Group 12
+31,"Perianth parts generally < 1.5 cm, generally not yellow and petal-like; ovules 1--2 per chamber",32,Family Group 12
+32,Plant covered with +- gray or silvery scales,33,Family Group 12
+32,Plant without scales,35,Family Group 12
+33,"Flowers tubular in proximal half, some or all bisexual; tree or large shrub; leaves linear-lanceolate to oblong",Elaeagnaceae:Elaeagnus,Family Group 12
+33,"Flowers not tubular, all unisexual, plant dioecious; shrub; leaves various",34,Family Group 12
+34,"Ovary of pistillate flower enclosed by 2 appressed bracts; leaf surface scales powder-like, not stellate",Chenopodiaceae:Atriplex,Family Group 12
+34,Ovary of pistillate flower subtended by 5 sepals; leaf surface scales stellate,Euphorbiaceae:Croton,Family Group 12
+35,Perianth parts 6 --- 2-whorled nature of perianth may not be evident in open flowers,36,Family Group 12
+35,Perianth parts generally 4 or 5,37,Family Group 12
+36,"Flowers solitary, axillary, unisexual; fruit a berry",Ericaceae:Empetrum,Family Group 12
+36,"Flowers in involucred umbels, bisexual; fruit an achene",Polygonaceae:Eriogonum,Family Group 12
+37,Stamens = in number to and alternate sepals,Rhamnaceae,Family Group 12
+37,Stamens = in number to and opposite sepals or > in number than sepals,38,Family Group 12
+38,Style and stigma 1,39,Family Group 12
+38,Styles or stigmas 2--4,40,Family Group 12
+39,"Style feathery with long, stiff hairs; fruit an achene surrounded by a tubular hypanthium; branches stiff",Rosaceae:Cercocarpus,Family Group 12
+39,"Style glabrous; fruit an exposed drupe; branches pliable --- corolla 0 or reduced to minute scales, easily overlooked",Thymelaeaceae:Dirca occidentalis,Family Group 12
+40,Fruit a drupe; flowers staminate and bisexual,Cannabaceae:Celtis,Family Group 12
+40,Fruit a winged nutlet or splitting into 1--2-seeded segments that release seeds; flowers unisexual or bisexual,41,Family Group 12
+41,"Tree; fruit a flattened, round to ovate, 2-winged nutlet",Ulmaceae:Ulmus,Family Group 12
+41,Shrub; fruit splitting into segments,42,Family Group 12
+42,"Leaves elliptic, crenate; fruit segments 1-seeded",Euphorbiaceae:Bernardia,Family Group 12
+42,"Leaves oblanceolate to obovate, entire; fruit segments 1--2-seeded",Picrodendraceae:Tetracoccus hallii,Family Group 12
+1,"Plant terrestrial, or if aquatic, strongly emergent",2,Family Group 13
+1,"Plant aquatic, submersed or floating",9,Family Group 13
+2,"Flowers all unisexual; inflorescence either a dense erect spike of staminate flowers directly distal to a spike of pistillate flowers, or a group of several spheric unisexual heads attached to a zigzag main axis, spikes or heads 1--4 cm diam",Typhaceae,Family Group 13
+2,"Flowers bisexual or some or all unisexual; inflorescences of various types, generally < 1 cm diam if spike or head",3,Family Group 13
+3,"Fruit a berry or capsule with 3--many seeds or breaking into 1-seeded mericarps; perianth segments 4--6, well developed --- actually in two whorls, but this may not be evident in open flowers",4,Family Group 13
+3,"Fruit an achene or grain, 1-seeded; perianth inconspicuous or 0 or modified as +- conspicuous bristles",6,Family Group 13
+4,"Leaves with expanded blades; perianth parts petal-like, white or cream",Ruscaceae:Maianthemum,Family Group 13
+4,"Leaves narrowly linear; perianth parts scale-like, green to +- red or brown",5,Family Group 13
+5,"Inflorescence of 1--many flowers, variously clustered, subtended individually and/or in small groups by bracts; style 1, stigmas (2)3, linear, spreading; fruit a capsule",Juncaceae,Family Group 13
+5,"Inflorescence a bractless raceme; stigmas 3 or 6, +- sessile, papillate or plumose; fruit breaking into mericarps",Juncaginaceae:Triglochin,Family Group 13
+6,"Inflorescence a bractless emergent spike of bisexual and sometimes staminate flowers, plus 2 submerged, long-styled, sessile pistillate flowers enclosed by leaf sheath at base of peduncle; stamen 1; stigma 1",Juncaginaceae:Triglochin scilloides,Family Group 13
+6,Inflorescence 1--many spikelets with flowers individually subtended or enclosed by scale-like bracts; stamens (1)3(6); stigmas 2--3,7,Family Group 13
+7,"Stem leafless, the leaves all basal, sometimes reduced to bladeless sheaths",Cyperaceae,Family Group 13
+7,Stem at least proximally leafy,8,Family Group 13
+8,"Stems generally 3-angled (cylindric), generally solid; nodes not swollen; leaves generally 3-ranked; spikelet generally without 2 bractlets at base that do not directly subtend flower parts; each flower subtended by 1 bract (in _Carex_ and _Kobresia_ a second, generally hollow, +- flask-shaped bract [perigynium] surrounds or encloses each pistillate flower); perianth of generally inconspicuous to long-exserted bristles or 0; fruit an achene",Cyperaceae,Family Group 13
+8,"Stems cylindric, the internodes generally hollow; nodes swollen, knot-like; leaves 2-ranked or not in obvious ranks; each spikelet generally with 2 bractlets [glumes] at base that do not directly subtend flower parts; each flower generally enclosed by 2 additional bractlets [lemma and palea]; perianth of 2 tiny scales or 0; fruit a grain",Poaceae,Family Group 13
+9,"Plant raft-like, free-floating or stranded on shore or drying mud, either plant body 0.4--10 mm, not differentiated into stems and leaves with roots unbranched or 0, or plant with floating rosette of widely wedge-shaped, velvety-hairy leaves and many fine, branched roots",Araceae,Family Group 13
+9,"Plant not raft-like, generally rooted, >> 1 cm, differentiated into stems and leaves, not forming floating rosettes; roots generally present, often branched; leaves linear, glabrous",10,Family Group 13
+10,"Leaves opposite or whorled (occasionally alternate at some nodes), all cauline",11,Family Group 13
+10,"Leaves alternate, basal and/or cauline",12,Family Group 13
+11,Leaf coarsely to finely toothed (teeth sometimes appearing +- 0 to naked eye); stipules 0 (leaf base may have ear-like lobes); fruit without a stiff beak,Hydrocharitaceae:Najas,Family Group 13
+11,"Leaf entire; stipules fused to blade or free, membranous, entire; fruit with a stiff beak",Zannichelliaceae:Zannichellia palustris,Family Group 13
+12,"Leaves all +- basal, sheaths overlapping and blades emerging at different levels, but stem internodes very short, not evident --- pistillate flowers paired, axillary, submersed, style 6--20 cm, thread-like, stigma floating, head-like; staminate and bisexual flowers in peduncled spike",Juncaginaceae:Triglochin scilloides,Family Group 13
+12,"Leaves basal and cauline or all cauline, stem internodes evident",13,Family Group 13
+13,"Inflorescence a dense, spheric head",Typhaceae:Sparganium,Family Group 13
+13,Inflorescence a spike or flowers solitary,14,Family Group 13
+14,Inflorescence a flattened spike enwrapped by a sheathing bract; subtidal or intertidal seawater or brackish water of bays and estuaries,Zosteraceae,Family Group 13
+14,"Inflorescence a cylindric spike, short- to long-stalked; freshwater, brackish, or inland saltwater habitat --- carpels actually free but easily misinterpreted",15,Family Group 13
+15,"Sepals 4; stamens 4; fruits sessile; fresh water in lakes, streams, ponds",Potamogetonaceae,Family Group 13
+15,Sepals 0; stamens 2; fruits on thread-like stalks; fresh to brackish or salt water in coastal to inland areas,Ruppiaceae:Ruppia,Family Group 13
+1,Plant parasite on stem of woody host,2,Family Group 14
+1,Plant free-living and rooted in ground or root-parasite,3,Family Group 14
+2,"Flowers of parasite emerging directly from stem of host, parasite otherwise growing within tissues of host; leaves 0; on _Psorothamnus_",Apodanthaceae:Pilostyles thurberi,Family Group 14
+2,Flowers of parasite borne in inflorescences on branches of parasite; leaves scale-like or with expanded blades; on various woody hosts [not _Psorothamnus_],Viscaceae,Family Group 14
+3,"Leaf blade 1--2+ m, covered with prickles --- perianth actually of 2 whorls but petals very small, easily overlooked",Gunneraceae:Gunnera tinctoria,Family Group 14
+3,"Leaf blade << 1 m, not prickly",4,Family Group 14
+4,"Leaves [at least proximal] whorled, all cauline",5,Family Group 14
+4,Leaves alternate or opposite (or sometimes some or all basal),8,Family Group 14
+5,Plant terrestrial,Rubiaceae,Family Group 14
+5,Plant +- aquatic,6,Family Group 14
+6,Leaves entire,Plantaginaceae:Hippuris,Family Group 14
+6,Leaves toothed to deeply divided,7,Family Group 14
+7,Leaves repeatedly forked,Ceratophyllaceae:Ceratophyllum demersum,Family Group 14
+7,Leaves [at least submersed] pinnately divided,Haloragaceae:Myriophyllum,Family Group 14
+8,"Inflorescence bracts large, petal-like; perianth 0 --- inflorescence a flower-like spike",Saururaceae:Anemopsis californica,Family Group 14
+8,Inflorescence bracts not at all petal-like; perianth present,9,Family Group 14
+9,Perianth parts free or nearly so,10,Family Group 14
+9,Perianth parts fused,18,Family Group 14
+10,"Leaves glabrous, round-peltate or -reniform; plant aquatic with stolons or rhizomes floating in shallow water or rooted in wet soil",Araliaceae:Hydrocotyle,Family Group 14
+10,"Leaves glabrous or hairy, leaf shape various; plant terrestrial if leaves round-reniform",11,Family Group 14
+11,Inflorescence a simple or compound umbel,Apiaceae,Family Group 14
+11,Inflorescence various or flowers solitary,12,Family Group 14
+12,"Plant aquatic, floating, stranded on mud, or rooted in bottom sediments",13,Family Group 14
+12,Plant terrestrial or sometimes growing in damp soil,14,Family Group 14
+13,"Sepals, stamens 5; pedicel 1--4(8) mm; leaves alternate (sometimes +- opposite or whorled), blade linear",Campanulaceae:Howellia,Family Group 14
+13,"Sepals, stamens 4; pedicel 0--0.5 mm; leaves opposite, blade narrowly elliptic to +- ovate",Onagraceae:Ludwigia palustris,Family Group 14
+14,Leaves all basal,Saxifragaceae:Heuchera cylindrica,Family Group 14
+14,"Leaves cauline, at least in part",15,Family Group 14
+15,"Fruit an achene; sepals 3--5; leaves alternate, +- entire, petiole +- = blade",Chenopodiaceae:Beta,Family Group 14
+15,"Fruit a capsule or +- nut-like [hard, indehiscent, 3--9-seeded with 2--5-horns]; sepals 3--9; leaves alternate or opposite, entire to pinnately lobed, petiole often < blade",16,Family Group 14
+16,"Perennial herb; stems erect; leaves generally unequally pinnately lobed; styles long, forked",Datiscaceae:Datisca glomerata,Family Group 14
+16,"Annual; stems prostrate to erect; leaves entire or toothed; styles short, not forked",17,Family Group 14
+17,"Styles 2--9; leaves +- fleshy, often +- papillate",Aizoaceae,Family Group 14
+17,"Style 1; leaves not fleshy, not papillate",Campanulaceae,Family Group 14
+18,Inflorescence of involucred heads or umbels,19,Family Group 14
+18,"Inflorescence not of involucred heads or umbels, flowers solitary or variously clustered",20,Family Group 14
+19,"Ovary truly inferior; anthers fused around style or, if free, the flowers unisexual; stigma lobes 2",Asteraceae,Family Group 14
+19,"Ovary actually superior, but appearing inferior [tightly enclosed by perianth base]; anthers free; stigma unlobed",Nyctaginaceae,Family Group 14
+20,"Flowers large, solitary, red to maroon or brown; perianth lobes 3 --- leaves cordate to reniform, long-petioled",Aristolochiaceae:Asarum,Family Group 14
+20,"Flowers generally +- small, generally clustered, not red to maroon or brown; perianth lobes (3)4--5(7)",21,Family Group 14
+21,Leaves alternate,22,Family Group 14
+21,Leaves opposite,23,Family Group 14
+22,Tendrils 0; leaves entire; flowers bisexual,Comandraceae {Comandra umbellata subsp. californica},Family Group 14
+22,Tendrils present; leaves palmately lobed; flowers unisexual,Cucurbitaceae,Family Group 14
+23,Flowers bilateral,Valerianaceae,Family Group 14
+23,Flowers +- radial,24,Family Group 14
+24,Perianth lobes 5; ovary actually superior [tightly enwrapped by hardened or winged calyx base]; leaves of a pair equal or unequal,25,Family Group 14
+24,Perianth lobes 3--4; ovary truly inferior; leaves of a pair equal,26,Family Group 14
+25,"Calyx green, not at all corolla-like, very inconspicuous; sepals erect, free or nearly so above the level of the ovary, thickened and linear, erect; leaves narrowly linear, needle-like, generally 1--2 cm or shorter, generally those of a pair equal",Caryophyllaceae:Scleranthus,Family Group 14
+25,"Calyx corolla-like in color and texture, often very showy; sepals fused well above level of ovary, calyx lobes wide and thin, +- spreading; leaves linear to ovate, often > 2 cm, those of a pair often unequal",Nyctaginaceae,Family Group 14
+26,"Stamens 3--4; leaves entire or teeth minute, prickle-like",Rubiaceae,Family Group 14
+26,Stamens 8; leaves with rounded teeth,Saxifragaceae:Chrysosplenium,Family Group 14
+1,Leaves opposite or whorled,2,Family Group 15
+1,Leaves alternate or all basal,25,Family Group 15
+2,"Plant aquatic, weak-stemmed; submersed, floating, or stranded on mud",3,Family Group 15
+2,"Plant terrestrial, sometimes in damp soil, or in areas flooded at high tide",6,Family Group 15
+3,Leaves opposite; ovary lobed or unlobed; seeds 4--many,4,Family Group 15
+3,Leaves whorled; ovary unlobed; seed 1,5,Family Group 15
+4,"Ovary unlobed, many-seeded",Lythraceae:Lythrum portula,Family Group 15
+4,"Ovary 2- or 4-lobed, 4-seeded",Plantaginaceae:Callitriche,Family Group 15
+5,Leaves dissected into narrow lobes,Ceratophyllaceae:Ceratophyllum demersum,Family Group 15
+5,Leaves entire,Plantaginaceae:Hippuris,Family Group 15
+6,Ovary chambers 2 or more (doubtful cases should be keyed both ways),7,Family Group 15
+6,Ovary chamber 1,10,Family Group 15
+7,Flowers unisexual,8,Family Group 15
+7,Flowers bisexual,9,Family Group 15
+8,"Style 0, stigma sessile; leaves +- cylindric or 3-angled in &times;-section, fleshy; milky latex 0; plants of coastal salt-marshes",Bataceae:Batis maritima,Family Group 15
+8,"Styles or stigmas 2--3, free; leaves thin; milky latex present or 0; plants of various habitats but not salt marsh",Euphorbiaceae,Family Group 15
+9,"Leaves opposite, equal; fruit circumscissile --- 1/2-inferior ovary may appear superior",Aizoaceae:Sesuvium,Family Group 15
+9,"Leaves whorled, often unequal; fruit loculicidal",Molluginaceae,Family Group 15
+10,Ovules 2--many; fruit a capsule,11,Family Group 15
+10,"Ovule 1; fruit an achene, 1-seeded capsule, or utricle",14,Family Group 15
+11,"Perianth parts 6(8) --- sepals actually present in bud, but early-deciduous, 0 in open flower",Papaveraceae,Family Group 15
+11,Perianth parts (4)5,12,Family Group 15
+12,Sepals free; flowers generally in cymes,Caryophyllaceae,Family Group 15
+12,Sepals fused; flowers solitary in leaf axils,13,Family Group 15
+13,Leaves of a pair unequal; stipules present; fruit circumscissile,Aizoaceae,Family Group 15
+13,Leaves of a pair equal; stipules 0; fruit 5-valved,Myrsinaceae:Lysimachia maritima,Family Group 15
+14,"Style 1, undivided or stigma 1, sessile",15,Family Group 15
+14,Styles or style branches 2 or more,17,Family Group 15
+15,"Sepals petal-like, fused into a tube; leaves entire or slightly lobed, stinging hairs 0",Nyctaginaceae,Family Group 15
+15,"Sepals green, small, inconspicuous; leaves toothed or entire, sometimes with stinging hairs",16,Family Group 15
+16,Herbage densely covered with branched hairs,Amaranthaceae:Tidestromia,Family Group 15
+16,"Herbage glabrous or +- hairy, hairs not branched (stinging hairs present in _Hesperocnide_, _Urtica_)",Urticaceae,Family Group 15
+17,Leaves palmately compound or deeply lobed,Cannabaceae,Family Group 15
+17,"Leaves simple, entire or toothed",18,Family Group 15
+18,"Fruit a 3-angled achene; perianth parts 6 [actually in 2 whorls of 3, but this may not be evident in open flowers]",Polygonaceae,Family Group 15
+18,Fruit not 3-angled; perianth parts <= 5,19,Family Group 15
+19,Leaves with stipules,20,Family Group 15
+19,Leaves without stipules,21,Family Group 15
+20,"Leaves petioled, fleshy; fruit a circumscissile capsule",Aizoaceae:Trianthema,Family Group 15
+20,"Leaves sessile, not fleshy; fruit 1-seeded, indehiscent",Caryophyllaceae,Family Group 15
+21,Leaves reduced to fleshy scales; inflorescence a fleshy spike,Chenopodiaceae,Family Group 15
+21,Leaves linear to ovate; inflorescences various or flowers solitary,22,Family Group 15
+22,"Sepals erect, linear, fused below and hardened around ovary; stamens fused to calyx; slender annual, generally <= 15 cm; leaves narrowly linear, <= 15 mm",Caryophyllaceae:Scleranthus,Family Group 15
+22,"Sepals erect or spreading, free, not hardened around ovary (sepals generally 0 in pistillate flowers of _Atriplex_, which has a pair of +- hardened bractlets around fruit); stamens free from calyx; plants often larger, annual or perennial herb; leaves various",23,Family Group 15
+23,"Bracts subtending flowers dry, scarious; plants neither fleshy nor with powdery or beaded surface; habitats generally not saline",Amaranthaceae,Family Group 15
+23,Bracts subtending flowers leaf-like or fleshy; plants often fleshy or with powdery or beaded surface; habitats often +- saline,24,Family Group 15
+24,"Sepals pink or white, papery; plant from rhizome",Amaranthaceae:Nitrophila,Family Group 15
+24,"Sepals green or +- red-tinged, herbaceous; rhizome 0",Chenopodiaceae,Family Group 15
+25,"Plant aquatic, raft-like, floating on water surface or stranded on shoreline --- leaves in rosettes, wedge-shaped, sessile, velvety; flowers enclosed by small, sheathing bracts",Araceae:Pistia,Family Group 15
+25,Plant terrestrial or rooted in shallow water,26,Family Group 15
+26,"Inflorescence a +- fleshy spike enclosed by a large, basally sheathing, often petal-like bract; petiole stout",Araceae,Family Group 15
+26,Inflorescence various but not a fleshy spike subtended by a sheathing bract; leaves sessile or +- slender-petioled,27,Family Group 15
+27,"Leaves with stipules, generally well developed",28,Family Group 15
+27,"Leaves without stipules, sometimes reduced to scale-like bracts",35,Family Group 15
+28,"Style 1, unbranched, or stigma sessile",29,Family Group 15
+28,Styles or stigmas 2 or more,30,Family Group 15
+29,Ovule 1; fruit an achene,Rosaceae,Family Group 15
+29,Ovules several to many; fruit a capsule --- late season cleistogamous flowers formed in most _Viola_ species,Violaceae:Viola,Family Group 15
+30,Leaves palmately compound,Cannabaceae:Cannabis,Family Group 15
+30,"Leaves simple, entire to lobed",31,Family Group 15
+31,"Plant a vine, stems twining",32,Family Group 15
+31,"Plant prostrate to erect, stems not twining",33,Family Group 15
+32,"Leaves toothed, at least the proximal also palmately lobed",Cannabaceae:Humulus,Family Group 15
+32,Leaves entire,Polygonaceae:Fallopia,Family Group 15
+33,"Stipules fused into a membranous sheath [ocrea] around stem, the sheath sometimes torn or shredded as branches develop",Polygonaceae,Family Group 15
+33,"Stipules free, not fused around stem, not torn or shredded as branches develop",34,Family Group 15
+34,Annual; stems prostrate; stinging hairs 0; flowers bisexual,Caryophyllaceae:Herniaria,Family Group 15
+34,Perennial herb; stems spreading to erect; stinging hairs present; flowers unisexual,Euphorbiaceae:Tragia,Family Group 15
+35,"Inflorescence flower-like with a cup-like involucre bearing 1--4(5) nectary glands that sometimes have flattened, white to +- pink, petal-like, marginal appendages --- stamens [actually staminate flowers] each with a jointed stalk [composed of a filament and a pedicel], pistillate flower 1, generally exserted from involucre, ovary 3-lobed",Euphorbiaceae,Family Group 15
+35,"Inflorescence not flower-like or with a cup-like, nectary-gland-bearing involucre",36,Family Group 15
+36,"Perianth parts 4 or 6, +- petal-like",37,Family Group 15
+36,"Perianth parts <= 5, sometimes 0, generally not petal-like",38,Family Group 15
+37,"Perianth parts 4 or 6, free; stigmas 1--many, generally sessile; fruit a capsule --- sepals actually present in bud, but early-deciduous, 0 in open flower",Papaveraceae,Family Group 15
+37,"Perianth parts 6, proximally fused; stigmas 3, at tips of slender styles; fruit a 3-angled achene",Polygonaceae,Family Group 15
+38,"Leaves all basal, palmately compound; leaflets 3; perianth 0",Berberidaceae:Achlys,Family Group 15
+38,"Leaves cauline, simple; perianth generally present",39,Family Group 15
+39,Ovule 1; inflorescences various,40,Family Group 15
+39,"Ovules 2--many; inflorescence generally a raceme (spike, axillary cluster)",44,Family Group 15
+40,Herbage +- densely covered with branched hairs,41,Family Group 15
+40,"Herbage glabrous or +- hairy, hairs not branched",42,Family Group 15
+41,"Flowers bisexual; hairs soft, irregularly branched, branches all short; fruit indehiscent --- leaf arrangement variable, often difficult to interpret",Amaranthaceae:Tidestromia,Family Group 15
+41,"Flowers unisexual; hairs harshly stellate, central branches often long, spreading, bristle-like; fruit dehiscent",Euphorbiaceae:Croton setiger,Family Group 15
+42,Stigma 1,Urticaceae,Family Group 15
+42,Stigmas 2--4,43,Family Group 15
+43,Bracts subtending flowers scarious-margined or dry and scarious throughout,Amaranthaceae,Family Group 15
+43,Bracts subtending flowers 0 or not scarious or scarious-margined,Chenopodiaceae,Family Group 15
+44,Flowers unisexual,Euphorbiaceae,Family Group 15
+44,Flowers bisexual,45,Family Group 15
+45,"Plant red- and white-striped, non-photosynthetic, green pigment 0",Ericaceae:Allotropa,Family Group 15
+45,Plant green and photosynthetic,46,Family Group 15
+46,Sepals 4,Brassicaceae,Family Group 15
+46,Sepals 5,47,Family Group 15
+47,"Stems +- erect, <= 3(7) m; leaf 6--36 cm; flowers many in spike or raceme; fruit a berry, chambers 5--12; perianth radial",Phytolaccaceae:Phytolacca,Family Group 15
+47,"Stems +- decumbent, 0.5--3.5 dm; leaf <= 6 cm; flowers 1--few in raceme; fruit a capsule; chambers 2; perianth bilateral --- some flowers often +- cleistogamous",Polygalaceae:Polygala,Family Group 15
+1,Ovary fully inferior,2,Family Group 16
+1,Ovary superior or partially inferior,9,Family Group 16
+2,Leaf parallel veined,3,Family Group 16
+2,Leaf pinnately or palmately veined,6,Family Group 16
+3,"Leaves fleshy, toothed, spine-tipped",Agavaceae:Agave,Family Group 16
+3,"Leaves not fleshy, entire, not spine-tipped",4,Family Group 16
+4,"Fertile stamens 1--2, filament(s) and anther(s) wholly fused above ovary to stigma and style, forming a column; ovary with a half twist; ovules many, microscopic; seeds dust-like",Orchidaceae,Family Group 16
+4,"Fertile stamens 3 or more, not fused to stigma and style; ovary straight; ovules not microscopic; seeds well developed",5,Family Group 16
+5,Stamens 6; leaves not 2-ranked and folded (0 at flower in _Amaryllis_); adaxial and abaxial faces both visible,Amaryllidaceae,Family Group 16
+5,"Stamens 3; leaves 2-ranked, generally folded lengthwise and apparently attached ""edge-on"", only abaxial face of leaf visible",Iridaceae,Family Group 16
+6,"Leaves basal, palmately veined and lobed, prickly --- petiole 1--1.5 m, blade 1--2+ m",Gunneraceae,Family Group 16
+6,"Leaves cauline, pinnately veined, entire or toothed, smooth",7,Family Group 16
+7,"Leaves opposite; petals 2, 1--1.5 mm, white; fruit indehiscent, with hooked hairs",Onagraceae:Circaea,Family Group 16
+7,"Leaves alternate; petals 3, yellow; fruit dehiscent, without hooked hairs",8,Family Group 16
+8,"Petals 0.8--2.3 mm; leaves narrowly oblanceolate, 1--3 cm",Onagraceae:Neoholmgrenia,Family Group 16
+8,"Petals >= 30 mm; leaves +- elliptic, 20--55 cm",Zingiberaceae:Hedychium flavescens,Family Group 16
+9,"Stem nodes with small, dry, sometimes spiny-spurred, scale-like leaves that subtend 1--20 thread-like, needle-like, or ovate, leaf-like branchlets --- erect to sprawling herb, sub-shrub, or twining vine",Asparagaceae:Asparagus,Family Group 16
+9,"Stem nodes without small, dry, scale-like leaves that subtend leaf-like branches",10,Family Group 16
+10,"Leaves needle-like, abaxially grooved; low shrub",Ericaceae:Empetrum,Family Group 16
+10,"Leaves generally not needle-like, generally not abaxially grooved; herb to tree",11,Family Group 16
+11,"Plant submersed aquatic; leaves very thin, 1-veined, opposite or whorled; flowers generally unisexual",Hydrocharitaceae,Family Group 16
+11,"Plant terrestrial, or if aquatic, leaves not very thin, 1-veined, and opposite or whorled",12,Family Group 16
+12,"Leaf venation pinnate or palmate, smaller veins generally forming a network (occasionally only midvein evident)",13,Family Group 16
+12,"Leaf venation parallel, sometimes in wider leaves several larger veins originating from leaf base but smaller veins parallel to them and not forming a network",27,Family Group 16
+13,Tendrils present; vine; leaves ovate --- flowers unisexual; plants dioecious,Smilacaceae:Smilax,Family Group 16
+13,"Tendrils 0; herb, shrub, or tree (occasionally vine with twining stem); leaves various",14,Family Group 16
+14,Leaves compound or deeply lobed,15,Family Group 16
+14,Leaves simple,19,Family Group 16
+15,Herb,16,Family Group 16
+15,Shrub or tree,17,Family Group 16
+16,"Perennial herb; leaves basal, 2--3-ternate; petals in 2 tight whorls of 3; sepals in 4--5 whorls of 3",Berberidaceae:Vancouveria,Family Group 16
+16,"Annual; leaves cauline, 1-ternate or 1-odd-pinnate; petals 3; sepals 3",Limnanthaceae:Floerkea,Family Group 16
+17,"Trunk stout, unbranched, crowned by a tight terminal rosette of very large leaves",Arecaceae,Family Group 16
+17,"Trunk(s) branched, with leaves < 50 cm, distributed on twigs",18,Family Group 16
+18,Leaves alternate; leaflets spiny-toothed; fruit berry,Berberidaceae:Berberis,Family Group 16
+18,Leaves opposite; leaflets serrate; fruit winged achene,Oleaceae:Fraxinus,Family Group 16
+19,Plant woody,20,Family Group 16
+19,Plant herbaceous,23,Family Group 16
+20,Stamens many,Hydrangeaceae:Carpenteria,Family Group 16
+20,Stamens 2--9,21,Family Group 16
+21,"Leaf blade gland-dotted, aromatic; anthers dehiscing by uplifted lids; fruit fleshy",Lauraceae,Family Group 16
+21,"Leaf blade not gland-dotted, not aromatic; anthers dehiscing by slits; fruit dry",22,Family Group 16
+22,"Inner perianth parts 2, petal-like, outer minutely 4-lobed, +- green; fruit winged, 22--30 mm",Oleaceae:Fraxinus parryi,Family Group 16
+22,"Inner and outer perianth parts in 3s, all petal-like; fruit 3-angled achene, < 5 mm",Polygonaceae,Family Group 16
+23,"Flower bilateral, proximal portion of calyx with a protruding, hollow spur",Balsaminaceae:Impatiens,Family Group 16
+23,"Flower radial, calyx without a spur",24,Family Group 16
+24,Cauline leaves in a whorl of 3 subtending 1 large terminal flower,Melanthiaceae,Family Group 16
+24,"Cauline leaves alternate, opposite, or whorled, sometimes reduced to bracts; flowers >> 1, small",25,Family Group 16
+25,"Fruit achene, (2)3-angled --- inner and outer perianth generally similar, both whorls petal-like or both sepal-like (inner perianth parts much enlarged in fruit in _Rumex_)",Polygonaceae,Family Group 16
+25,Fruit capsule,26,Family Group 16
+26,"Leaves not fleshy; plant +- aquatic; flowers axillary; outer perianth parts 2--3, +- = inner; stigmas 3; seeds many, surface net-like, brown to yellow-brown",Elatinaceae:Elatine,Family Group 16
+26,"Leaves fleshy; plant terrestrial; flowers in +- 1-sided raceme-, panicle-, or umbel-like cluster; outer perianth parts 2, > inner; stigmas 2; seeds 1--many, shiny, black",Montiaceae:Calyptridium,Family Group 16
+27,"Shrub, tree, or densely leafy rosette plant; leaves +- sword-like or +- grass-like, fibrous and/or fleshy, persisting > 1 year",28,Family Group 16
+27,"Herb; leaves generally thin, generally not persisting (sometimes +- cylindric)",32,Family Group 16
+28,Leaves grass-like; styles 3,Melanthiaceae:Xerophyllum,Family Group 16
+28,Leaves sword-like; style 1 or stigmas sessile,29,Family Group 16
+29,Ovules many per locule,30,Family Group 16
+29,Ovules 2 per locule,31,Family Group 16
+30,"Perianth creamy white; leaves tough, fibrous, entire or with marginal fibers",Agavaceae,Family Group 16
+30,"Perianth +- orange or red; leaves fleshy, toothed",Asphodelaceae:Aloe,Family Group 16
+31,Flowers bisexual; fruit a berry,Laxmanniaceae:Cordyline australis,Family Group 16
+31,Flowers generally unisexual (occasionally some bisexual); fruit a papery capsule,Ruscaceae:Nolina,Family Group 16
+32,Sepals and petals clearly different,33,Family Group 16
+32,Sepals and petals very similar,36,Family Group 16
+33,"Plant aquatic, plant body submersed or leaves floating to emergent",Hydrocharitaceae,Family Group 16
+33,Plant terrestrial,34,Family Group 16
+34,"Above-ground stem 0, leaves 2--3(4), all basal; sepals much wider than narrowly linear petals; stamens 3; pedicels twisted, recurved in age; fruit touching soil",Liliaceae:Scoliopus,Family Group 16
+34,"Above-ground stem well developed, +- leafy; sepals much narrower than reniform to generally widely ovate petals; stamens 6, sometimes 3 sterile; pedicels not recurved in age; fruit not touching soil",35,Family Group 16
+35,"Petals glabrous, withering after 1 day; ovary +- spheric; seeds few",Commelinaceae,Family Group 16
+35,"Petals hairy, generally persistent several days; ovary +- cylindric; seeds many",Liliaceae:Calochortus,Family Group 16
+36,"Perianth parts generally green to +- brown (red or white), scale-like",37,Family Group 16
+36,Perianth parts petal-like in color and texture,38,Family Group 16
+37,"Inflorescence of 1--many flowers, variously clustered, subtended individually and/or in small groups by bracts; style 1, stigmas 2--3, slender, spreading; fruit a capsule",Juncaceae,Family Group 16
+37,"Inflorescence a bractless raceme; stigmas 3 or 6, +- sessile; fruit breaking into mericarps",Juncaginaceae:Triglochin,Family Group 16
+38,"Inflorescence an umbel (rarely flower solitary or in short, dense raceme); leaves all basal, arising from bulb or corm",39,Family Group 16
+38,"Inflorescence various, often a raceme or panicle, if flowers in umbels stem +- leafy or with scale-like bracts; leaves basal and/or cauline, underground parts various",41,Family Group 16
+39,Fruit a berry,Liliaceae:Clintonia,Family Group 16
+39,Fruit a capsule,40,Family Group 16
+40,"Plant with onion odor; inflorescence bracts 2 (sometimes fused), wholly enclosing immature inflorescence, but generally not formed among pedicels; stems and leaves arising from bulb",Alliaceae,Family Group 16
+40,"Plant without onion odor; inflorescence bracts 3 or more, not wholly enclosing immature inflorescence, and some formed among pedicels; stems and leaves arising from corm",Themidaceae,Family Group 16
+41,Perianth parts proximally +- fused into tube,42,Family Group 16
+41,Perianth parts free or nearly so,46,Family Group 16
+42,"Plant aquatic, floating on water surface, stranded on mud, or rooting in bottom sediments; flowers generally open only 1 day",Pontederiaceae,Family Group 16
+42,"Plant generally terrestrial, sometimes in damp soil; flowers generally open > 1 day",43,Family Group 16
+43,"Ovary underground; perianth tube long, stalk-like",Agavaceae:Leucocrinum,Family Group 16
+43,Ovary above-ground; perianth tube not stalk-like,44,Family Group 16
+44,Perianth red (yellow),Asphodelaceae:Kniphofia,Family Group 16
+44,Perianth white to +- yellow,45,Family Group 16
+45,Perianth 45--60 mm; leaves strongly wavy-margined,Agavaceae:Hesperocallis,Family Group 16
+45,Perianth 8--12 mm; leaves not wavy-margined,Tecophilaeaceae:Odontostomum hartwegii,Family Group 16
+46,Leaves mostly or all cauline,47,Family Group 16
+46,Leaves all basal or basal and cauline,49,Family Group 16
+47,Styles 3; flowers bisexual or staminate,Melanthiaceae:Veratrum,Family Group 16
+47,Style 1 or stigmas sessile; flowers bisexual,48,Family Group 16
+48,Perianth 8--110+ mm,Liliaceae,Family Group 16
+48,Perianth 1--7 mm,Ruscaceae:Maianthemum,Family Group 16
+49,All or some filaments densely hairy,50,Family Group 16
+49,Filaments glabrous (or expanded filament base puberulent),51,Family Group 16
+50,Inner 3 filaments hairy,Asphodelaceae:Bulbine,Family Group 16
+50,All filaments hairy,Nartheciaceae:Narthecium californicum,Family Group 16
+51,Styles 3,52,Family Group 16
+51,Style 1 or 0 and stigmas sessile,53,Family Group 16
+52,Stem glabrous,Melanthiaceae,Family Group 16
+52,Stem glandular,Tofieldiaceae {Triantha occidentalis subsp. occidentalis},Family Group 16
+53,"Cauline leaves present, +- well developed",Liliaceae,Family Group 16
+53,Cauline leaves 0 or reduced to linear or scale-like bracts,54,Family Group 16
+54,Leaf lanceolate or ovate to elliptic or obovate,Liliaceae,Family Group 16
+54,Leaf linear,55,Family Group 16
+55,"Leaves +- flat, often keeled or wavy-margined; stem generally 1 from bulb",Agavaceae,Family Group 16
+55,"Leaves +- cylindric, hollow; stems several--many from tuber-like rhizome",Asphodelaceae:Asphodelus,Family Group 16
+1,Stamens > in number than corolla lobes or > 15,2,Family Group 17
+1,"Stamens = in number to corolla lobes or fewer, generally <= 5",6,Family Group 17
+2,Plant spiny or bristly,3,Family Group 17
+2,Plant glabrous or +- hairy but not spiny or bristly,4,Family Group 17
+3,"Stem very fleshy, generally spiny (in some _Opuntia_ species only with glochids); leaves 0 or conic to cylindric, fleshy; petal-like parts many, overlapping in several series",Cactaceae,Family Group 17
+3,"Stem not or slightly fleshy, bristly with stinging hairs; leaves well developed, with expanded blade; petals 5, in 1 series",Loasaceae:Eucnide,Family Group 17
+4,Petals or petal-like stamens many; leaves generally fleshy,Aizoaceae,Family Group 17
+4,"Petals 4 or 5, petal-like stamens 0; leaves generally thin",5,Family Group 17
+5,"Herbage glabrous to soft-hairy, sometimes glandular",Ericaceae,Family Group 17
+5,Herbage stellate-hairy,Styracaceae:Styrax redivivus,Family Group 17
+6,"Ovary actually superior, surrounded by but not fused to hardened or winged base of corolla-like calyx that simulates an inferior ovary; style passing through constriction separating calyx base from petal-like portion and joining to top of ovary",Nyctaginaceae,Family Group 17
+6,"Ovary truly inferior, fused to bases of surrounding flower parts; style not passing through a calyx constriction",7,Family Group 17
+7,Leaves alternate or all basal,8,Family Group 17
+7,Leaves opposite or whorled,11,Family Group 17
+8,"Tendrils generally present; flowers unisexual --- plant generally monoecious, leaves palmately veined, generally palmately lobed",Cucurbitaceae,Family Group 17
+8,Tendrils 0; flowers bisexual or unisexual,9,Family Group 17
+9,"Inflorescence a head subtended or +- enclosed by involucre; calyx modified as pappus of bristles, scales, and/or awns, not green and leaf-like",Asteraceae,Family Group 17
+9,"Inflorescence various but not a head; calyx of unmodified sepals, generally green",10,Family Group 17
+10,Stamens alternate corolla lobes; staminodes 0; flowers radial or bilateral; placentas axile or parietal,Campanulaceae,Family Group 17
+10,Stamens opposite corolla lobes; staminodes alternate fertile stamens; flowers radial; placentas free-central,Theophrastaceae:Samolus parviflorus,Family Group 17
+11,"Inflorescence a peduncled pair of flowers --- creeping subshrub, twining vine, or erect shrub",12,Family Group 17
+11,"Inflorescence a head, spike, or cyme, or flowers solitary",13,Family Group 17
+12,"Flowers sessile; fruits berries, sometimes fused",Caprifoliaceae:Lonicera,Family Group 17
+12,"Flowers on slender pedicels; fruits capsules, not fused",Linnaeaceae {Linnaea borealis var. longiflora},Family Group 17
+13,"Inflorescence a head or dense, head-like spike, subtended or +- enclosed by +- calyx-like involucre",14,Family Group 17
+13,"Inflorescence various, not subtended or enclosed by +- calyx-like involucre",16,Family Group 17
+14,Anthers fused into tube around style,Asteraceae,Family Group 17
+14,Anthers free,15,Family Group 17
+15,Leaves opposite,Dipsacaceae,Family Group 17
+15,Leaves whorled,Rubiaceae:Sherardia,Family Group 17
+16,Herb or subshrub,17,Family Group 17
+16,"Shrub, tree, or woody vine",18,Family Group 17
+17,"Stamens 4 or 5; corolla radial, not spurred or with proximal bulge",Rubiaceae,Family Group 17
+17,"Stamens 1 or 3; corolla often bilateral, often spurred or with proximal bulge",Valerianaceae,Family Group 17
+18,Inflorescence a raceme or +- interrupted spike or flowers 1--2 in axils,Caprifoliaceae,Family Group 17
+18,Inflorescence a head or compound cyme,19,Family Group 17
+19,Leaves compound,Adoxaceae:Sambucus,Family Group 17
+19,Leaves simple,20,Family Group 17
+20,Leaves 3--5-veined from base,Adoxaceae:Viburnum,Family Group 17
+20,Leaves 1-veined from base,Rubiaceae,Family Group 17
+1,Stamens > in number than corolla lobes,2,Family Group 18
+1,Stamens = in number to corolla lobes or fewer,5,Family Group 18
+2,Leaf compound --- petals proximally free but strongly adherent and may appear fused,Fabaceae Group 3,Family Group 18
+2,"Leaf simple, sometimes reduced to linear or scale-like bracts",3,Family Group 18
+3,"Filaments fused, forming a U-shaped tube around the style --- petals actually free but may appear fused",Polygalaceae:Polygala,Family Group 18
+3,Filaments free,4,Family Group 18
+4,Shrub; leaves alternate; anthers dehiscing by pores; ovules many; fruit a capsule,Ericaceae:Rhododendron macrophyllum,Family Group 18
+4,Herb or weak-stemmed subshrub; leaves opposite; anthers dehiscing by lateral slits; ovule 1; fruit an achene tightly enwrapped by hardened base of corolla-like calyx --- petals actually 0 but sepals petal-like and involucre bracts sepal-like,Nyctaginaceae:Allionia,Family Group 18
+5,"Corolla scarious, persistent in fruit",Plantaginaceae:Plantago,Family Group 18
+5,"Corolla not scarious, generally deciduous after flower",6,Family Group 18
+6,Fertile stamens = in number to corolla lobes,7,Family Group 18
+6,Fertile stamens fewer than corolla lobes --- 1 or more sterile stamens sometimes present,12,Family Group 18
+7,"Ovary deeply 4-lobed, especially in fruit; style attachment surrounded by lobes of ovary (style readily detaches in Lamiaceae as corolla falls); fruit breaking apart into 1-seeded nutlets (sometimes only 1--3 nutlets maturing)",8,Family Group 18
+7,Ovary entire or shallowly lobed; style clearly attached to tip of ovary; fruit a capsule or splitting into nutlets,9,Family Group 18
+8,"Stem round in &times;-section; leaves alternate (proximal opposite in some _Plagiobothrys_); herbage not aromatic; inflorescence or inflorescence branches coiled when young, unrolling in flower or fruit",Boraginaceae,Family Group 18
+8,"Stem 4-angled, at least when young; leaves opposite throughout; herbage generally strongly aromatic, especially if crushed; inflorescence or inflorescence branches not coiled",Lamiaceae,Family Group 18
+9,"Shrub; filaments attached directly to receptacle, falling free from corolla or only weakly adhering; anthers dehiscent by pores",Ericaceae,Family Group 18
+9,Herb; filaments fused to and falling with corolla; anthers dehiscent by slits,10,Family Group 18
+10,"Calyx lobes bordered by or +- fused by a much thinner, transparent or translucent membrane; corolla generally funnel-shaped to salverform; stigmas 3; ovary chambers 3",Polemoniaceae,Family Group 18
+10,Calyx lobes not bordered by or fused by transparent or translucent membrane; corolla +- rotate; stigmas 1--2; ovary chambers 1--4,11,Family Group 18
+11,"Corolla white to blue or purple, 2--8 mm diam; inflorescence cyme-like, or flowers solitary; fruit splitting into generally 4 one-seeded nutlets",Boraginaceae:Tiquilia,Family Group 18
+11,"Corolla yellow (white to +- purple), 15--40 mm diam; inflorescence a narrow raceme or panicle; fruit a many-seeded capsule",Scrophulariaceae:Verbascum,Family Group 18
+12,"Plant entirely non-green, +- fleshy",Orobanchaceae,Family Group 18
+12,Plant green and photosynthetic,13,Family Group 18
+13,"Proximal portion of lower corolla lip with backward-projecting, conic or tubular spur",14,Family Group 18
+13,"Proximal portion of lower corolla lip without backward-projecting, conic or tubular spur, occasionally with expanded pouch",16,Family Group 18
+14,"Plant aquatic; leaf-like underwater stems generally dissected, generally submersed, generally bearing small, hollow bladders that suck in and trap small organisms when hairs at opening are triggered",Lentibulariaceae:Utricularia,Family Group 18
+14,"Plant terrestrial; leaves entire to shallowly lobed, without hollow bladders",15,Family Group 18
+15,Leaves all basal; adaxial leaf face sticky or slimy with insect-capturing glands,Lentibulariaceae:Pinguicula,Family Group 18
+15,Leaves basal and cauline or all cauline; adaxial leaf surface not sticky or slimy with insect-capturing glands,Plantaginaceae,Family Group 18
+16,Ovary generally deeply 4-lobed; style attachment surrounded by lobes of ovary [style readily detaches as corolla falls] --- fruit breaking into 4 one-seeded nutlets,Lamiaceae,Family Group 18
+16,Ovary entire or +- shallowly lobed; style arising from tip of ovary,17,Family Group 18
+17,Ovules 1--4 per ovary chamber,18,Family Group 18
+17,Ovules several to many per ovary chamber,21,Family Group 18
+18,Fruit a capsule,19,Family Group 18
+18,Fruit 2--4 nutlets,20,Family Group 18
+19,Shrub,Acanthaceae,Family Group 18
+19,Annual,Plantaginaceae,Family Group 18
+20,Stamens exserted,Lamiaceae,Family Group 18
+20,Stamens included,Verbenaceae,Family Group 18
+21,Leaves compound,Bignoniaceae,Family Group 18
+21,Leaves simple,22,Family Group 18
+22,Capsule 5--35 cm,23,Family Group 18
+22,Capsule < 2 cm,24,Family Group 18
+23,"Shrub or tree; capsule body 15--35 cm, straight, linear",Bignoniaceae,Family Group 18
+23,"Annual; capsule body 5--10 cm, curved, tipped with a hooked beak several cm long",Martyniaceae:Proboscidea,Family Group 18
+24,"Corolla upper lip forming a concave beak or hood, +- enclosing or covering stamens and style",25,Family Group 18
+24,"Corolla upper lip not forming a beak or hood, not enclosing or covering stamens and style [though these may be included within corolla tube or throat]",26,Family Group 18
+25,Sterile stamen 0; lobes of upper corolla lip obscure or 0,Orobanchaceae,Family Group 18
+25,"Sterile stamen present, inserted on corolla tube between lobes of upper corolla lip; lobes of upper lip evident",Plantaginaceae,Family Group 18
+26,"Stigma lobes flat, disk-like, moving together when touched; cauline leaves opposite",Phrymaceae:Mimulus,Family Group 18
+26,"Stigma dot-like or head-like, unlobed, or lobes not moving together when touched; cauline leaves opposite or alternate (whorled) or leaves all basal",27,Family Group 18
+27,Leaves all basal,28,Family Group 18
+27,Leaves basal and cauline or all cauline,29,Family Group 18
+28,"Flowers solitary; stamens 4; leaves linear or awl-like to spoon-shaped or ovate, entire",Scrophulariaceae:Limosella,Family Group 18
+28,"Flowers in raceme; stamens 2; leaves ovate to round, toothed or shallowly lobed",Plantaginaceae:Synthyris,Family Group 18
+29,Stem 4-angled; corolla tube urn-shaped to spheric,Scrophulariaceae:Scrophularia,Family Group 18
+29,"Stem generally round in &times;-section; corolla tube cylindric to bell-shaped, sometimes very short",Plantaginaceae,Family Group 18
+1,Stamens > in number than corolla lobes,2,Family Group 19
+1,Stamens = in number to corolla lobes or fewer,10,Family Group 19
+2,"Filaments fused proximally, forming a cup or tube",3,Family Group 19
+2,Filaments free,6,Family Group 19
+3,Leaves compound,4,Family Group 19
+3,Leaves simple,5,Family Group 19
+4,"Shrub or tree; leaves 2-pinnate; fruit a legume; stamens many, much more conspicuous than corolla",Fabaceae Group 1,Family Group 19
+4,"Herb; leaves palmate with 3 leaflets; fruit a capsule; stamens 10, less conspicuous than corolla",Oxalidaceae:Oxalis,Family Group 19
+5,"Stamens many; filaments strongly fused, forming tube around pistil; anthers crescent-shaped, chamber 1; style 1, distally branched or styles 5--many, stigmas linear to head-like --- petals generally free from each other but fused to and falling with filament tube",Malvaceae,Family Group 19
+5,"Stamens 10(16); filaments fused at base; anthers oblong, 2-chambered; style 1, stigma dot-like or minutely lobed",Styracaceae:Styrax redivivus,Family Group 19
+6,"Flower parts in 6s; fruit a triangular achene --- 6-parted perianth easily mistaken for corolla, especially in plants with 1--few-flowered, calyx-like involucre",Polygonaceae,Family Group 19
+6,"Flower parts in 4s or 5s; fruit a capsule, berry, drupe, or cluster of follicles",7,Family Group 19
+7,Plant fleshy,8,Family Group 19
+7,Plant not fleshy,9,Family Group 19
+8,"Plant photosynthetic; leaves well developed, green; carpels fused only at base, styles 5",Crassulaceae,Family Group 19
+8,"Plant non-photosynthetic; leaves scale-like, white to cream or red; carpels wholly fused, style 1",Ericaceae,Family Group 19
+9,"Stem spineless; corolla urn-shaped to rotate or widely funnel-shaped, variously colored",Ericaceae,Family Group 19
+9,"Stem bearing a stout, petiolar spine at each node; corolla tubular, bright red",Fouquieriaceae {Fouquieria splendens subsp. splendens},Family Group 19
+10,Fertile stamens fewer than corolla lobes --- 1 or more sterile stamens sometimes present,11,Family Group 19
+10,Fertile stamens = in number to corolla lobes,19,Family Group 19
+11,"Perianth parts in 6s; stigmas and style branches 3 --- 6-parted perianth easily mistaken for corolla in plant with 1-flowered, calyx-like involucre",Polygonaceae,Family Group 19
+11,"Perianth parts in 4s or 5s; stigmas 1 or 2, style unbranched or branches 2",12,Family Group 19
+12,Ovary deeply 4-lobed; style attachment surrounded by lobes of ovary [style readily detaches as corolla falls] --- fruit 4 nutlets,Lamiaceae,Family Group 19
+12,Ovary entire or +- shallowly lobed; style arising from tip of ovary,13,Family Group 19
+13,Ovules several to many per ovary chamber,14,Family Group 19
+13,Ovules 1--4 per ovary chamber,16,Family Group 19
+14,"Leaves all basal; inflorescence scapose, flowers solitary --- leaves linear or awl-shaped to spoon-shaped or ovate, entire",Scrophulariaceae:Limosella,Family Group 19
+14,"Leaves basal and cauline or all cauline; inflorescence not scapose, flowers 1--many",15,Family Group 19
+15,"Stigma lobes flat, disk-like, moving together when touched",Phrymaceae:Mimulus,Family Group 19
+15,"Stigma dot-like or head-like, unlobed, or lobes not moving together when touched",Plantaginaceae,Family Group 19
+16,"Corolla-like calyx constricted above ovary, base persistent around ovary, becoming hardened or winged at maturity; stigma, ovary chamber, and ovule 1; fruit an achene --- corolla-like calyx easily mistaken for corolla, especially in plant with 1-flowered, calyx-like involucre",Nyctaginaceae,Family Group 19
+16,"True corolla present, not constricted above ovary, base not persistent as hardened or winged structure around ovary; stigmas, ovary chambers, and ovules > 1; fruit various",17,Family Group 19
+17,Stamens 2,Oleaceae,Family Group 19
+17,Stamens 4,18,Family Group 19
+18,Leaves gland-dotted; shrub or small tree,Scrophulariaceae:Myoporum,Family Group 19
+18,Leaves not gland-dotted though sometimes glandular-hairy,Verbenaceae,Family Group 19
+19,"Plants entirely non-green, parasitic",20,Family Group 19
+19,Plants green and photosynthetic,21,Family Group 19
+20,"Plant an erect or mound-shaped, fleshy root-parasite with many crowded, scale-like leaves",Boraginaceae:Pholisma,Family Group 19
+20,"Plant a thread-like, leafless, yellow to orange, twining vine that wraps around stems and leaves of host plant",Convolvulaceae:Cuscuta,Family Group 19
+21,"Ovaries 2, +- pressed together in flower but not fused, carpels distally united by a shared style or by a complex stigmatic structure; fruit of 1--2 follicles; milky latex generally present",Apocynaceae,Family Group 19
+21,"Ovary 1, sometimes deeply lobed; fruits various; milky latex 0",22,Family Group 19
+22,Leaves whorled,23,Family Group 19
+22,"Leaves alternate, opposite, or all basal",25,Family Group 19
+23,"Shrub --- leaves evergreen, leathery; corolla throat with fringed appendages",Apocynaceae:Nerium,Family Group 19
+23,Herb,24,Family Group 19
+24,"Perennial herb, sometimes dying after flower; perianth parts in 4s; fruit a capsule",Gentianaceae:Frasera,Family Group 19
+24,"Annual; perianth parts in 6s; fruit an achene --- 6-parted perianth easily mistaken for corolla, involucre 1-flowered, calyx-like",Polygonaceae:Chorizanthe,Family Group 19
+25,"Corolla dry, scarious, 4-lobed; inflorescence a dense spike (rarely flower only 1); leaves generally all basal (opposite, appearing clustered at nodes in <i>Plantago arenaria</i>)",Plantaginaceae:Plantago,Family Group 19
+25,"Corolla with normal, petal-like texture, 4--7-lobed; inflorescence various or flowers solitary; leaves basal and/or cauline",26,Family Group 19
+26,"Ovary deeply 2--4-lobed, especially in fruit; style attachment surrounded by lobes of ovary (style readily detaches in Lamiaceae as corolla falls); fruit breaking apart into 1-seeded nutlets or segments (sometimes only 1--3 nutlets maturing)",27,Family Group 19
+26,"Ovary entire or shallowly lobed; style clearly attached to tip of ovary; fruit generally a capsule, berry, drupe, or achene",30,Family Group 19
+27,"Leaves opposite, at least proximally; stem 4-angled or round &times;-section; stem and leaves sometimes aromatic",28,Family Group 19
+27,Leaves alternate; stem +- round; stem and leaves generally not aromatic,29,Family Group 19
+28,"Stem round; leaves generally alternate distally or leaves of a pair unequal; herbage not aromatic; inflorescence or branches of inflorescence generally +- coiled or 1-sided when young, unrolling during development, at maturity +- open, generally resembling a 1-sided spike or raceme or flowers sometimes solitary",Boraginaceae,Family Group 19
+28,Stem 4-angled; leaves opposite throughout; herbage generally strongly aromatic; inflorescence not coiled,Lamiaceae,Family Group 19
+29,"Leaves linear to ovate; stems mostly not rooting; inflorescence or branches of inflorescence generally +- coiled or 1-sided when young, unrolling during development, at maturity +- open, generally resembling a 1-sided spike or raceme, flowers seldom concealed by leaves; ovary 2--4-lobed",Boraginaceae,Family Group 19
+29,"Leaves reniform; stems matted, rooting at nodes; flowers solitary, +- concealed by leaves; ovary 2-lobed",Convolvulaceae:Dichondra,Family Group 19
+30,"Filaments fused, forming a tube around style",31,Family Group 19
+30,Filaments generally free,32,Family Group 19
+31,"Shrub; flowers solitary, yellow or orange to +- red; stems and leaves densely stellate --- corolla-like whorl actually a calyx, subtended by sepal-like bracts",Malvaceae:Fremontodendron,Family Group 19
+31,"Herb; flowers in scapose umbels, white to pink or purple; stems and leaves glabrous or glandular-hairy",Primulaceae:Primula,Family Group 19
+32,Sepals 2; stems and leaves +- fleshy,33,Family Group 19
+32,Sepals 4 or more; stems and leaves generally not fleshy,34,Family Group 19
+33,"Vine with twining stems; flowers in many-flowered raceme or panicle; fruit fleshy, indehiscent, 1-seeded",Basellaceae:Anredera cordifolia,Family Group 19
+33,"Herb, stems prostrate to erect, not twining; flowers solitary or in few-flowered clusters; fruit dry, dehiscent, 2--many-seeded",Montiaceae,Family Group 19
+34,Perianth parts in 6s or 7s,35,Family Group 19
+34,Perianth parts in 4s or 5s,36,Family Group 19
+35,Style and stigma 1; placentas free-central; ovules several--many; fruit a capsule,Myrsinaceae:Lysimachia,Family Group 19
+35,"Styles and stigmas 3; placentas basal; ovule 1; fruit a 3-angled achene --- 6-parted perianth easily mistaken for corolla, especially in plant with 1-flowered, calyx-like involucre",Polygonaceae,Family Group 19
+36,"Styles or style-branches 5; sepal tips and subtending bracts widely obtuse, scarious (sometimes brightly pigmented) Or calyx stalked-glandular",Plumbaginaceae,Family Group 19
+36,"Styles, style-branches, or stigmas generally 1--3; sepal tips and bracts generally not widely obtuse and scarious, calyx glandular or not",37,Family Group 19
+37,"Corolla-like calyx constricted above the ovary, persistent base becoming hardened or winged at maturity, enclosing fruit; ovary chamber 1, ovule 1; fruit an achene --- corolla-like calyx easily mistaken for corolla, especially in plants with 1-flowered, calyx-like involucre",Nyctaginaceae,Family Group 19
+37,"True corolla present, generally not constricted above ovary, base not persistent as hardened or winged structure enclosing fruit; ovary chambers generally 1--4, ovules generally > 1; fruit various",38,Family Group 19
+38,Stamens opposite corolla lobes; placentas free-central,39,Family Group 19
+38,Stamens alternate corolla lobes; placentas parietal or axile (rarely basal),40,Family Group 19
+39,Flowers axillary or in racemes,Myrsinaceae:Lysimachia,Family Group 19
+39,Flowers in scapose umbels,Primulaceae,Family Group 19
+40,"Filaments of stamens not fused to corolla, sometimes adhering weakly to base of corolla but readily separable",41,Family Group 19
+40,"Filaments of stamens definitely fused to corolla tube or throat, not separable without tearing stamen or corolla tissue",42,Family Group 19
+41,Annual; corolla 5-lobed; leaves pinnately lobed,Boraginaceae:Emmenanthe,Family Group 19
+41,Shrub; corolla 4-lobed; leaves entire,Ericaceae:Menziesia,Family Group 19
+42,"Inflorescence or branches of inflorescence generally +- coiled or 1-sided when young, unrolling during development, at maturity +- open, generally resembling a 1-sided spike or raceme",Boraginaceae,Family Group 19
+42,"Inflorescence not coiled and unrolling, generally not 1-sided",43,Family Group 19
+43,"Calyx lobes generally bordered by or +- fused by a much thinner, transparent or translucent membrane; stigmas and ovary chambers generally 3 (1 or 2)",Polemoniaceae,Family Group 19
+43,"Calyx lobes generally without a transparent or translucent marginal membrane; stigmas generally 2 (1 or 3), ovary chambers generally 1 or 2",44,Family Group 19
+44,Stem twining,Convolvulaceae,Family Group 19
+44,Stem not twining,45,Family Group 19
+45,"Leaves palmately compound --- rhizomed per of bogs, marshes, lake margins",Menyanthaceae:Menyanthes,Family Group 19
+45,Leaves simple to pinnately compound,46,Family Group 19
+46,"Plant aquatic; leaves floating on water surface, deeply cordate; inflorescence an umbel or flower 1",Menyanthaceae:Nymphoides,Family Group 19
+46,"Plant generally terrestrial, sometimes in damp soil; leaves not floating on water surface, shapes various; inflorescence not an umbel",47,Family Group 19
+47,Stigmas 3,Polemoniaceae,Family Group 19
+47,Stigmas 1--2,48,Family Group 19
+48,"Leaves alternate or of unusual arrangement [in some _Solanum_ species 2 leaves that are not opposite may be attached at the same node, and inflorescences may arise from internodes], not opposite or all basal",49,Family Group 19
+48,Leaves opposite or all basal,54,Family Group 19
+49,"Stigma 1, generally undivided",50,Family Group 19
+49,Stigmas or stigma lobes 2,51,Family Group 19
+50,Some or all stamens densely hairy; inflorescence a narrow raceme or panicle,Scrophulariaceae:Verbascum,Family Group 19
+50,"Stamens glabrous or nearly so; inflorescence variously cyme-like, or flowers solitary",Solanaceae,Family Group 19
+51,Style undivided,52,Family Group 19
+51,Styles or style branches 2,53,Family Group 19
+52,"Corolla < 15 mm; flowers in axillary or terminal clusters, several to many per peduncle, not subtended by paired bracts; leaves lobed or compound, not cordate, sagittate, or hastate",Boraginaceae,Family Group 19
+52,"Corolla 20--70 mm; flowers generally 1(5) in leaf axils, often subtended by a pair of opposite or subopposite bracts appressed against the calyx or borne below the flower(s) on the peduncle; leaves often cordate, sagittate, or hastate",Convolvulaceae,Family Group 19
+53,Herbage glabrous or variously hairy and/or glandular; flowers solitary or clustered; leaves entire to lobed or compound,Boraginaceae,Family Group 19
+53,"Herbage densely silky-canescent; flowers solitary in distal leaf axils, +- on 1 side of stem; leaves entire",Convolvulaceae:Cressa,Family Group 19
+54,Corolla lobes 4,55,Family Group 19
+54,Corolla lobes 5,57,Family Group 19
+55,Herb,Gentianaceae,Family Group 19
+55,Shrub,56,Family Group 19
+56,"Corolla +- rotate, lobes +- leathery, +- green-white; coastal lagoons or salt marshes",Acanthaceae:Avicennia,Family Group 19
+56,"Corolla +- salverform, lobes thin, +- yellow or white to purple; generally dry places",Scrophulariaceae:Buddleja,Family Group 19
+57,"Flowers solitary, inflorescence scapose",Boraginaceae:Hesperochiron,Family Group 19
+57,"Flowers 1--many, borne on a +- leafy stem",58,Family Group 19
+58,"Leaves toothed, lobed, or compound",Boraginaceae,Family Group 19
+58,Leaves entire,59,Family Group 19
+59,Plants glandular-hairy,Solanaceae:Petunia,Family Group 19
+59,"Plants glabrous or hairy, but not glandular",60,Family Group 19
+60,Stems spreading or mat-forming; stems and leaves densely strigose; flowers sessile or subsessile in forks of stem; leaves of a pair often unequal,Boraginaceae:Tiquilia,Family Group 19
+60,Stems mostly erect or ascending; stems and leaves glabrous or short-hairy; flowers axillary or in terminal inflorescences; leaves of a pair equal,Gentianaceae,Family Group 19
+1,Leaves 2 or more &times; compound or divided,2,Family Group 20
+1,Leaves once compound or divided,17,Family Group 20
+2,Ovary inferior,3,Family Group 20
+2,Ovary superior,4,Family Group 20
+3,"Fruit dry, splitting into 2 mericarps; inflorescence generally a compound umbel (occasionally simple umbel, head)",Apiaceae,Family Group 20
+3,Fruit a berry; inflorescence a simple or branched cluster of umbels,Araliaceae,Family Group 20
+4,Shrub or tree,5,Family Group 20
+4,Herb or subshrub,7,Family Group 20
+5,Main axis of leaf bearing many small leaflets or lobes in addition to main leaflets,Rosaceae,Family Group 20
+5,Main axis of leaf without small leaflets or lobes in addition to main leaflets,6,Family Group 20
+6,"Leaflets entire; flowers cream to yellow, orange, red, or pink",Fabaceae,Family Group 20
+6,Leaflets serrate; flowers white to dark purple,Meliaceae:Melia azedarach,Family Group 20
+7,Ovary very deeply 4--6-lobed; style arising from a deep indentation in middle of ovary,8,Family Group 20
+7,Ovary unlobed or only shallowly lobed; style or sessile stigma(s) terminal or from shallow depression at tip of ovary,9,Family Group 20
+8,Flowers white or pink; herbage not scented,Limnanthaceae:Limnanthes,Family Group 20
+8,Flowers yellow; herbage strongly scented,Rutaceae:Ruta,Family Group 20
+9,Stamens 12--50,10,Family Group 20
+9,Stamens 2--10,12,Family Group 20
+10,"Leaves, at least proximal, 2--3-ternately compound, leaflets flat, toothed to irregularly cut",Ranunculaceae:Actaea,Family Group 20
+10,"Leaves divided into linear, +- fleshy or flat lobes",11,Family Group 20
+11,"Flowers radial; leaves deeply, irregularly 2-ternately or ternately-pinnately lobed, +- fleshy; ovary (2)3(4)-chambered; fruit a capsule",Nitrariaceae:Peganum harmala,Family Group 20
+11,"Flowers bilateral; leaves deeply palmately or palmate-pinnately lobed or dissected, not fleshy; ovary 1-chambered; fruit a follicle",Ranunculaceae:Consolida,Family Group 20
+12,Petals 5,13,Family Group 20
+12,Petals 4 or 6,15,Family Group 20
+13,Flowers solitary on peduncles >= 2 cm,Violaceae:Viola,Family Group 20
+13,Flowers several to many in umbels or racemes,14,Family Group 20
+14,Petals yellow to orange or +- red; leaflets entire; inflorescence a raceme,Fabaceae:Hoffmannseggia,Family Group 20
+14,Petals pink to purple; leaflets toothed; inflorescence an umbel,Geraniaceae:Erodium,Family Group 20
+15,Petals 6; leaves all basal,Berberidaceae:Vancouveria,Family Group 20
+15,Petals 4; leaves basal and cauline,16,Family Group 20
+16,Petals all equal; flowers radial; inflorescence a bractless raceme,Brassicaceae,Family Group 20
+16,Petals unequal; flowers bilateral or biradial; inflorescence a bracted raceme or panicle-like cluster,Papaveraceae,Family Group 20
+17,Petal 1,Fabaceae:Amorpha,Family Group 20
+17,Petals 4--6,18,Family Group 20
+18,Ovary > 1/2 inferior,19,Family Group 20
+18,Ovary superior,23,Family Group 20
+19,Shrub or tree; stamens generally 20; fruit a pome,Rosaceae:Sorbus,Family Group 20
+19,"Herb; stamens 5--10; fruit a capsule, splitting into mericarps, or a berry",20,Family Group 20
+20,Inflorescence a raceme or spike (sometimes branched),21,Family Group 20
+20,"Inflorescence a simple or compound umbel, a cluster of simple umbels, or 1--several heads",22,Family Group 20
+21,"Plant a freshwater aquatic; leaves all cauline, submersed leaves whorled, pinnately dissected into thread-like segments",Haloragaceae:Myriophyllum,Family Group 20
+21,"Plant terrestrial; leaves basal and cauline, alternate, +- palmately compound",Saxifragaceae:Lithophragma parviflorum,Family Group 20
+22,"Styles 2; fruit splitting into 2 mericarps; inflorescence generally a compound umbel (simple umbel, 1 or more heads)",Apiaceae,Family Group 20
+22,Styles 5; fruit a berry; inflorescence of 2--many umbels in simple or branched cluster,Araliaceae,Family Group 20
+23,"Stamens many, filaments fused in tube around style; styles 5+",Malvaceae,Family Group 20
+23,"Stamens generally 4--10, or if many, free; styles generally 1--3",24,Family Group 20
+24,"Flowers strongly bilateral, 1 petal markedly different from others",25,Family Group 20
+24,"Flowers +- radial or if bilateral, petals 4 in dissimilar pairs",27,Family Group 20
+25,Petals 4; sepals 2,Papaveraceae,Family Group 20
+25,Petals 5; sepals or calyx lobes 5 (occasionally appearing to be 3 or fewer),26,Family Group 20
+26,"Odd petal uppermost in flower; stamens 10(5), generally all filaments or 9 of them fused, forming a tube around ovary (filaments free); carpel 1; fruit a legume or indehiscent pod",Fabaceae,Family Group 20
+26,"Odd petal lowermost in flower; stamens 5, free but tightly appressed against ovary; carpels 3; fruit a capsule",Violaceae:Viola,Family Group 20
+27,Leaflets or leaf segments 2 or 3,28,Family Group 20
+27,Leaflets or leaf segments 4 or more,39,Family Group 20
+28,Herb or subshrub,29,Family Group 20
+28,Tree or well-developed shrub,33,Family Group 20
+29,Petals 4; stamens 6,30,Family Group 20
+29,Petals 5; stamens 5 or 10,31,Family Group 20
+30,Ovary sessile on receptacle; flowers of raceme not subtended by bracts,Brassicaceae,Family Group 20
+30,"Ovary separated from receptacle by a stalk; flowers of raceme generally subtended by bracts or flowers solitary, axillary",Cleomaceae,Family Group 20
+31,Leaflet margins toothed or lobed,Saxifragaceae,Family Group 20
+31,Leaflet margins entire (sometimes apically notched),32,Family Group 20
+32,"Leaves alternate or all basal; stamens +- fused, at least at base; ovules or seeds many",Oxalidaceae:Oxalis,Family Group 20
+32,Leaves opposite; stamens free; ovules or seeds 1 per chamber,Zygophyllaceae,Family Group 20
+33,Leaves opposite,34,Family Group 20
+33,Leaves alternate,36,Family Group 20
+34,"Leaflets 2, fused at base [leaves deeply 2-lobed], entire, resinous",Zygophyllaceae:Larrea,Family Group 20
+34,"Leaflets 3, occasionally +- fused, toothed, not resinous",35,Family Group 20
+35,"Leaflets coarsely serrate or crenate; stigmas 2, +- sessile; ovary 2-winged; fruit generally splitting at maturity into winged mericarps",Sapindaceae:Acer glabrum,Family Group 20
+35,"Leaflets finely serrate; stigmas and styles 3; ovary wingless; fruit a bladdery, 3-chambered capsule",Staphyleaceae:Staphylea bolanderi,Family Group 20
+36,"Leaflets gland-dotted; fruit a round, winged achene",Rutaceae:Ptelea,Family Group 20
+36,Leaflets not gland-dotted; fruit a capsule or berry,37,Family Group 20
+37,Petals 4; ovary separated from receptacle by a stalk,Cleomaceae:Peritoma arborea,Family Group 20
+37,Petals 5--6; ovary sessile on receptacle,38,Family Group 20
+38,"Petals 5; leaflets entire to lobed, but not spiny-toothed",Anacardiaceae,Family Group 20
+38,Petals 6; leaflets spiny-toothed,Berberidaceae:Berberis,Family Group 20
+39,Leaves palmately compound or divided,40,Family Group 20
+39,Leaves pinnately compound or divided,43,Family Group 20
+40,Plant woody,41,Family Group 20
+40,Plant herbaceous,42,Family Group 20
+41,Leaves opposite; erect shrub or tree,Sapindaceae:Aesculus,Family Group 20
+41,Leaves alternate; woody vine with tendrils,Vitaceae:Parthenocissus,Family Group 20
+42,Leaflets entire; inflorescence a raceme; ovary separated from receptacle by a stalk,Cleomaceae:Peritoma,Family Group 20
+42,Leaflets or leaf segments toothed; inflorescence (1)2-flowered; ovary sessile on receptacle,Geraniaceae:Geranium,Family Group 20
+43,Petals 4,44,Family Group 20
+43,Petals 5 or more,45,Family Group 20
+44,Ovary entire or +- 2-lobed; inflorescence a generally bractless raceme,Brassicaceae,Family Group 20
+44,Ovary very deeply 4-lobed; flowers solitary and axillary or inflorescence a leafy-bracted raceme,Limnanthaceae:Limnanthes,Family Group 20
+45,Shrub or tree (occasionally low-creeping),46,Family Group 20
+45,Herb or subshrub,50,Family Group 20
+46,Petals 6; leaflets spiny-toothed; stems and leaves non-scented,Berberidaceae:Berberis,Family Group 20
+46,Petals 5(6); leaflets entire or toothed but not spiny; stems and leaves often strongly scented,47,Family Group 20
+47,"Ovary divided into 2--5 flattened lobes; fruit a cluster of elongated, winged achenes; leaflets with gland-tipped teeth near base",Simaroubaceae:Ailanthus,Family Group 20
+47,Ovary entire; fruit a drupe or legume; leaflets without gland-tipped teeth,48,Family Group 20
+48,"Flowers solitary or few; leaflets 2--10 mm, +- entire --- small tree of DSon",Burseraceae:Bursera microphylla,Family Group 20
+48,"Flowers in racemes or panicles, often many; leaflets mostly > 7 mm, often much longer, toothed or entire",49,Family Group 20
+49,"Corolla << 1 cm diam, white to +- green or pale yellow; fruit a drupe; leaflets often toothed",Anacardiaceae,Family Group 20
+49,"Corolla > 1 cm diam, bright yellow; fruit a legume; leaflets entire",Fabaceae:Senna,Family Group 20
+50,"Leaves +- cylindric [leaflets and lobes generally closely overlapping around axis], generally basal; fruit an achene; hypanthium present",Rosaceae:Ivesia,Family Group 20
+50,"Leaves +- flat, basal and/or cauline; fruit nutlets, mericarps, a capsule, or a legume; hypanthium 0",51,Family Group 20
+51,"Anther-bearing stamens as many as petals --- fruit with long beak, splitting into 5 mericarps",Geraniaceae:Erodium,Family Group 20
+51,Anther-bearing stamens 2 &times; as many as petals (occasionally some anthers much smaller than others),52,Family Group 20
+52,Flowers in racemes or panicles; ovary chamber 1; fruit dehiscent,53,Family Group 20
+52,"Flowers solitary, in pairs, or in a leafy-bracted raceme; ovary chambers generally 5; fruit splitting into mericarps",54,Family Group 20
+53,Terminal leaflet 0; fruit a legume,Fabaceae:Senna,Family Group 20
+53,Terminal leaflet present; fruit a capsule,Resedaceae,Family Group 20
+54,Stipules 0; ovary very deeply 5-lobed; style base surrounded by ovary lobes,Limnanthaceae:Limnanthes,Family Group 20
+54,Stipules present; ovary entire or shallowly lobed at time of pollination; style at tip of ovary,Zygophyllaceae,Family Group 20
+1,Stamens > 2 &times; as many as petals or > 15,2,Family Group 21
+1,Stamens 2 &times; as many as petals or fewer,11,Family Group 21
+2,Style 1,3,Family Group 21
+2,"Styles or sessile stigmas > 1, sometimes partly fused at base",7,Family Group 21
+3,"Stem fleshy, spiny (in some _Opuntia_ species only with glochids); sepals and petals indefinite in number and not sharply differentiated, in spirals",Cactaceae,Family Group 21
+3,"Stem not fleshy, generally not spiny; sepals and petals each 3--7, clearly differentiated, in whorls",4,Family Group 21
+4,"Herb or subshrub with rough, barbed, or stinging hairs",Loasaceae,Family Group 21
+4,Tree or shrub lacking such hairs,5,Family Group 21
+5,"Ovary only 1/2 inferior, the free portion conic, especially in fruit",Hydrangeaceae:Carpenteria,Family Group 21
+5,"Ovary +- wholly inferior, the free portion, if any, rounded",6,Family Group 21
+6,"Leaf generally dotted with embedded oil glands, often strongly scented when crushed; ovary chambers generally 2--5, all at 1 level; flowers variously colored",Myrtaceae,Family Group 21
+6,"Leaf not gland-dotted, not strongly scented; ovary chambers generally 5 or more, some at different levels in the ovary; flowers bright red-orange to pale yellow",Lythraceae:Punica,Family Group 21
+7,"Shrub or tree, woody throughout, not fleshy; petals generally 4--5",8,Family Group 21
+7,"Herb or plant woody only at base, generally +- fleshy; petals 4--many",9,Family Group 21
+8,Leaves opposite; fruit a capsule,Hydrangeaceae:Philadelphus,Family Group 21
+8,Leaves alternate; fruit a pome,Rosaceae,Family Group 21
+9,Plant aquatic; leaf blades and flowers floating at water surface,Nymphaeaceae:Nymphaea,Family Group 21
+9,Plant terrestrial; leaves and flowers not floating,10,Family Group 21
+10,Sepals 4--8; petals many,Aizoaceae,Family Group 21
+10,Sepals 2; petals 5,Portulacaceae:Portulaca,Family Group 21
+11,Stamens opposite and = in number to petals,12,Family Group 21
+11,Stamens alternate petals or different in number,13,Family Group 21
+12,Shrub or tree,Rhamnaceae,Family Group 21
+12,"Herb --- petals actually slightly fused at base, easily misinterpreted as free",Theophrastaceae:Samolus parviflorus,Family Group 21
+13,"Style 1, sometimes distally branched",14,Family Group 21
+13,Styles > 1,21,Family Group 21
+14,"Plant a tendril-bearing vine; flowers unisexual, plant monoecious --- corolla sometimes so deeply divided that petals appear to be free",Cucurbitaceae,Family Group 21
+14,Plant not tendril-bearing; flowers generally bisexual,15,Family Group 21
+15,Ovules > 1 per chamber,16,Family Group 21
+15,Ovule 1 per chamber or perennial herb ovary,18,Family Group 21
+16,Herb (subshrub),Onagraceae,Family Group 21
+16,Shrub,17,Family Group 21
+17,"Stamens 5, free; leaves ovate or obovate to round, generally palmately 3--5-lobed, generally toothed; glands stalked or 0",Grossulariaceae:Ribes,Family Group 21
+17,"Stamens 10, fused in ring with staminodes; leaves linear needle-like, entire, opposite; glands embedded in leaves",Myrtaceae:Chamelaucium,Family Group 21
+18,Leaves alternate,19,Family Group 21
+18,Leaves opposite; sepals and petals 4(5),20,Family Group 21
+19,"Plant a non-desert, sprawling, woody vine (flower stems +- erect); leaves smooth, dark green, often palmately lobed; inflorescence a cluster of umbels; fruit a berry",Araliaceae:Hedera,Family Group 21
+19,"Plant a low-desert perennial herb; leaves generally scabrous, pale green, unlobed; inflorescence +- a raceme; fruit an achene",Loasaceae:Petalonyx,Family Group 21
+20,"Perennial herb to tree; inflorescence an umbel, head, or cyme; fruit a drupe",Cornaceae:Cornus,Family Group 21
+20,"Annual; inflorescence a spike or spike-like raceme; fruit indehiscent, nut-like",Onagraceae:Clarkia heterandra,Family Group 21
+21,Seeds 1--2 per chamber,22,Family Group 21
+21,Seeds generally several--many per chamber,25,Family Group 21
+22,Inflorescences of umbels or heads (spike in _Hydrocotyle verticillata_),23,Family Group 21
+22,"Inflorescences various but not of umbels, heads, or spikes",24,Family Group 21
+23,"Leaves various [if round-reniform, plant terrestrial], glabrous or hairy; inflorescence generally compound umbel (occasionally simple umbel, head)",Apiaceae,Family Group 21
+23,"Leaves round-peltate or -reniform, glabrous; plant aquatic with stolons or rhizomes, floating or rooted in shallow water or on mud; inflorescence simple umbel or spike",Araliaceae:Hydrocotyle,Family Group 21
+24,Leaves alternate; hypanthium well developed; fruit a pome,Rosaceae,Family Group 21
+24,Leaves opposite; hypanthium very short or 0; fruit a capsule,Hydrangeaceae,Family Group 21
+25,Sepals 2; leaves fleshy,Portulacaceae:Portulaca,Family Group 21
+25,Sepals 4--5; leaves generally not fleshy,26,Family Group 21
+26,Herb,Saxifragaceae,Family Group 21
+26,Shrub,27,Family Group 21
+27,Stamens 4--5,Grossulariaceae:Ribes,Family Group 21
+27,Stamens 10,Hydrangeaceae:Jamesia,Family Group 21
+1,Ovary chamber 1,2,Family Group 22
+1,Ovary chambers 2--many,10,Family Group 22
+2,Hypanthium present,3,Family Group 22
+2,Hypanthium 0,5,Family Group 22
+3,"Sepals fused into conical cap that falls away as flower opens, 0 in open flower; petals 4 --- funnel-shaped receptacle readily misinterpreted as a hypanthium",Papaveraceae:Eschscholzia,Family Group 22
+3,Sepals present in open flower; petals (2)5,4,Family Group 22
+4,"Flowers +- radial; petals generally 5, oblanceolate to +- round, not recurved",Rosaceae,Family Group 22
+4,"Flowers strongly bilateral; petals 2, narrowly awl-like, recurved --- sepals obovate; fruit opening before seeds mature, becoming widely dehiscent",Saxifragaceae:Bensoniella,Family Group 22
+5,Inflorescence a spike or 1--many heads,6,Family Group 22
+5,"Inflorescence a cyme, raceme, panicle, or umbel, or flower solitary",7,Family Group 22
+6,Shrub or tree; fruit a legume,Fabaceae Group 1,Family Group 22
+6,"Herb; fruit a capsule, dehiscent at tip",Resedaceae:Reseda,Family Group 22
+7,"Sepals 2--3 (fused into conical cap in _Eschscholzia_), early-deciduous, 0 in open flower; latex generally present [at least in roots], generally milky or colored",Papaveraceae,Family Group 22
+7,"Sepals 2--5(8), persistent; milky or colored latex 0",8,Family Group 22
+8,Filaments fused at base into 3--5 bunches,Hypericaceae:Hypericum,Family Group 22
+8,Filaments free to base,9,Family Group 22
+9,"Sepals 3 or 5; placentas parietal, ovary chamber 1 (or +- 3--12 from intruded placentas); annual to shrub; plant hairy (+- glabrous), not at all fleshy; capsule splitting by valves",Cistaceae,Family Group 22
+9,"Sepals 2--8; placentas free-central, ovary chamber 1; annual or taprooted perennial herb; plant +- glabrous, generally +- fleshy; capsule circumscissile or splitting by valves",Montiaceae,Family Group 22
+10,"Leaves hollow, tubular, often holding watery fluid within",Sarraceniaceae,Family Group 22
+10,Leaves with ordinary flat blades,11,Family Group 22
+11,"Plant aquatic; leaves 1--4 dm, oblong or ovate to round, floating or rising a short distance above the water surface",Nymphaeaceae:Nuphar,Family Group 22
+11,"Plant terrestrial, sometimes in wet soil; leaves often < 1 dm",12,Family Group 22
+12,Flowers unisexual --- ovary 3-lobed,Euphorbiaceae:Ditaxis,Family Group 22
+12,Flowers bisexual,13,Family Group 22
+13,Filaments fused into tube around style; anther chamber 1 or appearing so,14,Family Group 22
+13,Filaments free or fused at base into groups; anther chambers 2,15,Family Group 22
+14,Flowers radial; stamens many; filament tube cylindric,Malvaceae,Family Group 22
+14,Flowers bilateral; stamens 6--8; filament tube open on one side,Polygalaceae:Polygala,Family Group 22
+15,"Leaves opposite or whorled (distal occasionally alternate), entire",16,Family Group 22
+15,"Leaves alternate throughout, entire to lobed",18,Family Group 22
+16,Petals yellow (salmon),Hypericaceae:Hypericum,Family Group 22
+16,Petals white to purple,17,Family Group 22
+17,Shrub --- ovary actually 1/2 inferior but easily interpreted as superior,Hydrangeaceae:Carpenteria,Family Group 22
+17,Herb,Lythraceae,Family Group 22
+18,Hypanthium present,Rosaceae,Family Group 22
+18,Hypanthium 0,19,Family Group 22
+19,"Petals 4--5; sepals 4--5, present in open flower, persistent in fruit; stamens 12--15",Nitrariaceae:Peganum harmala,Family Group 22
+19,"Petals 6; sepals 3, early-deciduous, 0 in open flower; stamens many",Papaveraceae:Romneya,Family Group 22
+1,Leaves opposite or whorled,2,Family Group 23
+1,"Leaves alternate, sometimes reduced to minute scales or so quickly deciduous that the plants are generally leafless",9,Family Group 23
+2,"Leaves 2-lobed, resin-coated; flowers bright yellow; fruit covered with white, spreading hairs --- desert shrub; leaf sometimes treated as compound with 2 leaflets fused at base",Zygophyllaceae:Larrea,Family Group 23
+2,"Leaves entire or toothed to palmately lobed or divided; flower +- green or white to creamy yellow, blue, or purple; fruit not covered with white, spreading hairs",3,Family Group 23
+3,Leaves lobed or divided; fruit splitting into mericarps,4,Family Group 23
+3,Leaves entire or toothed; fruit a capsule or drupe,5,Family Group 23
+4,"Shrub <= 1 m; stigmas 5, on long, stiff style; ovary not winged; mericarps wingless, each tipped by a spirally coiled beak",Geraniaceae:Pelargonium,Family Group 23
+4,"Tree or large shrub; stigmas 2(3), +- sessile; ovary 2(3)-winged; mericarps winged, beaks 0",Sapindaceae:Acer,Family Group 23
+5,"Leaves +- fleshy, salt encrusted, generally < 1 mm wide, united across node by a sheath",Frankeniaceae {Frankenia palmeri},Family Group 23
+5,"Leaves generally thin or leathery, not salt encrusted, generally >= 2 mm wide, not united by a sheath",6,Family Group 23
+6,Stamens > in number than petals,Rutaceae:Cneoridium,Family Group 23
+6,Stamens = in number to petals,7,Family Group 23
+7,"Petals opposite stamens, generally +- cupped",Rhamnaceae,Family Group 23
+7,"Petals alternate stamens, generally +- flat",8,Family Group 23
+8,Leaves opposite,Celastraceae,Family Group 23
+8,"Leaves +- whorled at some nodes, alternate at others",Pittosporaceae,Family Group 23
+9,Leaves lobed,10,Family Group 23
+9,"Leaves entire or toothed, unlobed",13,Family Group 23
+10,"Tendrils present; plant a woody vine, generally trailing or climbing on other plants",11,Family Group 23
+10,"Tendrils 0; plant +- erect, not climbing",12,Family Group 23
+11,"Flowers solitary, large and showy",Passifloraceae:Passiflora,Family Group 23
+11,"Flowers in panicles, small and inconspicuous",Vitaceae:Vitis,Family Group 23
+12,Inflorescence a panicle; flowers radial; 2--4 mm diam; fruit a drupe,Anacardiaceae {Rhus aromatica},Family Group 23
+12,"Inflorescence an umbel; flowers +- bilateral, 15--40 mm wide; fruit splitting into 5 mericarps",Geraniaceae:Pelargonium,Family Group 23
+13,"Leaf palmately veined, the blade well developed",14,Family Group 23
+13,"Leaf pinnately veined, 1-veined, or reduced to a bladeless scale",15,Family Group 23
+14,Flowers strongly bilateral,Fabaceae:Cercis,Family Group 23
+14,Flowers radial,Rhamnaceae:Ceanothus,Family Group 23
+15,Flowers strongly bilateral,16,Family Group 23
+15,Flowers radial or nearly so,18,Family Group 23
+16,"Stamens 4, all inserted on 1 side of ovary, free or nearly so; sepals rose-purple, petal-like, widely spreading; upper 3 petals similar, stalked, free or fused, lower 2 petals reduced to fleshy scales or glands; fruit an indehiscent pod bearing slender, barb-tipped prickles",Krameriaceae:Krameria,Family Group 23
+16,"Stamens 6--8 or 10, all filaments or 9 of 10 fused into a tube around the ovary [tube often open on 1 side]; sepals variously colored, sometimes petal-like; no petals reduced to fleshy scales or glands; fruit a capsule, legume, or unarmed, indehiscent pod",17,Family Group 23
+17,"Sepals all fused, at least at base, forming a cup-shaped to cylindric calyx tube, generally not petal-like; the odd petal [banner] uppermost, overlapping the margins of the 2 upper lateral petals; lower 2 lateral petals generally free at base but fused toward the tip, forming a keel that encloses stamens and ovary; fruit a legume or indehiscent pod",Fabaceae Group 3,Family Group 23
+17,"Sepals free, petal-like, 2 of them spreading and very different from the other 3; the odd petal lowermost, often appendaged, folded and forming a keel enclosing stamens and ovary, a banner petal never present; fruit a flattened capsule",Polygalaceae:Polygala,Family Group 23
+18,Stamens > in number than petals (sterile stamens as many as petals in pistillate flowers of _Castela_ (Simaroubaceae)),19,Family Group 23
+18,Stamens = in number to petals,24,Family Group 23
+19,"Petals dark blue-purple; stems and leaves gland-dotted, very strongly scented",Rutaceae:Thamnosma,Family Group 23
+19,Petals white to yellow or green; stems and leaves not scented,20,Family Group 23
+20,"Hypanthium present, well developed, tubular or cup-shaped",Rosaceae,Family Group 23
+20,Hypanthium 0 or small and disk-shaped,21,Family Group 23
+21,Anthers opening by small round pores; petals 5; stem not thorn-tipped; moist sites,Ericaceae:Rhododendron columbianum,Family Group 23
+21,Anthers opening along sides by long slits; petals 4--6; stems (except _Glossopetalon pungens_) generally thorn-tipped; arid sites,22,Family Group 23
+22,Flowers unisexual; ovary deeply 4--8-lobed,Simaroubaceae:Castela,Family Group 23
+22,Flowers bisexual; ovary unlobed,23,Family Group 23
+23,"Petals generally 5; ovary sessile on receptacle, chamber 1; stem angled; leaves oblong or narrowly elliptic to obovate, deciduous or +- persistent; fruit a follicle",Crossosomataceae:Glossopetalon,Family Group 23
+23,"Petals 4; ovary raised +- 1 mm above receptacle on short stalk, chambers 2; stem smooth; leaves scale-like, soon deciduous; fruit a berry",Koeberliniaceae {Koeberlinia spinosa var. tenuispina},Family Group 23
+24,"Leaves all reduced to bladeless scales; twigs very slender, jointed, green",Tamaricaceae:Tamarix,Family Group 23
+24,"Leaves with expanded blades, linear to (ob)ovate, sometimes early deciduous; twigs not jointed, green or brown",25,Family Group 23
+25,Stamens opposite petals; petals generally with cupped blade,Rhamnaceae,Family Group 23
+25,Stamens alternate petals; petals generally flat,26,Family Group 23
+26,Leaves 6--17 mm,27,Family Group 23
+26,Leaves 15--150 mm,28,Family Group 23
+27,"Flowers many in tight, leafy-bracted panicle; ovary chambers 5",Celastraceae:Mortonia,Family Group 23
+27,"Flowers solitary, axillary; ovary chamber 1",Crossosomataceae:Glossopetalon,Family Group 23
+28,Petals 8--15 mm,Pittosporaceae,Family Group 23
+28,Petals 1.5--3 mm,29,Family Group 23
+29,"Leaves 20--80 mm wide, elliptic to ovate; flowers many in terminal panicle",Anacardiaceae,Family Group 23
+29,"Leaves 5--10 mm wide, +- lanceolate; flowers 1--few, axillary",Celastraceae:Maytenus,Family Group 23
+1,Flower bilateral,2,Family Group 24
+1,Flower radial,10,Family Group 24
+2,"Proximal part of calyx with a protruding, hollow spur",3,Family Group 24
+2,"Proximal part of calyx without a protruding spur, spur 0 or fused to pedicel",4,Family Group 24
+3,"Leaf not peltate; ovary chambers 5, several-seeded; fruit an exploding capsule",Balsaminaceae:Impatiens,Family Group 24
+3,"Leaf peltate; ovary chambers 3, 1-seeded; fruit breaking into 3 1-seeded mericarps",Tropaeolaceae:Tropaeolum majus,Family Group 24
+4,"Filaments of all or all but 1 stamen fused, at least proximally",5,Family Group 24
+4,Filaments free (0 or fused in pairs),7,Family Group 24
+5,"Petals not strongly overlapping; ovary chambers and style branches 5; style base elongating, forming a stiff beak, beak segments coiled on segments of dry fruit",Geraniaceae:Pelargonium,Family Group 24
+5,"Petals strongly overlapping; ovary chambers 1 or 2, style unbranched, not forming beak on fruit",6,Family Group 24
+6,"Sepals all fused, at least at base, forming a cup-shaped to cylindric calyx tube, generally not petal-like; the odd petal [banner] uppermost, overlapping the margins of the 2 upper lateral petals; lower 2 lateral petals generally free at base but fused toward the tip, forming a keel that encloses stamens and ovary; fruit a legume or indehiscent pod",Fabaceae Group 3,Family Group 24
+6,"Sepals free, 2 of them petal-like, spreading and very different from the other 3; the odd petal lowermost, often appendaged, folded and forming a keel enclosing stamens and ovary, a banner petal never present; fruit a flattened capsule",Polygalaceae:Polygala,Family Group 24
+7,Flowers solitary; petals 5,Violaceae:Viola,Family Group 24
+7,Flowers in raceme or spike; petals 2 or 4,8,Family Group 24
+8,"Inflorescence a spike; ovary 4-lobed, stigmas 4; developing fruit open at tip; stamens 3--4",Resedaceae:Oligomeris,Family Group 24
+8,"Inflorescence a raceme or panicle; ovary unlobed or 2-lobed, stigma 1--2; developing fruit closed at tip",9,Family Group 24
+9,Sepals free to base; stamens 6; flowers not subtended by bracts,Brassicaceae,Family Group 24
+9,Sepals proximally fused to hypanthium; stamens 3; each flower subtended by a bract,Saxifragaceae:Tolmiea,Family Group 24
+10,Plants without green pigmentation,Ericaceae,Family Group 24
+10,Plants green and photosynthetic,11,Family Group 24
+11,Petals 4,12,Family Group 24
+11,Petals 5 or more,20,Family Group 24
+12,"Leaves alternate, sometimes all basal",13,Family Group 24
+12,Leaves opposite or whorled,14,Family Group 24
+13,Leaves +- fleshy; sepals 2,Montiaceae:Calyptridium,Family Group 24
+13,Leaves not fleshy; sepals 4,Brassicaceae,Family Group 24
+14,"Leaves +- cylindric or 3-angled in &times;-section, fleshy; flowers unisexual, dioecious perennial herb or subshrub; petals present only in staminate flowers",Bataceae:Batis maritima,Family Group 24
+14,"Leaves not fleshy; flowers bisexual, annual to subshrub; petals present in all flowers",15,Family Group 24
+15,"Sepals free or nearly so, hypanthium 0",16,Family Group 24
+15,"Sepals fused, at least toward base, or hypanthium present",18,Family Group 24
+16,"Petals 6--20 mm, each bearing a prominent, fringed appendage",Gentianaceae,Family Group 24
+16,"Petals <= 6 mm, not appendaged",17,Family Group 24
+17,"Flowers pedicelled, terminal or from distal axils, sometimes in cymes; leaf without stipules; stamens 4 or 8",Caryophyllaceae,Family Group 24
+17,Flowers +- sessile in leaf axils (pedicel elongating in fruit); leaf with stipules; stamens 8,Elatinaceae:Elatine californica,Family Group 24
+18,Leaves generally shallowly few-toothed; inflorescence a dense cyme or raceme borne on a terminal peduncle --- ovary actually 1/2 inferior but easily misinterpreted as superior,Hydrangeaceae,Family Group 24
+18,"Leaves entire; inflorescence of axillary or terminal cymes or flowers solitary, axillary",19,Family Group 24
+19,"Petals borne on receptacle; style 2--3(4)-branched, rarely unbranched",Frankeniaceae:Frankenia,Family Group 24
+19,Petals borne on inner face of hypanthium; style unbranched,Lythraceae,Family Group 24
+20,Flower unisexual,Euphorbiaceae:Ditaxis,Family Group 24
+20,Flower bisexual,21,Family Group 24
+21,Sepals 2 or 3,22,Family Group 24
+21,Sepals 5 or more,23,Family Group 24
+22,Leaves +- fleshy; sepals persistent on opened flower and fruit,Montiaceae,Family Group 24
+22,"Leaves not fleshy; sepals early-deciduous, 0 in open flower and fruit",Papaveraceae,Family Group 24
+23,Stamens > in number than petals,24,Family Group 24
+23,Stamens = in number to petals or fewer,34,Family Group 24
+24,"Leaves alternate, sometimes all basal",25,Family Group 24
+24,Leaves opposite or whorled,28,Family Group 24
+25,"Style branches and stigmas 5; style elongating, forming a beak; ovules 1 per ovary chamber; fruit breaking into 5 one-seeded mericarps, each tipped with a coiled beak segment",Geraniaceae:Geranium,Family Group 24
+25,"Styles or style branches 1--3, stigmas 1--3; style not elongating or forming a beak; ovules several--many per ovary chamber; fruit a capsule",26,Family Group 24
+26,"Stigmas 2--3, sessile or borne on 2--3 styles or style branches",Saxifragaceae,Family Group 24
+26,"Stigma 1, sessile or borne on an unbranched style",27,Family Group 24
+27,"Flower disk-shaped, without a hypanthium; stamens dehiscent by pores",Ericaceae,Family Group 24
+27,Flower with a tubular hypanthium; stamens dehiscent along the sides by slits,Lythraceae:Lythrum,Family Group 24
+28,Stigma and style 1,29,Family Group 24
+28,Stigmas 2--6,30,Family Group 24
+29,Flower without a hypanthium; leaf toothed,Ericaceae:Chimaphila,Family Group 24
+29,Flower with a tubular hypanthium; leaf entire,Lythraceae:Lythrum,Family Group 24
+30,"Leaf lobed; opposite leaves a single pair, the remainder all basal; stigmas 3 --- ovary chamber 1, placentas parietal --- ovary actually +- 1/2 inferior",Saxifragaceae:Lithophragma cymbalaria,Family Group 24
+30,Leaf entire or shallowly toothed; opposite leaves generally several--many pairs; stigmas 2--6,31,Family Group 24
+31,Leaf entire; ovary chamber 1 (rarely 2--4),32,Family Group 24
+31,Leaf crenate-serrate to serrate; ovary chambers 5--6,33,Family Group 24
+32,"Leaf not gland-dotted; petals white to pink, purple, or red; placentas free-central (axile)",Caryophyllaceae,Family Group 24
+32,Leaf gland-dotted; petals yellow; placentas parietal,Hypericaceae:Hypericum,Family Group 24
+33,"Flowers 1--few, sessile or short-pedicelled in leaf axils; annual; leaf teeth gland-tipped",Elatinaceae:Bergia,Family Group 24
+33,Flowers in a dense cyme or raceme borne on a terminal peduncle; perennial herb to subshrub; leaf teeth not gland-tipped --- ovary actually 1/2 inferior but easily misinterpreted as superior,Hydrangeaceae:Whipplea,Family Group 24
+34,Leaves opposite or whorled,35,Family Group 24
+34,"Leaves alternate, sometimes all basal",41,Family Group 24
+35,"Leaves, or at least distal-most, toothed or lobed (proximally generally entire in <i>Sclerolinon</i>)",36,Family Group 24
+35,Leaves entire,37,Family Group 24
+36,Petals white to pink or purple; inflorescence an umbel,Geraniaceae,Family Group 24
+36,Petals yellow; inflorescence a cyme,Linaceae:Sclerolinon,Family Group 24
+37,Stamens opposite petals --- petals actually fused but easily misinterpreted as free,Myrsinaceae:Lysimachia,Family Group 24
+37,Stamens alternate petals or of different numbers,38,Family Group 24
+38,Sepals evidently fused above base,39,Family Group 24
+38,Sepals free or nearly so,40,Family Group 24
+39,"Leaf +- linear, acute",Caryophyllaceae,Family Group 24
+39,"Leaf oblong to obovate, obtuse, margin often curled under and leaf appearing narrower",Frankeniaceae:Frankenia,Family Group 24
+40,Petals without fringed nectary pits,Caryophyllaceae,Family Group 24
+40,Base or center of each petal with 2 fringed nectary pits (sometimes appearing as 1 due to overlapping fringes) --- petals actually fused but easily misinterpreted as free,Gentianaceae:Swertia,Family Group 24
+41,"Leaf linear, entire",42,Family Group 24
+41,"Leaf wider, often toothed or lobed",43,Family Group 24
+42,"Leaves cauline; flowers solitary or in racemes, panicles, or cymes",Linaceae,Family Group 24
+42,Leaves all basal; flowers in scapose heads,Plumbaginaceae:Armeria,Family Group 24
+43,"Leaf covered with long, gland-tipped, insect-trapping hairs",Droseraceae:Drosera,Family Group 24
+43,Leaf without insect-trapping hairs,44,Family Group 24
+44,"Styles, style branches, or stigmas 2--4",45,Family Group 24
+44,Styles or style branches 5 or more,47,Family Group 24
+45,Flowers solitary; stamens alternating with toothed or fringed staminodes; stigmas 4,Parnassiaceae:Parnassia,Family Group 24
+45,Flowers 2--many; staminodes 0; stigmas 2--3,46,Family Group 24
+46,Annual; leaf veins pinnate or lateral veins obscure; hypanthium 0; ovary unlobed,Linaceae,Family Group 24
+46,Perennial herb; leaf veins +- palmate; hypanthium present; ovary generally 2--3-lobed distally,Saxifragaceae,Family Group 24
+47,Filaments fused in tube around style; petals thread-like,Malvaceae:Ayenia,Family Group 24
+47,Filaments free or fused only at base; petals wider,48,Family Group 24
+48,"Style elongating, forming a beak; fruit breaking into 5 one-seeded mericarps, each tipped with a coiled beak segment; flowers in umbels",Geraniaceae,Family Group 24
+48,"Styles not elongating and forming a beak; fruit not breaking into mericarps; flowers in a raceme, cyme, or panicle-like inflorescence",49,Family Group 24
+49,"Sepals free, +- green; fruit a capsule, 5- or 10-seeded; flowers in a raceme or cyme",Linaceae:Linum,Family Group 24
+49,"Sepals fused, generally pink to blue; fruit indehiscent, 1-seeded; flowers in a panicle-like inflorescence",Plumbaginaceae:Limonium,Family Group 24
