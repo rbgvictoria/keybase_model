@@ -7,8 +7,7 @@ use Illuminate\Support\Collection;
 /**
  * Balances a key by ordering leads by branch size, so that smaller branches are
  * above larger branches
- * 
- *   
+ *  *   
  *    /------------------
  *    |
  * ---| 1     /----------
@@ -16,8 +15,8 @@ use Illuminate\Support\Collection;
  *    |   |   \----------
  *    \---| 2
  *        |   /----------
- *        |   |   
- *        \---| 4 /------
+ *        \---| 4 
+ *            |   /------
  *            \---| 5
  *                \------
  */
