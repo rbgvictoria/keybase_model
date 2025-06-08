@@ -41,7 +41,7 @@ class BalanceKey
     }
 
     /**
-     * 
+     * @return Collection
      */
     public function execute(): Collection
     {
