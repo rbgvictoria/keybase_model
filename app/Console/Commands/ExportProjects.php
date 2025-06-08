@@ -20,7 +20,7 @@ class ExportProjects extends Command
      *
      * @var string
      */
-    protected $signature = 'app:export-projects {--project=} {--balance}';
+    protected $signature = 'app:export-projects {--project=} {--balance} {--delete=}';
 
     /**
      * The console command description.
@@ -41,8 +41,8 @@ class ExportProjects extends Command
         foreach ($projects as $project) {
             $slug = Str::slug($project->title, '-');
 
-            if (!is_dir(storage_path('app/private/exports/' . $slug))) {
-                mkdir(storage_path('app/private/exports/' . $slug));
+            if (!is_dir(storage_path('app/public/exports/' . $slug))) {
+                mkdir(storage_path('app/public/exports/' . $slug));
             }
 
             Storage::put('exports/' . $slug . '/project_metadata.yaml', Yaml::dump((array) $project));
@@ -50,7 +50,7 @@ class ExportProjects extends Command
 
             $keys = $this->getKeys($project->id);
             $firstKey = true;
-            $keysFile = fopen(storage_path('app/private/exports/' . $slug . '/keys.tsv'), 'w');
+            $keysFile = fopen(storage_path('app/public/exports/' . $slug . '/keys.tsv'), 'w');
             foreach ($keys as $key) {
                 if ($firstKey) {
                     fputcsv($keysFile, array_keys((array) $key), $separator);
@@ -59,7 +59,7 @@ class ExportProjects extends Command
 
                 $leads = (new GetLeads($key->id))->execute(balance: $this->option('balance'));
                 if ($leads) {
-                    $leadsFile = fopen(storage_path('app/private/exports/' . $slug . '/' . $key->key_file), 'w');
+                    $leadsFile = fopen(storage_path('app/public/exports/' . $slug . '/' . $key->key_file), 'w');
                     fputcsv($leadsFile, ['from', 'statement', 'to'], $separator);
                     foreach ($leads as $lead) {
                         fputcsv($leadsFile, array_values($lead), $separator);
@@ -77,7 +77,7 @@ class ExportProjects extends Command
 
             $sources = $this->getSources($project->id);
             $firstSource = true;
-            $sourcesFile = fopen(storage_path('app/private/exports/' . $slug . '/sources.tsv'), 'w');
+            $sourcesFile = fopen(storage_path('app/public/exports/' . $slug . '/sources.tsv'), 'w');
             foreach ($sources as $source) {
                 if ($firstSource) {
                     fputcsv($sourcesFile, array_keys((array) $source), $separator);
@@ -89,7 +89,7 @@ class ExportProjects extends Command
 
             $items = $this->getItems($project->id);
             $firstItem = true;
-            $itemsFile = fopen(storage_path('app/private/exports/' . $slug . '/items.tsv'), 'w');
+            $itemsFile = fopen(storage_path('app/public/exports/' . $slug . '/items.tsv'), 'w');
             foreach ($items as $item) {
                 if ($firstItem){
                     fputcsv($itemsFile, array_keys($item), $separator);
@@ -99,33 +99,7 @@ class ExportProjects extends Command
             }
             fclose($itemsFile);
 
-            $zipFilePath = storage_path('app/public/exports/' . $slug . '.zip');
-            $zip = new ZipArchive;
-            $zip->open($zipFilePath, ZipArchive::CREATE | ZipArchive::OVERWRITE);
-
-            $dir = storage_path('app/private/exports/' . $slug);
-
-            $files = new RecursiveIteratorIterator(
-                new RecursiveDirectoryIterator($dir),
-                RecursiveIteratorIterator::LEAVES_ONLY
-            );
-
-            foreach ($files as $file) {
-                if (!$file->isDir()) {
-                    $filePath = $file->getRealPath();
-                    $filename = substr($filePath, strlen($dir) + 1);
-                    $zip->addFile($filePath, $filename);
-                }
-            }
-            $zip->close();
-
-            foreach ($files as $file) {
-                if (!$file->isDir()) {
-                    unlink($file->getRealPath());
-                }
-            }
-            rmdir($dir);
-
+            $this->createZipArchive($slug, $this->option('delete') !== false);
         }
     }
 
@@ -237,5 +211,37 @@ class ExportProjects extends Command
             ->get();
 
         return $items->map(fn ($item) => (array) $item);
+    }
+
+    private function createZipArchive($slug, $delete=false) 
+    {
+            $zipFilePath = storage_path('app/public/exports/' . $slug . '.zip');
+            $zip = new ZipArchive;
+            $zip->open($zipFilePath, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+            $dir = storage_path('app/public/exports/' . $slug);
+
+            $files = new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($dir),
+                RecursiveIteratorIterator::LEAVES_ONLY
+            );
+
+            foreach ($files as $file) {
+                if (!$file->isDir()) {
+                    $filePath = $file->getRealPath();
+                    $filename = substr($filePath, strlen($dir) + 1);
+                    $zip->addFile($filePath, $filename);
+                }
+            }
+            $zip->close();
+
+            if ($delete) {
+                foreach ($files as $file) {
+                    if (!$file->isDir()) {
+                        unlink($file->getRealPath());
+                    }
+                }
+                rmdir($dir);
+            }
     }
 }
