@@ -3,8 +3,7 @@
   "dockerComposeFile": "../../laradock/docker-compose.yml",
   "remoteUser": "laradock",
   "runServices": [
-    "nginx",
-    "postgres-postgis"
+    "mariadb"
   ],
   "service": "workspace",
   "workspaceFolder": "/var/www/keybase_model",
