@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Actions\Exports\CreateZipArchive;
 use App\Actions\Exports\GetItems;
 use App\Actions\Exports\GetKeys;
-use App\Actions\Exports\GetLeads;
+use App\Actions\Exports\GetKey;
 use App\Actions\Exports\GetProjects;
 use App\Actions\Exports\GetSources;
 use Illuminate\Console\Command;
@@ -58,7 +58,7 @@ class ExportProjects extends Command
                     $firstKey = false;
                 }
 
-                $leads = (new GetLeads($key['id']))->execute(balance: $this->option('balance'));
+                $leads = (new GetKey($key['id']))->execute(balance: $this->option('balance'));
                 if ($leads) {
                     $leadsFile = fopen(storage_path('app/public/exports/' . $slug . '/' . $key['key_file']), 'w');
                     fputcsv($leadsFile, ['from', 'statement', 'to'], $separator);

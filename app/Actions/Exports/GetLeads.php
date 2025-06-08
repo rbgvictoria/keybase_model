@@ -8,19 +8,19 @@ use Illuminate\Support\Facades\DB;
 class GetLeads
 {
     /**
-     * @var int 
+     * @var int
      */
     private int $key;
 
     /**
      * Create a new class instance.
      */
-    public function __construct($key)
+    public function __construct(int $key)
     {
         $this->key = $key;
     }
 
-    public function execute($renumber=true, $balance=false)
+    public function execute()
     {
         $cte = DB::connection('keybase_old')
             ->query()
@@ -71,44 +71,6 @@ class GetLeads
             ->orderBy('l.LeadsID')
             ->get();
 
-        $leads = $leads->map(fn ($lead) => (array) $lead);
-        $from = $leads->map(fn ($lead) => $lead['from']);
-        // print_r($from);
-        $toCouplets = $leads->filter(fn ($lead) => $lead['to_couplet'])
-            ->map(fn ($lead) => $lead['to_couplet']);
-        // print_r($toCouplets);
-
-        if ($toCouplets->diff($from)->count()) {
-            return false;
-        }
-
-        if ($balance) {
-            $balanceKey = new BalanceKey($leads);
-            $leads = $balanceKey->execute();
-        }
-
-        if ($renumber) {
-            $renumberCouplets = new RenumberCouplets($leads);
-            $leads = $renumberCouplets->execute();
-        }
-
-        return $leads->map(function ($lead) {
-            if ($lead['to_couplet']) {
-                $to = $lead['to_couplet'];
-            }
-            else {
-                $to = $lead['to_item'];
-                if ($lead['shortcut']) {
-                    $to .= ':' . $lead['shortcut'];
-                }
-            }
-
-            return [
-                'from' => $lead['from'],
-                'statement' => html_entity_decode($lead['statement']),
-                'to' => $to,
-            ];
-        })
-        ->sortBy('from');
+        return $leads->map(fn ($lead) => (array) $lead);
     }
 }
