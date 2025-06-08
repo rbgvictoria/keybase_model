@@ -4,6 +4,23 @@ namespace App\Actions\Exports;
 
 use Illuminate\Support\Collection;
 
+/**
+ * Balances a key by ordering leads by branch size, so that smaller branches are
+ * above larger branches
+ * 
+ *   
+ *    /------------------
+ *    |
+ * ---| 1     /----------
+ *    |   /---| 3
+ *    |   |   \----------
+ *    \---| 2
+ *        |   /----------
+ *        |   |   
+ *        \---| 4 /------
+ *            \---| 5
+ *                \------
+ */
 class BalanceKey
 {
 
