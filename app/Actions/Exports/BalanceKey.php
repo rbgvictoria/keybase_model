@@ -30,18 +30,17 @@ class BalanceKey
     public function execute(): Collection
     {
 
+        // Create nested sets
         $this->left = 0;
-        $this->nodes = collect([]);
-        
+        $this->nodes = collect([]);        
         $coupletNumber = $this->leads->first()['from'];
-
         $this->getNodes(['to_couplet' => $coupletNumber]);
 
+        // Create nested sets second run: order leads in couplet by size of
+        // branch (right - left)
         $this->leads = $this->nodes;
-
         $this->left = 0;
         $this->nodes = collect([]);
-
         $this->getNodes(['to_couplet' => $coupletNumber]);
 
         return $this->nodes->sortBy('left');
@@ -50,7 +49,7 @@ class BalanceKey
     private function getNodes($lead)
     {
 
-        $leads = $this->leads->filter(fn ($item) => $item['from'] == $lead['to_couplet'])->sortBy('weight');
+        $leads = $this->leads->filter(fn ($item) => $item['from'] == $lead['to_couplet'])->sortBy('size');
 
         foreach ($leads as $next) {
             $this->left++;
@@ -69,7 +68,7 @@ class BalanceKey
 
             $this->left++;
             $node['right'] = $this->left;
-            $node['weight'] = $node['right'] - $node['left'];
+            $node['size'] = $node['right'] - $node['left'];
             $this->nodes->push($node);
         }
     }
