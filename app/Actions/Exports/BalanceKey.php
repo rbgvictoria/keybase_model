@@ -29,48 +29,21 @@ class BalanceKey
      */
     public function execute(): Collection
     {
-
         // Create nested sets
-        $this->left = 0;
-        $this->nodes = collect([]);        
-        $coupletNumber = $this->leads->first()['from'];
-        $this->getNodes(['to_couplet' => $coupletNumber]);
+        $leads = (new CreateNestedSets($this->leads))->execute();
 
-        // Create nested sets second run: order leads in couplet by size of
-        // branch (right - left)
-        $this->leads = $this->nodes;
-        $this->left = 0;
-        $this->nodes = collect([]);
-        $this->getNodes(['to_couplet' => $coupletNumber]);
+        // Set a 'size' property, which is the difference between 'right' and
+        // 'left', on the leads
+        $leads = $leads->map(function ($lead) {
+            $lead['size'] = $lead['right'] - $lead['left'];
+            return $lead;
+        });
 
-        return $this->nodes->sortBy('left');
+        // Create nested sets once more. Now we can sort the leads in a couplet
+        // by size, so that the smallest branch goes on top and the largest at
+        // the bottom
+        $leads = (new CreateNestedSets($leads))->execute();
+
+        return $leads;
     }
-
-    private function getNodes($lead)
-    {
-
-        $leads = $this->leads->filter(fn ($item) => $item['from'] == $lead['to_couplet'])->sortBy('size');
-
-        foreach ($leads as $next) {
-            $this->left++;
-            $node = [
-                'from' => $next['from'],
-                'statement' => $next['statement'],
-                'to_couplet' => $next['to_couplet'],
-                'to_item' => $next['to_item'],
-                'shortcut' => $next['shortcut'],
-                'left' => $this->left,
-            ];
-
-            if ($next['to_couplet']) {
-                $this->getNodes($next);
-            }
-
-            $this->left++;
-            $node['right'] = $this->left;
-            $node['size'] = $node['right'] - $node['left'];
-            $this->nodes->push($node);
-        }
-    }
-
 }
