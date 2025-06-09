@@ -56,8 +56,7 @@ class BalanceKey
         });
 
         // Create nested sets once more. Now we can sort the leads in a couplet
-        // by size, so that the smallest branch goes on top and the largest at
-        // the bottom
+        // by size, so that smaller branches go before larger ones
         $leads = (new CreateNestedSets($leads))->execute();
 
         return $leads;
