@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class GetKeys
+class GetKeyMetadata
 {
     /**
      * @var int

@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use App\Actions\Exports\CreateZipArchive;
 use App\Actions\Exports\GetItems;
-use App\Actions\Exports\GetKeys;
+use App\Actions\Exports\GetKeyMetadata;
 use App\Actions\Exports\GetKey;
 use App\Actions\Exports\GetProjects;
 use App\Actions\Exports\GetSources;
@@ -49,7 +49,7 @@ class ExportProjects extends Command
             Storage::put('exports/' . $slug . '/project_metadata.yaml', Yaml::dump((array) $project));
 
 
-            $keys = (new GetKeys($project['id']))->execute();
+            $keys = (new GetKeyMetadata($project['id']))->execute();
             $firstKey = true;
             $keysFile = fopen(storage_path('app/public/exports/' . $slug . '/keys.tsv'), 'w');
             foreach ($keys as $key) {
