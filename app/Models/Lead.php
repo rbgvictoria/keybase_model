@@ -26,7 +26,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property Key $key
  * @property Lead $parent
  * @property Item[] $items
- * @property Lead $reticulation
  * @property Key $subkey
  * @property Agent $createdBy
  * @property Agent $updatedBy
@@ -65,16 +64,6 @@ class Lead extends Model
     public function items(): BelongsToMany
     {
         return $this->belongsToMany(Item::class, 'lead_item');
-    }
-
-    /**
-     * Reticulation the lead leads to
-     * 
-     * @return BelongsTo<Lead, Lead>
-     */
-    public function reticulation(): BelongsTo
-    {
-        return $this->belongsTo(Lead::class);
     }
 
     /**
