@@ -1,21 +1,15 @@
-
-Enum "project_users_role_enum" {
-  "manager"
-  "contributor"
-}
-
 Table "agents" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
   "name" varchar(255) [not null]
   "first_name" varchar(64) [default: NULL]
   "surname" varchar(64) [default: NULL]
   "email" varchar(255) [not null]
   "orcid" varchar(255) [default: NULL]
-  "user_id" bigint(20) [default: NULL]
+  "user_id" bigint(20) [not null]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
     name [name: "agents_name_index"]
@@ -28,18 +22,18 @@ Table "agents" {
 
 Table "change_notes" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
-  "remarks" text [not null]
+  "remarks" text [default: NULL]
   "key_id" bigint(20) [not null]
-  "version" bigint(20) [not null]
+  "version" int(11) [default: NULL]
   "created_by_id" bigint(20) [not null]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
-    (key_id, version) [unique, name: "change_notes_key_id_version_unique"]
-    created_by_id [name: "change_notes_created_by_id_index"]
-    updated_by_id [name: "change_notes_updated_by_id_index"]
+    key_id [name: "change_notes_key_id_foreign"]
+    created_by_id [name: "change_notes_created_by_id_foreign"]
+    updated_by_id [name: "change_notes_updated_by_id_foreign"]
   }
 }
 
@@ -55,34 +49,35 @@ Table "filter_item" {
 
 Table "filters" {
   "id" bigint(20) [pk, not null, increment]
+  "title" varchar(255) [not null]
+  "is_project_filter" tinyint(1) [not null, default: 0]
+  "items_not_found" longtext [default: NULL]
+  "project_id" bigint(20) [not null]
+  "updated_by_id" bigint(20) [default: NULL]
+  "created_by_id" bigint(20) [default: NULL]
   "created_at" timestamp [default: NULL]
   "updated_at" timestamp [default: NULL]
-  "title" varchar(255) [not null]
-  "items_not_found" longtext [default: NULL]
-  "is_project_filter" tinyint(1) [default: NULL]
-  "project_id" bigint(20) [not null]
-  "created_by_id" bigint(20) [default: NULL]
-  "updated_by_id" bigint(20) [default: NULL]
 
   Indexes {
-    project_id [name: "filters_project_id_index"]
-    created_by_id [name: "filters_created_by_id_index"]
-    updated_by_id [name: "filters_updated_by_id_index"]
+    project_id [name: "filters_project_id_foreign"]
+    created_by_id [name: "filters_created_by_id_foreign"]
+    updated_by_id [name: "filters_updated_by_id_foreign"]
   }
 }
 
 Table "items" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
-  "guid" uuid [not null]
+  "guid" varchar(64) [not null]
   "name" varchar(255) [not null]
   "url" varchar(255) [default: NULL]
   "project_id" bigint(20) [not null]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
+    guid [unique, name: "items_guid_unique"]
     name [name: "items_name_index"]
     project_id [name: "items_project_id_index"]
     created_by_id [name: "items_created_by_id_index"]
@@ -102,32 +97,32 @@ Table "key_item" {
 
 Table "keys" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
-  "guid" uuid [not null]
-  "version" bigint(20) [not null]
+  "guid" varchar(64) [not null]
+  "version" int(11) [not null]
   "title" varchar(255) [not null]
   "author" varchar(255) [default: NULL]
   "description" text [default: NULL]
-  "notes" text [default: NULL]
-  "root_id" bigint(20) [not null]
-  "item_id" bigint(20) [not null]
+  "note" text [default: NULL]
+  "root_id" bigint(20) [default: NULL]
+  "item_id" bigint(20) [default: NULL]
   "project_id" bigint(20) [not null]
   "subkey_of_id" bigint(20) [default: NULL]
   "source_id" bigint(20) [default: NULL]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
     guid [name: "keys_guid_index"]
     title [name: "keys_title_index"]
     project_id [name: "keys_project_id_index"]
     subkey_of_id [name: "keys_subkey_of_id_index"]
-    item_id [name: "keys_item_id_index"]
     created_by_id [name: "keys_created_by_id_index"]
     updated_by_id [name: "keys_updated_by_id_index"]
+    item_id [name: "keys_item_id_index"]
+    root_id [name: "keys_root_id_index"]
     source_id [name: "keys_source_id_foreign"]
-    root_id [name: "keys_root_id_foreign"]
   }
 }
 
@@ -143,20 +138,18 @@ Table "lead_item" {
 
 Table "leads" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
-  "node_name" varchar(255) [default: NULL]
-  "statement" text [not null]
+  "node_name" varchar(255) [not null]
+  "statement" text [default: NULL]
   "parent_id" bigint(20) [default: NULL]
-  "reticulation_id" bigint(20) [default: NULL]
   "subkey_id" bigint(20) [default: NULL]
   "key_id" bigint(20) [not null]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
     parent_id [name: "leads_parent_id_index"]
-    reticulation_id [name: "leads_reticulation_id_index"]
     subkey_id [name: "leads_subkey_id_index"]
     key_id [name: "leads_key_id_index"]
     created_by_id [name: "leads_created_by_id_index"]
@@ -166,52 +159,50 @@ Table "leads" {
 
 Table "project_users" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
   "project_id" bigint(20) [not null]
   "user_id" bigint(20) [not null]
-  "role" project_users_role_enum [not null]
+  "role" varchar(255) [default: NULL]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
     (project_id, user_id) [unique, name: "project_users_project_id_user_id_unique"]
-    created_by_id [name: "project_users_created_by_id_index"]
-    updated_by_id [name: "project_users_updated_by_id_index"]
     user_id [name: "project_users_user_id_foreign"]
+    created_by_id [name: "project_users_created_by_id_foreign"]
+    updated_by_id [name: "project_users_updated_by_id_foreign"]
   }
 }
 
 Table "projects" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
   "title" varchar(255) [not null]
   "description" text [default: NULL]
   "project_icon" varchar(255) [default: NULL]
   "item_id" bigint(20) [default: NULL]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
     title [name: "projects_title_index"]
-    item_id [name: "projects_item_id_index"]
     created_by_id [name: "projects_created_by_id_index"]
     updated_by_id [name: "projects_updated_by_id_index"]
+    item_id [name: "projects_item_id_index"]
   }
 }
 
 Table "sources" {
   "id" bigint(20) [pk, not null, increment]
-  "created_at" timestamp [default: NULL]
-  "updated_at" timestamp [default: NULL]
   "title" varchar(255) [not null]
   "authors" varchar(255) [default: NULL]
   "year" varchar(16) [default: NULL]
   "in_authors" varchar(255) [default: NULL]
   "in_title" varchar(255) [default: NULL]
   "edition" varchar(32) [default: NULL]
-  "journal" varchar(255) [default: NULL]
+  "journal" varchar(64) [default: NULL]
   "series" varchar(64) [default: NULL]
   "volume" varchar(64) [default: NULL]
   "issue" varchar(64) [default: NULL]
@@ -223,6 +214,8 @@ Table "sources" {
   "project_id" bigint(20) [not null]
   "created_by_id" bigint(20) [default: NULL]
   "updated_by_id" bigint(20) [default: NULL]
+  "created_at" timestamp [default: NULL]
+  "updated_at" timestamp [default: NULL]
 
   Indexes {
     title [name: "sources_title_index"]
@@ -250,83 +243,53 @@ Table "users" {
 }
 
 Ref "agents_created_by_id_foreign":"agents"."id" < "agents"."created_by_id"
-
 Ref "agents_updated_by_id_foreign":"agents"."id" < "agents"."updated_by_id"
-
 Ref "agents_user_id_foreign":"users"."id" < "agents"."user_id"
 
 Ref "change_notes_created_by_id_foreign":"agents"."id" < "change_notes"."created_by_id"
-
 Ref "change_notes_key_id_foreign":"keys"."id" < "change_notes"."key_id"
-
 Ref "change_notes_updated_by_id_foreign":"agents"."id" < "change_notes"."updated_by_id"
 
-Ref "filter_item_filter_id_foreign":"filters"."id" < "filter_item"."filter_id"
-
-Ref "filter_item_item_id_foreign":"items"."id" < "filter_item"."item_id"
+Ref "filter_item_filter_id_foreign":"filters"."id" < "filter_item"."filter_id" [delete: cascade]
+Ref "filter_item_item_id_foreign":"items"."id" < "filter_item"."item_id" [delete: cascade]
 
 Ref "filters_created_by_id_foreign":"agents"."id" < "filters"."created_by_id"
-
 Ref "filters_project_id_foreign":"projects"."id" < "filters"."project_id"
-
 Ref "filters_updated_by_id_foreign":"agents"."id" < "filters"."updated_by_id"
 
 Ref "items_created_by_id_foreign":"agents"."id" < "items"."created_by_id"
-
 Ref "items_project_id_foreign":"projects"."id" < "items"."project_id"
-
 Ref "items_updated_by_id_foreign":"agents"."id" < "items"."updated_by_id"
 
-Ref "key_item_item_id_foreign":"items"."id" < "key_item"."item_id"
-
-Ref "key_item_key_id_foreign":"keys"."id" < "key_item"."key_id"
+Ref "key_item_item_id_foreign":"items"."id" < "key_item"."item_id" [delete: cascade]
+Ref "key_item_key_id_foreign":"keys"."id" < "key_item"."key_id" [delete: cascade]
 
 Ref "keys_created_by_id_foreign":"agents"."id" < "keys"."created_by_id"
-
 Ref "keys_item_id_foreign":"items"."id" < "keys"."item_id"
-
 Ref "keys_project_id_foreign":"projects"."id" < "keys"."project_id"
-
 Ref "keys_root_id_foreign":"leads"."id" < "keys"."root_id"
-
 Ref "keys_source_id_foreign":"sources"."id" < "keys"."source_id"
-
 Ref "keys_subkey_of_id_foreign":"keys"."id" < "keys"."subkey_of_id"
-
 Ref "keys_updated_by_id_foreign":"agents"."id" < "keys"."updated_by_id"
 
-Ref "lead_item_item_id_foreign":"items"."id" < "lead_item"."item_id"
-
-Ref "lead_item_lead_id_foreign":"leads"."id" < "lead_item"."lead_id"
+Ref "lead_item_item_id_foreign":"items"."id" < "lead_item"."item_id" [delete: cascade]
+Ref "lead_item_lead_id_foreign":"leads"."id" < "lead_item"."lead_id" [delete: cascade]
 
 Ref "leads_created_by_id_foreign":"agents"."id" < "leads"."created_by_id"
-
 Ref "leads_key_id_foreign":"keys"."id" < "leads"."key_id"
-
 Ref "leads_parent_id_foreign":"leads"."id" < "leads"."parent_id"
-
-Ref "leads_reticulation_id_foreign":"leads"."id" < "leads"."reticulation_id"
-
 Ref "leads_subkey_id_foreign":"keys"."id" < "leads"."subkey_id"
-
 Ref "leads_updated_by_id_foreign":"agents"."id" < "leads"."updated_by_id"
 
 Ref "project_users_created_by_id_foreign":"agents"."id" < "project_users"."created_by_id"
-
 Ref "project_users_project_id_foreign":"projects"."id" < "project_users"."project_id"
-
 Ref "project_users_updated_by_id_foreign":"agents"."id" < "project_users"."updated_by_id"
-
-Ref "project_users_user_id_foreign":"users"."id" < "project_users"."user_id"
+Ref "project_users_user_id_foreign":"users"."id" < "project_users"."user_id" [delete: cascade]
 
 Ref "projects_created_by_id_foreign":"agents"."id" < "projects"."created_by_id"
-
 Ref "projects_item_id_foreign":"items"."id" < "projects"."item_id"
-
 Ref "projects_updated_by_id_foreign":"agents"."id" < "projects"."updated_by_id"
 
 Ref "sources_created_by_id_foreign":"agents"."id" < "sources"."created_by_id"
-
 Ref "sources_project_id_foreign":"projects"."id" < "sources"."project_id"
-
 Ref "sources_updated_by_id_foreign":"agents"."id" < "sources"."updated_by_id"
