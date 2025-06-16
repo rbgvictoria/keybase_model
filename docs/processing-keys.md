@@ -542,8 +542,6 @@ need special treatment for reticulations.
 CSV files for keys with sub-keys need a fourth 'subkey' column. Therefore they
 need to have a header row, otherwise KeyBase will ignore this column.
 
-[[Example CSV of key with sub-keys](./examples/keybase-import-key-with-subkeys-example.csv)]
-
 To find sub-keys in a key:
 
 ```bash
@@ -613,6 +611,13 @@ To check if a lead with index `$i` goes to a sub-key:
 $hasSubkey = $subkeys->filter(fn ($value) => $value == $inKeys[''][$i]['to'])->count() > 0;
 ```
 
+**Examples**
+
+- [Example CSV of key with sub-keys](./examples/keybase-import-key-with-subkeys-example.csv)
+- [Jepson Flora – Key to the families](./examples/jepson-families-subkey.tsv), https://keybase.rbg.vic.gov.au/keys/show/3854
+- [Jepson Flora – Key to the genera of Brassicaceae](./examples/jepson-brassicaceae-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/10032
+- [Horticultural Flora of South-eastern Australia: Key to the species of Eucalyptus](./examples/horticultural-flora-of-southeastern-australia-species-of-eucalyptus-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/7394
+
 #### Unreachable sub-keys [**Error**]
 
 If there are sub-keys in a key, there should also be a test for sub-keys that do
@@ -663,6 +668,11 @@ And for a single lead:
 ```php
 $hasShortcut = $substr_count($inKey[$i]['to'], ':') > 0;
 ```
+
+**Examples**:
+
+- [Flora of Victoria: Key to the families of Monocotyledons](./examples/flora-of-victoria-families-of-monocotyledons-shortcut.tsv), https://keybase.rbg.vic.gov.au/keys/show/1906
+- [Flora of Victoria: Key to the genera of Aizoaceae](./examples/flora-of-victoria-genera-of-aizoaceae-shortcut.tsv), https://keybase.rbg.vic.gov.au/keys/show/2185
 
 #### Shortcuts already in key [**Error**]
 

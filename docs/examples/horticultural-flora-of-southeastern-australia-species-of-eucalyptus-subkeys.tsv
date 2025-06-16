@@ -1,0 +1,151 @@
+from	statement	to	subkey
+1	Leaves opposite (over most of mature tree)	2	
+1	Leaves alternate	3	
+2	Flowers without a cap; fruits ribbed and with sepal teeth on the rim	Angophora	
+2	Flowers with a cap; fruits sometimes ribbed but without sepal teeth	Eucalyptus - Group 1	
+3	Flowers in branching clusters (corymbs) and fruits more or less urn-shaped	Corymbia	
+3	Flowers and fruits not as above	4	
+4	Flowers and fruits in (4–)7s	5	
+4	Most flowers and fruits not in 7s	6	
+5	Common flower stalk (peduncle) flattened	Eucalyptus - Group 2	
+5	Common flower stalk cylindrical or angled	Eucalyptus - Group 3	
+6	Flowers and fruits in 1s or 3s (occasionally 3–7)	Eucalyptus - Group 4	
+6	Flowers and fruits more than 7	Eucalyptus - Group 5	
+1	Fruits and flowers not in 3s	2	Eucalyptus - Group 1
+1	Fruits and flowers in 3s	5	Eucalyptus - Group 1
+2	Fruits and flowers in 7s (mallee 2–3 m tall, bark smooth throughout)	Eucalyptus kruseana	Eucalyptus - Group 1
+2	Fruits and flowers not in 7s	3	Eucalyptus - Group 1
+3	Fruits solitary, massive	Eucalyptus macrocarpa	Eucalyptus - Group 1
+3	Fruits and flowers mostly more than 7 per cluster	4	Eucalyptus - Group 1
+4	Bark smooth; leaves stalkless to fused at the base, edges not wavy, upper and lower surfaces of the same colour; fruits 7–10 mm long	Eucalyptus risdonii	Eucalyptus - Group 1
+4	Bark rough; leaf faces mostly of different shades, edges wavy-toothed; fruits 3–4 mm long	Eucalyptus crenulata	Eucalyptus - Group 1
+5	Leaves with wavy-toothed margins	Eucalyptus cordata	Eucalyptus - Group 1
+5	Leaf margins not wavy-toothed (entire)	6	Eucalyptus - Group 1
+6	Fruits more than 1 cm long	7	Eucalyptus - Group 1
+6	Fruits less than 1 cm long	8	Eucalyptus - Group 1
+7	Fruits 1.2–1.8 cm long; peduncle 0.5–1 cm long	Eucalyptus tetragona	Eucalyptus - Group 1
+7	Fruits 2–2.5 cm long; peduncle 1–2.5 cm long	Eucalyptus preissiana	Eucalyptus - Group 1
+8	Bark fibrous; buds diamond-shaped	Eucalyptus cinerea	Eucalyptus - Group 1
+8	Bark smooth or the trunk with a ‘sock’ peeling in strips at the base; buds cylindrical, ovoid or club-shaped	9	Eucalyptus - Group 1
+9	Leaf pairs strongly fused together at the base (perfoliate); common flower and fruit stalk 2–5 mm long	Eucalyptus perriniana	Eucalyptus - Group 1
+9	Leaf pairs hardly fused together (amplexicaul); common flower and fruit stalk 5–8 mm long	Eucalyptus pulverulenta	Eucalyptus - Group 1
+1	Individual fruits distinctly stalked	2	Eucalyptus - Group 2
+1	Individual fruits stalkless or very shortly stalked	7	Eucalyptus - Group 2
+2	Flower cap long, cylindrical, horned	3	Eucalyptus - Group 2
+2	Flower cap conical, or beaked, or both	6	Eucalyptus - Group 2
+3	Fruit bell-shaped with a flared rim	4	Eucalyptus - Group 2
+3	Fruit cup-shaped to almost spherical	5	Eucalyptus - Group 2
+4	Bark smooth, peeling in curling plates; lateral veins just visible	Eucalyptus astringens	Eucalyptus - Group 2
+4	Bark rough, at least forming a ‘sock’ at the base of the trunk; lateral veins conspicuous	Eucalyptus occidentalis	Eucalyptus - Group 2
+5	Fruit length 8–15 mm; common flower stalk 1.5–3.6 cm long	Eucalyptus eremophila	Eucalyptus - Group 2
+5	Fruit length 4–7 mm; common flower stalk 0.4–1.5 cm long	Eucalyptus spathulata	Eucalyptus - Group 2
+6	Trunk fluted; fruit 4–6 mm long, valves protruding; flower cap not beaked	Eucalyptus salubris	Eucalyptus - Group 2
+6	Trunk not fluted; fruit 5–10 mm long, valves not protruding; flower cap beaked	Eucalyptus cypellocarpa	Eucalyptus - Group 2
+7	Leaf faces different shades of green	8	Eucalyptus - Group 2
+7	Leaf faces the same shade of green	9	Eucalyptus - Group 2
+8	Bark smooth except at base; fruit valves protruding, upright or curved back	Eucalyptus saligna	Eucalyptus - Group 2
+8	Bark rough over most of trunk; fruit valves enclosed	Eucalyptus botryoides	Eucalyptus - Group 2
+9	Fruit bell-shaped	10	Eucalyptus - Group 2
+9	Fruit cup- to barrel-shaped	12	Eucalyptus - Group 2
+10	Flower cap horned and warty; fruit 1.8–3.5 cm long	Eucalyptus megacornuta	Eucalyptus - Group 2
+10	Flower cap rounded to cylindrical, not warty; fruit 0.8–2.8 cm long	11	Eucalyptus - Group 2
+11	Bark rough throughout; leaf stalk 1.5–2 cm long; flowers cream; seed black	Eucalyptus gomphocephala	Eucalyptus - Group 2
+11	Bark smooth; leaf stalk 2–3.5 cm long; flowers greenish yellow; seed red-brown	Eucalyptus stricklandii	Eucalyptus - Group 2
+12	Leaves more or less round; operculum long, cylindrical, horned; common flower stalk 2.2–5 cm long	Eucalyptus platypus	Eucalyptus - Group 2
+12	Leaves elliptic to lanceolate; operculum more or less conical; common flower stalk less than 3 cm long	13	Eucalyptus - Group 2
+13	Flower cap short, rounded, red; fruit 2-ribbed, valves 5(–6)	Eucalyptus nutans	Eucalyptus - Group 2
+13	Flower cap conical or beaked, mostly green; fruit not 2-ribbed, valves 3–4(–5)	14	Eucalyptus - Group 2
+14	Leaves mostly less than 10 cm long, 1–2 cm wide; fruits 8–10 mm wide	Eucalyptus campaspe	Eucalyptus - Group 2
+14	Leaves mostly more than 10 cm long, mostly 2–3 cm wide; fruit 7–8 mm wide	Eucalyptus kitsoniana	Eucalyptus - Group 2
+1	Flower clusters terminal, compound; leaves ovate,with a small terminal point	Eucalyptus polyanthemos	Eucalyptus - Group 3
+1	Flower clusters axillary; simple	2	Eucalyptus - Group 3
+2	Leaves distinctly different shades of green on either face	Eucalyptus muelleriana	Eucalyptus - Group 3
+2	Leaves more or less the same green on both faces	3	Eucalyptus - Group 3
+3	Fruits waxy-white,1–1.5 cm long; flowers distinctive yellow-green	Eucalyptus woodwardii	Eucalyptus - Group 3
+3	Fruits not waxy-white, mostly less than 1 cm long; flowers not as above	4	Eucalyptus - Group 3
+4	Base of flowers and fruits not corrugated but the cap corrugated and with a slightly curved point	Eucalyptus torquata	Eucalyptus - Group 3
+4	Base of flowers and fruits and cap not corrugated	5	Eucalyptus - Group 3
+5	Bark ironbark; individual fruits on long slender stalks	Eucalyptus sideroxylon	Eucalyptus - Group 3
+5	Bark not ironbark; individual fruits not on long slender stalks	6	Eucalyptus - Group 3
+6	Fruit valves strongly protruding	Eucalyptus bancroftii	Eucalyptus - Group 3
+6	Fruit valves not or only slightly protruding	7	Eucalyptus - Group 3
+7	Leaves glossy	8	Eucalyptus - Group 3
+7	Leaves dull	12	Eucalyptus - Group 3
+8	Fruits with flared rims and 4–5 valves	9	Eucalyptus - Group 3
+8	Fruits without flared rims, valves 3–4	10	Eucalyptus - Group 3
+9	Leaves not hooked at the tip; fruits cup-shaped; common flower stalk 1.5–3.3 cm long	Eucalyptus dielsii	Eucalyptus - Group 3
+9	Leaves hooked at the tip; fruits obconical; common flower stalk curved, 1–1.3 cm long	Eucalyptus erythronema	Eucalyptus - Group 3
+10	Leaves narrow-lanceolate; operculum cylindrical to horned	Eucalyptus sargentii	Eucalyptus - Group 3
+10	Leaves more or less linear; operculum conical or beaked	11	Eucalyptus - Group 3
+11	Fruit 2–4 mm long; valves mostly 4; no bud scar	Eucalyptus viridis	Eucalyptus - Group 3
+11	Fruit 4–5 mm long; valves mostly 3; bud scarred	Eucalyptus scoparia	Eucalyptus - Group 3
+12	Bud scar absent; fruit valves mostly 5	Eucalyptus melliodora	Eucalyptus - Group 3
+12	Bud scar present; valves mostly 3–4	13	Eucalyptus - Group 3
+13	Bark smooth; flower and fruit stalk cylindrical; flower cap mostly shorter than its base; fruit 5–8 mm long	Eucalyptus mannifera	Eucalyptus - Group 3
+13	Bark rough; fruit length 2–5 mm	14	Eucalyptus - Group 3
+14	Leaves mostly 0.5–1 cm wide, blue-green (peppermint), stalk cylindrical; common flower/fruit stalk cylindrical	Eucalyptus nicholii	Eucalyptus - Group 3
+14	Leaves mostly 1–1.5 cm wide, pale green, stalk flattened; common flower stalk angled	Eucalyptus macarthuri	Eucalyptus - Group 3
+1	Flowers and fruits in 1s	2	Eucalyptus - Group 4
+1	Flowers and fruits in 3s (occasionally to 7)	4	Eucalyptus - Group 4
+2	Buds and fruits prominently 4-sided; common stalk curved	Eucalyptus forrestiana	Eucalyptus - Group 4
+2	Buds and fruits variously ribbed	3	Eucalyptus - Group 4
+3	Bud caps and fruits waxy-white, mostly stalkless, warty	Eucalyptus globulus	Eucalyptus - Group 4
+3	Fruits not waxy-white, long-stalked, red, pendulous, not warty	Eucalyptus stoatei	Eucalyptus - Group 4
+4	Flower bud caps flattened, warty and waxy-white; fruits generally ridged and warted	Eucalyptus E. globulus subsp. globulus	Eucalyptus - Group 4
+4	Bud caps and fruits sometimes flattened but not as above	5	Eucalyptus - Group 4
+5	Fruit capsules (excluding stalks) more than 2 cm long	6	Eucalyptus - Group 4
+5	Fruit capsules (excluding stalks) less than 2 cm long	7	Eucalyptus - Group 4
+6	Bark smooth; fruits distinctly 4-winged, square in cross-section; flowers white	Eucalyptus steedmanii	Eucalyptus - Group 4
+6	Bark reddish, peeling in scales; fruits not ridged or winged, waxy-white; flowers reddish pink	Eucalyptus caesia	Eucalyptus - Group 4
+7	Fruits distinctly ridged, winged, striated or warty	8	Eucalyptus - Group 4
+7	Fruits not ridged, winged or warty	11	Eucalyptus - Group 4
+8	Flowers red; fruits bell-shaped and striated	Eucalyptus erythronema	Eucalyptus - Group 4
+8	Characters not as above	9	Eucalyptus - Group 4
+9	Bark greyish; leaves ovate to orbicular, mostly notched at tip; fruits and especially buds very warty, fruit hemispherical	Eucalyptus verrucata	Eucalyptus - Group 4
+9	Combination of characters not as above; fruits 2-ribbed, sometimes finely so	10	Eucalyptus - Group 4
+10	Bark pinkish; leaves lanceolate; fruits 2-ridged, bell-shaped, valves protruding	Eucalyptus griffithsii	Eucalyptus - Group 4
+10	Bark white to matt grey-blue; leaves dull; bud ‘fat’ ovoid, cap rounded or pointed	Eucalyptus cosmophylla	Eucalyptus - Group 4
+11	Common stalk of flower buds and fruits cylindrical	12	Eucalyptus - Group 4
+11	Common stalk of flower buds and fruits angular or flattened	14	Eucalyptus - Group 4
+12	Bark rough (not furrowed); leaves to about 30 cm long; individual fruits stalkless, rim raised	Eucalyptus chapmaniana	Eucalyptus - Group 4
+12	Bark smooth, rough at base or furrowed; leaves to 14 cm long; individual and common fruit stalks long, rim flat	13	Eucalyptus - Group 4
+13	Bark smooth (occasionally rough at the base only)	Eucalyptus leucoxylon	Eucalyptus - Group 4
+13	Bark more or less black, deeply furrowed	Eucalyptus tricarpa	Eucalyptus - Group 4
+14	Leaves thick, elliptic to ovate; flower buds gradually tapering to the base	Eucalyptus gunnii	Eucalyptus - Group 4
+14	Leaves not as above; flower buds not gradually tapering to the base	15	Eucalyptus - Group 4
+15	Mature leaves mostly more than 2.5 cm wide; flower buds ‘fat’ roundish to ovoid, often pink; fruits more than 1.5 cm long	Eucalyptus cosmophylla	Eucalyptus - Group 4
+15	Mature leaves less than 2.5 cm wide; flower buds relatively narrow, green; fruits less than 1 cm long	16	Eucalyptus - Group 4
+16	Bark red to red-brown (or patched) late summer; juvenile leaves roundish, waxy-white	Eucalyptus rubida	Eucalyptus - Group 4
+16	Bark smooth grey, white or yellow-white; juvenile leaves lanceolate, not waxy-white	Eucalyptus viminalis	Eucalyptus - Group 4
+1	Leaves with longitudinal parallel veins	Eucalyptus pauciflora	Eucalyptus - Group 5
+1	Leaves with single midrib, veins spreading or inconspicuous	2	Eucalyptus - Group 5
+2	Individual fruits distinctly stalked	3	Eucalyptus - Group 5
+2	Individual fruits not or hardly stalked	10	Eucalyptus - Group 5
+3	Common fruit stalk flattened	4	Eucalyptus - Group 5
+3	Common fruit stalk angular or cylindrical	7	Eucalyptus - Group 5
+4	Leaves 3–4.5 cm wide, faces shaded differently; flower cap beaked	Eucalyptus robusta	Eucalyptus - Group 5
+4	Leaves 1–2.5 cm wide, faces the same colour; flower cap long, cylindrical, horned	5	Eucalyptus - Group 5
+5	Leaves dull; fruit barrel-shaped	Eucalyptus gardneri	Eucalyptus - Group 5
+5	Leaves shiny; fruit cup- to bell-shaped	6	Eucalyptus - Group 5
+6	Fruit more or less bell-shaped; leaf width 1–3.3 cm	Eucalyptus occidentalis	Eucalyptus - Group 5
+6	Fruit more or less cylindrical to cup-shaped; leaf width 0.6–1.5 cm	Eucalyptus eremophila	Eucalyptus - Group 5
+7	Leaf faces a different shade	8	Eucalyptus - Group 5
+7	Leaf faces of similar shade	9	Eucalyptus - Group 5
+8	Bark smooth, mottled yellow-blue; fruit elongate, ribbed, common stalk cylindrical	Eucalyptus cladocalyx	Eucalyptus - Group 5
+8	Bark rough throughout; fruit mostly cup-shaped, not ribbed; common stalk angular	Eucalyptus muelleriana	Eucalyptus - Group 5
+9	Leaves dull; flower clusters not in pairs; operculum more or less beaked	Eucalyptus camaldulensis	Eucalyptus - Group 5
+9	Leaves shiny; flower clusters mostly in pairs; operculum conical	Eucalyptus regnans	Eucalyptus - Group 5
+10	Leaf faces a different shade	11	Eucalyptus - Group 5
+10	Leaf faces of similar colouring	12	Eucalyptus - Group 5
+11	Fruit valves protruding, erect or curved back; fruit obconical to pear-shaped	Eucalyptus saligna	Eucalyptus - Group 5
+11	Valves not protruding; fruit cylindrical to barrel-shaped	Eucalyptus botryoides	Eucalyptus - Group 5
+12	Leaves more or less linear, rough gland-dotted, veins obscure, strongly scented; no bud scar	Eucalyptus pulchella	Eucalyptus - Group 5
+12	Leaves more or less lanceolate to elliptic, other characters not as above; bud scar present	13	Eucalyptus - Group 5
+13	Fruit valves protruding and fused at the tip	14	Eucalyptus - Group 5
+13	Fruit valves occasionally protruding or held together at the tip but not fused	15	Eucalyptus - Group 5
+14	Leaves lanceolate to elliptic; common fruit stalk cylindrical; fruit 0.6–1.3 cm long	Eucalyptus cornuta	Eucalyptus - Group 5
+14	Leaves elliptic to lanceolate, often narrow; common fruit stalk flattened; fruit 1.2–1.8 cm long	Eucalyptus talyuberlup	Eucalyptus - Group 5
+15	Fruits fused at the base into a single head	Eucalyptus conferruminata	Eucalyptus - Group 5
+15	Fruits free at the base	16	Eucalyptus - Group 5
+16	Leaves glossy; flowers with horned cap, bright greenish yellow; fruits 7–8 mm wide	Eucalyptus macrandra	Eucalyptus - Group 5
+16	Leaves usually dull; flowers with a short conical cap, white; fruits 8–15 mm wide	Eucalyptus diversifolia	Eucalyptus - Group 5

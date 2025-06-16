@@ -1,0 +1,40 @@
+from	statement	to
+1	Outer surface of fruit smooth (i.e. epidermis all or nearly all shed) although it may appear lumpy from subsurface swellings or have corky outgrowths; valves smooth and having 2 more or less hemispheric lobes (subg. Eremaea)	2
+1	Outer surface of fruit rough (i.e. epidermis present but disintegrated), flaky; valves 2-lobed with surface of each finely warty or irregularly mammillate (subg. Okriocarpa)	14
+2	Fruit valves deeply included	3
+2	Fruit valves reaching rim of fruit or only shallowly included	5
+2	Fruit valves exserted and enclosed or not by lower part of lobes	10
+2	Fruit valves exserted and reflexed	12
+3	Filaments pink, or dark pink, fruit urceolate with very narrow orifice	Eremaea fimbriata
+3	Filaments orange, fruit not as above	4
+4	Leaves linear or narrowly elliptic	Eremaea pauciflora
+4	Leaves elliptic or ovate	Eremaea beaufortioides
+5	Flowers borne on last season’s wood	6
+5	Flowers borne on current season’s wood	8
+6	Filaments pink, or dark pink	Eremaea x phoenicea
+6	Filaments orange	7
+7	Flowers terminal on long branches, fruits cylindrical to slightly obconic	Eremaea dendroidea
+7	Flowers terminal on short laterals along long branches, fruits globose	Eremaea blackwelliana
+8	Filaments pink	Eremaea purpurea
+8	Filaments orange	9
+9	Fruit rim without lobes, leaves narrowly elliptic to oblong, a small tree when mature	Eremaea dendroidea
+9	Fruit rim undulate, leaves linear, or obovate-ellipitic and broadly boat-shaped when dry, shrub to about 1 m when mature	Eremaea ebracteata
+10	Flowers borne on last season’s wood	Eremaea x codonocarpa
+10	Flowers borne on current season’s wood	11
+11	Filaments orange, leaves linear, or obovate-elliptic	Eremaea ebracteata
+11	Filaments pink, or dark pink, leaves narrow, ovate, elliptic to obovate	Eremaea purpurea
+12	Leaves not mucronate	Eremaea atala
+12	Leaves strongly mucronate	13
+13	Leaves straight or reflexed in upper part, >1.2 mm wide, longest perules >3 mm long	Eremaea hadra
+13	Leaves sinuate, or up-turned in upper part, <1.2 mm wide, longest perules <3mm long	Eremaea violacea
+14	Leaf veins seen on lower surface 0 or 1	15
+14	Leaf veins seen on lower surface 3	17
+14	Leaf veins seen on lower surface 5 or more	18
+15	Filaments pink, or dark pink, fruiting valves with two glabrescent, smooth lobes surrounded by fringe of hairs	Eremaea x codonocarpa
+15	Filaments orange, fruiting valves with two densely tomentose, mammillate lobes	16
+16	Flowers terminal on long branches, longest perules attenuate, tomentose	Eremaea ectadioclada
+16	Flowers terminal on short laterals along long branches, longest perules contracted at apex, mostly glabrous or ciliate	Eremaea acutifolia
+17	Filaments orange, leaves broad and multiveined	Eremaea asterocarpa
+17	Filaments pink, or dark pink, leaves triquetrous, rarely flat, 1- or 3-veined	Eremaea x codonocarpa
+18	Perules ciliate, back glabrous or distally tomentose	Eremaea asterocarpa
+18	Perules villous	Eremaea brevifolia
