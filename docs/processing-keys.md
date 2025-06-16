@@ -705,6 +705,22 @@ And for a single lead:
 $hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
 ```
 
+#### Multi-item shortcuts
+
+Some keys in KeyBase have shortcuts with what are meant to be multiple items.
+This may look like `Campanulaceae: Githopsis, Heterocodon, Triodanis`. KeyBase
+has never been able to process this properly and we are not going to change
+that, as it is inappropriate use of shortcuts. We are not even going to have a
+warning for it, _i.e._ we are going to treat it as a shortcut with a single
+item, but we will put something in the documentation.
+
+> **Note**
+> 
+> Now that we have the ability to have column headers, I think it will be best
+> to have a column for shortcuts, so that people do not have to muck about in
+> the `to` column. Then we can also just say that the `shortcut` column can only
+> have a single item
+
 ### Multi-item leads [**Warning**]
 
 The new version of KeyBase will support unfinished keys. Multiple item labels,
