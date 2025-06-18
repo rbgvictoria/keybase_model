@@ -618,6 +618,7 @@ $hasSubkey = $subkeys->filter(fn ($value) => $value == $inKeys[''][$i]['to'])->c
 - [Jepson Flora – Key to the families](./examples/jepson-families-subkey.tsv), https://keybase.rbg.vic.gov.au/keys/show/3854
 - [Jepson Flora – Key to the genera of Brassicaceae](./examples/jepson-brassicaceae-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/10032
 - [Horticultural Flora of South-eastern Australia: Key to the species of Eucalyptus](./examples/horticultural-flora-of-southeastern-australia-species-of-eucalyptus-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/7394
+- [Eucalypts of North Coast New South Wales: Key to the species of Eucalyptus](./examples/eucalypts-of-north-coast-new-south-wales-species-of-eucaluptus-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/13167
 
 #### Unreachable sub-keys [**Error**]
 
@@ -680,7 +681,6 @@ $hasShortcut = !empty($inKey[$i]['shortcut']);
 
 - [Flora of Victoria: Key to the families of Monocotyledons](./examples/flora-of-victoria-families-of-monocotyledons-shortcut.tsv), https://keybase.rbg.vic.gov.au/keys/show/1906
 - [Flora of Victoria: Key to the genera of Aizoaceae](./examples/flora-of-victoria-genera-of-aizoaceae-shortcut.tsv), https://keybase.rbg.vic.gov.au/keys/show/2185
-- [Eucalypts of North Coast New South Wales: Key to the species of Eucalyptus](./examples/eucalypts-of-north-coast-new-south-wales-species-of-eucaluptus-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/13167
 
 #### Shortcuts already in key [**Error**]
 
