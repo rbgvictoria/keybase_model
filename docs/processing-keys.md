@@ -98,16 +98,17 @@ is stored in the database and might be better for illustrating what is going on.
 
 </caption>
 
-The boxes outlined with a broken line in (**figure 6**) are nested sets. Nested
-sets can be stored in the database by storing the numbers in the top- and
-bottom-right corners of the boxes as `left` and `right`. KeyBase currently
-still stores the nested sets in the database, but for the last ten years, nested
-sets have been created by the plugin, so it is not necessary to store them in
-the database anymore. This makes KeyBase more flexible in what it can do with
-keys. Nested sets are used in the KeyBase player to get the remaining and
-discarded items. So, for couplet **3** in figure 6 remaining items are the items
-on the leads of which the value of `left` is between 8 and 21 and the discarded
-items where it is not. Nested sets also make the filters work.
+The boxes outlined with a broken line in figure 6 are nested sets. Nested sets
+can be stored in the database by storing the numbers in the top- and
+bottom-right corners of the boxes as `left` and `right`. KeyBase currently still
+stores the nested sets in the database, but for the last ten years, nested sets
+have been created by the plugin, so it is not necessary to store them in the
+database anymore. This makes KeyBase more flexible in what it can do with keys.
+Nested sets are used in the KeyBase player to get the remaining and discarded
+items. So, for couplet **3** in figure 6 remaining items are the items on the
+leads of which the value of `left` is between 8 and 21 and the discarded items
+are items on the leads where the value of `left` is outside this range. Nested
+sets also make the filters work.
 
 The bracketed format lends itself very well to exchange as tabular data (**table
 1**), which is why CSV is the preferred format for importing and exporting keys
@@ -633,46 +634,53 @@ sub-keys will be considered items.
 
 ### Shortcuts [**Info**]
 
-Often an item that keys out only has a single member (in the project), so there
-will not be a key for this item. However, this member itself can have multiple
-members, so can have a key to its members. In order to still be able to link
-this key to the present key, KeyBase has a data structure we call a 'shortcut'
-(from now on). A shortcut is a lead with an item. The parent of the shortcut is
-the lead with the keyed-out item (**figure 16**).
+Sometimes, an item that keys out only has a single member (in the project), so
+there will not be a key for this item. However, this member itself can have
+multiple members, so can have a key to its members. In order to still be able to
+link this key to the present key, KeyBase has a data structure we call a
+'shortcut' (from now on). A shortcut is a lead with an item. The parent of the
+shortcut is the lead with the keyed-out item (**figure 16**).
 
 ![shortcut](./media/couplets-shortcut.drawio.svg)
 
 <caption>
 
-**Figure 16.** Couplet with shortcut
-`:Senegalia greggii` in **KeyBase (2025)**, _Vascular plants of
+**Figure 16.** Couplet with keyed out item _Senegalia_ and a shortcut
+to _Senegalia greggii_ in **KeyBase (2025)**, _Vascular plants of
 California: Jepson Herbarium, UC Berkeley: Fabaceae Group 1_.
 &lt;https://keybase.rbg.vic.gov.au/keys/show/10038&gt; [Seen: 26-05-2025].
 
 </caption>
 
-In the key file shortcuts can be provided by appending a colon (':') and an item
-name, _e.g._ `:Senegalia greggii`, to an item name in the `to` column. (People
-will be tempted to put a space after the colon, so we should account for that
-when parsing a key).
+Shortcuts can currently be provided in the input file by appending a colon (':')
+and an item name, optionally separated by a space, _e.g._ `:Senegalia greggii`,
+or by appending an item enclosed in braces ('{' and '}'), _e.g._ `{Senegalia
+greggii}`. In the new version, now that we can have column headers, it can be
+delivered in a `shortcut` column. We'll have to see if we still need to support
+the old constructs.
 
 To check if there are any shortcuts in a provided key, you can run:
 
 ```php
-$shortcuts = $toItems->filter(fn ($value) => substr_count($value, ':'))
-    ->map(fn ($value) => preg_split('/ ?: ?/', $value)[1]);
+// $shortcuts = $toItems->filter(fn ($value) => substr_count($value, ':'))
+//     ->map(fn ($value) => preg_split('/ ?: ?/', $value)[1]);
+
+$shortcuts = $inKey->filter(fn ($lead) => $lead['shortcut'])->map(fn ($lead) => $lead['shortcut']);
 ```
 
 And for a single lead:
 
 ```php
-$hasShortcut = $substr_count($inKey[$i]['to'], ':') > 0;
+// $hasShortcut = $substr_count($inKey[$i]['to'], ':') > 0;
+
+$hasShortcut = !empty($inKey[$i]['shortcut']);
 ```
 
 **Examples**:
 
 - [Flora of Victoria: Key to the families of Monocotyledons](./examples/flora-of-victoria-families-of-monocotyledons-shortcut.tsv), https://keybase.rbg.vic.gov.au/keys/show/1906
 - [Flora of Victoria: Key to the genera of Aizoaceae](./examples/flora-of-victoria-genera-of-aizoaceae-shortcut.tsv), https://keybase.rbg.vic.gov.au/keys/show/2185
+- [Eucalypts of North Coast New South Wales: Key to the species of Eucalyptus](./examples/eucalypts-of-north-coast-new-south-wales-species-of-eucaluptus-subkeys.tsv), https://keybase.rbg.vic.gov.au/keys/show/13167
 
 #### Shortcuts already in key [**Error**]
 
@@ -703,16 +711,21 @@ users. Also, shortcuts are meant to connect keys, not link extra items to keys
 
 So, from now on, we will report chained shortcuts as errors.
 
+> **Note**
+>
+> This should not be an issue anymore once we have a separate column for
+> shortcuts.
+
 To find chained shortcuts in a provided key, you can run:
 
 ```php
-$chainedShortcuts = $toItems->filter(fn ($value) => substr_count($value, ':') > 1)->all();
+// $chainedShortcuts = $toItems->filter(fn ($value) => substr_count($value, ':') > 1)->all();
 ```
 
 And for a single lead:
 
 ```php
-$hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
+// $hasChainedShortcut = substr_count($lead['to'], ':') > 1 ? true : false;
 ```
 
 #### Multi-item shortcuts
@@ -725,11 +738,9 @@ warning for it, _i.e._ we are going to treat it as a shortcut with a single
 item, but we will put something in the documentation.
 
 > **Note**
-> 
-> Now that we have the ability to have column headers, I think it will be best
-> to have a column for shortcuts, so that people do not have to muck about in
-> the `to` column. Then we can also just say that the `shortcut` column can only
-> have a single item
+>
+> This should not be an issue anymore once we have a separate column for
+> shortcuts.
 
 ### Multi-item leads [**Warning**]
 
@@ -766,8 +777,8 @@ key that do not key out at all. This cannot be done with CSV key imports, of
 course.
 
 **Note** that the old plugin that KeyBase will keep supporting does not support
-multiple items keying out in the same place, so we might exclude unfinished keys
-from the old API.
+multiple items keying out in the same place, so for the old API we need to merge
+them into a single item.
 
 <br><hr>
 
@@ -775,8 +786,8 @@ from the old API.
 
 <caption>
 
-**Figure 18.** All possible object relationships between Keys, Leads and Items in
-KeyBase. Couplets and shortcut are demarcated by boxes with a broken outline.
+**Figure 18.** All possible object relationships between Keys, Leads and Items
+in KeyBase. Couplets and shortcut are demarcated by boxes with a broken outline.
 
 </caption>
 
