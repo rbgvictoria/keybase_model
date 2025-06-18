@@ -39,22 +39,28 @@ class GetKey
             $leads = $renumberCouplets->execute();
         }
 
-        return $leads->map(function ($lead) {
+        // ckeck for shortcuts
+        $shortcuts = $leads->filter(fn ($lead) => $lead['shortcut'])->map(fn ($lead) => $lead['shortcut']);
+
+        return $leads->map(function ($lead) use ($shortcuts) {
             if ($lead['to_couplet']) {
                 $to = $lead['to_couplet'];
             }
             else {
                 $to = $lead['to_item'];
-                if ($lead['shortcut']) {
-                    $to .= ':' . $lead['shortcut'];
-                }
             }
 
-            return [
+            $ret = [
                 'from' => $lead['from'],
                 'statement' => html_entity_decode($lead['statement']),
                 'to' => $to,
             ];
+
+            if ($shortcuts->count() > 0) {
+                $ret['shortcut'] = $lead['shortcut'];
+            }
+
+            return $ret;
         })
         ->sortBy('from');
     }

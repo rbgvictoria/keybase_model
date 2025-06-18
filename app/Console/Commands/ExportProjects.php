@@ -46,8 +46,8 @@ class ExportProjects extends Command
                 mkdir(storage_path('app/public/exports/' . $slug));
             }
 
-            Storage::put('exports/' . $slug . '/project_metadata.yaml', Yaml::dump((array) $project));
-
+            file_put_contents(storage_path('app/public/exports/' . $slug . 
+                    '/project_metadata.yaml'), Yaml::dump((array) $project));
 
             $keys = (new GetKeyMetadata($project['id']))->execute();
             $firstKey = true;
@@ -61,8 +61,10 @@ class ExportProjects extends Command
                 $leads = (new GetKey($key['id']))->execute(balance: $this->option('balance'));
                 if ($leads) {
                     $leadsFile = fopen(storage_path('app/public/exports/' . $slug . '/' . $key['key_file']), 'w');
-                    fputcsv($leadsFile, ['from', 'statement', 'to'], $separator);
-                    foreach ($leads as $lead) {
+                    foreach ($leads as $index => $lead) {
+                        if ($index == 0) {
+                            fputcsv($leadsFile, array_keys($lead), $separator);
+                        }
                         fputcsv($leadsFile, array_values($lead), $separator);
                     }
                     fclose($leadsFile);
@@ -102,7 +104,7 @@ class ExportProjects extends Command
             fclose($itemsFile);
 
 
-            (new CreateZipArchive)->execute($slug, $this->option('delete') !== false);
+            (new CreateZipArchive)->execute($slug, $this->option('delete'));
         }
     }
 }
