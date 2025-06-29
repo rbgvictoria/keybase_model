@@ -521,6 +521,10 @@ To check if a lead with index `$i` is in a reticulation:
 $isReticulation = $toCouplets->contain$($inKey[$i]['to']) && !$toCouplets->containsOneItem(fn ($value) => $value == $inKey[$i]['to']);
 ```
 
+**Examples**
+
+- [AusGrass2: Key to the genera of Poaceae](examples/ausgrass2-key-to-the-genera-of-poaceae.tsv)
+
 
 ### Sub-keys [**Info**]
 
@@ -779,6 +783,10 @@ course.
 **Note** that the old plugin that KeyBase will keep supporting does not support
 multiple items keying out in the same place, so for the old API we need to merge
 them into a single item.
+
+**Examples**
+
+- [ACT Flora: Key to the genera of Faboideae](examples/act-flora-genera-of-faboideae-incomplete.tsv)
 
 <br><hr>
 
