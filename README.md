@@ -196,4 +196,20 @@ those users themselves.
 
 ![entire schema](public/media/entire-schema.svg)
 
+## KeyBase organisational model
 
+The organisational structure of KeyBase has three levels, global (KeyBase),
+Project and Key. Models only make sense in the context they are in.
+
+![organisational model](public/media/keybase-organisational-model.drawio.svg)
+
+- At the **global** level we only really have Projects and User administration.
+  Agents are taken care of in the user profiles.
+
+- Keys, Items, Sources, Filters and Project Users (which we'll call contributors
+  in the front end) are all managed within a **Project** and make no sense at
+  the global level.
+
+- The **Key** is not really an organisational level, but Leads and Change Notes
+  only make sense in the context of a Key. They should not show in the side
+  pane, but only in the Key they belong to.
