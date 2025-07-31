@@ -1,0 +1,519 @@
+from	statement	to	shortcut
+1	Culms woody; leaves pseudopetiolate	2	
+1	Culms usually herbaceous; if woody the leaves not pseudopetiolate	5	
+2	Culms forming climbing vines	Mullerochloa	Mullerochloa moreheadiana
+2	Culms not forming climbing vines	3	
+3	Auricles with bristles to 10 mm long	Neololeba	Neololeba atra
+3	Auricles without bristles	4	
+4	Culms cylindrical in cross section	Bambusa	
+4	Culms with an internodal groove on alternate sides	Phyllostachys	
+5	Leaves spirally arranged	Micraira	
+5	Leaves arranged in two rows	6	
+6	Spikelets morphologically or functionally unisexual	7	
+6	Spikelets bisexual	20	
+7	Spikelets with 1 floret, or more than 2 florets	8	
+7	Spikelets with 2 florets	12	
+8	Spikelets with 1 floret; male and female spikelets on same plant	9	
+8	Spikelets with more than 2 florets; male and female spikelets on different plants	10	
+9	Lemma asymmetrical with a ±lateral orifice	Leptaspis	Leptaspis banksii
+9	Lemma pyriform with a terminal orifice	Scrotochloa	
+10	Short grasses with a compact raceme	Distichlis	Distichlis distichophylla
+10	Tall reed-like grasses with a plumose panicle	11	
+11	Leaf blades with only the midrib prominent and strongly sclerified	Cortaderia	
+11	 Leaf blades with several wide strongly sclerified veins (including midrib)	Austroderia	
+12	Upper lemma membranous, thinner than glumes	13	
+12	Upper lemma hardened, thicker than glumes	16	
+13	Male and female spikelets in separate inflorescences	Zea	Zea mays subsp. mexicana
+13	Male and female spikelets in different parts of the same inflorescence	14	
+14	Inflorescence consisting of a female spikelet enclosed in a rigid shell, from which a raceme of male spikelets emerges apically	Coix	
+14	Inflorescence spike-like with female spikelets basal and male apical	15	
+15	Internode broader than and ± enclosing female spikelet	Chionachne	
+15	Internode narrower  than and ± enclosed by female spikelet	Tripsacum	
+16	Plants monoecioeus, i.e. with male and female spikelets on the same plant	17	
+16	Plants dioecious i.e. with male and female spikelets on different plants	18	
+17	Inflorescence a simple raceme, with 1-2 female spikelets at the base, the upper spikelets male	Thuarea	Thuarea involuta
+17	Inflorescence a spike-like panicle with racemes of female spikelets below and solitary male spikelets above	Hygrochloa	
+18	Inflorescence a contracted, spike-like panicle, not spatheate	Cenchrus	
+18	Inflorescences clustered together in dense, umbel-like spatheate heads	19	
+19	Female heads with long stiff spines; inhabits coastal dunes	Spinifex	
+19	Female inflorescences bracteate but not spiny; inhabits desert sand dunes	Zygochloa	Zygochloa paradoxa
+20	Spikelets with 1 to many florets, if 2-flowered both florets or lower one bisexual	21	
+20	Spikelets 2-flowered, lower floret male or barren, upper bisexual or female	171	
+21	Inflorescence a solitary bilateral spike or raceme; spikelets usually with the broad side facing the axis	22	
+21	Inflorescence a panicle or a unilateral or multilateral spike or raceme, rarely a bilateral spike but then the spikelets edgewise on to the axis	38	
+22	Lemmas 3-5-nerved, hyaline to membranous	23	
+22	Lemmas 5-10-nerved, hardened at maturity	26	
+23	Lemmas awned	Psilurus	Psilurus incurvus
+23	Lemmas not awned	24	
+24	Spikelets compressed laterally	Parapholis	
+24	Spikelets compressed dorsiventrally	25	
+25	Lemmas with lateral nerves extending to the apex	Lepturus	
+25	Lemmas with very short lateral nerves	Hainardia	Hainardia cylindrica
+26	Rachilla terminated by a fertile floret	Tetrarrhena	
+26	Rachilla prolonged beyond the uppermost fertile floret	27	
+27	Spikelets in groups of more than 2 at each rachis node	28	
+27	Spikelets solitary at each rachis node	30	
+28	Spikelet 4-5-flowered, in groups of 2-4 (-7)	Leymus	
+28	Spikelet 1-flowered, in groups of 2 or 3	29	
+29	Spikelets in pairs at each rachis node	Taeniatherum	Taeniatherum caput-medusae
+29	Spikelets in 3s at each rachis node	Hordeum	
+30	Annuals	31	
+30	Perennials	34	
+31	Glumes not keeled	Brachypodium	
+31	Glumes strongly keeled	32	
+32	Glumes subulate	Secale	Secale cereale
+32	Glumes not subulate	33	
+33	Lemmas with nerves converging upwards	Eremopyrum	
+33	Lemmas with nerves not converging upwards	Triticum	Triticum aestivum
+34	Rachis fragile, smooth	Thinopyrum	
+34	Rachis tough, scabrous	35	
+35	Plant with long creeping rhizomes	Elytrigia	
+35	Plant tufted, or with short rhizomes	36	
+36	Leaf blades ± flat; glumes ± scabrous on nerves	Anthosachne	
+36	Leaf blades usually convolute or involute; glumes smooth	37	
+37	Rachis internodes concave; glumes subacute to pointed	Australopyrum	
+37	Rachis internodes nearly flat; glumes truncate	Thinopyrum	
+38	Fertile lemmas deeply or distinctly lobed	39	
+38	Fertile lemmas entire, dentate or slightly lobed	42	
+39	Spikelets 1-flowered	Amphipogon	
+39	Spikelets 2-or more-flowered, rarely 1-flowered	40	
+40	Lemmas 9-lobed	Enneapogon	
+40	Lemmas 3-lobed	41	
+41	Inflorescence a 1-sided raceme	Astrebla	
+41	Inflorescence a panicle or spike	Triodia	
+42	Leaf blades hard, woody, needle-like	Triodia	
+42	Leaf blades not hard, woody, needle-like	43	
+43	Leaf blades with transverse veins between main veins	44	
+43	Leaf blades without transverse veins	45	
+44	Glumes more or less equal; upper glume 7-nerved; lemmas awned	Lophatherum	Lophatherum gracile
+44	Glumes very unequal; upper glume 3-5-nerved; lemmas mucronate	Centotheca	
+45	Tall reed-like plants	46	
+45	Plants not tall and reed-like	47	
+46	Lemmas hairy; rachilla not hairy	Arundo	
+46	Lemmas not hairy; rachilla hairy	Phragmites	
+47	Spikelets with 2 or more bisexual florets or if only one, with rachilla extension or sterile florets (empty lemmas) above it	48	
+47	Spikelets with 1 bisexual floret, with or without male or sterile florets (empty lemmas) below it	132	
+48	Spikelets with 3 or more florets or with 1or 2 florets and a rachilla extended beyond the upper floret	49	
+48	Spikelets with 2 florets, without a rachilla extension	122	
+49	Inflorescence racemose or spicate, or digitate or non-digitate	50	
+49	Inflorescence a panicle	75	
+50	Inflorescence digitate or subdigitate	51	
+50	Inflorescence racemose or spicate	62	
+51	Spikelet with at least 3 fertile florets	52	
+51	Spikelet with 1 (rarely 2) fertile florets	55	
+52	Axis of each inflorescence branch ending in a bristle; spikelet-bearing axis disarticulating	Dactyloctenium	
+52	Axis of each inflorescence branch ending in a spikelet; spikelet-bearing axis not disarticulating	53	
+53	Spikelets 2-5; lemma 5-7-nerved; leaves mostly basal, setaceous	Cyperochloa	
+53	Spikelets many; lemma 3-nerved; leaves not basally aggregated or setaceous	54	
+54	Lemmas mucronate to shortly awned; upper glume 1-nerved	Acrachne	
+54	Lemmas muticous; upper glumes 3-7-nerved	Eleusine	
+55	Spikelet with 1 floret; lemmas unawned	56	
+55	Spikelet with 2 or more florets; lemmas awned	57	
+56	Glumes shorter than floret	Cynodon	
+56	Glumes longer than floret	Brachyachne	
+57	Lowest lemma dorsally compressed (lying on front or back when placed on a flat surface)	58	
+57	Lowest lemma laterally compressed (lying on the side when placed on a flat surface)	59	
+58	Glumes unequal, shorter than florets	Enteropogon	
+58	Glumes subequal, longer than florets	Austrochloris	
+59	Inflorescence with more than 40 branches	Eustachys	
+59	Inflorescence with less than 20 branches	60	
+60	Awn of lowest lemma less than 2 mm long	×Cynochloris	
+60	Awn of lowest lemma more than 3 mm long	61	
+61	Lemmas very broad, wing-like	Oxychloris	Oxychloris scariosa
+61	Lemmas not very broad, not wing-like	Chloris	
+62	Spikelets unilateral (borne on one side of the inflorescence axis)	63	
+62	Spikelets bilateral or multilateral (borne on opposite sides or all round the inflorescence axis)	70	
+63	Spikelet with many fertile florets	64	
+63	Spikelet with one fertile floret	66	
+64	Lower glume 5-nerved; lemma 7-nerved	Tribolium	
+64	Lower glume 1-nerved; lemma 1-3-nerved	65	
+65	Lemma mucronate to shortly awned; spikelet rachilla and callus not hairy	Tripogon	Tripogon loliiformis
+65	Lemma awnless; spikelet rachilla and callus hairy	Eragrostiella	
+66	One glume only developed	67	
+66	Both glumes well developed	68	
+67	Spikelet with one floret; lemma 3-nerved	Nardus	Nardus stricta
+67	Spikelet with many florets; lemma 3-nerved	Lolium	
+68	Spikelets falling entire; spikelets 6-18 mm long	Spartina	
+68	Spikelets fragmenting above glumes; spikelets less than 5.5 mm long	69	
+69	Spikelets shortly pedicellate	Mibora	
+69	Spikelets sessile	Microchloa	Microchloa indica
+70	Spikelets disarticulating above glumes; rachilla extending beyond upper floret	71	
+70	Spikelets falling with glumes; rachilla terminated by a floret	73	
+71	Spikelets sessile, partially embedded in the rachis	Gaudinia	
+71	Spikelets pedicelled, not embedded in the rachis	72	
+72	Lemmas awned; glumes not keeled	Vulpia	
+72	Lemmas awnless; glumes keeled	Catapodium	
+73	Inflorescence a true spike; spikelets sessile, sunken in hollows along the axis	Pholiurus	
+73	Inflorescence a spike-like raceme or spike-like panicle; spikelets at least shortly pedicellate and not sunken in hollows	74	
+74	Spikelets burr-like with hooked spines	Tragus	Tragus australianus
+74	Spikelets not burr-like	Zoysia	
+75	Glumes usually shorter than lowest floret and with the upper florets distinctly exserted; lemmas awnless or with a straight or curved awn from an entire or bifid apex, or several-awned or lobed	76	
+75	Glumes (or the longer one) at least as long as or longer than the lowest floret, often as long as the spikelet and enclosing the florets; lemmas awnless or more often awned from the back or from the sinus of a 2-lobed tip, the awn usually geniculate, rarely the awn straight or curved from the tip	106	
+76	Lemmas 1-3-nerved	77	
+76	Lemmas 5-many nerved	88	
+77	Lemmas 3-awned	Triraphis	Triraphis mollis
+77	Lemmas 1-awned or without awns	78	
+78	Lemmas notched, toothed or lobed	79	
+78	Lemmas entire	83	
+79	Spikelets borne in leaf-sheath axils	Psammagrostis	Psammagrostis wiseana
+79	Spikelets not borne in leaf-sheath axils	80	
+80	Lemma base often indurate, sometimes 5-nerved	Disakisperma	
+80	Lemma base soft and 3-nerved	81	
+81	Ligule apex acute to attenuate	Diplachne	
+81	Ligule apex usually trunate to obtuse	82	
+82	Panicle branches arranged in racemes along rachis; ligule apex erose or entire but never ciliate	Dinebra	
+82	Panicle branches digitate to sub-digitate inserted alongthe rachis usually with two or more branches per node; ligule apex ciliate	Leptochloa	
+83	Lemmas awned	84	
+83	Lemmas not awned	85	
+84	Spikelets in globose clusters; palea winged	Elytrophorus	
+84	Spikelets in dense to loose panicles; palea not winged	Ectrosia	
+85	Lemmas with winged keels	Heterachne	
+85	Lemmas without winged keels	86	
+86	Ligule membranous	Sphenopus	Sphenopus divaricatus
+86	Ligule a fringe of hairs	87	
+87	Lemmas 1-nerved	Thellungia	Thellungia advena
+87	Lemmas 3-nerved	Eragrostis	
+88	Ovary hairy at apex	89	
+88	Ovary glabrous at apex	91	
+89	Leaf sheath margins joined	Bromus	
+89	Leaf sheath margins free	90	
+90	Leaf blades 7-24 mm wide; lemmas bilobed	Dryopoa	
+90	Leaf blades 2-3 mm wide; lemmas 3-lobed	Notochloe	
+91	Spikelets dimorphous, with bisexual spikelets surrounded by sterile ones	92	
+91	Spikelets not dimorphous	93	
+92	Spikelets disarticulating above the glumes; spikelet-bearing axes persistent	Cynosurus	
+92	Spikelets disarticulating with the glumes; spikelet bearing axes disarticulating	Lamarckia	
+93	Inflorescence a contracted panicle or a panicle of racemes	94	
+93	Inflorescence an open panicle	98	
+94	Glumes more or less equal	95	
+94	Glumes very unequal	97	
+95	Glumes not keeled	Melica	
+95	Glumes keeled	96	
+96	Leaf blades up to 3 mm long and basal, if present	Spartochloa	Spartochloa scirpoidea
+96	Leaf blades well developed and not mainly basal	Catapodium	
+97	Glumes very dissimilar; lemmas awned	Vulpia	
+97	Glumes similar; lemmas awnless	Sclerochloa	Sclerochloa dura
+98	Spikelets almost as wide as long	Briza	
+98	Spikelets up to half as wide as long	99	
+99	Lemmas ± rounded or flattened on back, at least below	100	
+99	Lemmas keeled throughout	101	
+100	Lemmas 7-9-nerved; leaf sheath margins joined	Glyceria	
+100	Lemmas 5-nerved; leaf sheath margins free	Puccinellia	
+101	Leaves not basally aggregated; lemmas firmer than glumes, awned	102	
+101	Leaves mostly basal; lemmas similar in texture to glumes, awnless	103	
+102	Lemmas keeled; palea thinner than lemma	Dactylis	
+102	Lemmas not keeled; palea with similar texture to lemma	Festuca	
+103	Lemma awned	Hookerochloa	
+103	Lemma unawned	104	
+104	Sheath of upper culm leaf with margins joined only at the nodal band; blades 4–15 mm wide, flat	Sylvipoa	Sylvipoa queenslandica
+104	Sheath of upper culm leaf with margins fused ?1 mm or more above the nodal band; blades mostly <5 mm wide, flat to inrolled	105	
+105	Uppermost culm sheath margins fused 1–3% of the length	Saxipoa	
+105	Uppermost culm sheath margins fused 25–35% of the length	Poa	
+106	Ligule membranous	107	
+106	Ligule a fringe of hairs, ciliate membrane or ciliate at margins	116	
+107	Lemmas 3-nerved	Avellinia	
+107	Lemmas 5-9-nerved	108	
+108	Lower floret male	Arrhenatherum	
+108	Lower floret bisexual	109	
+109	Glumes more than 14 mm long	Avena	
+109	Glumes less than 10 mm long	110	
+110	Annuals	111	
+110	Perennials	113	
+111	Panicle spicate	Rostraria	
+111	Panicle open	112	
+112	Awn witha ring of hairs at junction of column and limb	Corynephorus	
+112	Awn without a ring of hairs	Aira	
+113	Lemmas 4-pointed, or 2-lobed with each lobe 2-pointed	114	
+113	Lemmas entire, 2-pointed or 2-lobed but not as above	115	
+114	Glumes long relative to the adjacent lemmas; leaves mostly basal	Deschampsia	
+114	Glumes shorter than the adjacent lemmas; leaves not basally aggregated	Amphibromus	
+115	Lemma awn 4-9 mm long, geniculate	Trisetum	
+115	Lemma awnless or with a short awn to 0.7 mm long	Koeleria	
+116	Leaf sheaths of the lower leaves swollen and woolly or leaf blades hard, woody, needle-like	117	
+116	Leaf sheaths of the  ower leaves not swollen and woolly and leaf blades not hard, woody, needle-like	118	
+117	Spikelets with 3-8 fertile florets; leaf sheaths of the lower leaves swollen and woolly	Monachather	
+117	Spikelets with 1 fertile floret; leaf blades hard, woody, needle-like	Symplectrodia	
+118	Lemmas awnless, sometimes mucronate	119	
+118	Lemmas distinctly awned	123	
+119	Lemmas entire, if mucronate, mucros apical	Tribolium	
+119	Lemmas bilobed; if mucronate, mucro is from an apical sinus	120	
+120	Grain not longitudinally grooved	Schismus	
+120	Grain longitudinally grooved	121	
+121	Lemma only hairy on the lower margins	Danthonia	
+121	Lemma ± evenly pubescent or in tufts	122	
+122	Lemma ± evenly pubescent in lower half only	Plinthanthesis	
+122	Lemma with hairs over whole surface or in tufts	Rytidosperma	
+123	Hilum ± 1/2 length of grain	Chionochloa	
+123	Hilum up to 1/3 length of grain	124	
+124	Lemma ± evenly pubescent in lower half only	Plinthanthesis	
+124	Lemma with hairs over whole surface or in tufts	125	
+125	Hairs on the lemma in two untidy rows, most of lemma surface glabrous and shiny; leaves often disarticulating from sheath	Rytidosperma	
+125	Hairs on the lemma forming a continuous indumentum, sometimes with tufts on the upper margin; leaves not disarticulating	126	
+126	Lemmas either distinctly hairy or awned	127	
+126	Lemmas neither distinctly hairy nor awned	131	
+127	Upper glume twice length of lower glume	Pheidochloa	
+127	Glumes ± equal in length	128	
+128	Glumes (3-)5-11-nerved	Eriachne	
+128	Glumes 1-3-nerved	129	
+129	Bisexual florets 1 per spikelet	Holcus	
+129	Bisexual florets 2 per spikelet	130	
+130	Lemma awn dorsal	Aira	
+130	Lemma awn terminal	Pentameris	
+131	Both lemmas membranous, not hardened	Periballia	
+131	Lower lemma hardened	Coelachne	
+132	Glumes absent or rudimentary	133	
+132	Glumes well developed	135	
+133	Spikelets 1-flowered	Leersia	
+133	Spikelets 3-flowered, the lower two reduced to sterile lemmas	134	
+134	Lemma and palea leathery to indurated	Oryza	
+134	Lemma and palea membranous	Potamophila	
+135	Spikelets with 3 florets, the lower two reduced to sterile or male and sometime minute lemmas	136	
+135	Spikelets with 1 floret	140	
+136	Both sterile lemma with a hinge-like appendage	Ehrharta	
+136	Neither sterile lemmas with an appendage	137	
+137	Basal florets male	Hierochloe	
+137	Basal florets sterile	138	
+138	Glumes minute	Microlaena	
+138	Glumes relatively large	139	
+139	Sterile lemmas shorter than fertile floret; glumes winged	Phalaris	
+139	Sterile lemmas longer than fertile floret; glumes not winged	Anthoxanthum	
+140	Glumes much longer than lemma and with long awns	Perotis	
+140	glumes usually shorter than lemma and if awned only slightly so	141	
+141	Lemma terete or dorsally compressed	142	
+141	Lemma laterally compressed	149	
+142	Lemma with a 3-branched awn (very rarely 1-branched)	143	
+142	Lemma with a single undivided awn	144	
+143	Awns glabrous	Aristida	
+143	Awns plumose	Stipagrostis	
+144	Awn ± geniculate; spikelet base (callus) pointed, often long and pungent	145	
+144	Awn ± straight; spikelet base (callus) short and blunt	148	
+145	Lemma margins usually enclosing the palea; callus pungent; awn well developed and with a strongly-twisted column at maturity	146	
+145	Lemma margins not completely enclosing the palea; callus blunt; awns not as robust as above and the column only weakly developed at maturity	147	
+146	Hummock-forming perennial; awn almost circular in transverse section	Monodia	
+146	Annuals or perennials, not usually hummock-forming; awn flattened in transverse section	Austrostipa	
+147	Lemma apex and lower part of awn with hairs obscuring the base of the awn	Jarava	
+147	Lemma apex glabrous or slightly hairy, the hairs not obscuring the base of the awn	Amelichloa	
+148	Lemma smooth, with a deciduous awn	Piptatherum	
+148	Lemma strongly scabrous, with a more or less persistent awn	Nassella	
+149	Lemmas coriaceous to indurated	150	
+149	Lemmas membranous to cartilaginous	155	
+150	Lemma awns non-geniculate	151	
+150	Lemma awns geniculate	152	
+151	Lemma with a 3-branched awn (very rarely 1-branched); spikelets with one floret	Aristida	
+151	Lemma with a single awn; spikelets with 2 florets (very rarely 1)	Eriachne	
+152	Lemma 1 awned and with an apical crown	153	
+152	Lemma 3-5 awned and without an apical crown	154	
+153	Awn at least 15 mm long; palea shorter than lemma, the lemma margins enclosing the palea	Nassella	
+153	Awn less than 10 mm long; palea slightly longer than lemma, the lemma margins exposing the palea	Piptochaetium	
+154	Lemma with 5 awns	Pentapogon	
+154	Lemma with 3 awns	Anisopogon	
+155	Glumes similar in texture to and shorter than lemmas; ligule hairy to some degree	156	
+155	Glumes firmer in texture to and as long as or longer than lemmas; ligule an unfringed membrane	157	
+156	Panicle spike-like, subtended by an inflated sheath	Crypsis	
+156	Panicle open to contracted, without an inflated sheath	Sporobolus	
+157	Spikelets falling entire	158	
+157	Spikelets disarticulating above the glumes	160	
+158	Glumes blunt, ±united	Alopecurus	
+158	Glumes acute or awned, distinctly separate	159	
+159	Lemma 3-nerved	Garnotia	
+159	Lemma 5-nerved	Polypogon	
+160	Glumes swollen at base	Gastridium	
+160	Glumes not swollen at base	161	
+161	Glumes silky-woolly, much longer than lemma	Lagurus	
+161	Glumes not silky-woolly, equal to or slightly longer than lemmas	162	
+162	Spikelets at least 9 mm long	Ammophila	
+162	Spikelets up to 7 mm long	163	
+163	Glumes terminating abruptly, shortly awned	164	
+163	Glumes obtuse or acute, not or scarcely awned	165	
+164	Lemmas awned; inflorescence a contracted panicle	Polypogon	
+164	Lemmas not awned; inflorescence a tight spike-like panicle	Phleum	
+165	Glumes with regularly arranged hairs on keel	Echinopogon	
+165	Glumes smooth to rough on keel, without hairs	166	
+166	Lemma awns more than twice as long as lemma	167	
+166	Lemma awns, if present, less than twice as long as lemma	168	
+167	Annuals	Apera	
+167	Perennials	Dichelachne	
+168	Lemmas decidedly firmer than the glumes	Deyeuxia	
+168	Lemmas less firm than the glumes	169	
+169	Glumes at least 5.5 mm long	Calamagrostis	
+169	Glumes less than 5 mm long	170	
+170	Inflorescence axis persistent; rachilla extension less than 20% of lemma length	Agrostis	
+170	Inflorescence often detaching as a diaspore; rachilla extension 30-100% of lemma length	Lachnagrostis	
+171	Spikelets breaking up above the glumes	172	
+171	Spikelets falling entire, breaking below the glumes	173	
+172	Glumes very unequal; spikelets compressed laterally	Arundinella	
+172	Glumes ±equal; spikelets compressed dorsiventrally	Isachne	
+173	Spikelets often dissimilar and usually paired, with one sessile and the other pedicelled (occasionally both pedicelled, but unequally, or in 3's with 2 sessile and 1 pedicelled) or rarely with the pedicelled spikelet reduced to the pedicel; upper lemma of sessile spikelet usually geniculately awned; glumes firm in texture	174	
+173	Spikelets all alike and usually solitary, rarely paired; upper lemma not geniculately awned; glumes usually membranous	210	
+174	 Spikelets similar in shape and size, development of awns and sex; if different pedicelled spikelets awned and sessile unawned; pedicels and raceme joints slender	175	
+174	Spiklets different in shape and size, development of awns and sex; if similar, pedicels and joints thickened	183	
+175	Paired spikelets unequally pedicelled	176	
+175	Paired spikelets with at least one sessile	178	
+176	Spikelets awnless	Imperata	
+176	Spikelets awned from apex of the upper lemma	177	
+177	Inflorescence a panicle, the racemes at least 10 cm long	Miscanthus	
+177	Inflorescence of subdigitate racemes up to 7 cm long	Pseudopogonatherum	
+178	Inflorescence a much branched panicle	Saccharum	
+178	Inflorescence a solitary raceme, or a digitate or subdigitate cluster of racemes	179	
+179	Spikelets in 3s, with 2 sessile and 1 pedicelled	Polytrias	
+179	Spikelets in pairs (3s at apex), with 1 sessile and 1 pedicelled	180	
+180	Sessile spikelets male; pedicelled spikelets female	Germainia	
+180	Sessile and pedicelled spikelets of the same sex	181	
+181	Lower glume convex on back, not 2-keeled	Pogonatherum	
+181	Lower glume flat or grooved on back,2-keeled	182	
+182	Tufted grass with silky hairs on racemes	Eulalia	
+182	Creeping grass with no hairs on racemes	Leptatherum	
+183	Rachis joints and pedicels thick, ± contiguous or fused together, forming cavities into which the spikelets are sunk	184	
+183	Rachis joints and pedicels slender, or if thickened upwards, not forming cavities	192	
+184	Sessile spikelet awned	185	
+184	Sessile spikelet awnless	187	
+185	Pedicelled spikelets reduced to naked pedicels	Thelepogon	
+185	Pedicelled spikelets developed	186	
+186	Pedicels ± flat	Sehima	
+186	Pedicels swollen	Ischaemum	
+187	Lower glume of sessile spikelet 2-toothed	Elionurus	
+187	Lower glume of sessile spikelet not 2-toothed	188	
+188	Spikelets in opposite rows on axis 	Ophiuros	
+188	Spikelets on one side of axis	189	
+189	Spikelets of each pair similar, both bisexual; rachis not fragmenting	Hemarthria	
+189	Spikelets of each pair dissimilar, pedicelled male or sterile or spikelets borne singly; rachis fragmenting readily	190	
+190	Lower floret of sessile spikelet male	Rottboellia	
+190	Lower floret of sessile spikelet sterile	191	
+191	Lower glume of sessile spikelet with a row of marginal spines	Eremochloa	
+191	Lower glume of sessile spikelet without marginal spines	Mnesithea	
+192	Inflorescence with spathes, spatheoles or spathe-like sheaths enclosing or subtending inflorescence	193	
+192	Inflorescences  espatheate	201	
+193	Raceme 1 jointed, reduced to 3 spikelets	194	
+193	Racemes with several joints, with more than 3 spikelets	195	
+194	Racemes in tight clusters; lemmas mucronate or shortly awned	Apluda	
+194	Racemes loose and pedunculate; lemmas with long awns	Clausospicula	
+195	Fertile spikelets ±compressed, the lower glume distinctly 2-keeled for most of its length	196	
+195	Fertile spikelets ±terete, the lower glume 2-keeled only at the tip if at all	199	
+196	Lower part of awn as wide as the lemma from which it arises	Spathia	
+196	Lower part of awn narrower than the lemma from which it arises	197	
+197	Raceme bases terete	Andropogon	
+197	Raceme bases flattened	198	
+198	Racemes paired; leaves aromatic	Cymbopogon	
+198	Racemes solitary; leaves not aromatic	Schizachyrium	
+199	Fertile spikelets not within an involucre of male or barren spikelets	Hyparrhenia	
+199	Fertile spikelets within an involucre of male or barren spikelets	200	
+200	Fertile spikelets falling with involucre or whole raceme falling as one unit; callus blunt	Iseilema	
+200	Fertile spikelets falling separately from involucres; callus pungent	Themeda	
+201	Rachis joints and pedicels with a translucent mid-line between thickened margins	202	
+201	Rachis joints and pedicels without a translucent mid-line	203	
+202	Inflorescence more than once-branched	Capillipedium	
+202	Inflorescence an arrangement of racemes on a central axis	Bothriochloa	
+203	Inflorescence of solitary, paired or subdigitate racemes	204	
+203	Inflorescence a panicle	206	
+204	Creeping plant with ovate leaves	Arthraxon	
+204	Erect plant with linear leaves	205	
+205	Fertile spikelet ±cylindrical in cross-section; callus pungent	Heteropogon	
+205	Fertile spikelet ±compressed; callus not pungent	Dichanthium	
+206	Spikelets laterally compressed	Chrysopogon	
+206	Spikelets dorsally compressed or ±cylindrical	207	
+207	Pedicelled spikelet reduced to pedicel; panicle axes not terminating in spikelets	Sorghastrum	
+207	Pedicelled spikelet developed, rarely reduced or suppressed but then panicle axes terminating in spikelets	208	
+208	Pedicelled spikelets reduced to narrow, linear glumes; culm nodes glabrous or pubescent, not bearded	Vacoparis	
+208	Pedicelled spikelets usually well developed, rarely greatly reduced or absent, but then culm nodes bearded with stiff hairs	209	
+209	Lemma awns of sessile spikelet absent or 1-1.5 cm long if present	Sorghum	
+209	Lemma awns of sessile spikelet 2-9 cm long	Sarga	
+210	Inflorescence a spike or spike-like raceme or digitate pair of racemes; glumes as long as or longer than the florets	211	
+210	Inflorescence otherwise or if a spike or raceme lower glume shorter than the florets	216	
+211	Inflorescence of paired racemes (with rarely a third raceme)	Dimeria	
+211	Inflorescence a single spike or raceme	212	
+212	Inflorescence a spike	Thaumastochloa	
+212	Inflorescence single raceme	213	
+213	Spikelets with distinct bristles from confluent tubercles	Thyridolepis	
+213	Spikelets with indistinct bristles from single tubercles, sometimes densely hairy	214	
+214	Plant shortly rhizomatous	Neurachne	
+214	Plant stoloniferous	215	
+215	Annuals	Thedachloa	
+215	Perennials	Paraneurachne	
+216	Spikelets with awns arising from between apical lobes of upper glume and lower lemma	Melinis	
+216	Spikelets awnless or with awn arising terminally from lemmas or glumes	217	
+217	Spikelets in bunches subtended by bracts	Xerochloa	
+217	Spikelets not in bunches subtended by bracts	218	
+218	Terminal spikelets opening normally; axillary spikelets cleistogamous	219	
+218	All spikelets opening normally	221	
+219	Cleistogamous  spikelets enclosed in semi-woody to woody leaf sheath	Calyptochloa	
+219	Cleistogamous spikelets not enclosed as above	220	
+220	Lower lemma of cleistogamous spikelets woody, >0.05 mm thick	Cleistochloa	
+220	Lower lemma of cleistogamous spikelets cartilaginous,< 0.05 mm thick	Dimorphochloa	
+221	Fertile lemma densely silky hairy	Entolasia	
+221	Fertile lemma not or indistinctly hairy	222	
+222	Inflorescence with broad, flattened axis with spikelets on one or both sides	223	
+222	Inflorescence otherwise	224	
+223	Spikelets closely spaced on one side of inflorescence axis	Stenotaphrum	
+223	Spikelets in distinct clusters on both sides of inflorescence axis	Uranthoecium	
+224	Inflorescence branches ending in bristle-like appendages or spikelets subtended by bristles	225	
+224	Inflorescence branches ending in spikelets which are not subtended by bristles	232	
+225	Spikelets falling at maturity without any bristles or spines attached	226	
+225	Spikelets falling at maturity with bristles or spines attached	229	
+226	Spikelets subtended by solitary bristles or an involucre of bristles	Setaria	
+226	Spikelets in racemes terminating in bristle-like appendages	227	
+227	Lower palea with wings clasping margin of upper floret	Holcolemma	
+227	Lower palea not winged, not clasping upper floret	228	
+228	Upper lemma covered with wrinkles, as long as or longer than upper glume	Paspalidium	
+228	Upper lemma smooth, shorter than upper glume	Pseudoraphis	
+229	Spikelets completely surrounded by a ring of spines or bristles	Cenchrus	
+229	Spikelets not surrounded by spines or bristles	230	
+230	Lower glume up to 1/3 spikelet length	Chamaeraphis	
+230	Lower glume more than 1/3 spikeletlength	231	
+231	Primary inflorescence branch producing simple unbranched bristles, each accompanied by a spikelet; rachilla between the glumes not distinct; pedicels less than 0.5 mm long	Paractaenum	
+231	Primary inflorescence branch producing 2–3 spikelets with each spikelet subtended by branched bristles; rachilla between the glumes distinct; pedicels 1.2–3.4 mm long	Plagiosetum	
+232	Upper glume and lower lemma with hooked hairs	Ancistrachne	
+232	Upper glume and lower lemma without hooked hairs	233	
+233	Spikelet with a bead-like swelling at base	Eriochloa	
+233	Spikelet without a bead-like swelling at base	234	
+234	Upper lemma with a shallow excavation and tuft of wool at the tip	Lasiacis	
+234	Upper lemma rarely excavated and then not woolly	235	
+235	Fertile lemma less firm or similar in texture to glumes	236	
+235	Fertile lemma decidedly firmer than the glumes	243	
+236	Lower glume 2/3 spikelet length	237	
+236	Lower glume to 1/2 spikelet length or absent	238	
+237	Inflorescence branches stiff and spreading; palea notched with a central depression	Walwhalleya	
+237	Inflorescence consisting of only a few spikelets, with branches not stiff and spreading; palea apex not notched	Alexfloydia	
+238	Upper glume mucronate to shortly awned	Alloteropsis	
+238	Upper glume obtuse to acuminate, not awned or mucronate	239	
+239	Palea of upper floret not completely clasped by lemma	240	
+239	Palea of upper floret completely clasped by lemma	241	
+240	Spikelet laterally compressed	Dallwatsonia	
+240	Spikelet dorsally compressed	Hymenachne	
+241	Lower glume minute or absent; spikelet dorsally compressed	Digitaria	
+241	Lower glume c. 1/3 spikelet length; spikelet terete or ±laterally compressed	242	
+242	Lower glume minute or absent; spikelet dorsally compressed	Digitaria	
+242	Spikelet terete or ± laterally compressed	Steinchisma	
+243	Rachilla prominent between glumes and between florets	244	
+243	Rachilla not prominent between glumes and between florets; fertile florets without appendage at base	247	
+244	Rachilla swollen beneath fertile florets and usually with lateral appendages	245	
+244	Rachilla not swollen beneath fertile florets and without lateral appendages	246	
+245	Appendages fused to base of fertile floret; spikelets laterally compressed, shortly pedicelled	Ichnanthus	
+245	Appendages, when present, free from base of fertile floret or absent; spikelets dorsally compressed, long pedicelled	Yakirra	
+246	Articulations present at the bases of spikelets, pedicels and inflorescence branches; upper glume 11-nerved	Arthragrostis	
+246	Articulations absent on pedicels and inflorescence branches; upper glume 5-7-nerved	Whiteochloa	
+247	Inflorescence an open or contracted panicle branched more than once; spikelets not grouped along one side of ultimate branches	248	
+247	Inflorescence once branched, the branches digitate or borne on elongated axis; spikelets grouped along one side of branches	255	
+248	Glumes slightly unequal in length	249	
+248	Glumes very unequal in length	251	
+249	Spikelets 4.5-6 mm long, borne at the ends of long branches	Homopholis	
+249	Spikelets 0.2-2 mm long, on short branches	250	
+250	Upper glume 3-nerved; spikelets falling with glumes and compressed laterally	Cyrtococcum	
+250	Upper glume 5-9-nerved; spikelets disarticulating above glumes and compressed dorsally	Isachne	
+251	Inflorescence a spike-like panicle	Sacciolepis	
+251	Inflorescence an open panicle	252	
+252	Upper glumes somewhat shorter than spikelet	Ottochloa	
+252	Upper glume as long as spikelet	253	
+253	Fertile floret smooth and shiny	Panicum	
+253	Fertile floret transversely rugose	254	
+254	Culm base bulbous	Zuloagaea	
+254	Culm base not bulbous	Megathyrsus	
+255	Lower glume absent or represented by a minute scale	256	
+255	Lower glume present	257	
+256	Lower lemma adjacent to the inflorescence axis	Axonopus	
+256	Lower lemma positioned away from the inflorescence axis	Paspalum	
+257	Spikelets awnless or mucronate	258	
+257	Spikelets distinctly awned	259	
+258	Upper lemma rugose and verrucose	Moorochloa	
+258	Upper lemma smooth	Urochloa	
+259	Glumes more or less equal and similar; decumbent grass of shaded habitats	Oplismenus	
+259	Glumes very unequal and dissimilar; erect grass of wet habitats	Echinochloa	

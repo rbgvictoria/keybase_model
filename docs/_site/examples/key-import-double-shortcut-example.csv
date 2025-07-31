@@ -1,0 +1,9 @@
+from,statement,to
+1,"Flowers unisexual, with a single, 5 (6)-lobed, perianth; fruit a woody follicle",Brachychiton:Brachychiton populneus:Brachychiton populneus subsp. populneus
+1,"Flowers bisexual, with a distinct 5-part calyx and usually 5 petals, petals sometimes minute or absent; fruit a capsule",2
+2,Petals conspicuous; staminodes present; capsule bristly or burr-like,3
+2,Petals absent or minute and gland-like (but calyx often corolla-like); staminodes absent; capsule not bristly,4
+3,Staminodes 3-lobed,Commersonia
+3,Staminodes entire,Rulingia
+4,"Stipules absent; calyx white, pink or brownish, not papery",Lasiopetalum
+4,"Stipules present, leafy; calyx purplish, papery",Thomasia:Thomasia petalocalyx

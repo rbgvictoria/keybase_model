@@ -1,0 +1,13 @@
+from,statement,to
+1,Fusce dignissim eros a massa tempor finibus,2
+1,"Maecenas at velit finibus, porttitor est quis, ullamcorper lacus",3
+2,Sed vulputate nisl id blandit convallis,Item 1
+2,Morbi fermentum massa eget maximus bibendum,Item 2
+3,"Nulla porta ipsum vel purus lacinia, ac ultrices quam aliquam",Item 3
+3,"Phasellus pellentesque enim eu ante egestas, et lacinia dui fringilla",4
+4,"Vivamus ut velit eleifend, scelerisque risus vel, semper ex",Item 4
+4,Aliquam feugiat tellus at felis molestie aliquet,6
+6,Nam mollis quam id posuere vulputate,3
+6,Duis consequat nisl non leo accumsan viverra eget quis sem,5
+5,"Sed sollicitudin odio sed odio sollicitudin, nec dictum lectus molestie",Item 5
+5,Morbi non elit eu mi rhoncus ullamcorper ac non eros,Item 6

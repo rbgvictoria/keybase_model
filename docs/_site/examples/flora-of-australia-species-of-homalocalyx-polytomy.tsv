@@ -1,0 +1,20 @@
+from	statement	to
+1	Sepals deciduous	2
+1	Sepals persistent	3
+2	Hypanthium glabrous	Homalocalyx ericaeus
+2	Hypanthium pubescent	Homalocalyx inerrabundus
+3	Hypanthium glabrous	4
+3	Hypanthium pubescent	7
+4	Hypanthium with the free region subtubular and much narrower than the subturbinate ovarian region	Homalocalyx coarctatus
+4	Hypanthium obconoid, compressed obconoid, or compressed goblet-shaped	5
+5	Sepals 4-4.5 mm long, ovary apex produced into an abaxial-adaxial ridge	Homalocalyx staminosus
+5	Sepals 2-3.8 mm long, ovary apex flat or variously developed (never into a ridge)	6
+6	Ovary apex distinctly swollen or domed on the adaxial side	Homalocalyx thryptomenoides
+6	Ovary apex flat	Homalocalyx polyandrus
+6	Ovary apex convex	Homalocalyx grandiflorus
+7	Ovary apex flat to umbonate	8
+7	Ovary apex depressed transversely or concave	9
+8	Sepals 2-2.8 mm long, total length of the cheiridium 4.3-8 times the length of the lobes	Homalocalyx pulcherrimus
+8	Sepals 3.5-43 mm long, total length of the cheiridium 1.5-2 times the length of the lobes	Homalocalyx echinulatus
+9	Ovary apex depressed transversely, petals pale yellow	Homalocalyx aureus
+9	Ovary apex concave, petals purplish	Homalocalyx chapmanii

@@ -1,0 +1,45 @@
+from	statement	to
+1	Bracts of inflorescence opposite, at least in lower part	Gonocarpus scordioides
+1	Bracts of inflorescence alternate throughout	2
+2	Leaves in whorls of 3 or opposite, at least in lower parts	3
+2	Leaves all alternate	19
+3	Fruit ovoid, 8-ribbed with 2 or 3 calluses between ribs	4
+3	Fruit urceolate, cylindrical or ovoid, variously ornamented but if ovoid then lacking calluses between ribs	5
+4	Leaves lanceolate to linear-lanceolate	Gonocarpus chinensis subsp. chinensis
+4	Leaves ovate to cordate	Gonocarpus implexus
+5	Fruit urceolate	6
+5	Fruit cylindrical or ovoid	9
+6	Stamens 4	Gonocarpus nodulosus
+6	Stamens 8	7
+7	Leaves less than 8 mm long, sessile	Gonocarpus confertifolius
+7	Leaves more than 10 mm long, sessile or shortly petiolate	8
+8	Fruit finely scabrous with 2 transverse rows of tubercles at base	Gonocarpus pycnostachyus
+8	Fruit glabrous, shiny, with 8 longitudinal rows of 4 tubercles at base	Gonocarpus ephemerus
+9	Fruit cylindrical	10
+9	Fruit ovoid, smooth between ribs	11
+10	Fruit 8-ribbed but smooth between ribs, with 3–5 glistening papillae on ribs	Gonocarpus eremophilus
+10	Fruit 8-ribbed with 3 or 4 tubercles between ribs	Gonocarpus leptothecus
+11	Leaves ovate to orbicular, about as long as wide	12
+11	Leaves linear to lanceolate or oblanceolate, at least twice as long as wide	15
+12	Sepals cordate	Gonocarpus intricatus
+12	Sepals deltoid to ovate	13
+13	Leaves and stems glabrous	Gonocarpus diffusus|Gonocarpus keigheryi
+13	Leaves and stems pilose	14
+14	Densely pilose plant; hairs 2–4-celled	Gonocarpus benthamii|Gonocarpus keigheryi
+14	Very sparsely pilose plant; hairs unicellular	Gonocarpus diffusus|Gonocarpus keigheryi
+15	Leaves oblanceolate, usually less than 1 cm long	16
+15	Leaves linear to lanceolate, usually more than 1 cm long (0.7–1 cm long in G. pusillus)	17
+16	Hairs 5–7-celled, dense	Gonocarpus rudis
+16	Hairs unicellular, sparse	Gonocarpus trichostachyus
+17	Bracts, bracteoles and sepals with thickened white margins; plant scabrous	Gonocarpus chinensis subsp. chinensis
+17	Bracts, bracteoles and sepals lacking thickened white margins; plant ±glabrous	18
+18	Herb 5–10 cm tall; leaves 0.7–1 cm long; inflorescence sparsely branched	Gonocarpus pusillus
+18	Herb 40–65 cm tall; leaves 2–5 cm long; inflorescence profusely branched	Gonocarpus paniculatus|Gonocarpus orchardii
+19	Fruit cylindrical; leaves 0.15–0.2 cm long	Gonocarpus simplex
+19	Fruit ovoid to turbinate; leaves usually 1–3.5 cm long	20
+20	Sepals cordate, concave	Gonocarpus cordiger
+20	Sepals broadly ovate to deltoid, +flat	21
+21	Plant glabrous, or hairs confined to ovary	Gonocarpus pithyoides
+21	Plant hispid to strigose in all parts	22
+22	Sepals ovate; inflorescence branches erect	Gonocarpus hispidus
+22	Sepals lanceolate; inflorescence branches nodding	Gonocarpus ericifolius

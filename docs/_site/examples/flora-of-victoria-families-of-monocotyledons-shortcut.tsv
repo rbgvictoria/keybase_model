@@ -1,0 +1,101 @@
+from	statement	to	shortcut
+1	Aquatic plants, floating free on or near the water surface, not rooting in substrate	2	
+1	Land or aquatic plants, if aquatic and with floating leaves then rooting in substrate	3	
+2	Plant consisting of small (less than 1 cm long) flat or flattened ovoid leaf or thallus, with or without simple roots from undersurface; plants readily reproducing vegetatively by lateral buds; flowers produced in small pits on upper surface, microscopic and rarely observed	Araceae	
+2	Plants conspicuous, with leaves c. 5 cm long or more, the petioles much inflated and spongy, roots abundant, feathery; flowers conspicuous (c. 5 cm diam.), mauve, produced in spikes	Pontederiaceae	
+3	Marine aquatics, or aquatics of non-marine habitats with leaves permanently submerged, but inflorescence sometimes emergent from water	4	
+3	Terrestrial or semi-aquatic plants, or aquatics with leaves floating or emergent from water	12	
+4	Plants of marine or brackish habitats	5	
+4	Plants of fresh water	10	
+5	Leaves ligulate	6	
+5	Leaves without ligules	8	
+6	Plants of brackish habitats (including estuaries, rarely extending to the intertidal zone); leaves 1 mm wide or less; flowers unisexual, solitary or clustered in axils	Potamogetonaceae	
+6	Marine plants of deep waters and rock-pools; leaves at least 4 mm wide	7	
+7	Leaf blade and sheath shed leaving a circular scar; flowers unisexual, enclosed within leaf-sheaths	Cymodoceaceae	Amphibolis
+7	Leaf blade shed but sheath persistent and fibrous; flowers bisexual, in several terminal spikes	Posidoniaceae	Posidonia
+8	Leaves elliptic to ovate, c. 1 cm wide or more; flowers with perianth (males with 3 segments, females with 6)	Hydrocharitaceae	
+8	Leaves narrow linear, to 1 mm wide; flowers without perianth	9	
+9	Flowers bisexual, borne at the end of a long, spirally coiled peduncle	Ruppiaceae	
+9	Flowers unisexual, in short spikes, remaining enclosed in sheathing leaf-bases	Zosteraceae	
+10	Flowers bisexual, in emergent spikes; perianth segments 4	Potamogetonaceae	
+10	Flowers unisexual, remaining submerged; perianth segments 0, 3 or 6	11	
+11	Leaves ovate to linear, mostly much more than 1 mm wide, but if ever less, then with finely toothed margins	Hydrocharitaceae	
+11	Leaves narrow-linear, less than 1 mm wide, with entire margins	Potamogetonaceae	
+12	Flowers lacking perianth, packed in thickish spike, subtended and partially enclosed by a tubular bract (spathe), margins overlapping or connate at base; apical part of spike male only or with a sterile appendix, lower part of spike female or bisexual; fleshy usually rhizomatous herb, usually near swamps or watercourses	Araceae	
+12	Flowers with a perianth or if perianth lacking, flowers not arranged in spatheate spikes	13	
+13	Flowers unisexual	14	
+13	Flowers bisexual	24	
+14	Flowers inconspicuous, often minute, subtended (and often enclosed by) paired or solitary, overlapping bracts or scales, in heads or spikelets; perianth absent or of 1–8 scales or bristles, usually concealed within bracts	15	
+14	Flowers conspicuous (but not always coloured), or if inconspicuous at least with distinct perianth parts	20	
+15	Male and female flowers small, mixed in spherical heads 2–8 mm diam., lacking conspicuous bracts; mostly marsh or aquatic plants	Eriocaulaceae	Eriocaulon
+15	Flowers in spikelets surrounded by glume-like bracts	16	
+16	Wiry plants with jointed stems; leaves reduced to sheathing bracts (bracts overlapping at base); male and female plants separate (except sometimes in Lepyrodia)	Restionaceae	
+16	Leaves well developped, or if ever reduced to sheathing bracts then these fused at the base and plants with both male and female flowers or flowers bisexual	17	
+17	Tiny, tufted annuals; male and female flowers mixed in terminal heads subtended and exceeded by 2–6 equal or subequal bracts	18	
+17	Habit various; if inflorescence ever a terminal head then flowers bisexual	19	
+18	Inflorescence green or greenish, with a pair of prominent, erect sheathing bracts enclosing the flowers and their small, membranous, subtending bracts	Restionaceae	
+18	Inflorescence red, flower cluster subtended by 4–6 more or less equal sheathing bracts, individual flowers (ovaries and stamens) not subtended by bracts	Hydatellaceae	Trithuria
+19	Flowers arranged in cylindric or distichous spikelets or spikes (rarely 1-flowered), rarely subtended by a pair of sterile bracts; individual flowers subtended by a solitary bract (glume); leaf-sheath usually with fused margins; stems cylindric, flattened or 3-sided, with solid internodes (sedges)	Cyperaceae	
+19	Flowers arranged in distichous (sometimes 1-flowered) spikelets, usually subtended by a pair of sterile bracts (glumes); individual flowers enclosed by a pair of bracts (lemma and palea), or if ever only one bract present, then fertile flowers only 1 per spikelet; leaf-sheath usually with free margins; stems usually cylindric, with hollow internodes (grasses)	Poaceae	
+20	Plants monoecious, male flowers borne above females in inflorescence; aquatic or semi-aquatic plants	21	
+20	Plants dioecious; mostly terrestrial	22	
+21	Perianth segments not petaloid; flowers sessile, in spikes or globular clusters; leaves linear, flattened or triangular in cross-section	Typhaceae	
+21	Perianth segments in 2 distinct whorls, the outermost petaloid; flowers pedicellate, whorled; at least the emergent leaves with a distinct ovate to sagittate blade	Alismataceae	
+22	Climbers, usually with retrorse spines along stems; leaves ovate, with prominent reticulate venation; eastern Victoria only	Smilacaceae	
+22	Non-climbers, or, if plants every climbing then venation linear, lacking prominent reticulate venation	23	
+23	Leaves well-developed; perianth segments more or less membranous or somewhat fleshy; fruit containing 1–few seeds	Asparagales-Liliales complex	
+23	Leaves reduced to sheathing bracts; perianth segments scarious; fruit containing many small seeds	Juncaceae	
+24	Carpels not fused or shortly united at base only	25	
+24	Carpels united for the greater part or carpel solitary	30	
+25	Tufted annuals or perennials, less than 10 cm high; land plants (but often growing near water)	26	
+25	Perennials, more than 10 cm high; aquatic or marsh plants	27	
+26	Inflorescence green or greenish, with a pair of prominent, erect sheathing bracts enclosing the flowers and their small, membranous, subtending bracts	Restionaceae	
+26	Inflorescence red, flower cluster subtended by 4–6 more or less equal sheathing bracts, individual flowers (ovaries and stamens) not subtended by bracts	Hydatellaceae	Trithuria
+27	Flowers borne in once-forked spikes; perianth of a single white segment; anthers 6–12, purple; carpels 3–6	Aponogetonaceae	Aponogeton
+27	Flowers borne in simple spikes or panicles; perianth of 3 or more segments (but inconspicuous in Juncaginaceae)	28	
+28	Perianth segments, stamens and carpels each 4	Potamogetonaceae	
+28	Perianth segments, stamens and carpels not each 4	29	
+29	Perianth segments in 2 distinct whorls, the outermost petaloid; at least the emergent leaves with a distinct ovate to sagittate blade	Alismataceae	
+29	Perianth segments all similar, not petaloid; leaves linear, terete or strap-shaped	Juncaginaceae	
+30	Ovary superior or perianth of petals and/or sepals absent	31	
+30	Ovary inferior, perianth well-developed	45	
+31	Flowers inconspicuous, often minute, within imbricate bracts or scales (glumes), in spikelets; perianth absent or of 18 scales or bristles, usually concealed within bracts (chiefly grasses and sedges)	32	
+31	Flowers conspicuous (but not always coloured), or if inconspicuous at least with distinct perianth parts rather than scales or bristles	35	
+32	Tiny, tufted plants; male and female flowers mixed in terminal heads subtended and exceeded by 2–6 equal or subequal bracts; individual flowers sometimes separated by a minute membranous bract; fruit a dehiscent, 1-seeded capsule	33	
+32	Plants various, if ever male and female flowers mixed in heads then bracts (glumes) separating individual flowers conspicuous; fruit indehiscent, 1-seeded	34	
+33	Inflorescence green or greenish, with a pair of prominent, erect sheathing bracts enclosing the flowers; individual flowers separated by a minute membranous bract	Restionaceae	
+33	Inflorescence reddish, with 2 or 3 pairs of equal sheathing bracts enclosing the flowers; individual flowers not subtended by bracts	Hydatellaceae	Trithuria
+34	Flowers arranged in cylindric or distichous spikelets or spikes (rarely 1-flowered), rarely subtended by a pair of sterile bracts; individual flowers subtended by a solitary bract (glume); leaf-sheath usually with fused margins; stems cylindric, flattened or 3-sided (sedges)	Cyperaceae	
+34	Flowers arranged in distichous (sometimes 1-flowered) spikelets, usually subtended by a pair of sterile bracts (glumes); individual flowers enclosed by a pair of bracts (lemma and palea), or if ever only one bract present, then fertile flowers only 1 per spikelet; leaf-sheath usually with free margins; stems usually cylindric, with hollow internodes (grasses)	Poaceae	
+35	Perianth segments 4 (inner pair small); stamen 1; uncommon yellow-flowered, tufted semi-aquatic	Philydraceae	Philydrum
+35	Perianth segments 6	36	
+36	Leaves compound; stems massive, woody, erect and undivided (palms)	Arecaceae	
+36	Leaves simple or absent	37	
+37	Perianth sepaloid (green, brown or translucent)	38	
+37	Perianth petaloid (white or coloured), but sometimes segments small	39	
+38	Carpels fused; style solitary, with 3 stigmas	Juncaceae	
+38	Carpels free or nearly so; stigmas sessile	Juncaginaceae	
+39	Stamens 3	40	
+39	Stamens 6 (sometimes 3 much longer than others)	43	
+40	Rhizome bright red; leaves tufted, linear, to 1.2 m long, plicate; scape up to 2.5 m tall; inflorescence a dense cylindircal panicle, with numerous yellow flowers; style and lowermost anther turned sideways	Haemodoraceae	
+40	Rhizome absent or not conspicuously bright red, but if ever somewhat reddish, neither with leaves long and plicate nor with scape approaching 2 m high	41	
+41	Inner perianth segments united; flowers short-lived with yellowish, tissue-like petals; inflorescence a dense spherical head on an undivided, wiry scape	Xyridaceae	Xyris
+41	Inner perianth segments free; other features in combination not as above	42	
+42	Tufted plants, stems commonly annual, or if prostrate, scrambling or twining, then either leafless or leaves sessile; rhizomatous or with a bulbous or cormous rootstock; inflorescence a raceme or panicle, not subtended by spathe-like bracts	Asparagales-Liliales complex	
+42	Prostrate, scrambling, much-branched plant with perennial, succulent stems; leaves ovate with sheathing petioles; rooting readily from nodes; inflorescence of 1ew flowers subtended by a single or pair of spathe-like bracts	Commelinaceae	
+43	Aquatic plants; flowers mauve and yellow in a terminal spike-like raceme; leaf-blade ovate, on long petiole	Pontederiaceae	
+43	Land plants, rarely growing in marshy situations and then with features not as above	44	
+44	Tufted plants, stems commonly annual, or if prostrate, scrambling or twining, then either leafless or leaves sessile; rhizomatous or with a bulbous or cormous rootstock; inflorescence a raceme or panicle, not subtended by spathe-like bracts	Asparagales-Liliales complex	
+44	Prostrate, scrambling, much-branched plant with perennial, succulent stems; leaves ovate with sheathing petioles; rooting readily from nodes; inflorescence of 1-few flowers subtended by a single or pair of spathe-like bracts	Commelinaceae	
+45	Flower lacking labellum; stamens 3 or 6, not assoicated with the style	46	
+45	Flower usually with distinct labellum; stamens 1, united with style or style held between anther locules	50	
+46	Aquatic plants with leaf-blades ovate, floating on water surface; flowers emergent or floating, showy, whitish with red-purple blotch at base; submerged cleistogamous flowers also produced	Hydrocharitaceae	
+46	Terrestrial plants, or if semi-aquatic, then leaf blades more or less linear and emergent from water	47	
+47	Stamens 3	Iridaceae	
+47	Stamens 6	48	
+48	Leafless herbs without chlorophyll (i.e. with no green parts), growing and flowering within leaf-litter layer of wet, shaded forests	Thismiaceae	Thismia
+48	Mostly leafy herbs, always with chlorophyll (i.e. some parts green), growing and flowering above ground level	49	
+49	Flowers zygomorphic, perianth tubular, externally tomentose; inflorescence a one-sided raceme	Haemodoraceae	Anigozanthos
+49	Flowers actinomorphic, or if zygomorphic then features not as above	Asparagales-Liliales complex	
+50	Labellum derived from modified perianth segment; stamen and style united, with stamen distal to style	Orchidaceae	
+50	Labellum derived from staminodes; style held between anther locules, the style extending beyond the anther	Zingiberaceae	Hedychium

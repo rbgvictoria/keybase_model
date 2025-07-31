@@ -1,0 +1,13 @@
+from,statement,to
+1,"Phasellus cursus enim sit amet justo efficitur, id semper sem hendrerit",2
+1,Suspendisse pharetra urna suscipit orci porta vehicula,3
+2,Vestibulum at massa a purus consectetur bibendum,Item 1
+2,Cras ultricies lorem id enim tempor bibendum et quis justo,Item 2
+3,Phasellus vitae magna quis ante elementum lacinia a et nisi,Item 3
+3,Cras at mauris vitae lorem pellentesque euismod,4
+4,Donec vitae est sed tortor facilisis tincidunt nec sed nisi,Item 4
+4,Fusce et orci eu purus pellentesque ornare,6
+6,"Donec pellentesque orci nec odio dapibus, rutrum efficitur nibh laoreet",2
+6,Ut a lectus id ipsum tempor consectetur et vitae odio,5
+5,Vivamus fermentum velit ut leo dictum tempus,Item 5
+5,Nam sed urna ac dolor posuere sodales placerat sed purus,Item 6

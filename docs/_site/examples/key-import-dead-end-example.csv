@@ -1,0 +1,13 @@
+from,statement,to
+1,Curabitur sed enim non risus aliquam volutpat,2
+1,Sed nec diam nec purus finibus fermentum,3
+2,Suspendisse ultrices lorem ut lorem congue ultricies,Item 1
+2,"Cras mollis sapien quis dui congue, in dignissim est hendrerit",Item 2
+3,Vivamus viverra nulla vel imperdiet sodales,Item 3
+3,"Vestibulum dictum ante in augue tristique, quis vulputate elit eleifend",4
+4,"Vivamus pharetra nisl ut nisl blandit, sed interdum nisi feugiat",Item 4
+4,"Aenean fringilla lectus a metus maximus, et pretium velit aliquam",6
+6,"In et metus auctor, molestie dolor dignissim, dignissim arcu",5
+6,Phasellus nec mi ut sapien finibus facilisis,7
+5,Pellentesque in nunc at tellus aliquam ultrices,Item 5
+5,Mauris eu nulla eu lacus tristique luctus nec at neque,Item 6

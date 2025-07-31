@@ -1,12 +1,27 @@
 {
   "name": "Laradock",
-  "dockerComposeFile": "../../laradock/docker-compose.yml",
-  "remoteUser": "laradock",
+  "dockerComposeFile": "../../laradock/docker-compose.vicflora.yml",
   "runServices": [
     "mariadb"
   ],
+  "remoteUser": "laradock",
   "service": "workspace",
   "workspaceFolder": "/var/www/keybase_model",
   "shutdownAction": "stopCompose",
-  "postCreateCommand": "uname -a"
+  "postCreateCommand": "uname -a",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "neilbrayfield.php-docblocker",
+        "laravel.vscode-laravel",
+        "graphql.vscode-graphql-syntax",
+        "mechatroner.rainbow-csv",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "bierner.markdown-preview-github-styles",
+        "brunnerh.insert-unicode"
+      ]
+    }
+  }
 }

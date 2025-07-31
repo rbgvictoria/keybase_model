@@ -1,0 +1,15 @@
+from	statement	to
+1	Leaves reduced to phyllodes or scales	2
+1	Leaves not reduced to phyllodes or scales	3
+2	Leaves reduced to scales	Bossiaea
+2	Leaves reduced to phyllodes	Daviesia
+3	Leaves simple or unifoliolate	Bossiaea|Cytisus|Dillwynia|Hardenbergia|Hovea|Mirbelia|Oxylobium|Platylobium|Pultenaea|Spartium|Sphaerolobium
+3	"Leaves compound, with more than one leaflet"	4
+4	"Leaves palmate, or pinnate with three or fewer leaflets"	5
+4	"Leaves pinnate, with more than three leaflets"	7
+5	Leaves bifoliolate	Zornia
+5	Leaflets more than 2	6
+6	Leaflets 5–7	Cullen
+6	Leaves trifoliolate	Chamaecytisus|Cullen|Cytisus|Desmodium|Genista|Glycine|Gompholobium|Goodia|Lespedeza|Medicago|Melilotus|Trifolium
+7	Leaves paripinnate	Lathyrus
+7	Leaves imparipinnate	Indigofera|Lessertia|Lotus|Robinia|Securigea|Swainsona|Vicia
